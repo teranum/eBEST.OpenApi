@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Description>NET wrapper for eBEST OpenApi</Description>
+		<Version>0.0.1-pre</Version>
+		<Title>eBEST.OpenApi</Title>
+		<PackageTags>eBEST, OpenApi</PackageTags>
+		<Authors>teranum</Authors>
+		<Copyright>Copyright © teranum 2023</Copyright>
+		<PackageProjectUrl>https://github.com/teranum/eBEST.OpenApi</PackageProjectUrl>
+		<PackageIcon>icon.jpg</PackageIcon>
+		<Company>$(Authors)</Company>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+</Project>
