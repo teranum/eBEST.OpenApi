@@ -23,4 +23,12 @@
 		</None>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Models\" />
+	  <Folder Include="TRModels\업종\" />
+	  <Folder Include="TRModels\기타\" />
+	  <Folder Include="TRModels\해외선물\" />
+	  <Folder Include="TRModels\선물옵션\" />
+	</ItemGroup>
+
 </Project>
