@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace eBEST.OpenApi.Models
+﻿namespace eBEST.OpenApi.Models
 {
     /// <summary>
     /// [기타] 실시간 시세 : 장운영정보
