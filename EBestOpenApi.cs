@@ -12,17 +12,10 @@ namespace eBEST.OpenApi
 {
     public class EBestOpenApi
     {
-        public enum ACCOUNT_TYPE
-        {
-            주식,
-            선물옵션,
-            해외선물,
-        }
-
         public enum SERVER_TYPE
         {
-            모의투자,
             실투자,
+            모의투자,
         }
 
         private readonly string _baseUrl = "https://openapi.ebestsec.co.kr:8080";
@@ -38,10 +31,8 @@ namespace eBEST.OpenApi
         public event EventHandler<EBestOnMessageEventArgs>? OnMessageEvent;
         public event EventHandler<EBestOnRealtimeEventArgs>? OnRealtimeEvent;
 
-        public EBestOpenApi(ACCOUNT_TYPE accType, SERVER_TYPE serverType)
+        public EBestOpenApi()
         {
-            AccountType = accType;
-            ServerType = serverType;
             _httpClient = new HttpClient
             {
                 BaseAddress = new Uri(_baseUrl),
@@ -50,8 +41,7 @@ namespace eBEST.OpenApi
             _wssClient = new ClientWebSocket();
         }
 
-        public readonly ACCOUNT_TYPE AccountType;
-        public readonly SERVER_TYPE ServerType;
+        public SERVER_TYPE ServerType { get; private set; }
         public bool Connected { get; private set; }
         public string LastErrorMessage = string.Empty;
         // 법인인 경우 필수 세팅
@@ -84,6 +74,14 @@ namespace eBEST.OpenApi
                 _expires_in = oAuth.expires_in;
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuth.token_type, _authorization);
 
+                // 모의투자인지 실투자인지 구분한다
+                if (await GetTrData<CSPAQ22200>("0") is CSPAQ22200.Response response)
+                {
+                    if (response.rsp_msg is not null && response.rsp_msg.StartsWith("모의투자"))
+                    {
+                        ServerType = SERVER_TYPE.모의투자;
+                    }
+                }
 
                 // 실시간 웹소켓 연결
                 Uri wssUri = new(ServerType == SERVER_TYPE.실투자 ? _wssUrlReal : _wssUrlSimulation);
@@ -91,8 +89,7 @@ namespace eBEST.OpenApi
                 {
                     Connected = true;
                     _ = WebsocketListen(_wssClient);
-                    OnConnectEvent?.Invoke(this, new(Ok: true, "연결 성공"));
-                    //OnMessageEvent?.Invoke(this, new($"주문가능금액 : {주문가능금액}"));
+                    OnConnectEvent?.Invoke(this, new(Ok: true, $"{ServerType} 연결 성공"));
                     return;
                 }
 

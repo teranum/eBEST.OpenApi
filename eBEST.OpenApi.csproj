@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Description>NET wrapper for eBEST OpenApi</Description>
-		<Version>0.0.2-pre</Version>
+		<Version>0.0.3-pre</Version>
 		<Title>eBEST.OpenApi</Title>
 		<PackageTags>eBEST, OpenApi</PackageTags>
 		<Authors>teranum</Authors>
