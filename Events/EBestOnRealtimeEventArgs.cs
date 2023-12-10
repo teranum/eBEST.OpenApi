@@ -1,8 +1,9 @@
 ﻿namespace eBEST.OpenApi.Events
 {
-    public class EBestOnRealtimeEventArgs(string Code, string RealData) : EventArgs
+    public class EBestOnRealtimeEventArgs(string TrCode, string Key, object RealtimeData) : EventArgs
     {
-        public string Code { get; } = Code;
-        public string RealData { get; } = RealData;
+        public string TrCode { get; } = TrCode;
+        public string Key { get; } = Key;
+        public object RealtimeData { get; } = RealtimeData;
     }
 }

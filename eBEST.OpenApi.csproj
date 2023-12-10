@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Description>NET wrapper for eBEST OpenApi</Description>
-		<Version>0.0.1-pre</Version>
+		<Version>0.0.2-pre</Version>
 		<Title>eBEST.OpenApi</Title>
 		<PackageTags>eBEST, OpenApi</PackageTags>
 		<Authors>teranum</Authors>
@@ -21,14 +21,6 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="TRModels\업종\" />
-	  <Folder Include="TRModels\기타\" />
-	  <Folder Include="TRModels\해외선물\" />
-	  <Folder Include="TRModels\선물옵션\" />
 	</ItemGroup>
 
 </Project>
