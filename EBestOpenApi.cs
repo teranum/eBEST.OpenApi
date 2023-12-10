@@ -90,8 +90,8 @@ namespace eBEST.OpenApi
                     Connected = true;
                     _ = WebsocketListen(_wssClient);
 
-                    // 장운영정보 실시간 시세 등록
-                    _ = AddRealtimeRequest("JIF", "0");
+                    //// 장운영정보 실시간 시세 등록
+                    //_ = AddRealtimeRequest("JIF", "0");
                     OnConnectEvent?.Invoke(this, new(Ok: true, $"{ServerType} 연결 성공"));
                     return;
                 }
@@ -182,10 +182,10 @@ namespace eBEST.OpenApi
 
                     if (response.body is JsonElement jsonElement)
                     {
-                        if (response.header.tr_cd.Equals("JIF"))
-                        {
+                        //if (response.header.tr_cd.Equals("JIF"))
+                        //{
 
-                        }
+                        //}
 
                         OnRealtimeEvent?.Invoke(this, new(response.header.tr_cd, response.header.tr_key, jsonElement));
                     }

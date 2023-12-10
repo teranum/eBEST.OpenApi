@@ -1,6 +1,6 @@
 ﻿namespace eBEST.OpenApi.Models
 {
-    [AttributeUsage(AttributeTargets.All)]
+    [AttributeUsage(AttributeTargets.Class)]
     public class PathAttribute(string path) : Attribute
     {
         public string Path { get; } = path;
