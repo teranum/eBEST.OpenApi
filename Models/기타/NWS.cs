@@ -1,4 +1,4 @@
-﻿namespace eBEST.OpenApi.Models.기타
+﻿namespace eBEST.OpenApi.Models
 {
     /// <summary>
     /// [기타] 실시간 시세 : 실시간뉴스제목패킷
