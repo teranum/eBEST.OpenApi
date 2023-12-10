@@ -5,6 +5,7 @@ using System.Net.WebSockets;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 
 #pragma warning disable MA0004
 
@@ -75,7 +76,7 @@ namespace eBEST.OpenApi
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuth.token_type, _authorization);
 
                 // 모의투자인지 실투자인지 구분한다
-                if (await GetTrData<CSPAQ22200>("0") is CSPAQ22200.Response response)
+                if (await GetTrData<SimpleCSPAQ22200>("0") is SimpleCSPAQ22200.Response response)
                 {
                     if (response.rsp_msg is not null && response.rsp_msg.StartsWith("모의투자"))
                     {
@@ -89,6 +90,9 @@ namespace eBEST.OpenApi
                 {
                     Connected = true;
                     _ = WebsocketListen(_wssClient);
+
+                    // 장운영정보 실시간 시세 등록
+                    _ = AddRealtimeRequest("JIF", "0");
                     OnConnectEvent?.Invoke(this, new(Ok: true, $"{ServerType} 연결 성공"));
                     return;
                 }
@@ -177,8 +181,15 @@ namespace eBEST.OpenApi
                         OnMessageEvent?.Invoke(this, new($"{response.header.tr_cd}({response.header.tr_type}) : {response.header.rsp_msg}"));
                     }
 
-                    if (response.body != null)
-                        OnRealtimeEvent?.Invoke(this, new(response.header.tr_cd, response.header.tr_key, response.body));
+                    if (response.body is JsonElement jsonElement)
+                    {
+                        if (response.header.tr_cd.Equals("JIF"))
+                        {
+
+                        }
+
+                        OnRealtimeEvent?.Invoke(this, new(response.header.tr_cd, response.header.tr_key, jsonElement));
+                    }
                 }
             }
             catch (Exception ex)
@@ -240,20 +251,20 @@ namespace eBEST.OpenApi
                     Content = content,
                 };
 
-                httpRequestMessage.Headers.Add("tr_cd", TType.Name);
+                httpRequestMessage.Headers.Add("tr_cd", pathAttribute.TRName.Length > 0 ? pathAttribute.TRName : TType.Name);
                 httpRequestMessage.Headers.Add("tr_cont", "N");
                 if (_macAddress.Length > 0) httpRequestMessage.Headers.Add("mac_address", _macAddress);
 
                 var response = await _httpClient.SendAsync(httpRequestMessage).ConfigureAwait(false);
 
-                var stringResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                return JsonSerializer.Deserialize(stringResult, responseType);
+                //var stringResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                //return JsonSerializer.Deserialize(stringResult, responseType);
 
-                //var contentStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
-                //await using (contentStream.ConfigureAwait(false))
-                //{
-                //    return await JsonSerializer.DeserializeAsync(contentStream, responseType).ConfigureAwait(false);
-                //}
+                var contentStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
+                await using (contentStream.ConfigureAwait(false))
+                {
+                    return await JsonSerializer.DeserializeAsync(contentStream, responseType).ConfigureAwait(false);
+                }
             }
             catch (Exception ex)
             {
@@ -272,5 +283,9 @@ namespace eBEST.OpenApi
         {
             public record Header(string tr_type, string rsp_cd, string rsp_msg, string tr_cd, string tr_key);
         }
+
+
+        // For Models
+
     }
 }
