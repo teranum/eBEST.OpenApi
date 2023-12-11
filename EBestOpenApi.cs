@@ -75,7 +75,7 @@ namespace eBEST.OpenApi
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuth.token_type, _authorization);
 
                 // 모의투자인지 실투자인지 구분한다
-                if (await GetTrData<SimpleCSPAQ22200>("0") is SimpleCSPAQ22200.Response response)
+                if (await GetTrData<SimpleDetectAccountServerType>("0", "0", "0", "0") is SimpleDetectAccountServerType.Response response)
                 {
                     if (response.rsp_msg is not null && response.rsp_msg.StartsWith("모의투자"))
                     {
