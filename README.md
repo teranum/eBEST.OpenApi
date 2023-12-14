@@ -31,10 +31,10 @@ Visual Studio 2022, NET8.0
 	// 로그인
 	_client.ConnectAsync(AccKey, AccSecretKey);
 
-	// TR 요청
+	// TR 요청 (삼성전자 현재가 요청)
 	t1102 주식현재가 = new()
 	{
-		t1102InBlock = new(code),
+		t1102InBlock = new("005930"),
 	};
 	_client.GetTRData(주식현재가).Wait();
 	if (주식현재가.t1102OutBlock != null)
