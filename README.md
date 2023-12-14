@@ -7,7 +7,7 @@ Visual Studio 2022, NET8.0
 
 ## 사용법
 
-### 1. eBEST.OpenApi nuget 패키지를 참조합니다.
+### 1. eBEST.OpenApi nuget 패키지를 참조합니다. (InOutBlocks, TR Models 확장 용 사용 시에는 eBEST.OpenApi.Models 패키지를 참조)
 ### 2. eBEST.OpenApi.OpenApi 클래스를 생성합니다.
 ### 3. 로그인후 TR을 요청합니다.
 
