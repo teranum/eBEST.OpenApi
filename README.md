@@ -1,4 +1,4 @@
-# eBEST.OpenApi C# Wrapper
+# [![NuGet version](https://badge.fury.io/nu/eBEST.OpenApi.png)](https://badge.fury.io/nu/eBEST.OpenApi) eBEST.OpenApi C# Wrapper
 
 eBEST.OpenApi C# Wrapper는 eBEST OpenAPI를 C#에서 사용하기 위한 Wrapper입니다.
 
