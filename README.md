@@ -1,17 +1,17 @@
 # [![NuGet version](https://badge.fury.io/nu/eBEST.OpenApi.png)](https://badge.fury.io/nu/eBEST.OpenApi) eBEST.OpenApi C# Wrapper
 
-eBEST.OpenApi C# Wrapper´Â eBEST OpenAPI¸¦ C#¿¡¼­ »ç¿ëÇÏ±â À§ÇÑ WrapperÀÔ´Ï´Ù.
+eBEST.OpenApi C# WrapperëŠ” eBEST OpenAPIë¥¼ C#ì—ì„œ ì‚¬ìš©í•˜ê¸° ìœ„í•œ Wrapperì…ë‹ˆë‹¤.
 
-## °³¹ßÈ¯°æ
-NET8.0, Visual Studio 2022
+## ê°œë°œí™˜ê²½
+Visual Studio 2022, NET8.0
 
-## »ç¿ë¹ı
+## ì‚¬ìš©ë²•
 
-### 1. eBEST.OpenApi nuget ÆĞÅ°Áö¸¦ ÂüÁ¶ÇÕ´Ï´Ù.
-### 2. eBEST.OpenApi.OpenApi Å¬·¡½º¸¦ »ı¼ºÇÕ´Ï´Ù.
-### 3. ·Î±×ÀÎÈÄ TRÀ» ¿äÃ»ÇÕ´Ï´Ù.
+### 1. eBEST.OpenApi nuget íŒ¨í‚¤ì§€ë¥¼ ì°¸ì¡°í•©ë‹ˆë‹¤.
+### 2. eBEST.OpenApi.OpenApi í´ë˜ìŠ¤ë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
+### 3. ë¡œê·¸ì¸í›„ TRì„ ìš”ì²­í•©ë‹ˆë‹¤.
 
-	* ÀÏºÎTRÀÀ´ä µ¥ÀÌÅÍ°¡ ¸Å´º¾ó°ú ½ÇÁ¦ÀÀ´äÀÌ Â÷ÀÌ³ª´Â °æ¿ì°¡ ÀÖ½À´Ï´Ù. È®ÀÎ ÈÄ »ç¿ëÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.
+	* ì¼ë¶€TRì‘ë‹µ ë°ì´í„°ê°€ ë§¤ë‰´ì–¼ê³¼ ì‹¤ì œì‘ë‹µì´ ì°¨ì´ë‚˜ëŠ” ê²½ìš°ê°€ ìˆìŠµë‹ˆë‹¤. í™•ì¸ í›„ ì‚¬ìš©í•˜ì‹œê¸° ë°”ëë‹ˆë‹¤.
 
 ```csharp
 	_client = new eBEST.OpenApi.EBestOpenApi();
@@ -19,26 +19,26 @@ NET8.0, Visual Studio 2022
 	{
 		if (e.Ok)
 		{
-			// ·Î±×ÀÎ ¼º°ø
+			// ë¡œê·¸ì¸ ì„±ê³µ
 		}
 		else
 		{
-			// ·Î±×ÀÎ ½ÇÆĞ
+			// ë¡œê·¸ì¸ ì‹¤íŒ¨
 		}
 	};
 
-	// ·Î±×ÀÎ
+	// ë¡œê·¸ì¸
 	_client.ConnectAsync(AccKey, AccSecretKey);
 
-	// TR ¿äÃ»
-	t1102 ÁÖ½ÄÇöÀç°¡ = new()
+	// TR ìš”ì²­
+	t1102 ì£¼ì‹í˜„ì¬ê°€ = new()
 	{
 		t1102InBlock = new(code),
 	};
-	_client.GetTRData(ÁÖ½ÄÇöÀç°¡).Wait();
-	if (ÁÖ½ÄÇöÀç°¡.t1102OutBlock != null)
+	_client.GetTRData(ì£¼ì‹í˜„ì¬ê°€).Wait();
+	if (ì£¼ì‹í˜„ì¬ê°€.t1102OutBlock != null)
 	{
-		ResultText = $"\r\n{ÁÖ½ÄÇöÀç°¡.t1102OutBlock}";
+		ResultText = $"\r\n{ì£¼ì‹í˜„ì¬ê°€.t1102OutBlock}";
 	}
 	
 ```
