@@ -5,6 +5,7 @@ using System.Net.WebSockets;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 #pragma warning disable MA0004
 
@@ -77,7 +78,7 @@ namespace eBEST.OpenApi
                 // 모의투자인지 실투자인지 구분한다
                 if (await GetTrData<SimpleDetectAccountServerType>("0", "0", "0", "0") is SimpleDetectAccountServerType.Response response)
                 {
-                    if (response.rsp_msg is not null && response.rsp_msg.StartsWith("모의투자"))
+                    if (response.rsp_msg is not null && response.rsp_msg.StartsWith("모의투자", StringComparison.Ordinal))
                     {
                         ServerType = SERVER_TYPE.모의투자;
                     }
@@ -285,6 +286,77 @@ namespace eBEST.OpenApi
 
 
         // For Models
+
+        public async Task GetTRDataExEx(TrBase request)
+        {
+            try
+            {
+                Type TType = request.GetType();
+                PathAttribute? pathAttribute = TType.GetCustomAttribute<PathAttribute>()
+                        ?? throw new Exception("Path Attribute is undefined");
+                string path = pathAttribute.Path;
+
+                // 속성 이름중 InBlock 이 포함된 속성들을 모두 찾는다
+                var inBlockProperties = TType.GetProperties().Where(m => m.Name.Contains("InBlock"));
+                if (!inBlockProperties.Any())
+                    throw new Exception("InBlock is undefined");
+
+                var prop = inBlockProperties.First();
+                var sss = prop.GetValue(request);
+
+                Dictionary<string, object?> nameValueCollection = [];
+                foreach (var p in inBlockProperties)
+                {
+                    nameValueCollection.Add(p.Name, p.GetValue(request));
+                }
+                string jsonbody = JsonSerializer.Serialize(nameValueCollection);
+
+                var content = new StringContent(jsonbody, Encoding.UTF8, "application/json");
+                HttpRequestMessage httpRequestMessage = new(HttpMethod.Post, path)
+                {
+                    Content = content,
+                };
+
+
+                httpRequestMessage.Headers.Add("tr_cd", pathAttribute.TRName.Length > 0 ? pathAttribute.TRName : TType.Name);
+                httpRequestMessage.Headers.Add("tr_cont", request.tr_cont);
+                httpRequestMessage.Headers.Add("tr_cont_key", request.tr_cont_key);
+                if (_macAddress.Length > 0) httpRequestMessage.Headers.Add("mac_address", _macAddress);
+
+                var responseMsg = await _httpClient.SendAsync(httpRequestMessage).ConfigureAwait(false);
+
+                var stringResult = await responseMsg.Content.ReadAsStringAsync().ConfigureAwait(false);
+
+                var jsonOptions = new JsonSerializerOptions()
+                {
+                    NumberHandling = JsonNumberHandling.AllowReadingFromString
+                };
+                var response = JsonSerializer.Deserialize(stringResult, TType, jsonOptions);
+
+                // OutBlock 속성을 찾는다
+                var outBlockProperties = TType.GetProperties().Where(m => m.Name.Contains("OutBlock"));
+                if (outBlockProperties.Any())
+                {
+                    foreach (var p in outBlockProperties)
+                    {
+                        var Property = TType.GetProperty(p.Name)!;
+                        Property.SetValue(request, Property.GetValue(response));
+                    }
+                }
+
+                // TrBase 의 베이스 속성들을 찾는다    
+                request.rsp_cd = TType.GetProperty("rsp_cd")!.GetValue(response) as string ?? string.Empty;
+                request.rsp_msg = TType.GetProperty("rsp_msg")!.GetValue(response) as string ?? string.Empty;
+                if (responseMsg.Headers.TryGetValues("tr_cont", out IEnumerable<string>? tr_cont))
+                    request.tr_cont = tr_cont.First();
+                if (responseMsg.Headers.TryGetValues("tr_cont_key", out IEnumerable<string>? tr_cont_key))
+                    request.tr_cont_key = tr_cont_key.First();
+            }
+            catch (Exception ex)
+            {
+                LastErrorMessage = ex.Message;
+            }
+        }
 
     }
 }

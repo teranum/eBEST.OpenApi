@@ -14,6 +14,7 @@
 		<PackageIcon>icon.png</PackageIcon>
 		<Company>$(Authors)</Company>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<NoWarn>($NoWarn);MA0048;MA0051</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>

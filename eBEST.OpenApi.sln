@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBEST.OpenApi", "eBEST.OpenApi.csproj", "{1DB38A07-DDA7-4888-9FDF-656CC2490338}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eBEST.OpenApi", "eBEST.OpenApi\eBEST.OpenApi.csproj", "{1E71A76F-2CFF-41B9-87BD-AFD27E83E30C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1DB38A07-DDA7-4888-9FDF-656CC2490338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DB38A07-DDA7-4888-9FDF-656CC2490338}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DB38A07-DDA7-4888-9FDF-656CC2490338}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DB38A07-DDA7-4888-9FDF-656CC2490338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E71A76F-2CFF-41B9-87BD-AFD27E83E30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E71A76F-2CFF-41B9-87BD-AFD27E83E30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E71A76F-2CFF-41B9-87BD-AFD27E83E30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E71A76F-2CFF-41B9-87BD-AFD27E83E30C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
