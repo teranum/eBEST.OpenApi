@@ -1,0 +1,66 @@
+﻿<Window
+    x:Class="WpfSample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfSample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="600"
+    Height="350"
+    d:DataContext="{d:DesignInstance local:MainWindow}"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Label Content="AccKey:" />
+            <TextBox
+                Width="300"
+                VerticalContentAlignment="Center"
+                Text="{Binding AccKey}" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="1"
+            Margin="0,10,0,0"
+            Orientation="Horizontal">
+            <Label Content="AccSecretKey:" />
+            <TextBox
+                Width="300"
+                VerticalContentAlignment="Center"
+                Text="{Binding AccSecretKey}" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="2"
+            Margin="0,10,0,0"
+            Orientation="Horizontal">
+            <Button
+                Width="60"
+                Command="{Binding 로그인Command}"
+                Content="로그인" />
+            <Label Margin="20,0,0,0" Content="종목코드" />
+            <TextBox
+                Width="80"
+                VerticalContentAlignment="Center"
+                Text="{Binding 종목코드}"
+                TextAlignment="Right" />
+            <Button
+                Width="60"
+                Margin="10,0,0,0"
+                Command="{Binding 종목조회Command}"
+                Content="종목조회" />
+        </StackPanel>
+        <TextBox
+            Grid.Row="3"
+            Margin="0,10,0,0"
+            AcceptsReturn="True"
+            Text="{Binding ResultText}"
+            TextWrapping="Wrap"
+            VerticalScrollBarVisibility="Auto" />
+    </Grid>
+</Window>
