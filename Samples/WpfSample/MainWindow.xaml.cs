@@ -1,17 +1,10 @@
 ﻿using eBEST.OpenApi.Events;
 using eBEST.OpenApi.Models;
-using System;
 using System.ComponentModel;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
+#pragma warning disable CS0067
 
 namespace WpfSample
 {
@@ -50,7 +43,7 @@ namespace WpfSample
             else
             {
                 ResultText += $"로그인 실패 : {e.Msg}";
-            }   
+            }
         }
 
         public string AccKey { get; set; }
@@ -58,7 +51,9 @@ namespace WpfSample
         public string 종목코드 { get; set; }
 
         string _resultText;
-        public string ResultText { get=> _resultText;
+        public string ResultText
+        {
+            get => _resultText;
             set
             {
                 _resultText = value;
@@ -129,9 +124,6 @@ namespace WpfSample
 
         public bool CanExecute(object? parameter) => true;
 
-        public void Execute(object? parameter)
-        {
-            _action.Invoke();
-        }
+        public void Execute(object? parameter) => _action.Invoke();
     }
 }

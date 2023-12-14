@@ -76,7 +76,7 @@ namespace eBEST.OpenApi
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuth.token_type, _authorization);
 
                 // 모의투자인지 실투자인지 구분한다
-                CSPAQ12300 더미조회 = new()
+                Simple_CSPAQ12300 더미조회 = new()
                 {
                     CSPAQ12300InBlock1 = new("0", "0", "0", "0"),
                 };
@@ -328,6 +328,18 @@ namespace eBEST.OpenApi
                 LastErrorMessage = ex.Message;
             }
             return string.Empty;
+        }
+
+        record CSPAQ12300InBlock1(string BalCreTp, string CmsnAppTpCode, string D2balBaseQryTp, string UprcTpCode);
+
+        /// <summary>
+        /// BEP단가조회
+        /// </summary>
+        [Path("/stock/accno", TRName = "CSPAQ12300")]
+        class Simple_CSPAQ12300 : TrBase
+        {
+            /// 요청
+            public CSPAQ12300InBlock1? CSPAQ12300InBlock1 { get; set; }
         }
 
     }

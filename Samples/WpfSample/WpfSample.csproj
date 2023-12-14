@@ -8,8 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\eBEST.OpenApi\eBEST.OpenApi.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="eBEST.OpenApi" Version="1.1.0" />
+		<PackageReference Include="eBEST.OpenApi.Models" Version="1.1.0" />
+	</ItemGroup>
 
 </Project>
