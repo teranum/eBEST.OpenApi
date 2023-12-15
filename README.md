@@ -7,12 +7,12 @@ Visual Studio 2022, NET8.0
 
 ## 사용법
 
-### 1. eBEST.OpenApi nuget 패키지를 참조합니다.
-	(InOutBlocks, TR Models 확장 용 사용 시에는 eBEST.OpenApi.Models 패키지를 참조)
-### 2. eBEST.OpenApi.OpenApi 클래스를 생성합니다.
-### 3. 로그인후 TR을 요청합니다.
-
-	* 일부TR응답 데이터가 매뉴얼과 실제응답이 차이나는 경우가 있습니다. 확인 후 사용하시기 바랍니다.
+### 1. eBEST.OpenApi nuget 패키지를 참조 합니다.
+	* InOutBlocks, TR Models 확장 용 사용 시에는 eBEST.OpenApi.Models 패키지를 참조
+	* 일부TR 응답 시, 매뉴얼과 실제 응답 데이터가 차이 나는 경우가 있습니다. 확인 후 사용 하시기 바랍니다.
+ 
+### 2. eBEST.OpenApi.OpenApi 클래스를 생성 합니다.
+### 3. 로그인후 TR을 요청 합니다.
 
 ```csharp
 	_client = new eBEST.OpenApi.EBestOpenApi();
@@ -43,7 +43,7 @@ Visual Studio 2022, NET8.0
 	}
 	
 ```
-
+Samples/WpfSample
 ![](./Samples/img/run-001.png)
 
 ![](./Samples/img/run-002.png)
@@ -51,3 +51,15 @@ Visual Studio 2022, NET8.0
 ![](./Samples/img/run-003.png)
 
 ![](./Samples/img/run-004.png)
+
+## 업데이트
+
+### version 1.1.1
+eBEST.OpenApi.Models 에 xml Document file 추가
+
+### version 1.1.0
+eBEST.OpenApi 에서 Models/Blocks 를 eBEST.OpenApi.Models 로 분리
+
+### version 1.0.0
+초기 eBEST.OpenApi.OpenApi nuget package 게시
+
