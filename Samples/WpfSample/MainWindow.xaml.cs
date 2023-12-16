@@ -107,6 +107,7 @@ namespace WpfSample
             }
         }
 
+        // TR 현재가 요청 ("005930" 입력시 삼성전자 현재가 요청)
         void Test(string code)
         {
             t1102 주식현재가 = new()
