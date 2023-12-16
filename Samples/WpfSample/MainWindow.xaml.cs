@@ -91,7 +91,7 @@ namespace WpfSample
             }
 
             _ = TestRequestAsync(종목코드);
-
+            //Test(종목코드);
         }
 
         async Task TestRequestAsync(string code)
@@ -101,6 +101,19 @@ namespace WpfSample
                 t1102InBlock = new(code),
             };
             await _client.GetTRData(주식현재가).ConfigureAwait(true);
+            if (주식현재가.t1102OutBlock != null)
+            {
+                ResultText += $"\r\n{주식현재가.t1102OutBlock}";
+            }
+        }
+
+        void Test(string code)
+        {
+            t1102 주식현재가 = new()
+            {
+                t1102InBlock = new(code),
+            };
+            _client.GetTRData(주식현재가).Wait();
             if (주식현재가.t1102OutBlock != null)
             {
                 ResultText += $"\r\n{주식현재가.t1102OutBlock}";
