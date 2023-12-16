@@ -91,7 +91,7 @@ namespace WpfSample
             }
 
             _ = TestRequestAsync(종목코드);
-
+            //Test(종목코드);
         }
 
         async Task TestRequestAsync(string code)
@@ -107,9 +107,22 @@ namespace WpfSample
             }
         }
 
+        // TR 현재가 요청 ("005930" 입력시 삼성전자 현재가 요청)
+        void Test(string code)
+        {
+            t1102 주식현재가 = new()
+            {
+                t1102InBlock = new(code),
+            };
+            _client.GetTRData(주식현재가).Wait();
+            if (주식현재가.t1102OutBlock != null)
+            {
+                ResultText += $"\r\n{주식현재가.t1102OutBlock}";
+            }
+        }
+
         public event PropertyChangedEventHandler? PropertyChanged;
     }
-
 
     internal class RelayCommand : ICommand
     {

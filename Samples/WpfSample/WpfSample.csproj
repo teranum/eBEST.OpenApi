@@ -9,7 +9,7 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="eBEST.OpenApi.Models" Version="*" />
+		<PackageReference Include="eBEST.OpenApi" Version="*" />
 	</ItemGroup>
 
 </Project>
