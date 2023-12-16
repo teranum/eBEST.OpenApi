@@ -110,7 +110,6 @@ namespace WpfSample
         public event PropertyChangedEventHandler? PropertyChanged;
     }
 
-
     internal class RelayCommand : ICommand
     {
         private readonly Action _action;
