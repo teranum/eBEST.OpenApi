@@ -5,7 +5,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Description>Models extension for eBEST.OpenApi</Description>
-		<Version>1.1.1</Version>
+		<Version>1.1.1-pre1</Version>
 		<Title>eBEST.OpenApi.Models</Title>
 		<PackageTags>eBEST, OpenApi</PackageTags>
 		<Authors>teranum</Authors>
@@ -15,6 +15,7 @@
 		<Company>$(Authors)</Company>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);CS1591</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
