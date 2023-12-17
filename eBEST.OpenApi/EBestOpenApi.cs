@@ -258,7 +258,7 @@ namespace eBEST.OpenApi
                 };
 
 
-                httpRequestMessage.Headers.Add("tr_cd", pathAttribute.TRName.Length > 0 ? pathAttribute.TRName : TType.Name);
+                httpRequestMessage.Headers.Add("tr_cd", pathAttribute.TRCode.Length > 0 ? pathAttribute.TRCode : TType.Name);
                 httpRequestMessage.Headers.Add("tr_cont", request.tr_cont);
                 httpRequestMessage.Headers.Add("tr_cont_key", request.tr_cont_key);
                 if (_macAddress.Length > 0) httpRequestMessage.Headers.Add("mac_address", _macAddress);
@@ -335,7 +335,7 @@ namespace eBEST.OpenApi
         /// <summary>
         /// BEP단가조회
         /// </summary>
-        [Path("/stock/accno", TRName = "CSPAQ12300")]
+        [Path("/stock/accno", TRCode = "CSPAQ12300")]
         class Simple_CSPAQ12300 : TrBase
         {
             /// 요청

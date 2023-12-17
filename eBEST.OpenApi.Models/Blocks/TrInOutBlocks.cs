@@ -1,4 +1,4 @@
-﻿// [2023-12-16 오후 8:53:31]
+﻿// [2023-12-17 오후 3:30:12]
 // 이 파일은 BlockMaker에 의해 자동으로 만들어졌습니다.
 // XingAPI res폴더의 TR파일에서 변환되었습니다.
 
@@ -2829,13 +2829,13 @@ public record MMDAQ91200OutBlock2([Description("종목소분류코드	string	3")
 
 
 /// <summary>
-/// 해외선물마스터조회(o3101)-API용: o3101: InBlock
+/// 해외선물마스터조회-API용: o3101: InBlock
 /// </summary>
 /// <param name="gubun">입력구분(예비)	string	1</param>
 public record o3101InBlock([Description("입력구분(예비)	string	1")] string gubun);
 
 /// <summary>
-/// 해외선물마스터조회(o3101)-API용: o3101: OutBlock
+/// 해외선물마스터조회-API용: o3101: OutBlock
 /// </summary>
 /// <param name="Symbol">종목코드	string	8</param>
 /// <param name="SymbolNm">종목명	string	50</param>
@@ -2867,7 +2867,7 @@ public record o3101OutBlock([Description("종목코드	string	8")] string Symbol
 
 
 /// <summary>
-/// 해외선물차트(분)(o3103)-API용: o3103: InBlock
+/// 해외선물차트(분)-API용: o3103: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="ncnt">N분주기	int	4</param>
@@ -2877,7 +2877,7 @@ public record o3101OutBlock([Description("종목코드	string	8")] string Symbol
 public record o3103InBlock([Description("단축코드	string	8")] string shcode, [Description("N분주기	int	4")] int ncnt, [Description("조회건수	int	4")] int readcnt, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	6")] string cts_time);
 
 /// <summary>
-/// 해외선물차트(분)(o3103)-API용: o3103: OutBlock
+/// 해외선물차트(분)-API용: o3103: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="timediff">시차	int	4</param>
@@ -2887,7 +2887,7 @@ public record o3103InBlock([Description("단축코드	string	8")] string shcode,
 public record o3103OutBlock([Description("단축코드	string	8")] string shcode, [Description("시차	int	4")] int timediff, [Description("조회건수	int	4")] int readcnt, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	6")] string cts_time);
 
 /// <summary>
-/// 해외선물차트(분)(o3103)-API용: o3103: OutBlock1
+/// 해외선물차트(분)-API용: o3103: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">현지시간	string	6</param>
@@ -2900,7 +2900,7 @@ public record o3103OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 해외선물일별체결조회(o3104)-API용: o3104: InBlock
+/// 해외선물일별체결조회-API용: o3104: InBlock
 /// </summary>
 /// <param name="gubun">조회구분	string	1</param>
 /// <param name="shcode">단축코드	string	8</param>
@@ -2908,7 +2908,7 @@ public record o3103OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record o3104InBlock([Description("조회구분	string	1")] string gubun, [Description("단축코드	string	8")] string shcode, [Description("조회일자	string	8")] string date);
 
 /// <summary>
-/// 해외선물일별체결조회(o3104)-API용: o3104: OutBlock1
+/// 해외선물일별체결조회-API용: o3104: OutBlock1
 /// </summary>
 /// <param name="chedate">일자	string	8</param>
 /// <param name="price">현재가	double	15.9</param>
@@ -2924,13 +2924,13 @@ public record o3104OutBlock1([Description("일자	string	8")] string chedate, [D
 
 
 /// <summary>
-/// 해외선물현재가(종목정보)조회(o3105)-API용: o3105: InBlock
+/// 해외선물현재가(종목정보)조회-API용: o3105: InBlock
 /// </summary>
 /// <param name="symbol">종목코드	string	8</param>
 public record o3105InBlock([Description("종목코드	string	8")] string symbol);
 
 /// <summary>
-/// 해외선물현재가(종목정보)조회(o3105)-API용: o3105: OutBlock
+/// 해외선물현재가(종목정보)조회-API용: o3105: OutBlock
 /// </summary>
 /// <param name="Symbol">종목코드	string	8</param>
 /// <param name="SymbolNm">종목명	string	50</param>
@@ -2994,13 +2994,13 @@ public record o3105OutBlock([Description("종목코드	string	8")] string Symbol
 
 
 /// <summary>
-/// 해외선물현재가호가조회(o3106)-API용: o3106: InBlock
+/// 해외선물현재가호가조회-API용: o3106: InBlock
 /// </summary>
 /// <param name="symbol">단축코드	string	8</param>
 public record o3106InBlock([Description("단축코드	string	8")] string symbol);
 
 /// <summary>
-/// 해외선물현재가호가조회(o3106)-API용: o3106: OutBlock
+/// 해외선물현재가호가조회-API용: o3106: OutBlock
 /// </summary>
 /// <param name="symbol">종목코드	string	8</param>
 /// <param name="symbolname">종목명	string	50</param>
@@ -3052,13 +3052,13 @@ public record o3106OutBlock([Description("종목코드	string	8")] string symbol
 
 
 /// <summary>
-/// 해외선물관심종목조회(o3107)-API용: o3107: InBlock
+/// 해외선물관심종목조회-API용: o3107: InBlock
 /// </summary>
 /// <param name="symbol">종목심볼	string	8</param>
 public record o3107InBlock([Description("종목심볼	string	8")] string symbol);
 
 /// <summary>
-/// 해외선물관심종목조회(o3107)-API용: o3107: OutBlock
+/// 해외선물관심종목조회-API용: o3107: OutBlock
 /// </summary>
 /// <param name="symbol">종목코드	string	8</param>
 /// <param name="symbolname">종목명	string	50</param>
@@ -3085,7 +3085,7 @@ public record o3107OutBlock([Description("종목코드	string	8")] string symbol
 
 
 /// <summary>
-/// 해외선물차트(일주월)(o3108)-API용: o3108: InBlock
+/// 해외선물차트(일주월)-API용: o3108: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	16</param>
 /// <param name="gubun">주기구분	string	1</param>
@@ -3096,7 +3096,7 @@ public record o3107OutBlock([Description("종목코드	string	8")] string symbol
 public record o3108InBlock([Description("단축코드	string	16")] string shcode, [Description("주기구분	string	1")] string gubun, [Description("요청건수	int	4")] int qrycnt, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate, [Description("연속일자	string	8")] string cts_date);
 
 /// <summary>
-/// 해외선물차트(일주월)(o3108)-API용: o3108: OutBlock
+/// 해외선물차트(일주월)-API용: o3108: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	16</param>
 /// <param name="jisiga">전일시가	double	15.9</param>
@@ -3115,7 +3115,7 @@ public record o3108InBlock([Description("단축코드	string	16")] string shcode
 public record o3108OutBlock([Description("단축코드	string	16")] string shcode, [Description("전일시가	double	15.9")] double jisiga, [Description("전일고가	double	15.9")] double jihigh, [Description("전일저가	double	15.9")] double jilow, [Description("전일종가	double	15.9")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	15.9")] double disiga, [Description("당일고가	double	15.9")] double dihigh, [Description("당일저가	double	15.9")] double dilow, [Description("당일종가	double	15.9")] double diclose, [Description("장시작시간	string	6")] string mk_stime, [Description("장마감시간	string	6")] string mk_etime, [Description("연속일자	string	8")] string cts_date, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 해외선물차트(일주월)(o3108)-API용: o3108: OutBlock1
+/// 해외선물차트(일주월)-API용: o3108: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	double	15.9</param>
@@ -3127,7 +3127,7 @@ public record o3108OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 해외선물시간대별(Tick)체결(o3116)-API용: o3116: InBlock
+/// 해외선물시간대별(Tick)체결-API용: o3116: InBlock
 /// </summary>
 /// <param name="gubun">조회구분(0:당일1:전일)	string	1</param>
 /// <param name="shcode">단축코드	string	8</param>
@@ -3136,13 +3136,13 @@ public record o3108OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record o3116InBlock([Description("조회구분(0:당일1:전일)	string	1")] string gubun, [Description("단축코드	string	8")] string shcode, [Description("조회갯수	int	4")] int readcnt, [Description("순번CTS	int	8")] int cts_seq);
 
 /// <summary>
-/// 해외선물시간대별(Tick)체결(o3116)-API용: o3116: OutBlock
+/// 해외선물시간대별(Tick)체결-API용: o3116: OutBlock
 /// </summary>
 /// <param name="cts_seq">순번CTS	int	8</param>
 public record o3116OutBlock([Description("순번CTS	int	8")] int cts_seq);
 
 /// <summary>
-/// 해외선물시간대별(Tick)체결(o3116)-API용: o3116: OutBlock1
+/// 해외선물시간대별(Tick)체결-API용: o3116: OutBlock1
 /// </summary>
 /// <param name="ovsdate">현지일자	string	8</param>
 /// <param name="ovstime">현지시간	string	6</param>
@@ -3156,7 +3156,7 @@ public record o3116OutBlock1([Description("현지일자	string	8")] string ovsda
 
 
 /// <summary>
-/// 해외선물차트용NTick(o3117)-API용: o3117: InBlock
+/// 해외선물차트용NTick-API용: o3117: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="ncnt">단위	int	4</param>
@@ -3166,7 +3166,7 @@ public record o3116OutBlock1([Description("현지일자	string	8")] string ovsda
 public record o3117InBlock([Description("단축코드	string	8")] string shcode, [Description("단위	int	4")] int ncnt, [Description("건수	int	4")] int qrycnt, [Description("연속시간	string	10")] string cts_seq, [Description("연속당일구분	string	2")] string cts_daygb);
 
 /// <summary>
-/// 해외선물차트용NTick(o3117)-API용: o3117: OutBlock
+/// 해외선물차트용NTick-API용: o3117: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
@@ -3175,7 +3175,7 @@ public record o3117InBlock([Description("단축코드	string	8")] string shcode,
 public record o3117OutBlock([Description("단축코드	string	8")] string shcode, [Description("레코드카운트	int	7")] int rec_count, [Description("연속시간	string	10")] string cts_seq, [Description("연속당일구분	string	2")] string cts_daygb);
 
 /// <summary>
-/// 해외선물차트용NTick(o3117)-API용: o3117: OutBlock1
+/// 해외선물차트용NTick-API용: o3117: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -3188,14 +3188,14 @@ public record o3117OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 해외선물옵션마스터조회(o3121)-API용: o3121: InBlock
+/// 해외선물옵션마스터조회-API용: o3121: InBlock
 /// </summary>
 /// <param name="MktGb">시장구분	string	1</param>
 /// <param name="BscGdsCd">옵션기초상품코드	string	10</param>
 public record o3121InBlock([Description("시장구분	string	1")] string MktGb, [Description("옵션기초상품코드	string	10")] string BscGdsCd);
 
 /// <summary>
-/// 해외선물옵션마스터조회(o3121)-API용: o3121: OutBlock
+/// 해외선물옵션마스터조회-API용: o3121: OutBlock
 /// </summary>
 /// <param name="Symbol">종목코드	string	16</param>
 /// <param name="SymbolNm">종목명	string	50</param>
@@ -3235,7 +3235,7 @@ public record o3121OutBlock([Description("종목코드	string	16")] string Symbo
 
 
 /// <summary>
-/// 해외선물옵션차트(분)(o3123)-API용: o3123: InBlock
+/// 해외선물옵션차트(분)-API용: o3123: InBlock
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="shcode">단축코드	string	16</param>
@@ -3246,7 +3246,7 @@ public record o3121OutBlock([Description("종목코드	string	16")] string Symbo
 public record o3123InBlock([Description("시장구분	string	1")] string mktgb, [Description("단축코드	string	16")] string shcode, [Description("N분주기	int	4")] int ncnt, [Description("조회건수	int	4")] int readcnt, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	6")] string cts_time);
 
 /// <summary>
-/// 해외선물옵션차트(분)(o3123)-API용: o3123: OutBlock
+/// 해외선물옵션차트(분)-API용: o3123: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	16</param>
 /// <param name="timediff">시차	int	4</param>
@@ -3256,7 +3256,7 @@ public record o3123InBlock([Description("시장구분	string	1")] string mktgb, 
 public record o3123OutBlock([Description("단축코드	string	16")] string shcode, [Description("시차	int	4")] int timediff, [Description("조회건수	int	4")] int readcnt, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	6")] string cts_time);
 
 /// <summary>
-/// 해외선물옵션차트(분)(o3123)-API용: o3123: OutBlock1
+/// 해외선물옵션차트(분)-API용: o3123: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">현지시간	string	6</param>
@@ -3269,14 +3269,14 @@ public record o3123OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 해외선물옵션현재가(종목정보)조회(o3125)-API용: o3125: InBlock
+/// 해외선물옵션현재가(종목정보)조회-API용: o3125: InBlock
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="symbol">종목코드	string	16</param>
 public record o3125InBlock([Description("시장구분	string	1")] string mktgb, [Description("종목코드	string	16")] string symbol);
 
 /// <summary>
-/// 해외선물옵션현재가(종목정보)조회(o3125)-API용: o3125: OutBlock
+/// 해외선물옵션현재가(종목정보)조회-API용: o3125: OutBlock
 /// </summary>
 /// <param name="Symbol">종목코드	string	16</param>
 /// <param name="SymbolNm">종목명	string	50</param>
@@ -3342,14 +3342,14 @@ public record o3125OutBlock([Description("종목코드	string	16")] string Symbo
 
 
 /// <summary>
-/// 해외선물옵션현재가호가조회(o3126)-API용: o3126: InBlock
+/// 해외선물옵션현재가호가조회-API용: o3126: InBlock
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="symbol">단축코드	string	16</param>
 public record o3126InBlock([Description("시장구분	string	1")] string mktgb, [Description("단축코드	string	16")] string symbol);
 
 /// <summary>
-/// 해외선물옵션현재가호가조회(o3126)-API용: o3126: OutBlock
+/// 해외선물옵션현재가호가조회-API용: o3126: OutBlock
 /// </summary>
 /// <param name="symbol">종목코드	string	16</param>
 /// <param name="symbolname">종목명	string	50</param>
@@ -3401,20 +3401,20 @@ public record o3126OutBlock([Description("종목코드	string	16")] string symbo
 
 
 /// <summary>
-/// 해외선물옵션관심종목조회(o3127)-API용: o3127: InBlock
+/// 해외선물옵션관심종목조회-API용: o3127: InBlock
 /// </summary>
 /// <param name="nrec">건수	int	4</param>
 public record o3127InBlock([Description("건수	int	4")] int nrec);
 
 /// <summary>
-/// 해외선물옵션관심종목조회(o3127)-API용: o3127: InBlock1
+/// 해외선물옵션관심종목조회-API용: o3127: InBlock1
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="symbol">종목심볼	string	16</param>
 public record o3127InBlock1([Description("시장구분	string	1")] string mktgb, [Description("종목심볼	string	16")] string symbol);
 
 /// <summary>
-/// 해외선물옵션관심종목조회(o3127)-API용: o3127: OutBlock
+/// 해외선물옵션관심종목조회-API용: o3127: OutBlock
 /// </summary>
 /// <param name="symbol">종목코드	string	16</param>
 /// <param name="symbolname">종목명	string	50</param>
@@ -3441,7 +3441,7 @@ public record o3127OutBlock([Description("종목코드	string	16")] string symbo
 
 
 /// <summary>
-/// 해외선물옵션차트일주월(o3128)-API용: o3128: InBlock
+/// 해외선물옵션차트일주월-API용: o3128: InBlock
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="shcode">단축코드	string	16</param>
@@ -3453,7 +3453,7 @@ public record o3127OutBlock([Description("종목코드	string	16")] string symbo
 public record o3128InBlock([Description("시장구분	string	1")] string mktgb, [Description("단축코드	string	16")] string shcode, [Description("주기구분	string	1")] string gubun, [Description("요청건수	int	4")] int qrycnt, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate, [Description("연속일자	string	8")] string cts_date);
 
 /// <summary>
-/// 해외선물옵션차트일주월(o3128)-API용: o3128: OutBlock
+/// 해외선물옵션차트일주월-API용: o3128: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	16</param>
 /// <param name="jisiga">전일시가	double	15.9</param>
@@ -3472,7 +3472,7 @@ public record o3128InBlock([Description("시장구분	string	1")] string mktgb, 
 public record o3128OutBlock([Description("단축코드	string	16")] string shcode, [Description("전일시가	double	15.9")] double jisiga, [Description("전일고가	double	15.9")] double jihigh, [Description("전일저가	double	15.9")] double jilow, [Description("전일종가	double	15.9")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	15.9")] double disiga, [Description("당일고가	double	15.9")] double dihigh, [Description("당일저가	double	15.9")] double dilow, [Description("당일종가	double	15.9")] double diclose, [Description("장시작시간	string	6")] string mk_stime, [Description("장마감시간	string	6")] string mk_etime, [Description("연속일자	string	8")] string cts_date, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 해외선물옵션차트일주월(o3128)-API용: o3128: OutBlock1
+/// 해외선물옵션차트일주월-API용: o3128: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	double	15.9</param>
@@ -3484,7 +3484,7 @@ public record o3128OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 해외선물옵션시간대별(Tick)체결(o3136)-API용: o3136: InBlock
+/// 해외선물옵션시간대별(Tick)체결-API용: o3136: InBlock
 /// </summary>
 /// <param name="gubun">조회구분(0:당일1:전일)	string	1</param>
 /// <param name="mktgb">시장구분	string	1</param>
@@ -3494,13 +3494,13 @@ public record o3128OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record o3136InBlock([Description("조회구분(0:당일1:전일)	string	1")] string gubun, [Description("시장구분	string	1")] string mktgb, [Description("단축코드	string	16")] string shcode, [Description("조회갯수	int	4")] int readcnt, [Description("순번CTS	int	8")] int cts_seq);
 
 /// <summary>
-/// 해외선물옵션시간대별(Tick)체결(o3136)-API용: o3136: OutBlock
+/// 해외선물옵션시간대별(Tick)체결-API용: o3136: OutBlock
 /// </summary>
 /// <param name="cts_seq">순번CTS	int	8</param>
 public record o3136OutBlock([Description("순번CTS	int	8")] int cts_seq);
 
 /// <summary>
-/// 해외선물옵션시간대별(Tick)체결(o3136)-API용: o3136: OutBlock1
+/// 해외선물옵션시간대별(Tick)체결-API용: o3136: OutBlock1
 /// </summary>
 /// <param name="ovsdate">현지일자	string	8</param>
 /// <param name="ovstime">현지시간	string	6</param>
@@ -3514,7 +3514,7 @@ public record o3136OutBlock1([Description("현지일자	string	8")] string ovsda
 
 
 /// <summary>
-/// 해외선물옵션차트용NTick(o3137)-API용: o3137: InBlock
+/// 해외선물옵션차트용NTick-API용: o3137: InBlock
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="shcode">단축코드	string	16</param>
@@ -3525,7 +3525,7 @@ public record o3136OutBlock1([Description("현지일자	string	8")] string ovsda
 public record o3137InBlock([Description("시장구분	string	1")] string mktgb, [Description("단축코드	string	16")] string shcode, [Description("단위	int	4")] int ncnt, [Description("건수	int	4")] int qrycnt, [Description("연속시간	string	10")] string cts_seq, [Description("연속당일구분	string	2")] string cts_daygb);
 
 /// <summary>
-/// 해외선물옵션차트용NTick(o3137)-API용: o3137: OutBlock
+/// 해외선물옵션차트용NTick-API용: o3137: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	16</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
@@ -3534,7 +3534,7 @@ public record o3137InBlock([Description("시장구분	string	1")] string mktgb, 
 public record o3137OutBlock([Description("단축코드	string	16")] string shcode, [Description("레코드카운트	int	7")] int rec_count, [Description("연속시간	string	10")] string cts_seq, [Description("연속당일구분	string	2")] string cts_daygb);
 
 /// <summary>
-/// 해외선물옵션차트용NTick(o3137)-API용: o3137: OutBlock1
+/// 해외선물옵션차트용NTick-API용: o3137: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -3547,7 +3547,7 @@ public record o3137OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 해외선물옵션차트용NTick(고정형)(o3139)-API용: o3139: InBlock
+/// 해외선물옵션차트용NTick(고정형)-API용: o3139: InBlock
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="shcode">단축코드	string	16</param>
@@ -3558,7 +3558,7 @@ public record o3137OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record o3139InBlock([Description("시장구분	string	1")] string mktgb, [Description("단축코드	string	16")] string shcode, [Description("단위	int	4")] int ncnt, [Description("건수	int	4")] int qrycnt, [Description("연속시간	string	10")] string cts_seq, [Description("연속당일구분	string	2")] string cts_daygb);
 
 /// <summary>
-/// 해외선물옵션차트용NTick(고정형)(o3139)-API용: o3139: OutBlock
+/// 해외선물옵션차트용NTick(고정형)-API용: o3139: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	16</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
@@ -3568,7 +3568,7 @@ public record o3139InBlock([Description("시장구분	string	1")] string mktgb, 
 public record o3139OutBlock([Description("단축코드	string	16")] string shcode, [Description("레코드카운트	int	7")] int rec_count, [Description("연속시간	string	10")] string cts_seq, [Description("연속당일구분	string	2")] string cts_daygb, [Description("마지막Tick건수	int	4")] int last_count);
 
 /// <summary>
-/// 해외선물옵션차트용NTick(고정형)(o3139)-API용: o3139: OutBlock1
+/// 해외선물옵션차트용NTick(고정형)-API용: o3139: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -3581,7 +3581,7 @@ public record o3139OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 주식당일매매일지/수수료(t0150): t0150: InBlock
+/// 주식당일매매일지/수수료: t0150: InBlock
 /// </summary>
 /// <param name="accno">계좌번호	string	11</param>
 /// <param name="cts_medosu">CTS_매매구분	string	1</param>
@@ -3591,7 +3591,7 @@ public record o3139OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t0150InBlock([Description("계좌번호	string	11")] string accno, [Description("CTS_매매구분	string	1")] string cts_medosu, [Description("CTS_종목번호	string	12")] string cts_expcode, [Description("CTS_단가	string	9")] string cts_price, [Description("CTS_매체	string	2")] string cts_middiv);
 
 /// <summary>
-/// 주식당일매매일지/수수료(t0150): t0150: OutBlock
+/// 주식당일매매일지/수수료: t0150: OutBlock
 /// </summary>
 /// <param name="mdqty">매도수량	long	9</param>
 /// <param name="mdamt">매도약정금액	long	18</param>
@@ -3619,7 +3619,7 @@ public record t0150InBlock([Description("계좌번호	string	11")] string accno,
 public record t0150OutBlock([Description("매도수량	long	9")] long mdqty, [Description("매도약정금액	long	18")] long mdamt, [Description("매도수수료	long	18")] long mdfee, [Description("매도거래세	long	18")] long mdtax, [Description("매도농특세	long	18")] long mdargtax, [Description("매도제비용합	long	18")] long tmdtax, [Description("매도정산금액	long	18")] long mdadjamt, [Description("매수수량	long	9")] long msqty, [Description("매수약정금액	long	18")] long msamt, [Description("매수수수료	long	18")] long msfee, [Description("매수제비용합	long	18")] long tmstax, [Description("매수정산금액	long	18")] long msadjamt, [Description("합계수량	long	9")] long tqty, [Description("합계약정금액	long	18")] long tamt, [Description("합계수수료	long	18")] long tfee, [Description("합계거래세	long	18")] long tottax, [Description("합계농특세	long	18")] long targtax, [Description("합계제비용합	long	18")] long ttax, [Description("합계정산금액	long	18")] long tadjamt, [Description("CTS_매매구분	string	1")] string cts_medosu, [Description("CTS_종목번호	string	12")] string cts_expcode, [Description("CTS_단가	string	9")] string cts_price, [Description("CTS_매체	string	2")] string cts_middiv);
 
 /// <summary>
-/// 주식당일매매일지/수수료(t0150): t0150: OutBlock1
+/// 주식당일매매일지/수수료: t0150: OutBlock1
 /// </summary>
 /// <param name="medosu">매매구분	string	10</param>
 /// <param name="expcode">종목번호	string	12</param>
@@ -3635,7 +3635,7 @@ public record t0150OutBlock1([Description("매매구분	string	10")] string medo
 
 
 /// <summary>
-/// 주식당일매매일지/수수료(전일)(t0151): t0151: InBlock
+/// 주식당일매매일지/수수료(전일): t0151: InBlock
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="accno">계좌번호	string	11</param>
@@ -3646,7 +3646,7 @@ public record t0150OutBlock1([Description("매매구분	string	10")] string medo
 public record t0151InBlock([Description("일자	string	8")] string date, [Description("계좌번호	string	11")] string accno, [Description("CTS_매매구분	string	1")] string cts_medosu, [Description("CTS_종목번호	string	12")] string cts_expcode, [Description("CTS_단가	string	9")] string cts_price, [Description("CTS_매체	string	2")] string cts_middiv);
 
 /// <summary>
-/// 주식당일매매일지/수수료(전일)(t0151): t0151: OutBlock
+/// 주식당일매매일지/수수료(전일): t0151: OutBlock
 /// </summary>
 /// <param name="mdqty">매도수량	long	9</param>
 /// <param name="mdamt">매도약정금액	long	18</param>
@@ -3674,7 +3674,7 @@ public record t0151InBlock([Description("일자	string	8")] string date, [Descri
 public record t0151OutBlock([Description("매도수량	long	9")] long mdqty, [Description("매도약정금액	long	18")] long mdamt, [Description("매도수수료	long	18")] long mdfee, [Description("매도거래세	long	18")] long mdtax, [Description("매도농특세	long	18")] long mdargtax, [Description("매도제비용합	long	18")] long tmdtax, [Description("매도정산금액	long	18")] long mdadjamt, [Description("매수수량	long	9")] long msqty, [Description("매수약정금액	long	18")] long msamt, [Description("매수수수료	long	18")] long msfee, [Description("매수제비용합	long	18")] long tmstax, [Description("매수정산금액	long	18")] long msadjamt, [Description("합계수량	long	9")] long tqty, [Description("합계약정금액	long	18")] long tamt, [Description("합계수수료	long	18")] long tfee, [Description("합계거래세	long	18")] long tottax, [Description("합계농특세	long	18")] long targtax, [Description("합계제비용합	long	18")] long ttax, [Description("합계정산금액	long	18")] long tadjamt, [Description("CTS_매매구분	string	1")] string cts_medosu, [Description("CTS_종목번호	string	12")] string cts_expcode, [Description("CTS_단가	string	9")] string cts_price, [Description("CTS_매체	string	2")] string cts_middiv);
 
 /// <summary>
-/// 주식당일매매일지/수수료(전일)(t0151): t0151: OutBlock1
+/// 주식당일매매일지/수수료(전일): t0151: OutBlock1
 /// </summary>
 /// <param name="medosu">매매구분	string	10</param>
 /// <param name="expcode">종목번호	string	12</param>
@@ -3690,13 +3690,13 @@ public record t0151OutBlock1([Description("매매구분	string	10")] string medo
 
 
 /// <summary>
-/// 서버시간조회(t0167): t0167: InBlock
+/// 서버시간조회: t0167: InBlock
 /// </summary>
 /// <param name="id">id	string	8</param>
 public record t0167InBlock([Description("id	string	8")] string id);
 
 /// <summary>
-/// 서버시간조회(t0167): t0167: OutBlock
+/// 서버시간조회: t0167: OutBlock
 /// </summary>
 /// <param name="dt">일자(YYYYMMDD)	string	8</param>
 /// <param name="time">시간(HHMMSSssssss)	string	12</param>
@@ -3704,7 +3704,7 @@ public record t0167OutBlock([Description("일자(YYYYMMDD)	string	8")] string dt
 
 
 /// <summary>
-/// 주식잔고2(t0424): t0424: InBlock
+/// 주식잔고2: t0424: InBlock
 /// </summary>
 /// <param name="accno">계좌번호	string	11</param>
 /// <param name="passwd">비밀번호	string	8</param>
@@ -3716,7 +3716,7 @@ public record t0167OutBlock([Description("일자(YYYYMMDD)	string	8")] string dt
 public record t0424InBlock([Description("계좌번호	string	11")] string accno, [Description("비밀번호	string	8")] string passwd, [Description("단가구분	string	1")] string prcgb, [Description("체결구분	string	1")] string chegb, [Description("단일가구분	string	1")] string dangb, [Description("제비용포함여부	string	1")] string charge, [Description("CTS_종목번호	string	22")] string cts_expcode);
 
 /// <summary>
-/// 주식잔고2(t0424): t0424: OutBlock
+/// 주식잔고2: t0424: OutBlock
 /// </summary>
 /// <param name="sunamt">추정순자산	long	18</param>
 /// <param name="dtsunik">실현손익	long	18</param>
@@ -3728,7 +3728,7 @@ public record t0424InBlock([Description("계좌번호	string	11")] string accno,
 public record t0424OutBlock([Description("추정순자산	long	18")] long sunamt, [Description("실현손익	long	18")] long dtsunik, [Description("매입금액	long	18")] long mamt, [Description("추정D2예수금	long	18")] long sunamt1, [Description("CTS_종목번호	string	22")] string cts_expcode, [Description("평가금액	long	18")] long tappamt, [Description("평가손익	long	18")] long tdtsunik);
 
 /// <summary>
-/// 주식잔고2(t0424): t0424: OutBlock1
+/// 주식잔고2: t0424: OutBlock1
 /// </summary>
 /// <param name="expcode">종목번호	string	12</param>
 /// <param name="jangb">잔고구분	string	10</param>
@@ -3763,7 +3763,7 @@ public record t0424OutBlock1([Description("종목번호	string	12")] string expc
 
 
 /// <summary>
-/// 주식체결/미체결(t0425): t0425: InBlock
+/// 주식체결/미체결: t0425: InBlock
 /// </summary>
 /// <param name="accno">계좌번호	string	11</param>
 /// <param name="passwd">비밀번호	string	8</param>
@@ -3775,7 +3775,7 @@ public record t0424OutBlock1([Description("종목번호	string	12")] string expc
 public record t0425InBlock([Description("계좌번호	string	11")] string accno, [Description("비밀번호	string	8")] string passwd, [Description("종목번호	string	12")] string expcode, [Description("체결구분	string	1")] string chegb, [Description("매매구분	string	1")] string medosu, [Description("정렬순서	string	1")] string sortgb, [Description("주문번호	string	10")] string cts_ordno);
 
 /// <summary>
-/// 주식체결/미체결(t0425): t0425: OutBlock
+/// 주식체결/미체결: t0425: OutBlock
 /// </summary>
 /// <param name="tqty">총주문수량	long	18</param>
 /// <param name="tcheqty">총체결수량	long	18</param>
@@ -3789,7 +3789,7 @@ public record t0425InBlock([Description("계좌번호	string	11")] string accno,
 public record t0425OutBlock([Description("총주문수량	long	18")] long tqty, [Description("총체결수량	long	18")] long tcheqty, [Description("총미체결수량	long	18")] long tordrem, [Description("추정수수료	long	18")] long cmss, [Description("총주문금액	long	18")] long tamt, [Description("총매도체결금액	long	18")] long tmdamt, [Description("총매수체결금액	long	18")] long tmsamt, [Description("추정제세금	long	18")] long tax, [Description("주문번호	string	10")] string cts_ordno);
 
 /// <summary>
-/// 주식체결/미체결(t0425): t0425: OutBlock1
+/// 주식체결/미체결: t0425: OutBlock1
 /// </summary>
 /// <param name="ordno">주문번호	long	10</param>
 /// <param name="expcode">종목번호	string	12</param>
@@ -3815,7 +3815,7 @@ public record t0425OutBlock1([Description("주문번호	long	10")] long ordno, [
 
 
 /// <summary>
-/// 선물/옵션체결/미체결(t0434): t0434: InBlock
+/// 선물/옵션체결/미체결: t0434: InBlock
 /// </summary>
 /// <param name="accno">계좌번호	string	11</param>
 /// <param name="passwd">비밀번호	string	8</param>
@@ -3826,13 +3826,13 @@ public record t0425OutBlock1([Description("주문번호	long	10")] long ordno, [
 public record t0434InBlock([Description("계좌번호	string	11")] string accno, [Description("비밀번호	string	8")] string passwd, [Description("종목번호	string	8")] string expcode, [Description("체결구분	string	1")] string chegb, [Description("정렬순서	string	1")] string sortgb, [Description("CTS_주문번호	string	7")] string cts_ordno);
 
 /// <summary>
-/// 선물/옵션체결/미체결(t0434): t0434: OutBlock
+/// 선물/옵션체결/미체결: t0434: OutBlock
 /// </summary>
 /// <param name="cts_ordno">CTS_주문번호	string	7</param>
 public record t0434OutBlock([Description("CTS_주문번호	string	7")] string cts_ordno);
 
 /// <summary>
-/// 선물/옵션체결/미체결(t0434): t0434: OutBlock1
+/// 선물/옵션체결/미체결: t0434: OutBlock1
 /// </summary>
 /// <param name="ordno">주문번호	int	7</param>
 /// <param name="orgordno">원주문번호	int	7</param>
@@ -3854,7 +3854,7 @@ public record t0434OutBlock1([Description("주문번호	int	7")] int ordno, [Des
 
 
 /// <summary>
-/// 선물/옵션잔고평가(이동평균)(t0441): t0441: InBlock
+/// 선물/옵션잔고평가(이동평균): t0441: InBlock
 /// </summary>
 /// <param name="accno">계좌번호	string	11</param>
 /// <param name="passwd">비밀번호	string	8</param>
@@ -3863,7 +3863,7 @@ public record t0434OutBlock1([Description("주문번호	int	7")] int ordno, [Des
 public record t0441InBlock([Description("계좌번호	string	11")] string accno, [Description("비밀번호	string	8")] string passwd, [Description("CTS_종목번호	string	8")] string cts_expcode, [Description("CTS_매매구분	string	1")] string cts_medocd);
 
 /// <summary>
-/// 선물/옵션잔고평가(이동평균)(t0441): t0441: OutBlock
+/// 선물/옵션잔고평가(이동평균): t0441: OutBlock
 /// </summary>
 /// <param name="tdtsunik">매매손익합계	long	18</param>
 /// <param name="cts_expcode">CTS_종목번호	string	8</param>
@@ -3873,7 +3873,7 @@ public record t0441InBlock([Description("계좌번호	string	11")] string accno,
 public record t0441OutBlock([Description("매매손익합계	long	18")] long tdtsunik, [Description("CTS_종목번호	string	8")] string cts_expcode, [Description("CTS_매매구분	string	1")] string cts_medocd, [Description("평가금액	long	18")] long tappamt, [Description("평가손익	long	18")] long tsunik);
 
 /// <summary>
-/// 선물/옵션잔고평가(이동평균)(t0441): t0441: OutBlock1
+/// 선물/옵션잔고평가(이동평균): t0441: OutBlock1
 /// </summary>
 /// <param name="expcode">종목번호	string	8</param>
 /// <param name="medosu">구분	string	4</param>
@@ -3892,13 +3892,13 @@ public record t0441OutBlock1([Description("종목번호	string	8")] string expco
 
 
 /// <summary>
-/// 주식현재가호가조회(t1101): t1101: InBlock
+/// 주식현재가호가조회: t1101: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 public record t1101InBlock([Description("단축코드	string	6")] string shcode);
 
 /// <summary>
-/// 주식현재가호가조회(t1101): t1101: OutBlock
+/// 주식현재가호가조회: t1101: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -3990,13 +3990,13 @@ public record t1101OutBlock([Description("한글명	string	20")] string hname, [
 
 
 /// <summary>
-/// 주식현재가(시세)조회(t1102): t1102: InBlock
+/// 주식현재가(시세)조회: t1102: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 public record t1102InBlock([Description("단축코드	string	6")] string shcode);
 
 /// <summary>
-/// 주식현재가(시세)조회(t1102): t1102: OutBlock
+/// 주식현재가(시세)조회: t1102: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4162,14 +4162,14 @@ public record t1102OutBlock([Description("한글명	string	20")] string hname, [
 
 
 /// <summary>
-/// 주식현재가시세메모(t1104): t1104: InBlock
+/// 주식현재가시세메모: t1104: InBlock
 /// </summary>
 /// <param name="code">종목코드	string	6</param>
 /// <param name="nrec">건수	string	2</param>
 public record t1104InBlock([Description("종목코드	string	6")] string code, [Description("건수	string	2")] string nrec);
 
 /// <summary>
-/// 주식현재가시세메모(t1104): t1104: InBlock1
+/// 주식현재가시세메모: t1104: InBlock1
 /// </summary>
 /// <param name="indx">인덱스	string	1</param>
 /// <param name="gubn">조건구분	string	1</param>
@@ -4178,13 +4178,13 @@ public record t1104InBlock([Description("종목코드	string	6")] string code, [
 public record t1104InBlock1([Description("인덱스	string	1")] string indx, [Description("조건구분	string	1")] string gubn, [Description("데이타1	string	1")] string dat1, [Description("데이타2	string	8")] string dat2);
 
 /// <summary>
-/// 주식현재가시세메모(t1104): t1104: OutBlock
+/// 주식현재가시세메모: t1104: OutBlock
 /// </summary>
 /// <param name="nrec">출력건수	string	2</param>
 public record t1104OutBlock([Description("출력건수	string	2")] string nrec);
 
 /// <summary>
-/// 주식현재가시세메모(t1104): t1104: OutBlock1
+/// 주식현재가시세메모: t1104: OutBlock1
 /// </summary>
 /// <param name="indx">인덱스	string	1</param>
 /// <param name="gubn">조건구분	string	1</param>
@@ -4193,13 +4193,13 @@ public record t1104OutBlock1([Description("인덱스	string	1")] string indx, [D
 
 
 /// <summary>
-/// 주식피못/디마크조회(t1105): t1105: InBlock
+/// 주식피못/디마크조회: t1105: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 public record t1105InBlock([Description("단축코드	string	6")] string shcode);
 
 /// <summary>
-/// 주식피못/디마크조회(t1105): t1105: OutBlock
+/// 주식피못/디마크조회: t1105: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="pbot">피봇	int	8</param>
@@ -4214,7 +4214,7 @@ public record t1105OutBlock([Description("단축코드	string	6")] string shcode
 
 
 /// <summary>
-/// 시간외체결량(t1109): t1109: InBlock
+/// 시간외체결량: t1109: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="dan_chetime">체결cts	string	10</param>
@@ -4222,7 +4222,7 @@ public record t1105OutBlock([Description("단축코드	string	6")] string shcode
 public record t1109InBlock([Description("종목코드	string	6")] string shcode, [Description("체결cts	string	10")] string dan_chetime, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시간외체결량(t1109): t1109: OutBlock
+/// 시간외체결량: t1109: OutBlock
 /// </summary>
 /// <param name="ctsshcode">종목cts	string	6</param>
 /// <param name="ctschetime">체결cts	string	10</param>
@@ -4230,7 +4230,7 @@ public record t1109InBlock([Description("종목코드	string	6")] string shcode,
 public record t1109OutBlock([Description("종목cts	string	6")] string ctsshcode, [Description("체결cts	string	10")] string ctschetime, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시간외체결량(t1109): t1109: OutBlock1
+/// 시간외체결량: t1109: OutBlock1
 /// </summary>
 /// <param name="dan_chetime">시간	string	10</param>
 /// <param name="dan_price">현재가	int	8</param>
@@ -4244,7 +4244,7 @@ public record t1109OutBlock1([Description("시간	string	10")] string dan_chetim
 
 
 /// <summary>
-/// 주식시간대별체결조회(t1301): t1301: InBlock
+/// 주식시간대별체결조회: t1301: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="cvolume">특이거래량	long	12</param>
@@ -4254,13 +4254,13 @@ public record t1109OutBlock1([Description("시간	string	10")] string dan_chetim
 public record t1301InBlock([Description("단축코드	string	6")] string shcode, [Description("특이거래량	long	12")] long cvolume, [Description("시작시간	string	4")] string starttime, [Description("종료시간	string	4")] string endtime, [Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 주식시간대별체결조회(t1301): t1301: OutBlock
+/// 주식시간대별체결조회: t1301: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
 public record t1301OutBlock([Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 주식시간대별체결조회(t1301): t1301: OutBlock1
+/// 주식시간대별체결조회: t1301: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	10</param>
 /// <param name="price">현재가	int	8</param>
@@ -4280,7 +4280,7 @@ public record t1301OutBlock1([Description("시간	string	10")] string chetime, [
 
 
 /// <summary>
-/// 주식분별주가조회(t1302): t1302: InBlock
+/// 주식분별주가조회: t1302: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="gubun">작업구분	string	1</param>
@@ -4289,13 +4289,13 @@ public record t1301OutBlock1([Description("시간	string	10")] string chetime, [
 public record t1302InBlock([Description("단축코드	string	6")] string shcode, [Description("작업구분	string	1")] string gubun, [Description("시간	string	6")] string time, [Description("건수	int	3")] int cnt);
 
 /// <summary>
-/// 주식분별주가조회(t1302): t1302: OutBlock
+/// 주식분별주가조회: t1302: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	6</param>
 public record t1302OutBlock([Description("시간CTS	string	6")] string cts_time);
 
 /// <summary>
-/// 주식분별주가조회(t1302): t1302: OutBlock1
+/// 주식분별주가조회: t1302: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	6</param>
 /// <param name="close">종가	int	8</param>
@@ -4324,7 +4324,7 @@ public record t1302OutBlock1([Description("시간	string	6")] string chetime, [D
 
 
 /// <summary>
-/// 기간별주가(t1305): t1305: InBlock
+/// 기간별주가: t1305: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="dwmcode">일주월구분	int	1</param>
@@ -4334,7 +4334,7 @@ public record t1302OutBlock1([Description("시간	string	6")] string chetime, [D
 public record t1305InBlock([Description("단축코드	string	6")] string shcode, [Description("일주월구분	int	1")] int dwmcode, [Description("날짜	string	8")] string date, [Description("IDX	int	4")] int idx, [Description("건수	int	4")] int cnt);
 
 /// <summary>
-/// 기간별주가(t1305): t1305: OutBlock
+/// 기간별주가: t1305: OutBlock
 /// </summary>
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="date">날짜	string	8</param>
@@ -4342,7 +4342,7 @@ public record t1305InBlock([Description("단축코드	string	6")] string shcode,
 public record t1305OutBlock([Description("CNT	int	4")] int cnt, [Description("날짜	string	8")] string date, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 기간별주가(t1305): t1305: OutBlock1
+/// 기간별주가: t1305: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	int	8</param>
@@ -4376,7 +4376,7 @@ public record t1305OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 주식시간대별체결조회챠트(t1308): t1308: InBlock
+/// 주식시간대별체결조회챠트: t1308: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="starttime">시작시간	string	4</param>
@@ -4385,7 +4385,7 @@ public record t1305OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t1308InBlock([Description("단축코드	string	6")] string shcode, [Description("시작시간	string	4")] string starttime, [Description("종료시간	string	4")] string endtime, [Description("분간격	string	2")] string bun_term);
 
 /// <summary>
-/// 주식시간대별체결조회챠트(t1308): t1308: OutBlock1
+/// 주식시간대별체결조회챠트: t1308: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	8</param>
 /// <param name="price">현재가	int	8</param>
@@ -4407,7 +4407,7 @@ public record t1308OutBlock1([Description("시간	string	8")] string chetime, [D
 
 
 /// <summary>
-/// 주식당일전일분틱조회(t1310): t1310: InBlock
+/// 주식당일전일분틱조회: t1310: InBlock
 /// </summary>
 /// <param name="daygb">당일전일구분	string	1</param>
 /// <param name="timegb">분틱구분	string	1</param>
@@ -4417,13 +4417,13 @@ public record t1308OutBlock1([Description("시간	string	8")] string chetime, [D
 public record t1310InBlock([Description("당일전일구분	string	1")] string daygb, [Description("분틱구분	string	1")] string timegb, [Description("단축코드	string	6")] string shcode, [Description("종료시간	string	4")] string endtime, [Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 주식당일전일분틱조회(t1310): t1310: OutBlock
+/// 주식당일전일분틱조회: t1310: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
 public record t1310OutBlock([Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 주식당일전일분틱조회(t1310): t1310: OutBlock1
+/// 주식당일전일분틱조회: t1310: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	10</param>
 /// <param name="price">현재가	int	8</param>
@@ -4443,7 +4443,7 @@ public record t1310OutBlock1([Description("시간	string	10")] string chetime, [
 
 
 /// <summary>
-/// 신규상장종목조회(t1403): t1403: InBlock
+/// 신규상장종목조회: t1403: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="styymm">시작상장월	string	6</param>
@@ -4452,13 +4452,13 @@ public record t1310OutBlock1([Description("시간	string	10")] string chetime, [
 public record t1403InBlock([Description("구분	string	1")] string gubun, [Description("시작상장월	string	6")] string styymm, [Description("종료상장월	string	6")] string enyymm, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 신규상장종목조회(t1403): t1403: OutBlock
+/// 신규상장종목조회: t1403: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1403OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 신규상장종목조회(t1403): t1403: OutBlock1
+/// 신규상장종목조회: t1403: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4477,7 +4477,7 @@ public record t1403OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 관리/불성실/투자유의조회(t1404): t1404: InBlock
+/// 관리/불성실/투자유의조회: t1404: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="jongchk">종목체크	string	1</param>
@@ -4485,13 +4485,13 @@ public record t1403OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1404InBlock([Description("구분	string	1")] string gubun, [Description("종목체크	string	1")] string jongchk, [Description("종목코드_CTS	string	6")] string cts_shcode);
 
 /// <summary>
-/// 관리/불성실/투자유의조회(t1404): t1404: OutBlock
+/// 관리/불성실/투자유의조회: t1404: OutBlock
 /// </summary>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
 public record t1404OutBlock([Description("종목코드_CTS	string	6")] string cts_shcode);
 
 /// <summary>
-/// 관리/불성실/투자유의조회(t1404): t1404: OutBlock1
+/// 관리/불성실/투자유의조회: t1404: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4510,7 +4510,7 @@ public record t1404OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 투자경고/매매정지/정리매매조회(t1405): t1405: InBlock
+/// 투자경고/매매정지/정리매매조회: t1405: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="jongchk">종목체크	string	1</param>
@@ -4518,13 +4518,13 @@ public record t1404OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1405InBlock([Description("구분	string	1")] string gubun, [Description("종목체크	string	1")] string jongchk, [Description("종목코드_CTS	string	6")] string cts_shcode);
 
 /// <summary>
-/// 투자경고/매매정지/정리매매조회(t1405): t1405: OutBlock
+/// 투자경고/매매정지/정리매매조회: t1405: OutBlock
 /// </summary>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
 public record t1405OutBlock([Description("종목코드_CTS	string	6")] string cts_shcode);
 
 /// <summary>
-/// 투자경고/매매정지/정리매매조회(t1405): t1405: OutBlock1
+/// 투자경고/매매정지/정리매매조회: t1405: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4539,20 +4539,20 @@ public record t1405OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 초저유동성조회(t1410): t1410: InBlock
+/// 초저유동성조회: t1410: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
 public record t1410InBlock([Description("구분	string	1")] string gubun, [Description("종목코드_CTS	string	6")] string cts_shcode);
 
 /// <summary>
-/// 초저유동성조회(t1410): t1410: OutBlock
+/// 초저유동성조회: t1410: OutBlock
 /// </summary>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
 public record t1410OutBlock([Description("종목코드_CTS	string	6")] string cts_shcode);
 
 /// <summary>
-/// 초저유동성조회(t1410): t1410: OutBlock1
+/// 초저유동성조회: t1410: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4565,7 +4565,7 @@ public record t1410OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 증거금율별종목조회(t1411): t1411: InBlock
+/// 증거금율별종목조회: t1411: InBlock
 /// </summary>
 /// <param name="gubun">시장구분	string	1</param>
 /// <param name="jongchk">위탁신용구분	string	1</param>
@@ -4575,7 +4575,7 @@ public record t1410OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1411InBlock([Description("시장구분	string	1")] string gubun, [Description("위탁신용구분	string	1")] string jongchk, [Description("증거금율구분	string	1")] string jkrate, [Description("종목코드	string	6")] string shcode, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 증거금율별종목조회(t1411): t1411: OutBlock
+/// 증거금율별종목조회: t1411: OutBlock
 /// </summary>
 /// <param name="jkrate">위탁증거금율	int	3</param>
 /// <param name="sjkrate">신용증거금율	int	3</param>
@@ -4583,7 +4583,7 @@ public record t1411InBlock([Description("시장구분	string	1")] string gubun, 
 public record t1411OutBlock([Description("위탁증거금율	int	3")] int jkrate, [Description("신용증거금율	int	3")] int sjkrate, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 증거금율별종목조회(t1411): t1411: OutBlock1
+/// 증거금율별종목조회: t1411: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="hname">종목명	string	20</param>
@@ -4600,7 +4600,7 @@ public record t1411OutBlock1([Description("종목코드	string	6")] string shcod
 
 
 /// <summary>
-/// 상/하한(t1422): t1422: InBlock
+/// 상/하한: t1422: InBlock
 /// </summary>
 /// <param name="qrygb">조회구분	string	1</param>
 /// <param name="gubun">구분	string	1</param>
@@ -4614,14 +4614,14 @@ public record t1411OutBlock1([Description("종목코드	string	6")] string shcod
 public record t1422InBlock([Description("조회구분	string	1")] string qrygb, [Description("구분	string	1")] string gubun, [Description("전일구분	string	1")] string jnilgubun, [Description("상하한구분	string	1")] string sign, [Description("대상제외	long	12")] long jc_num, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 상/하한(t1422): t1422: OutBlock
+/// 상/하한: t1422: OutBlock
 /// </summary>
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="idx">IDX	int	4</param>
 public record t1422OutBlock([Description("CNT	int	4")] int cnt, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 상/하한(t1422): t1422: OutBlock1
+/// 상/하한: t1422: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4640,7 +4640,7 @@ public record t1422OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 상/하한가직전(t1427): t1427: InBlock
+/// 상/하한가직전: t1427: InBlock
 /// </summary>
 /// <param name="qrygb">조회구분	string	1</param>
 /// <param name="gubun">구분	string	1</param>
@@ -4655,14 +4655,14 @@ public record t1422OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1427InBlock([Description("조회구분	string	1")] string qrygb, [Description("구분	string	1")] string gubun, [Description("상하한가구분	string	1")] string signgubun, [Description("등락율	int	3")] int diff, [Description("대상제외	long	12")] long jc_num, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("IDX	int	4")] int idx, [Description("전일상하한제외	string	1")] string jshex);
 
 /// <summary>
-/// 상/하한가직전(t1427): t1427: OutBlock
+/// 상/하한가직전: t1427: OutBlock
 /// </summary>
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="idx">IDX	int	4</param>
 public record t1427OutBlock([Description("CNT	int	4")] int cnt, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 상/하한가직전(t1427): t1427: OutBlock1
+/// 상/하한가직전: t1427: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4685,7 +4685,7 @@ public record t1427OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 등락율상위(t1441): t1441: InBlock
+/// 등락율상위: t1441: InBlock
 /// </summary>
 /// <param name="gubun1">구분	string	1</param>
 /// <param name="gubun2">상승하락	string	1</param>
@@ -4699,13 +4699,13 @@ public record t1427OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1441InBlock([Description("구분	string	1")] string gubun1, [Description("상승하락	string	1")] string gubun2, [Description("당일전일	string	1")] string gubun3, [Description("대상제외	long	12")] long jc_num, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("IDX	int	4")] int idx, [Description("대상제외2	long	12")] long jc_num2);
 
 /// <summary>
-/// 등락율상위(t1441): t1441: OutBlock
+/// 등락율상위: t1441: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1441OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 등락율상위(t1441): t1441: OutBlock1
+/// 등락율상위: t1441: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4730,7 +4730,7 @@ public record t1441OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 신고/신저가(t1442): t1442: InBlock
+/// 신고/신저가: t1442: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="type1">신고신저	string	1</param>
@@ -4745,13 +4745,13 @@ public record t1441OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1442InBlock([Description("구분	string	1")] string gubun, [Description("신고신저	string	1")] string type1, [Description("기간	string	1")] string type2, [Description("유지여부	string	1")] string type3, [Description("대상제외	long	12")] long jc_num, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("IDX	int	4")] int idx, [Description("대상제외2	long	12")] long jc_num2);
 
 /// <summary>
-/// 신고/신저가(t1442): t1442: OutBlock
+/// 신고/신저가: t1442: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1442OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 신고/신저가(t1442): t1442: OutBlock1
+/// 신고/신저가: t1442: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="hname">종목명	string	20</param>
@@ -4768,20 +4768,20 @@ public record t1442OutBlock1([Description("종목코드	string	6")] string shcod
 
 
 /// <summary>
-/// 시가총액상위(t1444): t1444: InBlock
+/// 시가총액상위: t1444: InBlock
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="idx">IDX	int	4</param>
 public record t1444InBlock([Description("업종코드	string	3")] string upcode, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시가총액상위(t1444): t1444: OutBlock
+/// 시가총액상위: t1444: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1444OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시가총액상위(t1444): t1444: OutBlock1
+/// 시가총액상위: t1444: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="hname">종목명	string	20</param>
@@ -4798,14 +4798,14 @@ public record t1444OutBlock1([Description("종목코드	string	6")] string shcod
 
 
 /// <summary>
-/// 가격대별매매비중조회(t1449): t1449: InBlock
+/// 가격대별매매비중조회: t1449: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="dategb">일자구분	string	1</param>
 public record t1449InBlock([Description("단축코드	string	6")] string shcode, [Description("일자구분	string	1")] string dategb);
 
 /// <summary>
-/// 가격대별매매비중조회(t1449): t1449: OutBlock
+/// 가격대별매매비중조회: t1449: OutBlock
 /// </summary>
 /// <param name="price">현재가	int	8</param>
 /// <param name="sign">전일대비구분	string	1</param>
@@ -4817,7 +4817,7 @@ public record t1449InBlock([Description("단축코드	string	6")] string shcode,
 public record t1449OutBlock([Description("현재가	int	8")] int price, [Description("전일대비구분	string	1")] string sign, [Description("전일대비	int	8")] int change, [Description("등락율	double	6.2")] double diff, [Description("거래량	long	12")] long volume, [Description("매수체결량	long	12")] long msvolume, [Description("매도체결량	long	12")] long mdvolume);
 
 /// <summary>
-/// 가격대별매매비중조회(t1449): t1449: OutBlock1
+/// 가격대별매매비중조회: t1449: OutBlock1
 /// </summary>
 /// <param name="price">체결가	int	8</param>
 /// <param name="sign">전일대비구분	string	1</param>
@@ -4832,7 +4832,7 @@ public record t1449OutBlock1([Description("체결가	int	8")] int price, [Descri
 
 
 /// <summary>
-/// 거래량상위(t1452): t1452: InBlock
+/// 거래량상위: t1452: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="jnilgubun">전일구분	string	1</param>
@@ -4846,13 +4846,13 @@ public record t1449OutBlock1([Description("체결가	int	8")] int price, [Descri
 public record t1452InBlock([Description("구분	string	1")] string gubun, [Description("전일구분	string	1")] string jnilgubun, [Description("시작등락율	int	3")] int sdiff, [Description("종료등락율	int	3")] int ediff, [Description("대상제외	long	12")] long jc_num, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 거래량상위(t1452): t1452: OutBlock
+/// 거래량상위: t1452: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1452OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 거래량상위(t1452): t1452: OutBlock1
+/// 거래량상위: t1452: OutBlock1
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4868,7 +4868,7 @@ public record t1452OutBlock1([Description("종목명	string	20")] string hname, 
 
 
 /// <summary>
-/// 거래대금상위(t1463): t1463: InBlock
+/// 거래대금상위: t1463: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="jnilgubun">전일구분	string	1</param>
@@ -4881,13 +4881,13 @@ public record t1452OutBlock1([Description("종목명	string	20")] string hname, 
 public record t1463InBlock([Description("구분	string	1")] string gubun, [Description("전일구분	string	1")] string jnilgubun, [Description("대상제외	long	12")] long jc_num, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("IDX	int	4")] int idx, [Description("대상제외2	long	12")] long jc_num2);
 
 /// <summary>
-/// 거래대금상위(t1463): t1463: OutBlock
+/// 거래대금상위: t1463: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1463OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 거래대금상위(t1463): t1463: OutBlock1
+/// 거래대금상위: t1463: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -4905,7 +4905,7 @@ public record t1463OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 전일동시간대비거래급증(t1466): t1466: InBlock
+/// 전일동시간대비거래급증: t1466: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="type1">전일거래량	string	1</param>
@@ -4919,14 +4919,14 @@ public record t1463OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1466InBlock([Description("구분	string	1")] string gubun, [Description("전일거래량	string	1")] string type1, [Description("거래급등율	string	1")] string type2, [Description("대상제외	long	12")] long jc_num, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("IDX	int	4")] int idx, [Description("대상제외2	long	12")] long jc_num2);
 
 /// <summary>
-/// 전일동시간대비거래급증(t1466): t1466: OutBlock
+/// 전일동시간대비거래급증: t1466: OutBlock
 /// </summary>
 /// <param name="hhmm">현재시분	string	5</param>
 /// <param name="idx">IDX	int	4</param>
 public record t1466OutBlock([Description("현재시분	string	5")] string hhmm, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 전일동시간대비거래급증(t1466): t1466: OutBlock1
+/// 전일동시간대비거래급증: t1466: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="hname">종목명	string	20</param>
@@ -4944,7 +4944,7 @@ public record t1466OutBlock1([Description("종목코드	string	6")] string shcod
 
 
 /// <summary>
-/// 시간대별호가잔량추이(t1471): t1471: InBlock
+/// 시간대별호가잔량추이: t1471: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="gubun">분구분	string	2</param>
@@ -4953,7 +4953,7 @@ public record t1466OutBlock1([Description("종목코드	string	6")] string shcod
 public record t1471InBlock([Description("종목코드	string	6")] string shcode, [Description("분구분	string	2")] string gubun, [Description("시간	string	6")] string time, [Description("자료개수	string	3")] string cnt);
 
 /// <summary>
-/// 시간대별호가잔량추이(t1471): t1471: OutBlock
+/// 시간대별호가잔량추이: t1471: OutBlock
 /// </summary>
 /// <param name="time">시간CTS	string	6</param>
 /// <param name="price">현재가	int	8</param>
@@ -4964,7 +4964,7 @@ public record t1471InBlock([Description("종목코드	string	6")] string shcode,
 public record t1471OutBlock([Description("시간CTS	string	6")] string time, [Description("현재가	int	8")] int price, [Description("전일대비구분	string	1")] string sign, [Description("전일대비	int	8")] int change, [Description("등락율	double	6.2")] double diff, [Description("누적거래량	long	12")] long volume);
 
 /// <summary>
-/// 시간대별호가잔량추이(t1471): t1471: OutBlock1
+/// 시간대별호가잔량추이: t1471: OutBlock1
 /// </summary>
 /// <param name="time">체결시간	string	6</param>
 /// <param name="preoffercha1">메도증감	long	12</param>
@@ -4982,7 +4982,7 @@ public record t1471OutBlock1([Description("체결시간	string	6")] string time,
 
 
 /// <summary>
-/// 체결강도추이(t1475): t1475: InBlock
+/// 체결강도추이: t1475: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="vptype">상승하락	string	1</param>
@@ -4994,7 +4994,7 @@ public record t1471OutBlock1([Description("체결시간	string	6")] string time,
 public record t1475InBlock([Description("종목코드	string	6")] string shcode, [Description("상승하락	string	1")] string vptype, [Description("데이터개수	int	4")] int datacnt, [Description("기준일자	int	8")] int date, [Description("기준시간	int	6")] int time, [Description("랭크카운터	int	3")] int rankcnt, [Description("조회구분	string	1")] string gubun);
 
 /// <summary>
-/// 체결강도추이(t1475): t1475: OutBlock
+/// 체결강도추이: t1475: OutBlock
 /// </summary>
 /// <param name="date">기준일자	int	8</param>
 /// <param name="time">기준시간	int	6</param>
@@ -5002,7 +5002,7 @@ public record t1475InBlock([Description("종목코드	string	6")] string shcode,
 public record t1475OutBlock([Description("기준일자	int	8")] int date, [Description("기준시간	int	6")] int time, [Description("랭크카운터	int	3")] int rankcnt);
 
 /// <summary>
-/// 체결강도추이(t1475): t1475: OutBlock1
+/// 체결강도추이: t1475: OutBlock1
 /// </summary>
 /// <param name="datetime">일자	string	10</param>
 /// <param name="price">현재가	int	8</param>
@@ -5018,7 +5018,7 @@ public record t1475OutBlock1([Description("일자	string	10")] string datetime, 
 
 
 /// <summary>
-/// 시간외등락율상위(t1481): t1481: InBlock
+/// 시간외등락율상위: t1481: InBlock
 /// </summary>
 /// <param name="gubun1">구분	string	1</param>
 /// <param name="gubun2">상승하락	string	1</param>
@@ -5028,13 +5028,13 @@ public record t1475OutBlock1([Description("일자	string	10")] string datetime, 
 public record t1481InBlock([Description("구분	string	1")] string gubun1, [Description("상승하락	string	1")] string gubun2, [Description("종목체크	string	1")] string jongchk, [Description("거래량	string	1")] string volume, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시간외등락율상위(t1481): t1481: OutBlock
+/// 시간외등락율상위: t1481: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1481OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시간외등락율상위(t1481): t1481: OutBlock1
+/// 시간외등락율상위: t1481: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -5052,7 +5052,7 @@ public record t1481OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 시간외거래량상위(t1482): t1482: InBlock
+/// 시간외거래량상위: t1482: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="jongchk">거래량	string	1</param>
@@ -5060,13 +5060,13 @@ public record t1481OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1482InBlock([Description("구분	string	1")] string gubun, [Description("거래량	string	1")] string jongchk, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시간외거래량상위(t1482): t1482: OutBlock
+/// 시간외거래량상위: t1482: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1482OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시간외거래량상위(t1482): t1482: OutBlock1
+/// 시간외거래량상위: t1482: OutBlock1
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -5081,14 +5081,14 @@ public record t1482OutBlock1([Description("종목명	string	20")] string hname, 
 
 
 /// <summary>
-/// 예상지수(t1485): t1485: InBlock
+/// 예상지수: t1485: InBlock
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="gubun">조회구분	string	1</param>
 public record t1485InBlock([Description("업종코드	string	3")] string upcode, [Description("조회구분	string	1")] string gubun);
 
 /// <summary>
-/// 예상지수(t1485): t1485: OutBlock
+/// 예상지수: t1485: OutBlock
 /// </summary>
 /// <param name="pricejisu">현재지수	double	10.2</param>
 /// <param name="sign">지수전일대비구분	string	1</param>
@@ -5103,7 +5103,7 @@ public record t1485InBlock([Description("업종코드	string	3")] string upcode,
 public record t1485OutBlock([Description("현재지수	double	10.2")] double pricejisu, [Description("지수전일대비구분	string	1")] string sign, [Description("전일대비	double	10.2")] double change, [Description("거래량	long	12")] long volume, [Description("상승종목수	int	4")] int yhighjo, [Description("상한종목수	int	4")] int yupjo, [Description("보합종목수	int	4")] int yunchgjo, [Description("하락종목수	int	4")] int ylowjo, [Description("하한종목수	int	4")] int ydownjo, [Description("거래형성수	int	4")] int ytrajo);
 
 /// <summary>
-/// 예상지수(t1485): t1485: OutBlock1
+/// 예상지수: t1485: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	6</param>
 /// <param name="jisu">예상지수	double	10.2</param>
@@ -5116,7 +5116,7 @@ public record t1485OutBlock1([Description("시간	string	6")] string chetime, [D
 
 
 /// <summary>
-/// 시간별예상체결가(t1486): t1486: InBlock
+/// 시간별예상체결가: t1486: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="cts_time">시간CTS	string	10</param>
@@ -5124,13 +5124,13 @@ public record t1485OutBlock1([Description("시간	string	6")] string chetime, [D
 public record t1486InBlock([Description("단축코드	string	6")] string shcode, [Description("시간CTS	string	10")] string cts_time, [Description("조회건수	int	4")] int cnt);
 
 /// <summary>
-/// 시간별예상체결가(t1486): t1486: OutBlock
+/// 시간별예상체결가: t1486: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
 public record t1486OutBlock([Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 시간별예상체결가(t1486): t1486: OutBlock1
+/// 시간별예상체결가: t1486: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	8</param>
 /// <param name="price">예상체결가	int	8</param>
@@ -5146,7 +5146,7 @@ public record t1486OutBlock1([Description("시간	string	8")] string chetime, [D
 
 
 /// <summary>
-/// 예상체결가등락율상위조회(t1488): t1488: InBlock
+/// 예상체결가등락율상위조회: t1488: InBlock
 /// </summary>
 /// <param name="gubun">거래소구분	string	1</param>
 /// <param name="sign">상하락구분	string	1</param>
@@ -5160,13 +5160,13 @@ public record t1486OutBlock1([Description("시간	string	8")] string chetime, [D
 public record t1488InBlock([Description("거래소구분	string	1")] string gubun, [Description("상하락구분	string	1")] string sign, [Description("장구분	string	1")] string jgubun, [Description("종목체크	string	12")] string jongchk, [Description("IDX	int	4")] int idx, [Description("거래량	string	1")] string volume, [Description("예상체결시작가격	int	8")] int yesprice, [Description("예상체결종료가격	int	8")] int yeeprice, [Description("예상체결량	long	12")] long yevolume);
 
 /// <summary>
-/// 예상체결가등락율상위조회(t1488): t1488: OutBlock
+/// 예상체결가등락율상위조회: t1488: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1488OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 예상체결가등락율상위조회(t1488): t1488: OutBlock1
+/// 예상체결가등락율상위조회: t1488: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -5186,7 +5186,7 @@ public record t1488OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 예상체결량상위조회(t1489): t1489: InBlock
+/// 예상체결량상위조회: t1489: InBlock
 /// </summary>
 /// <param name="gubun">거래소구분	string	1</param>
 /// <param name="jgubun">장구분	string	1</param>
@@ -5198,13 +5198,13 @@ public record t1488OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1489InBlock([Description("거래소구분	string	1")] string gubun, [Description("장구분	string	1")] string jgubun, [Description("종목체크	string	12")] string jongchk, [Description("IDX	int	4")] int idx, [Description("예상체결시작가격	int	8")] int yesprice, [Description("예상체결종료가격	int	8")] int yeeprice, [Description("예상체결량	long	12")] long yevolume);
 
 /// <summary>
-/// 예상체결량상위조회(t1489): t1489: OutBlock
+/// 예상체결량상위조회: t1489: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1489OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 예상체결량상위조회(t1489): t1489: OutBlock1
+/// 예상체결량상위조회: t1489: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -5220,7 +5220,7 @@ public record t1489OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 단일가예상등락율상위(t1492): t1492: InBlock
+/// 단일가예상등락율상위: t1492: InBlock
 /// </summary>
 /// <param name="gubun1">구분	string	1</param>
 /// <param name="gubun2">상승하락	string	1</param>
@@ -5230,13 +5230,13 @@ public record t1489OutBlock1([Description("한글명	string	20")] string hname, 
 public record t1492InBlock([Description("구분	string	1")] string gubun1, [Description("상승하락	string	1")] string gubun2, [Description("종목체크	string	1")] string jongchk, [Description("거래량	string	1")] string volume, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 단일가예상등락율상위(t1492): t1492: OutBlock
+/// 단일가예상등락율상위: t1492: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1492OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 단일가예상등락율상위(t1492): t1492: OutBlock1
+/// 단일가예상등락율상위: t1492: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">예상체결가	int	8</param>
@@ -5255,13 +5255,13 @@ public record t1492OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 업종현재가(t1511): t1511: InBlock
+/// 업종현재가: t1511: InBlock
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
 public record t1511InBlock([Description("업종코드	string	3")] string upcode);
 
 /// <summary>
-/// 업종현재가(t1511): t1511: OutBlock
+/// 업종현재가: t1511: OutBlock
 /// </summary>
 /// <param name="gubun">업종구분	string	1</param>
 /// <param name="hname">업종명	string	20</param>
@@ -5332,7 +5332,7 @@ public record t1511OutBlock([Description("업종구분	string	1")] string gubun,
 
 
 /// <summary>
-/// 업종기간별추이(t1514): t1514: InBlock
+/// 업종기간별추이: t1514: InBlock
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="gubun1">구분1	string	1</param>
@@ -5343,13 +5343,13 @@ public record t1511OutBlock([Description("업종구분	string	1")] string gubun,
 public record t1514InBlock([Description("업종코드	string	3")] string upcode, [Description("구분1	string	1")] string gubun1, [Description("구분2	string	1")] string gubun2, [Description("CTS_일자	string	8")] string cts_date, [Description("조회건수	int	4")] int cnt, [Description("비중구분	string	1")] string rate_gbn);
 
 /// <summary>
-/// 업종기간별추이(t1514): t1514: OutBlock
+/// 업종기간별추이: t1514: OutBlock
 /// </summary>
 /// <param name="cts_date">CTS_일자	string	8</param>
 public record t1514OutBlock([Description("CTS_일자	string	8")] string cts_date);
 
 /// <summary>
-/// 업종기간별추이(t1514): t1514: OutBlock1
+/// 업종기간별추이: t1514: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="jisu">지수	double	12.2</param>
@@ -5379,7 +5379,7 @@ public record t1514OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 업종별종목시세(t1516): t1516: InBlock
+/// 업종별종목시세: t1516: InBlock
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="gubun">구분	string	1</param>
@@ -5387,7 +5387,7 @@ public record t1514OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t1516InBlock([Description("업종코드	string	3")] string upcode, [Description("구분	string	1")] string gubun, [Description("종목코드	string	6")] string shcode);
 
 /// <summary>
-/// 업종별종목시세(t1516): t1516: OutBlock
+/// 업종별종목시세: t1516: OutBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="pricejisu">지수	double	12.2</param>
@@ -5397,7 +5397,7 @@ public record t1516InBlock([Description("업종코드	string	3")] string upcode,
 public record t1516OutBlock([Description("종목코드	string	6")] string shcode, [Description("지수	double	12.2")] double pricejisu, [Description("전일대비구분	string	1")] string sign, [Description("전일대비	double	7.2")] double change, [Description("등락율	double	6.2")] double jdiff);
 
 /// <summary>
-/// 업종별종목시세(t1516): t1516: OutBlock1
+/// 업종별종목시세: t1516: OutBlock1
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -5421,14 +5421,14 @@ public record t1516OutBlock1([Description("종목명	string	20")] string hname, 
 
 
 /// <summary>
-/// 테마별종목(t1531): t1531: InBlock
+/// 테마별종목: t1531: InBlock
 /// </summary>
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="tmcode">테마코드	string	4</param>
 public record t1531InBlock([Description("테마명	string	36")] string tmname, [Description("테마코드	string	4")] string tmcode);
 
 /// <summary>
-/// 테마별종목(t1531): t1531: OutBlock
+/// 테마별종목: t1531: OutBlock
 /// </summary>
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="avgdiff">평균등락율	double	6.2</param>
@@ -5437,13 +5437,13 @@ public record t1531OutBlock([Description("테마명	string	36")] string tmname, 
 
 
 /// <summary>
-/// 종목별테마(t1532): t1532: InBlock
+/// 종목별테마: t1532: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 public record t1532InBlock([Description("종목코드	string	6")] string shcode);
 
 /// <summary>
-/// 종목별테마(t1532): t1532: OutBlock
+/// 종목별테마: t1532: OutBlock
 /// </summary>
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="avgdiff">평균등락율	double	6.2</param>
@@ -5452,20 +5452,20 @@ public record t1532OutBlock([Description("테마명	string	36")] string tmname, 
 
 
 /// <summary>
-/// 특이테마(t1533): t1533: InBlock
+/// 특이테마: t1533: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="chgdate">대비일자	int	2</param>
 public record t1533InBlock([Description("구분	string	1")] string gubun, [Description("대비일자	int	2")] int chgdate);
 
 /// <summary>
-/// 특이테마(t1533): t1533: OutBlock
+/// 특이테마: t1533: OutBlock
 /// </summary>
 /// <param name="bdate">일자	string	8</param>
 public record t1533OutBlock([Description("일자	string	8")] string bdate);
 
 /// <summary>
-/// 특이테마(t1533): t1533: OutBlock1
+/// 특이테마: t1533: OutBlock1
 /// </summary>
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="totcnt">전체	int	4</param>
@@ -5480,13 +5480,13 @@ public record t1533OutBlock1([Description("테마명	string	36")] string tmname,
 
 
 /// <summary>
-/// 테마종목별시세조회(t1537): t1537: InBlock
+/// 테마종목별시세조회: t1537: InBlock
 /// </summary>
 /// <param name="tmcode">테마코드	string	4</param>
 public record t1537InBlock([Description("테마코드	string	4")] string tmcode);
 
 /// <summary>
-/// 테마종목별시세조회(t1537): t1537: OutBlock
+/// 테마종목별시세조회: t1537: OutBlock
 /// </summary>
 /// <param name="upcnt">상승종목수	int	4</param>
 /// <param name="tmcnt">테마종목수	int	4</param>
@@ -5495,7 +5495,7 @@ public record t1537InBlock([Description("테마코드	string	4")] string tmcode)
 public record t1537OutBlock([Description("상승종목수	int	4")] int upcnt, [Description("테마종목수	int	4")] int tmcnt, [Description("상승종목비율	int	4")] int uprate, [Description("테마명	string	36")] string tmname);
 
 /// <summary>
-/// 테마종목별시세조회(t1537): t1537: OutBlock1
+/// 테마종목별시세조회: t1537: OutBlock1
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -5515,7 +5515,7 @@ public record t1537OutBlock1([Description("종목명	string	20")] string hname, 
 
 
 /// <summary>
-/// 투자자별종합(t1601): t1601: InBlock
+/// 투자자별종합: t1601: InBlock
 /// </summary>
 /// <param name="gubun1">주식금액수량구분1	string	1</param>
 /// <param name="gubun2">옵션금액수량구분2	string	1</param>
@@ -5524,7 +5524,7 @@ public record t1537OutBlock1([Description("종목명	string	20")] string hname, 
 public record t1601InBlock([Description("주식금액수량구분1	string	1")] string gubun1, [Description("옵션금액수량구분2	string	1")] string gubun2, [Description("금액단위	string	1")] string gubun3, [Description("선물금액수량구분4	string	1")] string gubun4);
 
 /// <summary>
-/// 투자자별종합(t1601): t1601: OutBlock1
+/// 투자자별종합: t1601: OutBlock1
 /// </summary>
 /// <param name="tjjcode_08">개인투자자코드	string	4</param>
 /// <param name="ms_08">개인매수	long	12</param>
@@ -5589,7 +5589,7 @@ public record t1601InBlock([Description("주식금액수량구분1	string	1")] s
 public record t1601OutBlock1([Description("개인투자자코드	string	4")] string tjjcode_08, [Description("개인매수	long	12")] long ms_08, [Description("개인매도	long	12")] long md_08, [Description("개인증감	long	12")] long rate_08, [Description("개인순매수	long	12")] long svolume_08, [Description("외국인투자자코드	string	4")] string jjcode_17, [Description("외국인매수	long	12")] long ms_17, [Description("외국인매도	long	12")] long md_17, [Description("외국인증감	long	12")] long rate_17, [Description("외국인순매수	long	12")] long svolume_17, [Description("기관계투자자코드	string	4")] string jjcode_18, [Description("기관계매수	long	12")] long ms_18, [Description("기관계매도	long	12")] long md_18, [Description("기관계증감	long	12")] long rate_18, [Description("기관계순매수	long	12")] long svolume_18, [Description("증권투자자코드	string	4")] string jjcode_01, [Description("증권매수	long	12")] long ms_01, [Description("증권매도	long	12")] long md_01, [Description("증권증감	long	12")] long rate_01, [Description("증권순매수	long	12")] long svolume_01, [Description("투신투자자코드	string	4")] string jjcode_03, [Description("투신매수	long	12")] long ms_03, [Description("투신매도	long	12")] long md_03, [Description("투신증감	long	12")] long rate_03, [Description("투신순매수	long	12")] long svolume_03, [Description("은행투자자코드	string	4")] string jjcode_04, [Description("은행매수	long	12")] long ms_04, [Description("은행매도	long	12")] long md_04, [Description("은행증감	long	12")] long rate_04, [Description("은행순매수	long	12")] long svolume_04, [Description("보험투자자코드	string	4")] string jjcode_02, [Description("보험매수	long	12")] long ms_02, [Description("보험매도	long	12")] long md_02, [Description("보험증감	long	12")] long rate_02, [Description("보험순매수	long	12")] long svolume_02, [Description("종금투자자코드	string	4")] string jjcode_05, [Description("종금매수	long	12")] long ms_05, [Description("종금매도	long	12")] long md_05, [Description("종금증감	long	12")] long rate_05, [Description("종금순매수	long	12")] long svolume_05, [Description("기금투자자코드	string	4")] string jjcode_06, [Description("기금매수	long	12")] long ms_06, [Description("기금매도	long	12")] long md_06, [Description("기금증감	long	12")] long rate_06, [Description("기금순매수	long	12")] long svolume_06, [Description("국가투자코드	string	4")] string jjcode_11, [Description("국가매수	long	12")] long ms_11, [Description("국가매도	long	12")] long md_11, [Description("국가증감	long	12")] long rate_11, [Description("국가순매수	long	12")] long svolume_11, [Description("기타투자자코드	string	4")] string jjcode_07, [Description("기타매수	long	12")] long ms_07, [Description("기타매도	long	12")] long md_07, [Description("기타증감	long	12")] long rate_07, [Description("기타순매수	long	12")] long svolume_07, [Description("사모펀드투자자코드	string	4")] string jjcode_00, [Description("사모펀드매수	long	12")] long ms_00, [Description("사모펀드매도	long	12")] long md_00, [Description("사모펀드증감	long	12")] long rate_00, [Description("사모펀드순매수	long	12")] long svolume_00);
 
 /// <summary>
-/// 투자자별종합(t1601): t1601: OutBlock2
+/// 투자자별종합: t1601: OutBlock2
 /// </summary>
 /// <param name="tjjcode_08">개인투자자코드	string	4</param>
 /// <param name="ms_08">개인매수	long	12</param>
@@ -5654,7 +5654,7 @@ public record t1601OutBlock1([Description("개인투자자코드	string	4")] str
 public record t1601OutBlock2([Description("개인투자자코드	string	4")] string tjjcode_08, [Description("개인매수	long	12")] long ms_08, [Description("개인매도	long	12")] long md_08, [Description("개인증감	long	12")] long rate_08, [Description("개인순매수	long	12")] long svolume_08, [Description("외국인투자자코드	string	4")] string jjcode_17, [Description("외국인매수	long	12")] long ms_17, [Description("외국인매도	long	12")] long md_17, [Description("외국인증감	long	12")] long rate_17, [Description("외국인순매수	long	12")] long svolume_17, [Description("기관계투자자코드	string	4")] string jjcode_18, [Description("기관계매수	long	12")] long ms_18, [Description("기관계매도	long	12")] long md_18, [Description("기관계증감	long	12")] long rate_18, [Description("기관계순매수	long	12")] long svolume_18, [Description("증권투자자코드	string	4")] string jjcode_01, [Description("증권매수	long	12")] long ms_01, [Description("증권매도	long	12")] long md_01, [Description("증권증감	long	12")] long rate_01, [Description("증권순매수	long	12")] long svolume_01, [Description("투신투자자코드	string	4")] string jjcode_03, [Description("투신매수	long	12")] long ms_03, [Description("투신매도	long	12")] long md_03, [Description("투신증감	long	12")] long rate_03, [Description("투신순매수	long	12")] long svolume_03, [Description("은행투자자코드	string	4")] string jjcode_04, [Description("은행매수	long	12")] long ms_04, [Description("은행매도	long	12")] long md_04, [Description("은행증감	long	12")] long rate_04, [Description("은행순매수	long	12")] long svolume_04, [Description("보험투자자코드	string	4")] string jjcode_02, [Description("보험매수	long	12")] long ms_02, [Description("보험매도	long	12")] long md_02, [Description("보험증감	long	12")] long rate_02, [Description("보험순매수	long	12")] long svolume_02, [Description("종금투자자코드	string	4")] string jjcode_05, [Description("종금매수	long	12")] long ms_05, [Description("종금매도	long	12")] long md_05, [Description("종금증감	long	12")] long rate_05, [Description("종금순매수	long	12")] long svolume_05, [Description("기금투자자코드	string	4")] string jjcode_06, [Description("기금매수	long	12")] long ms_06, [Description("기금매도	long	12")] long md_06, [Description("기금증감	long	12")] long rate_06, [Description("기금순매수	long	12")] long svolume_06, [Description("국가투자코드	string	4")] string jjcode_11, [Description("국가매수	long	12")] long ms_11, [Description("국가매도	long	12")] long md_11, [Description("국가증감	long	12")] long rate_11, [Description("국가순매수	long	12")] long svolume_11, [Description("기타투자자코드	string	4")] string jjcode_07, [Description("기타매수	long	12")] long ms_07, [Description("기타매도	long	12")] long md_07, [Description("기타증감	long	12")] long rate_07, [Description("기타순매수	long	12")] long svolume_07, [Description("사모펀드투자자코드	string	4")] string jjcode_00, [Description("사모펀드매수	long	12")] long ms_00, [Description("사모펀드매도	long	12")] long md_00, [Description("사모펀드증감	long	12")] long rate_00, [Description("사모펀드순매수	long	12")] long svolume_00);
 
 /// <summary>
-/// 투자자별종합(t1601): t1601: OutBlock3
+/// 투자자별종합: t1601: OutBlock3
 /// </summary>
 /// <param name="tjjcode_08">개인투자자코드	string	4</param>
 /// <param name="ms_08">개인매수	long	12</param>
@@ -5719,7 +5719,7 @@ public record t1601OutBlock2([Description("개인투자자코드	string	4")] str
 public record t1601OutBlock3([Description("개인투자자코드	string	4")] string tjjcode_08, [Description("개인매수	long	12")] long ms_08, [Description("개인매도	long	12")] long md_08, [Description("개인증감	long	12")] long rate_08, [Description("개인순매수	long	12")] long svolume_08, [Description("외국인투자자코드	string	4")] string jjcode_17, [Description("외국인매수	long	12")] long ms_17, [Description("외국인매도	long	12")] long md_17, [Description("외국인증감	long	12")] long rate_17, [Description("외국인순매수	long	12")] long svolume_17, [Description("기관계투자자코드	string	4")] string jjcode_18, [Description("기관계매수	long	12")] long ms_18, [Description("기관계매도	long	12")] long md_18, [Description("기관계증감	long	12")] long rate_18, [Description("기관계순매수	long	12")] long svolume_18, [Description("증권투자자코드	string	4")] string jjcode_01, [Description("증권매수	long	12")] long ms_01, [Description("증권매도	long	12")] long md_01, [Description("증권증감	long	12")] long rate_01, [Description("증권순매수	long	12")] long svolume_01, [Description("투신투자자코드	string	4")] string jjcode_03, [Description("투신매수	long	12")] long ms_03, [Description("투신매도	long	12")] long md_03, [Description("투신증감	long	12")] long rate_03, [Description("투신순매수	long	12")] long svolume_03, [Description("은행투자자코드	string	4")] string jjcode_04, [Description("은행매수	long	12")] long ms_04, [Description("은행매도	long	12")] long md_04, [Description("은행증감	long	12")] long rate_04, [Description("은행순매수	long	12")] long svolume_04, [Description("보험투자자코드	string	4")] string jjcode_02, [Description("보험매수	long	12")] long ms_02, [Description("보험매도	long	12")] long md_02, [Description("보험증감	long	12")] long rate_02, [Description("보험순매수	long	12")] long svolume_02, [Description("종금투자자코드	string	4")] string jjcode_05, [Description("종금매수	long	12")] long ms_05, [Description("종금매도	long	12")] long md_05, [Description("종금증감	long	12")] long rate_05, [Description("종금순매수	long	12")] long svolume_05, [Description("기금투자자코드	string	4")] string jjcode_06, [Description("기금매수	long	12")] long ms_06, [Description("기금매도	long	12")] long md_06, [Description("기금증감	long	12")] long rate_06, [Description("기금순매수	long	12")] long svolume_06, [Description("국가투자코드	string	4")] string jjcode_11, [Description("국가매수	long	12")] long ms_11, [Description("국가매도	long	12")] long md_11, [Description("국가증감	long	12")] long rate_11, [Description("국가순매수	long	12")] long svolume_11, [Description("기타투자자코드	string	4")] string jjcode_07, [Description("기타매수	long	12")] long ms_07, [Description("기타매도	long	12")] long md_07, [Description("기타증감	long	12")] long rate_07, [Description("기타순매수	long	12")] long svolume_07, [Description("사모펀드투자자코드	string	4")] string jjcode_00, [Description("사모펀드매수	long	12")] long ms_00, [Description("사모펀드매도	long	12")] long md_00, [Description("사모펀드증감	long	12")] long rate_00, [Description("사모펀드순매수	long	12")] long svolume_00);
 
 /// <summary>
-/// 투자자별종합(t1601): t1601: OutBlock4
+/// 투자자별종합: t1601: OutBlock4
 /// </summary>
 /// <param name="tjjcode_08">개인투자자코드	string	4</param>
 /// <param name="ms_08">개인매수	long	12</param>
@@ -5784,7 +5784,7 @@ public record t1601OutBlock3([Description("개인투자자코드	string	4")] str
 public record t1601OutBlock4([Description("개인투자자코드	string	4")] string tjjcode_08, [Description("개인매수	long	12")] long ms_08, [Description("개인매도	long	12")] long md_08, [Description("개인증감	long	12")] long rate_08, [Description("개인순매수	long	12")] long svolume_08, [Description("외국인투자자코드	string	4")] string jjcode_17, [Description("외국인매수	long	12")] long ms_17, [Description("외국인매도	long	12")] long md_17, [Description("외국인증감	long	12")] long rate_17, [Description("외국인순매수	long	12")] long svolume_17, [Description("기관계투자자코드	string	4")] string jjcode_18, [Description("기관계매수	long	12")] long ms_18, [Description("기관계매도	long	12")] long md_18, [Description("기관계증감	long	12")] long rate_18, [Description("기관계순매수	long	12")] long svolume_18, [Description("증권투자자코드	string	4")] string jjcode_01, [Description("증권매수	long	12")] long ms_01, [Description("증권매도	long	12")] long md_01, [Description("증권증감	long	12")] long rate_01, [Description("증권순매수	long	12")] long svolume_01, [Description("투신투자자코드	string	4")] string jjcode_03, [Description("투신매수	long	12")] long ms_03, [Description("투신매도	long	12")] long md_03, [Description("투신증감	long	12")] long rate_03, [Description("투신순매수	long	12")] long svolume_03, [Description("은행투자자코드	string	4")] string jjcode_04, [Description("은행매수	long	12")] long ms_04, [Description("은행매도	long	12")] long md_04, [Description("은행증감	long	12")] long rate_04, [Description("은행순매수	long	12")] long svolume_04, [Description("보험투자자코드	string	4")] string jjcode_02, [Description("보험매수	long	12")] long ms_02, [Description("보험매도	long	12")] long md_02, [Description("보험증감	long	12")] long rate_02, [Description("보험순매수	long	12")] long svolume_02, [Description("종금투자자코드	string	4")] string jjcode_05, [Description("종금매수	long	12")] long ms_05, [Description("종금매도	long	12")] long md_05, [Description("종금증감	long	12")] long rate_05, [Description("종금순매수	long	12")] long svolume_05, [Description("기금투자자코드	string	4")] string jjcode_06, [Description("기금매수	long	12")] long ms_06, [Description("기금매도	long	12")] long md_06, [Description("기금증감	long	12")] long rate_06, [Description("기금순매수	long	12")] long svolume_06, [Description("국가투자코드	string	4")] string jjcode_11, [Description("국가매수	long	12")] long ms_11, [Description("국가매도	long	12")] long md_11, [Description("국가증감	long	12")] long rate_11, [Description("국가순매수	long	12")] long svolume_11, [Description("기타투자자코드	string	4")] string jjcode_07, [Description("기타매수	long	12")] long ms_07, [Description("기타매도	long	12")] long md_07, [Description("기타증감	long	12")] long rate_07, [Description("기타순매수	long	12")] long svolume_07, [Description("사모펀드투자자코드	string	4")] string jjcode_00, [Description("사모펀드매수	long	12")] long ms_00, [Description("사모펀드매도	long	12")] long md_00, [Description("사모펀드증감	long	12")] long rate_00, [Description("사모펀드순매수	long	12")] long svolume_00);
 
 /// <summary>
-/// 투자자별종합(t1601): t1601: OutBlock5
+/// 투자자별종합: t1601: OutBlock5
 /// </summary>
 /// <param name="tjjcode_08">개인투자자코드	string	4</param>
 /// <param name="ms_08">개인매수	long	12</param>
@@ -5849,7 +5849,7 @@ public record t1601OutBlock4([Description("개인투자자코드	string	4")] str
 public record t1601OutBlock5([Description("개인투자자코드	string	4")] string tjjcode_08, [Description("개인매수	long	12")] long ms_08, [Description("개인매도	long	12")] long md_08, [Description("개인증감	long	12")] long rate_08, [Description("개인순매수	long	12")] long svolume_08, [Description("외국인투자자코드	string	4")] string jjcode_17, [Description("외국인매수	long	12")] long ms_17, [Description("외국인매도	long	12")] long md_17, [Description("외국인증감	long	12")] long rate_17, [Description("외국인순매수	long	12")] long svolume_17, [Description("기관계투자자코드	string	4")] string jjcode_18, [Description("기관계매수	long	12")] long ms_18, [Description("기관계매도	long	12")] long md_18, [Description("기관계증감	long	12")] long rate_18, [Description("기관계순매수	long	12")] long svolume_18, [Description("증권투자자코드	string	4")] string jjcode_01, [Description("증권매수	long	12")] long ms_01, [Description("증권매도	long	12")] long md_01, [Description("증권증감	long	12")] long rate_01, [Description("증권순매수	long	12")] long svolume_01, [Description("투신투자자코드	string	4")] string jjcode_03, [Description("투신매수	long	12")] long ms_03, [Description("투신매도	long	12")] long md_03, [Description("투신증감	long	12")] long rate_03, [Description("투신순매수	long	12")] long svolume_03, [Description("은행투자자코드	string	4")] string jjcode_04, [Description("은행매수	long	12")] long ms_04, [Description("은행매도	long	12")] long md_04, [Description("은행증감	long	12")] long rate_04, [Description("은행순매수	long	12")] long svolume_04, [Description("보험투자자코드	string	4")] string jjcode_02, [Description("보험매수	long	12")] long ms_02, [Description("보험매도	long	12")] long md_02, [Description("보험증감	long	12")] long rate_02, [Description("보험순매수	long	12")] long svolume_02, [Description("종금투자자코드	string	4")] string jjcode_05, [Description("종금매수	long	12")] long ms_05, [Description("종금매도	long	12")] long md_05, [Description("종금증감	long	12")] long rate_05, [Description("종금순매수	long	12")] long svolume_05, [Description("기금투자자코드	string	4")] string jjcode_06, [Description("기금매수	long	12")] long ms_06, [Description("기금매도	long	12")] long md_06, [Description("기금증감	long	12")] long rate_06, [Description("기금순매수	long	12")] long svolume_06, [Description("국가투자코드	string	4")] string jjcode_11, [Description("국가매수	long	12")] long ms_11, [Description("국가매도	long	12")] long md_11, [Description("국가증감	long	12")] long rate_11, [Description("국가순매수	long	12")] long svolume_11, [Description("기타투자자코드	string	4")] string jjcode_07, [Description("기타매수	long	12")] long ms_07, [Description("기타매도	long	12")] long md_07, [Description("기타증감	long	12")] long rate_07, [Description("기타순매수	long	12")] long svolume_07, [Description("사모펀드투자자코드	string	4")] string jjcode_00, [Description("사모펀드매수	long	12")] long ms_00, [Description("사모펀드매도	long	12")] long md_00, [Description("사모펀드증감	long	12")] long rate_00, [Description("사모펀드순매수	long	12")] long svolume_00);
 
 /// <summary>
-/// 투자자별종합(t1601): t1601: OutBlock6
+/// 투자자별종합: t1601: OutBlock6
 /// </summary>
 /// <param name="tjjcode_08">개인투자자코드	string	4</param>
 /// <param name="ms_08">개인매수	long	12</param>
@@ -5915,7 +5915,7 @@ public record t1601OutBlock6([Description("개인투자자코드	string	4")] str
 
 
 /// <summary>
-/// 시간대별투자자매매추이(t1602): t1602: InBlock
+/// 시간대별투자자매매추이: t1602: InBlock
 /// </summary>
 /// <param name="market">시장구분	string	1</param>
 /// <param name="upcode">업종코드	string	3</param>
@@ -5928,7 +5928,7 @@ public record t1601OutBlock6([Description("개인투자자코드	string	4")] str
 public record t1602InBlock([Description("시장구분	string	1")] string market, [Description("업종코드	string	3")] string upcode, [Description("수량구분	string	1")] string gubun1, [Description("전일분구분	string	1")] string gubun2, [Description("CTSTIME	string	8")] string cts_time, [Description("CTSIDX	int	4")] int cts_idx, [Description("조회건수	int	4")] int cnt, [Description("직전대비구분(C:직전대비)	string	1")] string gubun3);
 
 /// <summary>
-/// 시간대별투자자매매추이(t1602): t1602: OutBlock
+/// 시간대별투자자매매추이: t1602: OutBlock
 /// </summary>
 /// <param name="cts_time">CTSTIME	string	8</param>
 /// <param name="tjjcode_08">개인투자자코드	string	4</param>
@@ -5994,7 +5994,7 @@ public record t1602InBlock([Description("시장구분	string	1")] string market,
 public record t1602OutBlock([Description("CTSTIME	string	8")] string cts_time, [Description("개인투자자코드	string	4")] string tjjcode_08, [Description("개인매수	long	12")] long ms_08, [Description("개인매도	long	12")] long md_08, [Description("개인증감	long	12")] long rate_08, [Description("개인순매수	long	12")] long svolume_08, [Description("외국인투자자코드	string	4")] string jjcode_17, [Description("외국인매수	long	12")] long ms_17, [Description("외국인매도	long	12")] long md_17, [Description("외국인증감	long	12")] long rate_17, [Description("외국인순매수	long	12")] long svolume_17, [Description("기관계투자자코드	string	4")] string jjcode_18, [Description("기관계매수	long	12")] long ms_18, [Description("기관계매도	long	12")] long md_18, [Description("기관계증감	long	12")] long rate_18, [Description("기관계순매수	long	12")] long svolume_18, [Description("증권투자자코드	string	4")] string jjcode_01, [Description("증권매수	long	12")] long ms_01, [Description("증권매도	long	12")] long md_01, [Description("증권증감	long	12")] long rate_01, [Description("증권순매수	long	12")] long svolume_01, [Description("투신투자자코드	string	4")] string jjcode_03, [Description("투신매수	long	12")] long ms_03, [Description("투신매도	long	12")] long md_03, [Description("투신증감	long	12")] long rate_03, [Description("투신순매수	long	12")] long svolume_03, [Description("은행투자자코드	string	4")] string jjcode_04, [Description("은행매수	long	12")] long ms_04, [Description("은행매도	long	12")] long md_04, [Description("은행증감	long	12")] long rate_04, [Description("은행순매수	long	12")] long svolume_04, [Description("보험투자자코드	string	4")] string jjcode_02, [Description("보험매수	long	12")] long ms_02, [Description("보험매도	long	12")] long md_02, [Description("보험증감	long	12")] long rate_02, [Description("보험순매수	long	12")] long svolume_02, [Description("종금투자자코드	string	4")] string jjcode_05, [Description("종금매수	long	12")] long ms_05, [Description("종금매도	long	12")] long md_05, [Description("종금증감	long	12")] long rate_05, [Description("종금순매수	long	12")] long svolume_05, [Description("기금투자자코드	string	4")] string jjcode_06, [Description("기금매수	long	12")] long ms_06, [Description("기금매도	long	12")] long md_06, [Description("기금증감	long	12")] long rate_06, [Description("기금순매수	long	12")] long svolume_06, [Description("기타투자자코드	string	4")] string jjcode_07, [Description("기타매수	long	12")] long ms_07, [Description("기타매도	long	12")] long md_07, [Description("기타증감	long	12")] long rate_07, [Description("기타순매수	long	12")] long svolume_07, [Description("국가투자자코드	string	4")] string jjcode_11, [Description("국가매수	long	12")] long ms_11, [Description("국가매도	long	12")] long md_11, [Description("국가증감	long	12")] long rate_11, [Description("국가순매수	long	12")] long svolume_11, [Description("사모펀드코드	string	4")] string jjcode_00, [Description("사모펀드매수	long	12")] long ms_00, [Description("사모펀드매도	long	12")] long md_00, [Description("사모펀드증감	long	12")] long rate_00, [Description("사모펀드순매수	long	12")] long svolume_00);
 
 /// <summary>
-/// 시간대별투자자매매추이(t1602): t1602: OutBlock1
+/// 시간대별투자자매매추이: t1602: OutBlock1
 /// </summary>
 /// <param name="time">시간	string	8</param>
 /// <param name="sv_08">개인순매수	long	12</param>
@@ -6013,7 +6013,7 @@ public record t1602OutBlock1([Description("시간	string	8")] string time, [Desc
 
 
 /// <summary>
-/// 시간대별투자자매매추이상세(t1603): t1603: InBlock
+/// 시간대별투자자매매추이상세: t1603: InBlock
 /// </summary>
 /// <param name="market">시장구분	string	1</param>
 /// <param name="gubun1">투자자구분	string	1</param>
@@ -6025,14 +6025,14 @@ public record t1602OutBlock1([Description("시간	string	8")] string time, [Desc
 public record t1603InBlock([Description("시장구분	string	1")] string market, [Description("투자자구분	string	1")] string gubun1, [Description("전일분구분	string	1")] string gubun2, [Description("CTSTIME	string	8")] string cts_time, [Description("CTSIDX	int	4")] int cts_idx, [Description("조회건수	int	3")] int cnt, [Description("업종코드	string	3")] string upcode);
 
 /// <summary>
-/// 시간대별투자자매매추이상세(t1603): t1603: OutBlock
+/// 시간대별투자자매매추이상세: t1603: OutBlock
 /// </summary>
 /// <param name="cts_idx">CTSIDX	int	4</param>
 /// <param name="cts_time">CTSTIME	string	8</param>
 public record t1603OutBlock([Description("CTSIDX	int	4")] int cts_idx, [Description("CTSTIME	string	8")] string cts_time);
 
 /// <summary>
-/// 시간대별투자자매매추이상세(t1603): t1603: OutBlock1
+/// 시간대별투자자매매추이상세: t1603: OutBlock1
 /// </summary>
 /// <param name="time">시간	string	8</param>
 /// <param name="tjjcode">투자자구분	string	4</param>
@@ -6046,14 +6046,14 @@ public record t1603OutBlock1([Description("시간	string	8")] string time, [Desc
 
 
 /// <summary>
-/// 투자자매매종합1(t1615): t1615: InBlock
+/// 투자자매매종합1: t1615: InBlock
 /// </summary>
 /// <param name="gubun1">주식구분	string	1</param>
 /// <param name="gubun2">옵션구분	string	1</param>
 public record t1615InBlock([Description("주식구분	string	1")] string gubun1, [Description("옵션구분	string	1")] string gubun2);
 
 /// <summary>
-/// 투자자매매종합1(t1615): t1615: OutBlock
+/// 투자자매매종합1: t1615: OutBlock
 /// </summary>
 /// <param name="dwvolume">위탁매도수량	long	12</param>
 /// <param name="dwvalue">위탁매도금액	long	12</param>
@@ -6064,7 +6064,7 @@ public record t1615InBlock([Description("주식구분	string	1")] string gubun1,
 public record t1615OutBlock([Description("위탁매도수량	long	12")] long dwvolume, [Description("위탁매도금액	long	12")] long dwvalue, [Description("자기매도수량	long	12")] long djvolume, [Description("자기매도금액	long	12")] long djvalue, [Description("합계수량	long	12")] long sum_volume, [Description("합계금액	long	12")] long sum_value);
 
 /// <summary>
-/// 투자자매매종합1(t1615): t1615: OutBlock1
+/// 투자자매매종합1: t1615: OutBlock1
 /// </summary>
 /// <param name="hname">시장명	string	20</param>
 /// <param name="sv_08">개인	long	12</param>
@@ -6075,7 +6075,7 @@ public record t1615OutBlock1([Description("시장명	string	20")] string hname, 
 
 
 /// <summary>
-/// 투자자매매종합2(t1617): t1617: InBlock
+/// 투자자매매종합2: t1617: InBlock
 /// </summary>
 /// <param name="gubun1">시장구분(1:코스피2:코스닥3:선물4:콜옵션5:풋옵션6:주식선물)	string	1</param>
 /// <param name="gubun2">수량금액구분(1:수량2:금액)	string	1</param>
@@ -6085,7 +6085,7 @@ public record t1615OutBlock1([Description("시장명	string	20")] string hname, 
 public record t1617InBlock([Description("시장구분(1:코스피2:코스닥3:선물4:콜옵션5:풋옵션6:주식선물)	string	1")] string gubun1, [Description("수량금액구분(1:수량2:금액)	string	1")] string gubun2, [Description("일자구분(1:시간대별2:일별)	string	1")] string gubun3, [Description("CTSDATE(연속키값-일자)	string	8")] string cts_date, [Description("CTSTIME(연속키값-시간)	string	8")] string cts_time);
 
 /// <summary>
-/// 투자자매매종합2(t1617): t1617: OutBlock
+/// 투자자매매종합2: t1617: OutBlock
 /// </summary>
 /// <param name="cts_date">CTSDATE	string	8</param>
 /// <param name="cts_time">CTSTIME	string	8</param>
@@ -6104,7 +6104,7 @@ public record t1617InBlock([Description("시장구분(1:코스피2:코스닥3:�
 public record t1617OutBlock([Description("CTSDATE	string	8")] string cts_date, [Description("CTSTIME	string	8")] string cts_time, [Description("개인매수	long	12")] long ms_08, [Description("개인매도	long	12")] long md_08, [Description("개인순매수	long	12")] long sv_08, [Description("외국인매수	long	12")] long ms_17, [Description("외국인매도	long	12")] long md_17, [Description("외국인순매수	long	12")] long sv_17, [Description("기관계매수	long	12")] long ms_18, [Description("기관계매도	long	12")] long md_18, [Description("기관계순매수	long	12")] long sv_18, [Description("증권매수	long	12")] long ms_01, [Description("증권매도	long	12")] long md_01, [Description("증권순매수	long	12")] long sv_01);
 
 /// <summary>
-/// 투자자매매종합2(t1617): t1617: OutBlock1
+/// 투자자매매종합2: t1617: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	8</param>
@@ -6181,7 +6181,7 @@ public record t1621OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 프로그램매매종합조회(t1631): t1631: InBlock
+/// 프로그램매매종합조회: t1631: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="dgubun">일자구분	string	1</param>
@@ -6190,7 +6190,7 @@ public record t1621OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t1631InBlock([Description("구분	string	1")] string gubun, [Description("일자구분	string	1")] string dgubun, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate);
 
 /// <summary>
-/// 프로그램매매종합조회(t1631): t1631: OutBlock
+/// 프로그램매매종합조회: t1631: OutBlock
 /// </summary>
 /// <param name="cdhrem">매도차익미체결잔량	int	8</param>
 /// <param name="bdhrem">매도비차익미체결잔량	int	8</param>
@@ -6203,7 +6203,7 @@ public record t1631InBlock([Description("구분	string	1")] string gubun, [Descr
 public record t1631OutBlock([Description("매도차익미체결잔량	int	8")] int cdhrem, [Description("매도비차익미체결잔량	int	8")] int bdhrem, [Description("매도차익주문수량	int	8")] int tcdrem, [Description("매도비차익주문수량	int	8")] int tbdrem, [Description("매수차익미체결잔량	int	8")] int cshrem, [Description("매수비차익미체결잔량	int	8")] int bshrem, [Description("매수차익주문수량	int	8")] int tcsrem, [Description("매수비차익주문수량	int	8")] int tbsrem);
 
 /// <summary>
-/// 프로그램매매종합조회(t1631): t1631: OutBlock1
+/// 프로그램매매종합조회: t1631: OutBlock1
 /// </summary>
 /// <param name="offervolume">매도수량	int	8</param>
 /// <param name="offervalue">매도금액	long	12</param>
@@ -6215,7 +6215,7 @@ public record t1631OutBlock1([Description("매도수량	int	8")] int offervolume
 
 
 /// <summary>
-/// 시간대별프로그램매매추이(t1632): t1632: InBlock
+/// 시간대별프로그램매매추이: t1632: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="gubun1">금액수량구분	string	1</param>
@@ -6226,7 +6226,7 @@ public record t1631OutBlock1([Description("매도수량	int	8")] int offervolume
 public record t1632InBlock([Description("구분	string	1")] string gubun, [Description("금액수량구분	string	1")] string gubun1, [Description("직전대비증감	string	1")] string gubun2, [Description("전일구분	string	1")] string gubun3, [Description("일자	string	8")] string date, [Description("시간	string	6")] string time);
 
 /// <summary>
-/// 시간대별프로그램매매추이(t1632): t1632: OutBlock
+/// 시간대별프로그램매매추이: t1632: OutBlock
 /// </summary>
 /// <param name="date">날짜CTS	string	8</param>
 /// <param name="time">시간CTS	string	6</param>
@@ -6234,7 +6234,7 @@ public record t1632InBlock([Description("구분	string	1")] string gubun, [Descr
 public record t1632OutBlock([Description("날짜CTS	string	8")] string date, [Description("시간CTS	string	6")] string time, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 시간대별프로그램매매추이(t1632): t1632: OutBlock1
+/// 시간대별프로그램매매추이: t1632: OutBlock1
 /// </summary>
 /// <param name="time">시간	string	6</param>
 /// <param name="k200jisu">KP200	double	6.2</param>
@@ -6254,7 +6254,7 @@ public record t1632OutBlock1([Description("시간	string	6")] string time, [Desc
 
 
 /// <summary>
-/// 기간별프로그램매매추이(t1633): t1633: InBlock
+/// 기간별프로그램매매추이: t1633: InBlock
 /// </summary>
 /// <param name="gubun">시장구분	string	1</param>
 /// <param name="gubun1">금액수량구분	string	1</param>
@@ -6267,14 +6267,14 @@ public record t1632OutBlock1([Description("시간	string	6")] string time, [Desc
 public record t1633InBlock([Description("시장구분	string	1")] string gubun, [Description("금액수량구분	string	1")] string gubun1, [Description("수치누적구분	string	1")] string gubun2, [Description("일주월구분	string	1")] string gubun3, [Description("from일자	string	8")] string fdate, [Description("to일자	string	8")] string tdate, [Description("직전대비증감구분	string	1")] string gubun4, [Description("날짜	string	8")] string date);
 
 /// <summary>
-/// 기간별프로그램매매추이(t1633): t1633: OutBlock
+/// 기간별프로그램매매추이: t1633: OutBlock
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="idx">IDX	int	4</param>
 public record t1633OutBlock([Description("날짜	string	8")] string date, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 기간별프로그램매매추이(t1633): t1633: OutBlock1
+/// 기간별프로그램매매추이: t1633: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="jisu">KP200	double	6.2</param>
@@ -6294,7 +6294,7 @@ public record t1633OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 종목별프로그램매매동향(t1636): t1636: InBlock
+/// 종목별프로그램매매동향: t1636: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="gubun1">금액수량구분	string	1</param>
@@ -6304,13 +6304,13 @@ public record t1633OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t1636InBlock([Description("구분	string	1")] string gubun, [Description("금액수량구분	string	1")] string gubun1, [Description("정렬기준	string	1")] string gubun2, [Description("종목코드	string	6")] string shcode, [Description("IDXCTS	int	4")] int cts_idx);
 
 /// <summary>
-/// 종목별프로그램매매동향(t1636): t1636: OutBlock
+/// 종목별프로그램매매동향: t1636: OutBlock
 /// </summary>
 /// <param name="cts_idx">IDXCTS	int	4</param>
 public record t1636OutBlock([Description("IDXCTS	int	4")] int cts_idx);
 
 /// <summary>
-/// 종목별프로그램매매동향(t1636): t1636: OutBlock1
+/// 종목별프로그램매매동향: t1636: OutBlock1
 /// </summary>
 /// <param name="rank">순위	int	8</param>
 /// <param name="hname">종목명	string	20</param>
@@ -6332,7 +6332,7 @@ public record t1636OutBlock1([Description("순위	int	8")] int rank, [Descriptio
 
 
 /// <summary>
-/// 종목별프로그램매매추이(t1637): t1637: InBlock
+/// 종목별프로그램매매추이: t1637: InBlock
 /// </summary>
 /// <param name="gubun1">수량금액구분(0:수량1:금액)	string	1</param>
 /// <param name="gubun2">시간일별구분(0:시간1:일자)	string	1</param>
@@ -6343,13 +6343,13 @@ public record t1636OutBlock1([Description("순위	int	8")] int rank, [Descriptio
 public record t1637InBlock([Description("수량금액구분(0:수량1:금액)	string	1")] string gubun1, [Description("시간일별구분(0:시간1:일자)	string	1")] string gubun2, [Description("종목코드	string	6")] string shcode, [Description("일자	string	8")] string date, [Description("시간	string	6")] string time, [Description("IDXCTS(9999:차트)	int	4")] int cts_idx);
 
 /// <summary>
-/// 종목별프로그램매매추이(t1637): t1637: OutBlock
+/// 종목별프로그램매매추이: t1637: OutBlock
 /// </summary>
 /// <param name="cts_idx">IDXCTS	int	4</param>
 public record t1637OutBlock([Description("IDXCTS	int	4")] int cts_idx);
 
 /// <summary>
-/// 종목별프로그램매매추이(t1637): t1637: OutBlock1
+/// 종목별프로그램매매추이: t1637: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -6369,7 +6369,7 @@ public record t1637OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 종목별잔량/사전공시(t1638): t1638: InBlock
+/// 종목별잔량/사전공시: t1638: InBlock
 /// </summary>
 /// <param name="gubun1">구분	string	1</param>
 /// <param name="shcode">종목코드	string	6</param>
@@ -6377,7 +6377,7 @@ public record t1637OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t1638InBlock([Description("구분	string	1")] string gubun1, [Description("종목코드	string	6")] string shcode, [Description("정렬	string	1")] string gubun2);
 
 /// <summary>
-/// 종목별잔량/사전공시(t1638): t1638: OutBlock
+/// 종목별잔량/사전공시: t1638: OutBlock
 /// </summary>
 /// <param name="rank">순위	int	4</param>
 /// <param name="hname">한글명	string	20</param>
@@ -6397,13 +6397,13 @@ public record t1638OutBlock([Description("순위	int	4")] int rank, [Description
 
 
 /// <summary>
-/// 프로그램매매종합조회(미니)(t1640): t1640: InBlock
+/// 프로그램매매종합조회(미니): t1640: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	2</param>
 public record t1640InBlock([Description("구분	string	2")] string gubun);
 
 /// <summary>
-/// 프로그램매매종합조회(미니)(t1640): t1640: OutBlock
+/// 프로그램매매종합조회(미니): t1640: OutBlock
 /// </summary>
 /// <param name="offervolume">매도수량	int	8</param>
 /// <param name="bidvolume">매수수량	int	8</param>
@@ -6422,7 +6422,7 @@ public record t1640OutBlock([Description("매도수량	int	8")] int offervolume,
 
 
 /// <summary>
-/// 시간대별프로그램매매추이(차트)(t1662): t1662: InBlock
+/// 시간대별프로그램매매추이(차트): t1662: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="gubun1">금액수량구분	string	1</param>
@@ -6430,7 +6430,7 @@ public record t1640OutBlock([Description("매도수량	int	8")] int offervolume,
 public record t1662InBlock([Description("구분	string	1")] string gubun, [Description("금액수량구분	string	1")] string gubun1, [Description("전일구분	string	1")] string gubun3);
 
 /// <summary>
-/// 시간대별프로그램매매추이(차트)(t1662): t1662: OutBlock
+/// 시간대별프로그램매매추이(차트): t1662: OutBlock
 /// </summary>
 /// <param name="time">시간	string	6</param>
 /// <param name="k200jisu">KP200	double	6.2</param>
@@ -6537,7 +6537,7 @@ public record t1665OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 외인기관종목별동향(t1702): t1702: InBlock
+/// 외인기관종목별동향: t1702: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="todt">종료일자	string	8</param>
@@ -6549,14 +6549,14 @@ public record t1665OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t1702InBlock([Description("종목코드	string	6")] string shcode, [Description("종료일자	string	8")] string todt, [Description("금액수량구분(0:금액1:수량2:단가)	string	1")] string volvalgb, [Description("매수매도구분(0:순매수1:매수2:매도)	string	1")] string msmdgb, [Description("누적구분(0:일간1:누적)	string	1")] string cumulgb, [Description("CTSDATE	string	8")] string cts_date, [Description("CTSIDX	int	4")] int cts_idx);
 
 /// <summary>
-/// 외인기관종목별동향(t1702): t1702: OutBlock
+/// 외인기관종목별동향: t1702: OutBlock
 /// </summary>
 /// <param name="cts_idx">CTSIDX	int	4</param>
 /// <param name="cts_date">CTSDATE	string	8</param>
 public record t1702OutBlock([Description("CTSIDX	int	4")] int cts_idx, [Description("CTSDATE	string	8")] string cts_date);
 
 /// <summary>
-/// 외인기관종목별동향(t1702): t1702: OutBlock1
+/// 외인기관종목별동향: t1702: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="close">종가	int	8</param>
@@ -6583,7 +6583,7 @@ public record t1702OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 외인기관종목별동향(t1716): t1716: InBlock
+/// 외인기관종목별동향: t1716: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="gubun">구분(0:일간순매수1:기간누적순매수)	string	1</param>
@@ -6596,7 +6596,7 @@ public record t1702OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t1716InBlock([Description("종목코드	string	6")] string shcode, [Description("구분(0:일간순매수1:기간누적순매수)	string	1")] string gubun, [Description("시작일자	string	8")] string fromdt, [Description("종료일자	string	8")] string todt, [Description("PR감산적용율	int	3")] int prapp, [Description("PR적용구분(0:적용안함1:적용)	string	1")] string prgubun, [Description("기관적용	string	1")] string orggubun, [Description("외인적용	string	1")] string frggubun);
 
 /// <summary>
-/// 외인기관종목별동향(t1716): t1716: OutBlock
+/// 외인기관종목별동향: t1716: OutBlock
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="close">종가	int	8</param>
@@ -6617,7 +6617,7 @@ public record t1716OutBlock([Description("일자	string	8")] string date, [Descr
 
 
 /// <summary>
-/// 외인기관종목별동향(t1717): t1717: InBlock
+/// 외인기관종목별동향: t1717: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="gubun">구분(0:일간순매수1:기간누적순매수)	string	1</param>
@@ -6626,7 +6626,7 @@ public record t1716OutBlock([Description("일자	string	8")] string date, [Descr
 public record t1717InBlock([Description("종목코드	string	6")] string shcode, [Description("구분(0:일간순매수1:기간누적순매수)	string	1")] string gubun, [Description("시작일자(일간조회일경우는space)	string	8")] string fromdt, [Description("종료일자	string	8")] string todt);
 
 /// <summary>
-/// 외인기관종목별동향(t1717): t1717: OutBlock
+/// 외인기관종목별동향: t1717: OutBlock
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="close">종가	int	8</param>
@@ -6668,7 +6668,7 @@ public record t1717OutBlock([Description("일자	string	8")] string date, [Descr
 
 
 /// <summary>
-/// 종목별상위회원사(t1752): t1752: InBlock
+/// 종목별상위회원사: t1752: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="traddate1">조회날짜1	string	8</param>
@@ -6678,7 +6678,7 @@ public record t1717OutBlock([Description("일자	string	8")] string date, [Descr
 public record t1752InBlock([Description("종목코드	string	6")] string shcode, [Description("조회날짜1	string	8")] string traddate1, [Description("조회날짜2	string	8")] string traddate2, [Description("외국계구분	string	1")] string fwgubun1, [Description("CTSIDX	int	4")] int cts_idx);
 
 /// <summary>
-/// 종목별상위회원사(t1752): t1752: OutBlock
+/// 종목별상위회원사: t1752: OutBlock
 /// </summary>
 /// <param name="fwdvl">외국계매도	long	12</param>
 /// <param name="fwsvl">외국계매수	long	12</param>
@@ -6686,7 +6686,7 @@ public record t1752InBlock([Description("종목코드	string	6")] string shcode,
 public record t1752OutBlock([Description("외국계매도	long	12")] long fwdvl, [Description("외국계매수	long	12")] long fwsvl, [Description("CTSIDX	int	4")] int cts_idx);
 
 /// <summary>
-/// 종목별상위회원사(t1752): t1752: OutBlock1
+/// 종목별상위회원사: t1752: OutBlock1
 /// </summary>
 /// <param name="tradname">회원사	string	20</param>
 /// <param name="tradmdvol">매도수량	long	12</param>
@@ -6701,14 +6701,14 @@ public record t1752OutBlock1([Description("회원사	string	20")] string tradnam
 
 
 /// <summary>
-/// 회원사리스트(t1764): t1764: InBlock
+/// 회원사리스트: t1764: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="gubun1">구분1	string	1</param>
 public record t1764InBlock([Description("종목코드	string	6")] string shcode, [Description("구분1	string	1")] string gubun1);
 
 /// <summary>
-/// 회원사리스트(t1764): t1764: OutBlock
+/// 회원사리스트: t1764: OutBlock
 /// </summary>
 /// <param name="rank">순위	int	4</param>
 /// <param name="tradno">거래원번호	string	3</param>
@@ -6717,7 +6717,7 @@ public record t1764OutBlock([Description("순위	int	4")] int rank, [Description
 
 
 /// <summary>
-/// 종목별회원사추이(t1771): t1771: InBlock
+/// 종목별회원사추이: t1771: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="tradno">거래원코드	string	3</param>
@@ -6729,13 +6729,13 @@ public record t1764OutBlock([Description("순위	int	4")] int rank, [Description
 public record t1771InBlock([Description("종목코드	string	6")] string shcode, [Description("거래원코드	string	3")] string tradno, [Description("구분1	string	1")] string gubun1, [Description("거래원날짜1	string	8")] string traddate1, [Description("거래원날짜2	string	8")] string traddate2, [Description("CTSIDX	int	4")] int cts_idx, [Description("요청건수	int	3")] int cnt);
 
 /// <summary>
-/// 종목별회원사추이(t1771): t1771: OutBlock
+/// 종목별회원사추이: t1771: OutBlock
 /// </summary>
 /// <param name="cts_idx">CTSIDX	int	4</param>
 public record t1771OutBlock([Description("CTSIDX	int	4")] int cts_idx);
 
 /// <summary>
-/// 종목별회원사추이(t1771): t1771: OutBlock2
+/// 종목별회원사추이: t1771: OutBlock2
 /// </summary>
 /// <param name="traddate">날짜	string	8</param>
 /// <param name="tradtime">시간	string	8</param>
@@ -6756,7 +6756,7 @@ public record t1771OutBlock2([Description("날짜	string	8")] string traddate, [
 
 
 /// <summary>
-/// 신호조회(t1809): t1809: InBlock
+/// 신호조회: t1809: InBlock
 /// </summary>
 /// <param name="gubun">신호구분	string	1</param>
 /// <param name="jmGb">종목구분	string	1</param>
@@ -6765,13 +6765,13 @@ public record t1771OutBlock2([Description("날짜	string	8")] string traddate, [
 public record t1809InBlock([Description("신호구분	string	1")] string gubun, [Description("종목구분	string	1")] string jmGb, [Description("종목코드	string	6")] string jmcode, [Description("NEXTKEY	string	30")] string cts);
 
 /// <summary>
-/// 신호조회(t1809): t1809: OutBlock
+/// 신호조회: t1809: OutBlock
 /// </summary>
 /// <param name="cts">NEXTKEY	string	30</param>
 public record t1809OutBlock([Description("NEXTKEY	string	30")] string cts);
 
 /// <summary>
-/// 신호조회(t1809): t1809: OutBlock1
+/// 신호조회: t1809: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -6791,20 +6791,20 @@ public record t1809OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 종목Q클릭검색(씽큐스마트)(t1825): t1825: InBlock
+/// 종목Q클릭검색(씽큐스마트): t1825: InBlock
 /// </summary>
 /// <param name="search_cd">검색코드	string	4</param>
 /// <param name="gubun">구분(0:전체1:코스피2:코스닥)	string	1</param>
 public record t1825InBlock([Description("검색코드	string	4")] string search_cd, [Description("구분(0:전체1:코스피2:코스닥)	string	1")] string gubun);
 
 /// <summary>
-/// 종목Q클릭검색(씽큐스마트)(t1825): t1825: OutBlock
+/// 종목Q클릭검색(씽큐스마트): t1825: OutBlock
 /// </summary>
 /// <param name="JongCnt">검색종목수	int	4</param>
 public record t1825OutBlock([Description("검색종목수	int	4")] int JongCnt);
 
 /// <summary>
-/// 종목Q클릭검색(씽큐스마트)(t1825): t1825: OutBlock1
+/// 종목Q클릭검색(씽큐스마트): t1825: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="hname">종목명	string	20</param>
@@ -6819,13 +6819,13 @@ public record t1825OutBlock1([Description("종목코드	string	6")] string shcod
 
 
 /// <summary>
-/// 종목Q클릭검색리스트조회(씽큐스마트)(t1826): t1826: InBlock
+/// 종목Q클릭검색리스트조회(씽큐스마트): t1826: InBlock
 /// </summary>
 /// <param name="search_gb">검색구분(0:핵심검색1:지표검색2:시세동향3:투자자동향)	string	1</param>
 public record t1826InBlock([Description("검색구분(0:핵심검색1:지표검색2:시세동향3:투자자동향)	string	1")] string search_gb);
 
 /// <summary>
-/// 종목Q클릭검색리스트조회(씽큐스마트)(t1826): t1826: OutBlock
+/// 종목Q클릭검색리스트조회(씽큐스마트): t1826: OutBlock
 /// </summary>
 /// <param name="search_cd">검색코드	string	4</param>
 /// <param name="search_nm">검색명	string	40</param>
@@ -6863,7 +6863,7 @@ public record t1857OutBlock1([Description("종목코드	string	7")] string shcod
 
 
 /// <summary>
-/// 서버저장조건리스트조회(API)(t1866): t1866: InBlock
+/// 서버저장조건리스트조회(API): t1866: InBlock
 /// </summary>
 /// <param name="user_id">로그인ID	string	8</param>
 /// <param name="gb">조회구분	string	1</param>
@@ -6873,7 +6873,7 @@ public record t1857OutBlock1([Description("종목코드	string	7")] string shcod
 public record t1866InBlock([Description("로그인ID	string	8")] string user_id, [Description("조회구분	string	1")] string gb, [Description("그룹명	string	40")] string group_name, [Description("연속여부	string	1")] string cont, [Description("연속키	string	40")] string contkey);
 
 /// <summary>
-/// 서버저장조건리스트조회(API)(t1866): t1866: OutBlock
+/// 서버저장조건리스트조회(API): t1866: OutBlock
 /// </summary>
 /// <param name="result_count">저장조건수	int	5</param>
 /// <param name="cont">연속여부	string	1</param>
@@ -6881,7 +6881,7 @@ public record t1866InBlock([Description("로그인ID	string	8")] string user_id,
 public record t1866OutBlock([Description("저장조건수	int	5")] int result_count, [Description("연속여부	string	1")] string cont, [Description("연속키	string	40")] string contkey);
 
 /// <summary>
-/// 서버저장조건리스트조회(API)(t1866): t1866: OutBlock1
+/// 서버저장조건리스트조회(API): t1866: OutBlock1
 /// </summary>
 /// <param name="query_index">서버저장인덱스	string	12</param>
 /// <param name="group_name">그룹명	string	40</param>
@@ -6890,13 +6890,13 @@ public record t1866OutBlock1([Description("서버저장인덱스	string	12")] st
 
 
 /// <summary>
-/// ETF현재가(시세)조회(t1901): t1901: InBlock
+/// ETF현재가(시세)조회: t1901: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 public record t1901InBlock([Description("단축코드	string	6")] string shcode);
 
 /// <summary>
-/// ETF현재가(시세)조회(t1901): t1901: OutBlock
+/// ETF현재가(시세)조회: t1901: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -7036,14 +7036,14 @@ public record t1901OutBlock([Description("한글명	string	20")] string hname, [
 
 
 /// <summary>
-/// ETF시간별추이(t1902): t1902: InBlock
+/// ETF시간별추이: t1902: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="time">시간	string	6</param>
 public record t1902InBlock([Description("단축코드	string	6")] string shcode, [Description("시간	string	6")] string time);
 
 /// <summary>
-/// ETF시간별추이(t1902): t1902: OutBlock
+/// ETF시간별추이: t1902: OutBlock
 /// </summary>
 /// <param name="time">시간	string	6</param>
 /// <param name="hname">종목명	string	20</param>
@@ -7051,7 +7051,7 @@ public record t1902InBlock([Description("단축코드	string	6")] string shcode,
 public record t1902OutBlock([Description("시간	string	6")] string time, [Description("종목명	string	20")] string hname, [Description("업종지수명	string	20")] string upname);
 
 /// <summary>
-/// ETF시간별추이(t1902): t1902: OutBlock1
+/// ETF시간별추이: t1902: OutBlock1
 /// </summary>
 /// <param name="time">시간	string	8</param>
 /// <param name="price">현재가	int	8</param>
@@ -7070,14 +7070,14 @@ public record t1902OutBlock1([Description("시간	string	8")] string time, [Desc
 
 
 /// <summary>
-/// ETF일별추이(t1903): t1903: InBlock
+/// ETF일별추이: t1903: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="date">일자	string	8</param>
 public record t1903InBlock([Description("단축코드	string	6")] string shcode, [Description("일자	string	8")] string date);
 
 /// <summary>
-/// ETF일별추이(t1903): t1903: OutBlock
+/// ETF일별추이: t1903: OutBlock
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="hname">종목명	string	20</param>
@@ -7085,7 +7085,7 @@ public record t1903InBlock([Description("단축코드	string	6")] string shcode,
 public record t1903OutBlock([Description("일자	string	8")] string date, [Description("종목명	string	20")] string hname, [Description("업종지수명	string	20")] string upname);
 
 /// <summary>
-/// ETF일별추이(t1903): t1903: OutBlock1
+/// ETF일별추이: t1903: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="price">현재가	int	8</param>
@@ -7104,7 +7104,7 @@ public record t1903OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// ETF구성종목조회(t1904): t1904: InBlock
+/// ETF구성종목조회: t1904: InBlock
 /// </summary>
 /// <param name="shcode">ETF단축코드	string	6</param>
 /// <param name="date">PDF적용일자	string	8</param>
@@ -7112,7 +7112,7 @@ public record t1903OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t1904InBlock([Description("ETF단축코드	string	6")] string shcode, [Description("PDF적용일자	string	8")] string date, [Description("정렬기준(1:평가금액2:증권수)	string	1")] string sgb);
 
 /// <summary>
-/// ETF구성종목조회(t1904): t1904: OutBlock
+/// ETF구성종목조회: t1904: OutBlock
 /// </summary>
 /// <param name="chk_tday">당일구분	string	1</param>
 /// <param name="date">PDF적용일자	string	8</param>
@@ -7154,7 +7154,7 @@ public record t1904InBlock([Description("ETF단축코드	string	6")] string shco
 public record t1904OutBlock([Description("당일구분	string	1")] string chk_tday, [Description("PDF적용일자	string	8")] string date, [Description("ETF현재가	int	8")] int price, [Description("ETF전일대비구분	string	1")] string sign, [Description("ETF전일대비	int	8")] int change, [Description("ETF등락율	double	6.2")] double diff, [Description("ETF누적거래량	long	12")] long volume, [Description("NAV	double	8.2")] double nav, [Description("NAV전일대비구분	string	1")] string navsign, [Description("NAV전일대비	double	8.2")] double navchange, [Description("NAV등락율	double	6.2")] double navdiff, [Description("전일NAV	double	8.2")] double jnilnav, [Description("전일NAV전일대비구분	string	1")] string jnilnavsign, [Description("전일NAV전일대비	double	8.2")] double jnilnavchange, [Description("전일NAV등락율	double	6.2")] double jnilnavdiff, [Description("업종명	string	20")] string upname, [Description("업종코드	string	3")] string upcode, [Description("업종현재가	double	7.2")] double upprice, [Description("업종전일비구분	string	1")] string upsign, [Description("업종전일대비	double	6.2")] double upchange, [Description("업종등락율	double	6.2")] double updiff, [Description("선물최근월물명	string	20")] string futname, [Description("선물최근월물코드	string	8")] string futcode, [Description("선물현재가	double	6.2")] double futprice, [Description("선물전일비구분	string	1")] string futsign, [Description("선물전일대비	double	6.2")] double futchange, [Description("선물등락율	double	6.2")] double futdiff, [Description("참고지수명	string	20")] string upname2, [Description("참고지수코드	string	3")] string upcode2, [Description("참고지수현재가	double	7.2")] double upprice2, [Description("순자산총액(단위:억)	long	12")] long etftotcap, [Description("구성종목수	int	4")] int etfnum, [Description("CU주식수	long	12")] long etfcunum, [Description("현금	long	12")] long cash, [Description("운용사명	string	20")] string opcom_nmk, [Description("전종목평가금액합	long	12")] long tot_pval, [Description("전종목구성시가총액합	long	12")] long tot_sigatval);
 
 /// <summary>
-/// ETF구성종목조회(t1904): t1904: OutBlock1
+/// ETF구성종목조회: t1904: OutBlock1
 /// </summary>
 /// <param name="shcode">단축코드	string	12</param>
 /// <param name="hname">한글명	string	20</param>
@@ -7175,13 +7175,13 @@ public record t1904OutBlock1([Description("단축코드	string	12")] string shco
 
 
 /// <summary>
-/// ETFLP호가(t1906): t1906: InBlock
+/// ETFLP호가: t1906: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 public record t1906InBlock([Description("단축코드	string	6")] string shcode);
 
 /// <summary>
-/// ETFLP호가(t1906): t1906: OutBlock
+/// ETFLP호가: t1906: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -7293,7 +7293,7 @@ public record t1906OutBlock([Description("한글명	string	20")] string hname, [
 
 
 /// <summary>
-/// 신용거래동향(t1921): t1921: InBlock
+/// 신용거래동향: t1921: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="gubun">융자대주구분	string	1</param>
@@ -7302,7 +7302,7 @@ public record t1906OutBlock([Description("한글명	string	20")] string hname, [
 public record t1921InBlock([Description("종목코드	string	6")] string shcode, [Description("융자대주구분	string	1")] string gubun, [Description("날짜	string	8")] string date, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 신용거래동향(t1921): t1921: OutBlock
+/// 신용거래동향: t1921: OutBlock
 /// </summary>
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="date">날짜	string	8</param>
@@ -7310,7 +7310,7 @@ public record t1921InBlock([Description("종목코드	string	6")] string shcode,
 public record t1921OutBlock([Description("CNT	int	4")] int cnt, [Description("날짜	string	8")] string date, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 신용거래동향(t1921): t1921: OutBlock1
+/// 신용거래동향: t1921: OutBlock1
 /// </summary>
 /// <param name="mmdate">날짜	string	8</param>
 /// <param name="close">종가	int	8</param>
@@ -7329,13 +7329,13 @@ public record t1921OutBlock1([Description("날짜	string	8")] string mmdate, [De
 
 
 /// <summary>
-/// 종목별신용정보(t1926): t1926: InBlock
+/// 종목별신용정보: t1926: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 public record t1926InBlock([Description("종목코드	string	6")] string shcode);
 
 /// <summary>
-/// 종목별신용정보(t1926): t1926: OutBlock
+/// 종목별신용정보: t1926: OutBlock
 /// </summary>
 /// <param name="ynvolume">융자신규수량	int	8</param>
 /// <param name="ysvolume">융자상환수량	int	8</param>
@@ -7371,7 +7371,7 @@ public record t1926OutBlock([Description("융자신규수량	int	8")] int ynvolu
 
 
 /// <summary>
-/// 공매도일별추이(t1927): t1927: InBlock
+/// 공매도일별추이: t1927: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="date">일자	string	8</param>
@@ -7380,13 +7380,13 @@ public record t1926OutBlock([Description("융자신규수량	int	8")] int ynvolu
 public record t1927InBlock([Description("종목코드	string	6")] string shcode, [Description("일자	string	8")] string date, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate);
 
 /// <summary>
-/// 공매도일별추이(t1927): t1927: OutBlock
+/// 공매도일별추이: t1927: OutBlock
 /// </summary>
 /// <param name="date">일자CTS	string	8</param>
 public record t1927OutBlock([Description("일자CTS	string	8")] string date);
 
 /// <summary>
-/// 공매도일별추이(t1927): t1927: OutBlock1
+/// 공매도일별추이: t1927: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="price">현재가	int	8</param>
@@ -7408,7 +7408,7 @@ public record t1927OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 종목별대차거래일간추이(t1941): t1941: InBlock
+/// 종목별대차거래일간추이: t1941: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="sdate">시작일자	string	8</param>
@@ -7416,7 +7416,7 @@ public record t1927OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t1941InBlock([Description("종목코드	string	6")] string shcode, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate);
 
 /// <summary>
-/// 종목별대차거래일간추이(t1941): t1941: OutBlock1
+/// 종목별대차거래일간추이: t1941: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="price">종가	int	8</param>
@@ -7434,13 +7434,13 @@ public record t1941OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// ELW현재가(시세)조회(t1950): t1950: InBlock
+/// ELW현재가(시세)조회: t1950: InBlock
 /// </summary>
 /// <param name="shcode">ELW단축코드	string	6</param>
 public record t1950InBlock([Description("ELW단축코드	string	6")] string shcode);
 
 /// <summary>
-/// ELW현재가(시세)조회(t1950): t1950: OutBlock
+/// ELW현재가(시세)조회: t1950: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	40</param>
 /// <param name="chetime">체결시간	string	10</param>
@@ -7525,7 +7525,7 @@ public record t1950InBlock([Description("ELW단축코드	string	6")] string shco
 public record t1950OutBlock([Description("한글명	string	40")] string hname, [Description("체결시간	string	10")] string chetime, [Description("현재가	int	8")] int price, [Description("전일대비구분	string	1")] string sign, [Description("전일대비	int	8")] int change, [Description("등락율	double	6.2")] double diff, [Description("체결량	long	10")] long cvolume, [Description("누적거래량	double	12")] double volume, [Description("기준가	int	8")] int recprice, [Description("가중평균	int	8")] int avg, [Description("전일거래량	double	12")] double jnilvolume, [Description("전일동시간거래량	double	12")] double jvolume, [Description("전일종가	int	8")] int jnilclose, [Description("거래량차	double	12")] double volumechg, [Description("거래량차등락율	double	6.2")] double volumediff, [Description("시가	int	8")] int open, [Description("시가등락율	double	6.2")] double odiff, [Description("시가시간	string	6")] string opentime, [Description("고가	int	8")] int high, [Description("고가등락율	double	6.2")] double hdiff, [Description("고가시간	string	6")] string hightime, [Description("저가	int	8")] int low, [Description("저가등락율	double	6.2")] double ldiff, [Description("저가시간	string	6")] string lowtime, [Description("52최고가	int	8")] int high52w, [Description("52최고가등락율	double	6.2")] double high52wdiff, [Description("52최고가일	string	8")] string high52wdate, [Description("52최저가	int	8")] int low52w, [Description("52최저가등락율	double	6.2")] double low52wdiff, [Description("52최저가일	string	8")] string low52wdate, [Description("소진율	double	6.2")] double exhratio, [Description("상장주식수(천)	double	12")] double listing, [Description("수량단위	string	5")] string memedan, [Description("회전율	double	6.2")] double vol, [Description("패리티	double	8.2")] double parity, [Description("손익분기	double	8.2")] double berate, [Description("기어링	double	8.2")] double gearing, [Description("행사가	double	8.2")] double elwexec, [Description("발행가	int	8")] int issueprice, [Description("전환비율	double	12.4")] double convrate, [Description("최종거래일	string	8")] string lastdate, [Description("자본지지	double	8.2")] double capt, [Description("e.기어링	double	8.2")] double egearing, [Description("프리미엄	double	8.2")] double premium, [Description("스프레드	double	6.2")] double spread, [Description("최대스프레드	double	6.2")] double espread, [Description("이론가	double	10.2")] double theoryprice, [Description("내재변동성	double	6.2")] double impv, [Description("상태	string	1")] string moneyness, [Description("델타	double	8.6")] double delt, [Description("감마	double	8.6")] double gama, [Description("베가	double	13.6")] double vega, [Description("쎄타	double	13.6")] double ceta, [Description("로	double	13.6")] double rhox, [Description("잔존일수	int	4")] int bjandatecnt, [Description("행사개시일	string	8")] string mmsdate, [Description("행사종료일	string	8")] string mmedate, [Description("지급일	string	8")] string payday, [Description("발행일	string	8")] string listdate, [Description("LP회원사	string	20")] string lpmem, [Description("LP보유수량	double	12")] double lp_holdvol, [Description("기초자산코드	string	6")] string bcode, [Description("기초자산구분	string	1")] string bgubun, [Description("기초자산현재가	int	8")] int bprice, [Description("기초자산전일비구분	string	1")] string bsign, [Description("기초자산전일비	int	8")] int bchange, [Description("기초자산등락율	double	6.2")] double bdiff, [Description("기초자산거래량	double	12")] double bvolume, [Description("락구분	string	10")] string info1, [Description("관리/급등구분	string	10")] string info2, [Description("정지/연장구분	string	10")] string info3, [Description("투자/불성실구분	string	12")] string info4, [Description("장구분	string	10")] string janginfo, [Description("바스켓구분	string	1")] string basketgb, [Description("바스켓갯수	int	3")] int basketcnt, [Description("ELW권리행사방식	string	2")] string elwtype, [Description("ELW결제방법	string	2")] string settletype, [Description("LP사주문가능여부	string	2")] string lpord, [Description("권리내용	string	100")] string elwdetail, [Description("만기평가가격방식	string	100")] string valuation);
 
 /// <summary>
-/// ELW현재가(시세)조회(t1950): t1950: OutBlock1
+/// ELW현재가(시세)조회: t1950: OutBlock1
 /// </summary>
 /// <param name="bskcode">기초자산코드	string	6</param>
 /// <param name="bskbno">기초자산비율	int	3</param>
@@ -7539,7 +7539,7 @@ public record t1950OutBlock1([Description("기초자산코드	string	6")] string
 
 
 /// <summary>
-/// ELW시간대별체결조회(t1951): t1951: InBlock
+/// ELW시간대별체결조회: t1951: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="cvolume">특이거래량	long	12</param>
@@ -7549,13 +7549,13 @@ public record t1950OutBlock1([Description("기초자산코드	string	6")] string
 public record t1951InBlock([Description("단축코드	string	6")] string shcode, [Description("특이거래량	long	12")] long cvolume, [Description("시작시간	string	4")] string starttime, [Description("종료시간	string	4")] string endtime, [Description("시간CTS	string	8")] string cts_time);
 
 /// <summary>
-/// ELW시간대별체결조회(t1951): t1951: OutBlock
+/// ELW시간대별체결조회: t1951: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	8</param>
 public record t1951OutBlock([Description("시간CTS	string	8")] string cts_time);
 
 /// <summary>
-/// ELW시간대별체결조회(t1951): t1951: OutBlock1
+/// ELW시간대별체결조회: t1951: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	8</param>
 /// <param name="price">현재가	int	8</param>
@@ -7575,7 +7575,7 @@ public record t1951OutBlock1([Description("시간	string	8")] string chetime, [D
 
 
 /// <summary>
-/// ELW일별주가(t1954): t1954: InBlock
+/// ELW일별주가: t1954: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="date">날짜	string	8</param>
@@ -7583,7 +7583,7 @@ public record t1951OutBlock1([Description("시간	string	8")] string chetime, [D
 public record t1954InBlock([Description("단축코드	string	6")] string shcode, [Description("날짜	string	8")] string date, [Description("건수	int	3")] int cnt);
 
 /// <summary>
-/// ELW일별주가(t1954): t1954: OutBlock
+/// ELW일별주가: t1954: OutBlock
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="bsjgubun">기초자산구분	string	1</param>
@@ -7592,7 +7592,7 @@ public record t1954InBlock([Description("단축코드	string	6")] string shcode,
 public record t1954OutBlock([Description("날짜	string	8")] string date, [Description("기초자산구분	string	1")] string bsjgubun, [Description("기초자산코드(현물)	string	6")] string bscode, [Description("기초자산코드(지수)	string	3")] string bjcode);
 
 /// <summary>
-/// ELW일별주가(t1954): t1954: OutBlock1
+/// ELW일별주가: t1954: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	int	8</param>
@@ -7621,13 +7621,13 @@ public record t1954OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// ELW현재가(확정지급액)조회(t1956): t1956: InBlock
+/// ELW현재가(확정지급액)조회: t1956: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 public record t1956InBlock([Description("단축코드	string	6")] string shcode);
 
 /// <summary>
-/// ELW현재가(확정지급액)조회(t1956): t1956: OutBlock
+/// ELW현재가(확정지급액)조회: t1956: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	40</param>
 /// <param name="chetime">체결시간	string	10</param>
@@ -7713,7 +7713,7 @@ public record t1956InBlock([Description("단축코드	string	6")] string shcode)
 public record t1956OutBlock([Description("한글명	string	40")] string hname, [Description("체결시간	string	10")] string chetime, [Description("현재가	int	8")] int price, [Description("전일대비구분	string	1")] string sign, [Description("전일대비	int	8")] int change, [Description("등락율	double	6.2")] double diff, [Description("체결량	long	10")] long cvolume, [Description("누적거래량	double	12")] double volume, [Description("기준가	int	8")] int recprice, [Description("가중평균	int	8")] int avg, [Description("전일거래량	double	12")] double jnilvolume, [Description("전일동시간거래량	double	12")] double jvolume, [Description("전일종가	int	8")] int jnilclose, [Description("거래량차	double	12")] double volumechg, [Description("거래량차등락율	double	6.2")] double volumediff, [Description("시가	int	8")] int open, [Description("시가등락율	double	6.2")] double odiff, [Description("시가시간	string	6")] string opentime, [Description("고가	int	8")] int high, [Description("고가등락율	double	6.2")] double hdiff, [Description("고가시간	string	6")] string hightime, [Description("저가	int	8")] int low, [Description("저가등락율	double	6.2")] double ldiff, [Description("저가시간	string	6")] string lowtime, [Description("52최고가	int	8")] int high52w, [Description("52최고가등락율	double	6.2")] double high52wdiff, [Description("52최고가일	string	8")] string high52wdate, [Description("52최저가	int	8")] int low52w, [Description("52최저가등락율	double	6.2")] double low52wdiff, [Description("52최저가일	string	8")] string low52wdate, [Description("소진율	double	6.2")] double exhratio, [Description("상장주식수(천)	double	12")] double listing, [Description("수량단위	string	5")] string memedan, [Description("회전율	double	6.2")] double vol, [Description("패리티	double	8.2")] double parity, [Description("손익분기	double	8.2")] double berate, [Description("기어링	double	8.2")] double gearing, [Description("행사가	double	8.2")] double elwexec, [Description("발행가	int	8")] int issueprice, [Description("전환비율	double	12.4")] double convrate, [Description("최종거래일	string	8")] string lastdate, [Description("자본지지	double	8.2")] double capt, [Description("e.기어링	double	8.2")] double egearing, [Description("프리미엄	double	8.2")] double premium, [Description("스프레드	double	6.2")] double spread, [Description("최대스프레드	double	6.2")] double espread, [Description("이론가	double	10.2")] double theoryprice, [Description("내재변동성	double	6.2")] double impv, [Description("상태	string	1")] string moneyness, [Description("델타	double	8.6")] double delt, [Description("감마	double	8.6")] double gama, [Description("베가	double	13.6")] double vega, [Description("쎄타	double	13.6")] double ceta, [Description("로	double	13.6")] double rhox, [Description("잔존일수	int	4")] int bjandatecnt, [Description("행사개시일	string	8")] string mmsdate, [Description("행사종료일	string	8")] string mmedate, [Description("지급일	string	8")] string payday, [Description("발행일	string	8")] string listdate, [Description("LP회원사	string	20")] string lpmem, [Description("LP보유수량	double	12")] double lp_holdvol, [Description("기초자산코드	string	6")] string bcode, [Description("기초자산구분	string	1")] string bgubun, [Description("기초자산현재가	int	8")] int bprice, [Description("기초자산전일비구분	string	1")] string bsign, [Description("기초자산전일비	int	8")] int bchange, [Description("기초자산등락율	double	6.2")] double bdiff, [Description("기초자산거래량	double	12")] double bvolume, [Description("락구분	string	10")] string info1, [Description("관리/급등구분	string	10")] string info2, [Description("정지/연장구분	string	10")] string info3, [Description("투자/불성실구분	string	12")] string info4, [Description("장구분	string	10")] string janginfo, [Description("바스켓구분	string	1")] string basketgb, [Description("바스켓갯수	int	3")] int basketcnt, [Description("ELW권리행사방식	string	2")] string elwtype, [Description("ELW결제방법	string	2")] string settletype, [Description("LP사주문가능여부	string	2")] string lpord, [Description("권리내용	string	100")] string elwdetail, [Description("만기평가가격방식	string	100")] string valuation, [Description("확정지급액	double	8.3")] double givemoney);
 
 /// <summary>
-/// ELW현재가(확정지급액)조회(t1956): t1956: OutBlock1
+/// ELW현재가(확정지급액)조회: t1956: OutBlock1
 /// </summary>
 /// <param name="bskcode">기초자산코드	string	6</param>
 /// <param name="bskbno">기초자산비율	int	3</param>
@@ -7727,14 +7727,14 @@ public record t1956OutBlock1([Description("기초자산코드	string	6")] string
 
 
 /// <summary>
-/// ELW종목비교(t1958): t1958: InBlock
+/// ELW종목비교: t1958: InBlock
 /// </summary>
 /// <param name="shcode1">종목코드1	string	6</param>
 /// <param name="shcode2">종목코드2	string	6</param>
 public record t1958InBlock([Description("종목코드1	string	6")] string shcode1, [Description("종목코드2	string	6")] string shcode2);
 
 /// <summary>
-/// ELW종목비교(t1958): t1958: OutBlock
+/// ELW종목비교: t1958: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	40</param>
 /// <param name="item1">기초자산	string	12</param>
@@ -7761,7 +7761,7 @@ public record t1958InBlock([Description("종목코드1	string	6")] string shcode
 public record t1958OutBlock([Description("종목명	string	40")] string hname, [Description("기초자산	string	12")] string item1, [Description("발행사	string	40")] string issuernmk, [Description("콜풋구분	string	2")] string elwopt, [Description("행사방식	string	2")] string elwtype, [Description("결제방법	string	2")] string settletype, [Description("행사가	double	8.2")] double elwexec, [Description("전환비율	double	12.4")] double convrate, [Description("발행수량	double	12")] double listing, [Description("행사개시일	string	8")] string mmsdate, [Description("최종거래일	string	8")] string lastdate, [Description("거래잔존일수	int	4")] int nofdays, [Description("지급일	string	8")] string payday, [Description("패리티	double	6.2")] double parity, [Description("프리미엄	double	6.2")] double premium, [Description("손익분기	double	6.2")] double berate, [Description("자본지지	double	6.2")] double capt, [Description("기어링	double	6.2")] double gearing, [Description("e.기어링	double	6.2")] double egearing, [Description("가격	int	8")] int price, [Description("거래량	double	12")] double volume, [Description("등락율	double	6.2")] double diff);
 
 /// <summary>
-/// ELW종목비교(t1958): t1958: OutBlock1
+/// ELW종목비교: t1958: OutBlock1
 /// </summary>
 /// <param name="hname">종목명	string	40</param>
 /// <param name="item1">기초자산	string	12</param>
@@ -7788,7 +7788,7 @@ public record t1958OutBlock([Description("종목명	string	40")] string hname, [
 public record t1958OutBlock1([Description("종목명	string	40")] string hname, [Description("기초자산	string	12")] string item1, [Description("발행사	string	40")] string issuernmk, [Description("콜풋구분	string	2")] string elwopt, [Description("행사방식	string	2")] string elwtype, [Description("결제방법	string	2")] string settletype, [Description("행사가	double	8.2")] double elwexec, [Description("전환비율	double	12.4")] double convrate, [Description("발행수량	double	12")] double listing, [Description("행사개시일	string	8")] string mmsdate, [Description("최종거래일	string	8")] string lastdate, [Description("거래잔존일수	int	4")] int nofdays, [Description("지급일	string	8")] string payday, [Description("패리티	double	6.2")] double parity, [Description("프리미엄	double	6.2")] double premium, [Description("손익분기	double	6.2")] double berate, [Description("자본지지	double	6.2")] double capt, [Description("기어링	double	6.2")] double gearing, [Description("e.기어링	double	6.2")] double egearing, [Description("가격	int	8")] int price, [Description("거래량	double	12")] double volume, [Description("등락율	double	6.2")] double diff);
 
 /// <summary>
-/// ELW종목비교(t1958): t1958: OutBlock2
+/// ELW종목비교: t1958: OutBlock2
 /// </summary>
 /// <param name="hnamecmp">종목명비교	string	6</param>
 /// <param name="item1cmp">기초자산비교	string	6</param>
@@ -7816,13 +7816,13 @@ public record t1958OutBlock2([Description("종목명비교	string	6")] string hn
 
 
 /// <summary>
-/// LP대상종목정보조회(t1959): t1959: InBlock
+/// LP대상종목정보조회: t1959: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 public record t1959InBlock([Description("종목코드	string	6")] string shcode);
 
 /// <summary>
-/// LP대상종목정보조회(t1959): t1959: OutBlock1
+/// LP대상종목정보조회: t1959: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="hname">종목명	string	40</param>
@@ -7846,7 +7846,7 @@ public record t1959OutBlock1([Description("종목코드	string	6")] string shcod
 
 
 /// <summary>
-/// ELW등락율상위(t1960): t1960: InBlock
+/// ELW등락율상위: t1960: InBlock
 /// </summary>
 /// <param name="gubun">상승하락(0:상승1:하락)	string	1</param>
 /// <param name="ggubun">권리유형구분(00:EX01:콜02:풋'':전체)	string	2</param>
@@ -7862,13 +7862,13 @@ public record t1959OutBlock1([Description("종목코드	string	6")] string shcod
 public record t1960InBlock([Description("상승하락(0:상승1:하락)	string	1")] string gubun, [Description("권리유형구분(00:EX01:콜02:풋'':전체)	string	2")] string ggubun, [Description("기초자산종목	string	12")] string itemcode, [Description("조회만기일	string	8")] string lastdate, [Description("대상제외	string	6")] string exgubun, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("잔존시작일수	int	8")] int sjanday, [Description("잔존종료일수	int	8")] int ejanday, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// ELW등락율상위(t1960): t1960: OutBlock
+/// ELW등락율상위: t1960: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1960OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// ELW등락율상위(t1960): t1960: OutBlock1
+/// ELW등락율상위: t1960: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	40</param>
 /// <param name="price">현재가	int	8</param>
@@ -7892,7 +7892,7 @@ public record t1960OutBlock1([Description("한글명	string	40")] string hname, 
 
 
 /// <summary>
-/// ELW거래량상위(t1961): t1961: InBlock
+/// ELW거래량상위: t1961: InBlock
 /// </summary>
 /// <param name="gubun">당일전일(0:당일1:전일)	string	1</param>
 /// <param name="ggubun">권리유형구분(00:EX01:콜02:풋'':전체)	string	2</param>
@@ -7908,13 +7908,13 @@ public record t1960OutBlock1([Description("한글명	string	40")] string hname, 
 public record t1961InBlock([Description("당일전일(0:당일1:전일)	string	1")] string gubun, [Description("권리유형구분(00:EX01:콜02:풋'':전체)	string	2")] string ggubun, [Description("기초자산종목	string	12")] string itemcode, [Description("조회만기일	string	8")] string lastdate, [Description("대상제외	string	6")] string exgubun, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("잔존시작일수	int	8")] int sjanday, [Description("잔존종료일수	int	8")] int ejanday, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// ELW거래량상위(t1961): t1961: OutBlock
+/// ELW거래량상위: t1961: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1961OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// ELW거래량상위(t1961): t1961: OutBlock1
+/// ELW거래량상위: t1961: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	40</param>
 /// <param name="price">현재가	int	8</param>
@@ -7938,7 +7938,7 @@ public record t1961OutBlock1([Description("한글명	string	40")] string hname, 
 
 
 /// <summary>
-/// ELW전광판(t1964): t1964: InBlock
+/// ELW전광판: t1964: InBlock
 /// </summary>
 /// <param name="item">기초자산코드	string	12</param>
 /// <param name="issuercd">발행사	string	12</param>
@@ -7954,7 +7954,7 @@ public record t1961OutBlock1([Description("한글명	string	40")] string hname, 
 public record t1964InBlock([Description("기초자산코드	string	12")] string item, [Description("발행사	string	12")] string issuercd, [Description("만기월물	string	6")] string lastmonth, [Description("콜풋구분	string	1")] string elwopt, [Description("머니구분	string	1")] string atmgubun, [Description("권리행사방식	string	2")] string elwtype, [Description("결제방법	string	2")] string settletype, [Description("행사기초자산구분	string	1")] string elwexecgubun, [Description("시작비율	string	5")] string fromrat, [Description("종료비율	string	5")] string torat, [Description("거래량	string	12")] string volume);
 
 /// <summary>
-/// ELW전광판(t1964): t1964: OutBlock1
+/// ELW전광판: t1964: OutBlock1
 /// </summary>
 /// <param name="shcode">ELW코드	string	6</param>
 /// <param name="hname">종목명	string	40</param>
@@ -7997,7 +7997,7 @@ public record t1964OutBlock1([Description("ELW코드	string	6")] string shcode, 
 
 
 /// <summary>
-/// ELW거래대금상위(t1966): t1966: InBlock
+/// ELW거래대금상위: t1966: InBlock
 /// </summary>
 /// <param name="gubun">당일전일(0:당일1:전일)	string	1</param>
 /// <param name="ggubun">권리유형구분(00:EX01:콜02:풋'':전체)	string	2</param>
@@ -8013,13 +8013,13 @@ public record t1964OutBlock1([Description("ELW코드	string	6")] string shcode, 
 public record t1966InBlock([Description("당일전일(0:당일1:전일)	string	1")] string gubun, [Description("권리유형구분(00:EX01:콜02:풋'':전체)	string	2")] string ggubun, [Description("기초자산종목	string	12")] string itemcode, [Description("조회만기일	string	8")] string lastdate, [Description("대상제외	string	6")] string exgubun, [Description("시작가격	int	8")] int sprice, [Description("종료가격	int	8")] int eprice, [Description("거래량	long	12")] long volume, [Description("잔존시작일수	int	8")] int sjanday, [Description("잔존종료일수	int	8")] int ejanday, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// ELW거래대금상위(t1966): t1966: OutBlock
+/// ELW거래대금상위: t1966: OutBlock
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
 public record t1966OutBlock([Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// ELW거래대금상위(t1966): t1966: OutBlock1
+/// ELW거래대금상위: t1966: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	40</param>
 /// <param name="price">현재가	int	8</param>
@@ -8043,7 +8043,7 @@ public record t1966OutBlock1([Description("한글명	string	40")] string hname, 
 
 
 /// <summary>
-/// ELW지표검색(t1969): t1969: InBlock
+/// ELW지표검색: t1969: InBlock
 /// </summary>
 /// <param name="chkitem">기초자산chk구분	string	1</param>
 /// <param name="cbitem">기초자산코드	string	12</param>
@@ -8052,7 +8052,7 @@ public record t1966OutBlock1([Description("한글명	string	40")] string hname, 
 /// <param name="chkcallput">권리chk구분	string	1</param>
 /// <param name="cbcallput">권리(call:01.put:02)	string	2</param>
 /// <param name="chkexec">행사가chk구분	string	1</param>
-/// <param name="cbexec">행사가(>=:1.<=:2)	string	1</param>
+/// <param name="cbexec">행사가(이상:1.이하:2)	string	1</param>
 /// <param name="chktype">행사방식chk구분	string	1</param>
 /// <param name="cbtype">행사방식	string	2</param>
 /// <param name="chksettle">결제방법chk구분	string	1</param>
@@ -8104,13 +8104,13 @@ public record t1966OutBlock1([Description("한글명	string	40")] string hname, 
 public record t1969InBlock([Description("기초자산chk구분	string	1")] string chkitem, [Description("기초자산코드	string	12")] string cbitem, [Description("발행사chk구분	string	1")] string chkissuer, [Description("발행사	string	12")] string cbissuer, [Description("권리chk구분	string	1")] string chkcallput, [Description("권리(call:01.put:02)	string	2")] string cbcallput, [Description("행사가chk구분	string	1")] string chkexec, [Description("행사가(>=:1.<=:2)	string	1")] string cbexec, [Description("행사방식chk구분	string	1")] string chktype, [Description("행사방식	string	2")] string cbtype, [Description("결제방법chk구분	string	1")] string chksettle, [Description("결제방법	string	2")] string cbsettle, [Description("만기chk구분	string	1")] string chklast, [Description("만기월별	string	6")] string cblast, [Description("행사가격chk구분	string	1")] string chkelwexec, [Description("행사가이상	double	10.2")] double elwexecs, [Description("행사가이하	double	10.2")] double elwexece, [Description("거래량chk구분	string	1")] string chkvolume, [Description("거래량이상	double	12")] double volumes, [Description("거래량이하	double	12")] double volumee, [Description("등락율chk구분	string	1")] string chkrate, [Description("등락율이상	double	6.2")] double rates, [Description("등락율이하	double	6.2")] double ratee, [Description("프리미엄chk구분	string	1")] string chkpremium, [Description("프리미엄이상	double	6.2")] double premiums, [Description("프리미엄이하	double	6.2")] double premiume, [Description("패리티chk구분	string	1")] string chkparity, [Description("패리티이상	double	6.2")] double paritys, [Description("패리티이하	double	6.2")] double paritye, [Description("손익분기chk구분	string	1")] string chkberate, [Description("손익분기이상	double	6.2")] double berates, [Description("손익분기이하	double	6.2")] double beratee, [Description("자본지지chk구분	string	1")] string chkcapt, [Description("자본지지이상	double	6.2")] double capts, [Description("자본지지이하	double	6.2")] double capte, [Description("e.기어링chk구분	string	1")] string chkegearing, [Description("e.기어링이상	double	6.2")] double egearings, [Description("e.기어링이하	double	6.2")] double egearinge, [Description("기어링chk구분	string	1")] string chkgearing, [Description("기어링이상	double	6.2")] double gearings, [Description("기어링이하	double	6.2")] double gearinge, [Description("델타chk구분	string	1")] string chkdelta, [Description("델타이상	double	10.6")] double deltas, [Description("델타이하	double	10.6")] double deltae, [Description("쎄타chk구분	string	1")] string chktheta, [Description("쎄타이상	double	10.6")] double thetas, [Description("쎄타이하	double	10.6")] double thetae, [Description("최종거래일chk구분	string	1")] string chkduedate, [Description("최종거래일이상	string	8")] string duedates, [Description("최종거래일이하	string	8")] string duedatee, [Description("LP갭1틱	string	1")] string onetickgubun, [Description("LP유동성공급	string	1")] string lp_liquidity, [Description("LPchk구분	string	1")] string chklp_code, [Description("LP회원사코드	string	3")] string lp_code, [Description("조기종료chk구분	string	1")] string chkkoba, [Description("조기종료(0:전체1:KOBA2:KOBA제외)	string	1")] string cbkoba);
 
 /// <summary>
-/// ELW지표검색(t1969): t1969: OutBlock
+/// ELW지표검색: t1969: OutBlock
 /// </summary>
 /// <param name="cnt">종목갯수	int	4</param>
 public record t1969OutBlock([Description("종목갯수	int	4")] int cnt);
 
 /// <summary>
-/// ELW지표검색(t1969): t1969: OutBlock1
+/// ELW지표검색: t1969: OutBlock1
 /// </summary>
 /// <param name="hname">종목명	string	40</param>
 /// <param name="shcode">종목코드	string	6</param>
@@ -8148,13 +8148,13 @@ public record t1969OutBlock1([Description("종목명	string	40")] string hname, 
 
 
 /// <summary>
-/// ELW현재가호가조회(t1971): t1971: InBlock
+/// ELW현재가호가조회: t1971: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 public record t1971InBlock([Description("단축코드	string	6")] string shcode);
 
 /// <summary>
-/// ELW현재가호가조회(t1971): t1971: OutBlock
+/// ELW현재가호가조회: t1971: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	40</param>
 /// <param name="price">현재가	int	8</param>
@@ -8267,13 +8267,13 @@ public record t1971OutBlock([Description("한글명	string	40")] string hname, [
 
 
 /// <summary>
-/// ELW현재가(거래원)조회(t1972): t1972: InBlock
+/// ELW현재가(거래원)조회: t1972: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 public record t1972InBlock([Description("단축코드	string	6")] string shcode);
 
 /// <summary>
-/// ELW현재가(거래원)조회(t1972): t1972: OutBlock
+/// ELW현재가(거래원)조회: t1972: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	40</param>
 /// <param name="expcode">표준코드	string	12</param>
@@ -8328,20 +8328,20 @@ public record t1972OutBlock([Description("한글명	string	40")] string hname, [
 
 
 /// <summary>
-/// ELW시간대별예상체결조회(t1973): t1973: InBlock
+/// ELW시간대별예상체결조회: t1973: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="cts_time">시간CTS	string	8</param>
 public record t1973InBlock([Description("단축코드	string	6")] string shcode, [Description("시간CTS	string	8")] string cts_time);
 
 /// <summary>
-/// ELW시간대별예상체결조회(t1973): t1973: OutBlock
+/// ELW시간대별예상체결조회: t1973: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	8</param>
 public record t1973OutBlock([Description("시간CTS	string	8")] string cts_time);
 
 /// <summary>
-/// ELW시간대별예상체결조회(t1973): t1973: OutBlock1
+/// ELW시간대별예상체결조회: t1973: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	8</param>
 /// <param name="yeprice">예상체결가격	int	8</param>
@@ -8356,19 +8356,19 @@ public record t1973OutBlock1([Description("시간	string	8")] string chetime, [D
 
 
 /// <summary>
-/// ELW기초자산동일종목(t1974): t1974: InBlock
+/// ELW기초자산동일종목: t1974: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 public record t1974InBlock([Description("종목코드	string	6")] string shcode);
 
 /// <summary>
-/// ELW기초자산동일종목(t1974): t1974: OutBlock
+/// ELW기초자산동일종목: t1974: OutBlock
 /// </summary>
 /// <param name="cnt">종목갯수	int	4</param>
 public record t1974OutBlock([Description("종목갯수	int	4")] int cnt);
 
 /// <summary>
-/// ELW기초자산동일종목(t1974): t1974: OutBlock1
+/// ELW기초자산동일종목: t1974: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="hname">종목명	string	40</param>
@@ -8382,7 +8382,7 @@ public record t1974OutBlock1([Description("종목코드	string	6")] string shcod
 
 
 /// <summary>
-/// 기초자산리스트조회(t1988): t1988: InBlock
+/// 기초자산리스트조회: t1988: InBlock
 /// </summary>
 /// <param name="mkt_gb">시장구분(0:전체1:코스피2:코스닥)	string	1</param>
 /// <param name="chk_price">가격설정(0:전체1:조건설정)	string	1</param>
@@ -8402,14 +8402,14 @@ public record t1974OutBlock1([Description("종목코드	string	6")] string shcod
 public record t1988InBlock([Description("시장구분(0:전체1:코스피2:코스닥)	string	1")] string mkt_gb, [Description("가격설정(0:전체1:조건설정)	string	1")] string chk_price, [Description("가격1	string	12")] string from_price, [Description("가격2	string	12")] string to_price, [Description("거래량설정(0:전체1:조건설정)	string	1")] string chk_vol, [Description("거래량1	string	12")] string from_vol, [Description("거래량2	string	12")] string to_vol, [Description("등락율설정(0:전체1:조건설정)	string	1")] string chk_rate, [Description("등락율1	double	5.2")] double from_rate, [Description("등락율2	double	5.2")] double to_rate, [Description("거래대금설정(0:전체1:조건설정)	string	1")] string chk_amt, [Description("거래대금1	string	12")] string from_amt, [Description("거래대금2	string	12")] string to_amt, [Description("양봉설정(0:전체1:조건설정)	string	1")] string chk_up, [Description("음봉설정(0:전체1:조건설정)	string	1")] string chk_down);
 
 /// <summary>
-/// 기초자산리스트조회(t1988): t1988: OutBlock
+/// 기초자산리스트조회: t1988: OutBlock
 /// </summary>
 /// <param name="ksp_cnt">코스피종목건수	string	4</param>
 /// <param name="ksd_cnt">코스닥종목건수	string	4</param>
 public record t1988OutBlock([Description("코스피종목건수	string	4")] string ksp_cnt, [Description("코스닥종목건수	string	4")] string ksd_cnt);
 
 /// <summary>
-/// 기초자산리스트조회(t1988): t1988: OutBlock1
+/// 기초자산리스트조회: t1988: OutBlock1
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="expcode">표준코드	string	12</param>
@@ -8426,13 +8426,13 @@ public record t1988OutBlock1([Description("단축코드	string	6")] string shcod
 
 
 /// <summary>
-/// 선물/옵션현재가(시세)조회(t2101): t2101: InBlock
+/// 선물/옵션현재가(시세)조회: t2101: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 public record t2101InBlock([Description("단축코드	string	8")] string focode);
 
 /// <summary>
-/// 선물/옵션현재가(시세)조회(t2101): t2101: OutBlock
+/// 선물/옵션현재가(시세)조회: t2101: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -8507,13 +8507,13 @@ public record t2101OutBlock([Description("한글명	string	20")] string hname, [
 
 
 /// <summary>
-/// 선물/옵션현재가호가조회(t2105): t2105: InBlock
+/// 선물/옵션현재가호가조회: t2105: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 public record t2105InBlock([Description("단축코드	string	8")] string shcode);
 
 /// <summary>
-/// 선물/옵션현재가호가조회(t2105): t2105: OutBlock
+/// 선물/옵션현재가호가조회: t2105: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -8563,14 +8563,14 @@ public record t2105OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 선물/옵션현재가시세메모(t2106): t2106: InBlock
+/// 선물/옵션현재가시세메모: t2106: InBlock
 /// </summary>
 /// <param name="code">종목코드	string	8</param>
 /// <param name="nrec">건수	string	2</param>
 public record t2106InBlock([Description("종목코드	string	8")] string code, [Description("건수	string	2")] string nrec);
 
 /// <summary>
-/// 선물/옵션현재가시세메모(t2106): t2106: InBlock1
+/// 선물/옵션현재가시세메모: t2106: InBlock1
 /// </summary>
 /// <param name="indx">인덱스	string	1</param>
 /// <param name="gubn">조건구분	string	1</param>
@@ -8579,13 +8579,13 @@ public record t2106InBlock([Description("종목코드	string	8")] string code, [
 public record t2106InBlock1([Description("인덱스	string	1")] string indx, [Description("조건구분	string	1")] string gubn, [Description("데이타1	string	1")] string dat1, [Description("데이타2	string	8")] string dat2);
 
 /// <summary>
-/// 선물/옵션현재가시세메모(t2106): t2106: OutBlock
+/// 선물/옵션현재가시세메모: t2106: OutBlock
 /// </summary>
 /// <param name="nrec">출력건수	string	2</param>
 public record t2106OutBlock([Description("출력건수	string	2")] string nrec);
 
 /// <summary>
-/// 선물/옵션현재가시세메모(t2106): t2106: OutBlock1
+/// 선물/옵션현재가시세메모: t2106: OutBlock1
 /// </summary>
 /// <param name="indx">인덱스	string	1</param>
 /// <param name="gubn">조건구분	string	1</param>
@@ -8594,7 +8594,7 @@ public record t2106OutBlock1([Description("인덱스	string	1")] string indx, [D
 
 
 /// <summary>
-/// 선물옵션시간대별체결조회(t2201): t2201: InBlock
+/// 선물옵션시간대별체결조회: t2201: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 /// <param name="cvolume">특이거래량	long	12</param>
@@ -8604,13 +8604,13 @@ public record t2106OutBlock1([Description("인덱스	string	1")] string indx, [D
 public record t2201InBlock([Description("단축코드	string	8")] string focode, [Description("특이거래량	long	12")] long cvolume, [Description("시작시간	string	4")] string stime, [Description("종료시간	string	4")] string etime, [Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 선물옵션시간대별체결조회(t2201): t2201: OutBlock
+/// 선물옵션시간대별체결조회: t2201: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
 public record t2201OutBlock([Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 선물옵션시간대별체결조회(t2201): t2201: OutBlock1
+/// 선물옵션시간대별체결조회: t2201: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	10</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -8638,7 +8638,7 @@ public record t2201OutBlock1([Description("시간	string	10")] string chetime, [
 
 
 /// <summary>
-/// 기간별주가(t2203): t2203: InBlock
+/// 기간별주가: t2203: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="futcheck">선물최근월물	string	1</param>
@@ -8649,7 +8649,7 @@ public record t2201OutBlock1([Description("시간	string	10")] string chetime, [
 public record t2203InBlock([Description("단축코드	string	8")] string shcode, [Description("선물최근월물	string	1")] string futcheck, [Description("날짜	string	8")] string date, [Description("CTS종목코드	string	8")] string cts_code, [Description("전종목만기일	string	8")] string lastdate, [Description("조회요청건수	int	3")] int cnt);
 
 /// <summary>
-/// 기간별주가(t2203): t2203: OutBlock
+/// 기간별주가: t2203: OutBlock
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="cts_code">CTS종목코드	string	8</param>
@@ -8658,7 +8658,7 @@ public record t2203InBlock([Description("단축코드	string	8")] string shcode,
 public record t2203OutBlock([Description("날짜	string	8")] string date, [Description("CTS종목코드	string	8")] string cts_code, [Description("전종목만기일	string	8")] string lastdate, [Description("최근월선물여부	string	1")] string nowfutyn);
 
 /// <summary>
-/// 기간별주가(t2203): t2203: OutBlock1
+/// 기간별주가: t2203: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	double	6.2</param>
@@ -8677,7 +8677,7 @@ public record t2203OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 선물옵션틱분별체결조회챠트(t2209): t2209: InBlock
+/// 선물옵션틱분별체결조회챠트: t2209: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 /// <param name="cgubun">챠트구분	string	1</param>
@@ -8686,7 +8686,7 @@ public record t2203OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t2209InBlock([Description("단축코드	string	8")] string focode, [Description("챠트구분	string	1")] string cgubun, [Description("분구분	int	3")] int bgubun, [Description("조회건수	int	3")] int cnt);
 
 /// <summary>
-/// 선물옵션틱분별체결조회챠트(t2209): t2209: OutBlock1
+/// 선물옵션틱분별체결조회챠트: t2209: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	10</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -8731,14 +8731,14 @@ public record t2210OutBlock([Description("매도체결수량	int	8")] int mdvolu
 
 
 /// <summary>
-/// 옵션전광판(t2301): t2301: InBlock
+/// 옵션전광판: t2301: InBlock
 /// </summary>
 /// <param name="yyyymm">월물	string	6</param>
 /// <param name="gubun">미니구분(M:미니G:정규)	string	1</param>
 public record t2301InBlock([Description("월물	string	6")] string yyyymm, [Description("미니구분(M:미니G:정규)	string	1")] string gubun);
 
 /// <summary>
-/// 옵션전광판(t2301): t2301: OutBlock
+/// 옵션전광판: t2301: OutBlock
 /// </summary>
 /// <param name="histimpv">역사적변동성	int	4</param>
 /// <param name="jandatecnt">옵션잔존일	int	4</param>
@@ -8753,7 +8753,7 @@ public record t2301InBlock([Description("월물	string	6")] string yyyymm, [Desc
 public record t2301OutBlock([Description("역사적변동성	int	4")] int histimpv, [Description("옵션잔존일	int	4")] int jandatecnt, [Description("콜옵션대표IV	double	6.3")] double cimpv, [Description("풋옵션대표IV	double	6.3")] double pimpv, [Description("근월물현재가	double	6.2")] double gmprice, [Description("근월물전일대비구분	string	1")] string gmsign, [Description("근월물전일대비	double	6.2")] double gmchange, [Description("근월물등락율	double	6.2")] double gmdiff, [Description("근월물거래량	long	12")] long gmvolume, [Description("근월물선물코드	string	8")] string gmshcode);
 
 /// <summary>
-/// 옵션전광판(t2301): t2301: OutBlock1
+/// 옵션전광판: t2301: OutBlock1
 /// </summary>
 /// <param name="actprice">행사가	double	6.2</param>
 /// <param name="optcode">콜옵션코드	string	8</param>
@@ -8790,7 +8790,7 @@ public record t2301OutBlock([Description("역사적변동성	int	4")] int histim
 public record t2301OutBlock1([Description("행사가	double	6.2")] double actprice, [Description("콜옵션코드	string	8")] string optcode, [Description("현재가	double	6.2")] double price, [Description("전일대비구분	string	1")] string sign, [Description("전일대비	double	6.2")] double change, [Description("등락율	double	6.2")] double diff, [Description("거래량	long	12")] long volume, [Description("IV	double	6.2")] double iv, [Description("미결제약정	long	12")] long mgjv, [Description("미결제약정증감	long	12")] long mgjvupdn, [Description("매도호가	double	6.2")] double offerho1, [Description("매수호가	double	6.2")] double bidho1, [Description("체결량	long	12")] long cvolume, [Description("델타	double	6.4")] double delt, [Description("감마	double	6.4")] double gama, [Description("베가	double	6.4")] double vega, [Description("쎄타	double	6.4")] double ceta, [Description("로우	double	6.4")] double rhox, [Description("이론가	double	6.2")] double theoryprice, [Description("내재가치	double	6.2")] double impv, [Description("시간가치	double	6.2")] double timevl, [Description("잔고수량	long	12")] long jvolume, [Description("평가손익	long	12")] long parpl, [Description("청산가능수량	int	6")] int jngo, [Description("매도잔량	long	12")] long offerrem1, [Description("매수잔량	long	12")] long bidrem1, [Description("시가	double	6.2")] double open, [Description("고가	double	6.2")] double high, [Description("저가	double	6.2")] double low, [Description("ATM구분	string	1")] string atmgubun, [Description("지수환산	double	6.2")] double jisuconv, [Description("거래대금	double	12")] double value);
 
 /// <summary>
-/// 옵션전광판(t2301): t2301: OutBlock2
+/// 옵션전광판: t2301: OutBlock2
 /// </summary>
 /// <param name="actprice">행사가	double	6.2</param>
 /// <param name="optcode">풋옵션코드	string	8</param>
@@ -8828,7 +8828,7 @@ public record t2301OutBlock2([Description("행사가	double	6.2")] double actpri
 
 
 /// <summary>
-/// 선물옵션호가잔량비율챠트(t2405): t2405: InBlock
+/// 선물옵션호가잔량비율챠트: t2405: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 /// <param name="bgubun">분구분	string	1</param>
@@ -8840,7 +8840,7 @@ public record t2301OutBlock2([Description("행사가	double	6.2")] double actpri
 public record t2405InBlock([Description("단축코드	string	8")] string focode, [Description("분구분	string	1")] string bgubun, [Description("N분	int	2")] int nmin, [Description("종료시간	string	4")] string etime, [Description("호가구분	string	1")] string hgubun, [Description("조회건수	int	3")] int cnt, [Description("시간CTS	string	6")] string cts_time);
 
 /// <summary>
-/// 선물옵션호가잔량비율챠트(t2405): t2405: OutBlock
+/// 선물옵션호가잔량비율챠트: t2405: OutBlock
 /// </summary>
 /// <param name="mdvolume">매도체결수량	double	12</param>
 /// <param name="mdchecnt">매도체결건수	int	8</param>
@@ -8850,7 +8850,7 @@ public record t2405InBlock([Description("단축코드	string	8")] string focode,
 public record t2405OutBlock([Description("매도체결수량	double	12")] double mdvolume, [Description("매도체결건수	int	8")] int mdchecnt, [Description("매수체결수량	double	12")] double msvolume, [Description("매수체결건수	int	8")] int mschecnt, [Description("시간CTS	string	6")] string cts_time);
 
 /// <summary>
-/// 선물옵션호가잔량비율챠트(t2405): t2405: OutBlock1
+/// 선물옵션호가잔량비율챠트: t2405: OutBlock1
 /// </summary>
 /// <param name="time">시간	string	6</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -8876,7 +8876,7 @@ public record t2405OutBlock1([Description("시간	string	6")] string time, [Desc
 
 
 /// <summary>
-/// 미결제약정추이(t2421): t2421: InBlock
+/// 미결제약정추이: t2421: InBlock
 /// </summary>
 /// <param name="focode">종목코드	string	8</param>
 /// <param name="bdgubun">분일구분	string	1</param>
@@ -8886,7 +8886,7 @@ public record t2405OutBlock1([Description("시간	string	6")] string time, [Desc
 public record t2421InBlock([Description("종목코드	string	8")] string focode, [Description("분일구분	string	1")] string bdgubun, [Description("N분	int	3")] int nmin, [Description("당일연결구분	string	1")] string tcgubun, [Description("조회건수	int	4")] int cnt);
 
 /// <summary>
-/// 미결제약정추이(t2421): t2421: OutBlock
+/// 미결제약정추이: t2421: OutBlock
 /// </summary>
 /// <param name="price">현재가	double	6.2</param>
 /// <param name="sign">전일대비구분	string	1</param>
@@ -8898,7 +8898,7 @@ public record t2421InBlock([Description("종목코드	string	8")] string focode,
 public record t2421OutBlock([Description("현재가	double	6.2")] double price, [Description("전일대비구분	string	1")] string sign, [Description("전일대비	double	6.2")] double change, [Description("등락율	double	6.2")] double diff, [Description("체결수량	int	8")] int cvolume, [Description("누적거래량	double	15")] double volume, [Description("미결제수량	int	8")] int openyak);
 
 /// <summary>
-/// 미결제약정추이(t2421): t2421: OutBlock1
+/// 미결제약정추이: t2421: OutBlock1
 /// </summary>
 /// <param name="dt">일자시간	string	14</param>
 /// <param name="open">시가	double	6.2</param>
@@ -8914,7 +8914,7 @@ public record t2421OutBlock1([Description("일자시간	string	14")] string dt, 
 
 
 /// <summary>
-/// 상품선물투자자매매동향(실시간)(t2541): t2541: InBlock
+/// 상품선물투자자매매동향(실시간): t2541: InBlock
 /// </summary>
 /// <param name="eitem">상품ID	string	2</param>
 /// <param name="market">시장구분	string	1</param>
@@ -8927,7 +8927,7 @@ public record t2421OutBlock1([Description("일자시간	string	14")] string dt, 
 public record t2541InBlock([Description("상품ID	string	2")] string eitem, [Description("시장구분	string	1")] string market, [Description("업종코드	string	3")] string upcode, [Description("수량구분	string	1")] string gubun1, [Description("전일분구분	string	1")] string gubun2, [Description("CTSTIME	string	8")] string cts_time, [Description("CTSIDX	int	4")] int cts_idx, [Description("조회건수	int	4")] int cnt);
 
 /// <summary>
-/// 상품선물투자자매매동향(실시간)(t2541): t2541: OutBlock
+/// 상품선물투자자매매동향(실시간): t2541: OutBlock
 /// </summary>
 /// <param name="eitem">상품ID	string	2</param>
 /// <param name="sgubun">시장구분	string	1</param>
@@ -8995,7 +8995,7 @@ public record t2541InBlock([Description("상품ID	string	2")] string eitem, [Des
 public record t2541OutBlock([Description("상품ID	string	2")] string eitem, [Description("시장구분	string	1")] string sgubun, [Description("CTSTIME	string	8")] string cts_time, [Description("개인투자자코드	string	4")] string tjjcode_08, [Description("개인매수	long	12")] long ms_08, [Description("개인매도	long	12")] long md_08, [Description("개인증감	long	12")] long rate_08, [Description("개인순매수	long	12")] long svolume_08, [Description("외국인투자자코드	string	4")] string jjcode_17, [Description("외국인매수	long	12")] long ms_17, [Description("외국인매도	long	12")] long md_17, [Description("외국인증감	long	12")] long rate_17, [Description("외국인순매수	long	12")] long svolume_17, [Description("기관계투자자코드	string	4")] string jjcode_18, [Description("기관계매수	long	12")] long ms_18, [Description("기관계매도	long	12")] long md_18, [Description("기관계증감	long	12")] long rate_18, [Description("기관계순매수	long	12")] long svolume_18, [Description("증권투자자코드	string	4")] string jjcode_01, [Description("증권매수	long	12")] long ms_01, [Description("증권매도	long	12")] long md_01, [Description("증권증감	long	12")] long rate_01, [Description("증권순매수	long	12")] long svolume_01, [Description("투신투자자코드	string	4")] string jjcode_03, [Description("투신매수	long	12")] long ms_03, [Description("투신매도	long	12")] long md_03, [Description("투신증감	long	12")] long rate_03, [Description("투신순매수	long	12")] long svolume_03, [Description("은행투자자코드	string	4")] string jjcode_04, [Description("은행매수	long	12")] long ms_04, [Description("은행매도	long	12")] long md_04, [Description("은행증감	long	12")] long rate_04, [Description("은행순매수	long	12")] long svolume_04, [Description("보험투자자코드	string	4")] string jjcode_02, [Description("보험매수	long	12")] long ms_02, [Description("보험매도	long	12")] long md_02, [Description("보험증감	long	12")] long rate_02, [Description("보험순매수	long	12")] long svolume_02, [Description("종금투자자코드	string	4")] string jjcode_05, [Description("종금매수	long	12")] long ms_05, [Description("종금매도	long	12")] long md_05, [Description("종금증감	long	12")] long rate_05, [Description("종금순매수	long	12")] long svolume_05, [Description("기금투자자코드	string	4")] string jjcode_06, [Description("기금매수	long	12")] long ms_06, [Description("기금매도	long	12")] long md_06, [Description("기금증감	long	12")] long rate_06, [Description("기금순매수	long	12")] long svolume_06, [Description("기타투자자코드	string	4")] string jjcode_07, [Description("기타매수	long	12")] long ms_07, [Description("기타매도	long	12")] long md_07, [Description("기타증감	long	12")] long rate_07, [Description("기타순매수	long	12")] long svolume_07, [Description("국가투자자코드	string	4")] string jjcode_11, [Description("국가매수	long	12")] long ms_11, [Description("국가매도	long	12")] long md_11, [Description("국가증감	long	12")] long rate_11, [Description("국가순매수	long	12")] long svolume_11, [Description("사모펀드코드	string	4")] string jjcode_00, [Description("사모펀드매수	long	12")] long ms_00, [Description("사모펀드매도	long	12")] long md_00, [Description("사모펀드증감	long	12")] long rate_00, [Description("사모펀드순매수	long	12")] long svolume_00);
 
 /// <summary>
-/// 상품선물투자자매매동향(실시간)(t2541): t2541: OutBlock1
+/// 상품선물투자자매매동향(실시간): t2541: OutBlock1
 /// </summary>
 /// <param name="time">시간	string	8</param>
 /// <param name="sv_08">개인순매수	long	12</param>
@@ -9083,13 +9083,13 @@ public record t2545OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// EUREXKOSPI200옵션선물현재가(시세)조회(t2830): t2830: InBlock
+/// EUREXKOSPI200옵션선물현재가(시세)조회: t2830: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 public record t2830InBlock([Description("단축코드	string	8")] string focode);
 
 /// <summary>
-/// EUREXKOSPI200옵션선물현재가(시세)조회(t2830): t2830: OutBlock
+/// EUREXKOSPI200옵션선물현재가(시세)조회: t2830: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -9132,13 +9132,13 @@ public record t2830OutBlock([Description("한글명	string	20")] string hname, [
 
 
 /// <summary>
-/// EUREXKOSPI200옵션선물호가조회(t2831): t2831: InBlock
+/// EUREXKOSPI200옵션선물호가조회: t2831: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 public record t2831InBlock([Description("단축코드	string	8")] string shcode);
 
 /// <summary>
-/// EUREXKOSPI200옵션선물호가조회(t2831): t2831: OutBlock
+/// EUREXKOSPI200옵션선물호가조회: t2831: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -9187,7 +9187,7 @@ public record t2831OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// EUREX야간옵션선물시간대별체결조회(t2832): t2832: InBlock
+/// EUREX야간옵션선물시간대별체결조회: t2832: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 /// <param name="cvolume">특이거래량	long	12</param>
@@ -9197,13 +9197,13 @@ public record t2831OutBlock([Description("종목명	string	20")] string hname, [
 public record t2832InBlock([Description("단축코드	string	8")] string focode, [Description("특이거래량	long	12")] long cvolume, [Description("시작시간	string	4")] string stime, [Description("종료시간	string	4")] string etime, [Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// EUREX야간옵션선물시간대별체결조회(t2832): t2832: OutBlock
+/// EUREX야간옵션선물시간대별체결조회: t2832: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
 public record t2832OutBlock([Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// EUREX야간옵션선물시간대별체결조회(t2832): t2832: OutBlock1
+/// EUREX야간옵션선물시간대별체결조회: t2832: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	10</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -9224,7 +9224,7 @@ public record t2832OutBlock1([Description("시간	string	10")] string chetime, [
 
 
 /// <summary>
-/// EUREX야간옵션선물기간별추이(t2833): t2833: InBlock
+/// EUREX야간옵션선물기간별추이: t2833: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="futcheck">선물최근월물	string	1</param>
@@ -9235,7 +9235,7 @@ public record t2832OutBlock1([Description("시간	string	10")] string chetime, [
 public record t2833InBlock([Description("단축코드	string	8")] string shcode, [Description("선물최근월물	string	1")] string futcheck, [Description("날짜	string	8")] string date, [Description("CTS종목코드	string	8")] string cts_code, [Description("전종목만기일	string	8")] string lastdate, [Description("조회요청건수	int	3")] int cnt);
 
 /// <summary>
-/// EUREX야간옵션선물기간별추이(t2833): t2833: OutBlock
+/// EUREX야간옵션선물기간별추이: t2833: OutBlock
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="cts_code">CTS종목코드	string	8</param>
@@ -9244,7 +9244,7 @@ public record t2833InBlock([Description("단축코드	string	8")] string shcode,
 public record t2833OutBlock([Description("날짜	string	8")] string date, [Description("CTS종목코드	string	8")] string cts_code, [Description("전종목만기일	string	8")] string lastdate, [Description("최근월선물여부	string	1")] string nowfutyn);
 
 /// <summary>
-/// EUREX야간옵션선물기간별추이(t2833): t2833: OutBlock1
+/// EUREX야간옵션선물기간별추이: t2833: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	double	6.2</param>
@@ -9260,14 +9260,14 @@ public record t2833OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// EUREX옵션선물시세전광판(t2835): t2835: InBlock
+/// EUREX옵션선물시세전광판: t2835: InBlock
 /// </summary>
 /// <param name="yyyymm">월물(혹은주물WN)	string	6</param>
 /// <param name="gubun">구분(G:원지수W:위클리)	string	1</param>
 public record t2835InBlock([Description("월물(혹은주물WN)	string	6")] string yyyymm, [Description("구분(G:원지수W:위클리)	string	1")] string gubun);
 
 /// <summary>
-/// EUREX옵션선물시세전광판(t2835): t2835: OutBlock
+/// EUREX옵션선물시세전광판: t2835: OutBlock
 /// </summary>
 /// <param name="gmprice">근월물현재가	double	6.2</param>
 /// <param name="gmsign">근월물전일대비구분	string	1</param>
@@ -9278,7 +9278,7 @@ public record t2835InBlock([Description("월물(혹은주물WN)	string	6")] stri
 public record t2835OutBlock([Description("근월물현재가	double	6.2")] double gmprice, [Description("근월물전일대비구분	string	1")] string gmsign, [Description("근월물전일대비	double	6.2")] double gmchange, [Description("근월물등락율	double	6.2")] double gmdiff, [Description("근월물거래량	long	12")] long gmvolume, [Description("근월물선물코드	string	8")] string gmshcode);
 
 /// <summary>
-/// EUREX옵션선물시세전광판(t2835): t2835: OutBlock1
+/// EUREX옵션선물시세전광판: t2835: OutBlock1
 /// </summary>
 /// <param name="actprice">행사가	double	6.2</param>
 /// <param name="optcode">콜옵션코드	string	8</param>
@@ -9302,7 +9302,7 @@ public record t2835OutBlock([Description("근월물현재가	double	6.2")] doubl
 public record t2835OutBlock1([Description("행사가	double	6.2")] double actprice, [Description("콜옵션코드	string	8")] string optcode, [Description("현재가	double	6.2")] double price, [Description("전일대비구분	string	1")] string sign, [Description("전일대비	double	6.2")] double change, [Description("등락율	double	6.2")] double diff, [Description("거래량	long	12")] long volume, [Description("매도호가	double	6.2")] double offerho1, [Description("매수호가	double	6.2")] double bidho1, [Description("체결량	long	12")] long cvolume, [Description("내재가치	double	6.2")] double impv, [Description("시간가치	double	6.2")] double timevl, [Description("매도잔량	long	12")] long offerrem1, [Description("매수잔량	long	12")] long bidrem1, [Description("시가	double	6.2")] double open, [Description("고가	double	6.2")] double high, [Description("저가	double	6.2")] double low, [Description("ATM구분	string	1")] string atmgubun, [Description("지수환산	double	6.2")] double jisuconv);
 
 /// <summary>
-/// EUREX옵션선물시세전광판(t2835): t2835: OutBlock2
+/// EUREX옵션선물시세전광판: t2835: OutBlock2
 /// </summary>
 /// <param name="actprice">행사가	double	6.2</param>
 /// <param name="optcode">풋옵션코드	string	8</param>
@@ -9327,39 +9327,39 @@ public record t2835OutBlock2([Description("행사가	double	6.2")] double actpri
 
 
 /// <summary>
-/// 뉴스본문(t3102): t3102: InBlock
+/// 뉴스본문: t3102: InBlock
 /// </summary>
 /// <param name="sNewsno">뉴스번호	string	24</param>
 public record t3102InBlock([Description("뉴스번호	string	24")] string sNewsno);
 
 /// <summary>
-/// 뉴스본문(t3102): t3102: OutBlock
+/// 뉴스본문: t3102: OutBlock
 /// </summary>
 /// <param name="sJongcode">뉴스종목	string	6</param>
 public record t3102OutBlock([Description("뉴스종목	string	6")] string sJongcode);
 
 /// <summary>
-/// 뉴스본문(t3102): t3102: OutBlock1
+/// 뉴스본문: t3102: OutBlock1
 /// </summary>
 /// <param name="sBody">뉴스본문	string	100</param>
 public record t3102OutBlock1([Description("뉴스본문	string	100")] string sBody);
 
 /// <summary>
-/// 뉴스본문(t3102): t3102: OutBlock2
+/// 뉴스본문: t3102: OutBlock2
 /// </summary>
 /// <param name="sTitle">뉴스타이틀	string	300</param>
 public record t3102OutBlock2([Description("뉴스타이틀	string	300")] string sTitle);
 
 
 /// <summary>
-/// 종목별증시일정(t3202): t3202: InBlock
+/// 종목별증시일정: t3202: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="date">조회일자	string	8</param>
 public record t3202InBlock([Description("종목코드	string	6")] string shcode, [Description("조회일자	string	8")] string date);
 
 /// <summary>
-/// 종목별증시일정(t3202): t3202: OutBlock
+/// 종목별증시일정: t3202: OutBlock
 /// </summary>
 /// <param name="recdt">기준일	string	8</param>
 /// <param name="tableid">테이블아이디	string	6</param>
@@ -9372,13 +9372,13 @@ public record t3202OutBlock([Description("기준일	string	8")] string recdt, [D
 
 
 /// <summary>
-/// FNG_요약(t3320): t3320: InBlock
+/// FNG_요약: t3320: InBlock
 /// </summary>
 /// <param name="gicode">종목코드	string	7</param>
 public record t3320InBlock([Description("종목코드	string	7")] string gicode);
 
 /// <summary>
-/// FNG_요약(t3320): t3320: OutBlock
+/// FNG_요약: t3320: OutBlock
 /// </summary>
 /// <param name="upgubunnm">업종구분명	string	20</param>
 /// <param name="sijangcd">시장구분	string	1</param>
@@ -9407,7 +9407,7 @@ public record t3320InBlock([Description("종목코드	string	7")] string gicode)
 public record t3320OutBlock([Description("업종구분명	string	20")] string upgubunnm, [Description("시장구분	string	1")] string sijangcd, [Description("시장구분명	string	10")] string marketnm, [Description("한글기업명	string	100")] string company, [Description("본사주소	string	100")] string baddress, [Description("본사전화번호	string	20")] string btelno, [Description("최근결산년도	string	4")] string gsyyyy, [Description("결산월	string	2")] string gsmm, [Description("최근결산년월	string	6")] string gsym, [Description("주당액면가	long	12")] long lstprice, [Description("주식수	long	12")] long gstock, [Description("Homepage	string	50")] string homeurl, [Description("그룹명	string	30")] string grdnm, [Description("외국인	double	6.2")] double foreignratio, [Description("주담전화	string	30")] string irtel, [Description("자본금	double	12")] double capital, [Description("시가총액	double	12")] double sigavalue, [Description("배당금	double	12")] double cashsis, [Description("배당수익율	double	13.2")] double cashrate, [Description("현재가	int	8")] int price, [Description("전일종가	int	8")] int jnilclose, [Description("위험고지구분1_정리매매	string	1")] string notice1, [Description("위험고지구분2_투자위험	string	1")] string notice2, [Description("위험고지구분3_단기과열	string	1")] string notice3);
 
 /// <summary>
-/// FNG_요약(t3320): t3320: OutBlock1
+/// FNG_요약: t3320: OutBlock1
 /// </summary>
 /// <param name="gicode">기업코드	string	7</param>
 /// <param name="gsym">결산년월	string	6</param>
@@ -9432,7 +9432,7 @@ public record t3320OutBlock1([Description("기업코드	string	7")] string gicod
 
 
 /// <summary>
-/// 재무순위종합(t3341): t3341: InBlock
+/// 재무순위종합: t3341: InBlock
 /// </summary>
 /// <param name="gubun">시장구분	string	1</param>
 /// <param name="gubun1">순위구분(1:매출액증가율2:영업이익증가율3:세전계속이익증가율4:부채비율5:유보율6:EPS7:BPS8:ROE9:PERa:PBRb:PEG)	string	1</param>
@@ -9441,14 +9441,14 @@ public record t3320OutBlock1([Description("기업코드	string	7")] string gicod
 public record t3341InBlock([Description("시장구분	string	1")] string gubun, [Description("순위구분(1:매출액증가율2:영업이익증가율3:세전계속이익증가율4:부채비율5:유보율6:EPS7:BPS8:ROE9:PERa:PBRb:PEG)	string	1")] string gubun1, [Description("대비구분	string	1")] string gubun2, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 재무순위종합(t3341): t3341: OutBlock
+/// 재무순위종합: t3341: OutBlock
 /// </summary>
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="idx">IDX	int	4</param>
 public record t3341OutBlock([Description("CNT	int	4")] int cnt, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 재무순위종합(t3341): t3341: OutBlock1
+/// 재무순위종합: t3341: OutBlock1
 /// </summary>
 /// <param name="rank">순위	int	4</param>
 /// <param name="hname">기업명	string	20</param>
@@ -9468,7 +9468,7 @@ public record t3341OutBlock1([Description("순위	int	4")] int rank, [Descriptio
 
 
 /// <summary>
-/// 투자의견(t3401): t3401: InBlock
+/// 투자의견: t3401: InBlock
 /// </summary>
 /// <param name="shcode">종목코드	string	9</param>
 /// <param name="gubun1">구분	string	1</param>
@@ -9477,7 +9477,7 @@ public record t3341OutBlock1([Description("순위	int	4")] int rank, [Descriptio
 public record t3401InBlock([Description("종목코드	string	9")] string shcode, [Description("구분	string	1")] string gubun1, [Description("회원사코드	string	3")] string tradno, [Description("IDXDATE	string	8")] string cts_date);
 
 /// <summary>
-/// 투자의견(t3401): t3401: OutBlock
+/// 투자의견: t3401: OutBlock
 /// </summary>
 /// <param name="cts_date">IDXDATE	string	8</param>
 /// <param name="price">현재가	int	8</param>
@@ -9489,7 +9489,7 @@ public record t3401InBlock([Description("종목코드	string	9")] string shcode,
 public record t3401OutBlock([Description("IDXDATE	string	8")] string cts_date, [Description("현재가	int	8")] int price, [Description("대비속성	string	1")] string sign, [Description("대비	int	8")] int change, [Description("등락율	double	6.2")] double diff, [Description("거래량	long	12")] long volume, [Description("거래대금	long	12")] long value);
 
 /// <summary>
-/// 투자의견(t3401): t3401: OutBlock1
+/// 투자의견: t3401: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	9</param>
 /// <param name="tradno">회원사코드	string	3</param>
@@ -9504,7 +9504,7 @@ public record t3401OutBlock1([Description("종목코드	string	9")] string shcod
 
 
 /// <summary>
-/// 해외실시간지수(t3518): t3518: InBlock
+/// 해외실시간지수: t3518: InBlock
 /// </summary>
 /// <param name="kind">종목종류	string	1</param>
 /// <param name="symbol">SYMBOL	string	16</param>
@@ -9516,14 +9516,14 @@ public record t3401OutBlock1([Description("종목코드	string	9")] string shcod
 public record t3518InBlock([Description("종목종류	string	1")] string kind, [Description("SYMBOL	string	16")] string symbol, [Description("입력건수	int	4")] int cnt, [Description("조회구분	string	1")] string jgbn, [Description("N분	int	3")] int nmin, [Description("CTS_DATE	string	8")] string cts_date, [Description("CTS_TIME	string	6")] string cts_time);
 
 /// <summary>
-/// 해외실시간지수(t3518): t3518: OutBlock
+/// 해외실시간지수: t3518: OutBlock
 /// </summary>
 /// <param name="cts_date">CTS_DATE	string	8</param>
 /// <param name="cts_time">CTS_TIME	string	6</param>
 public record t3518OutBlock([Description("CTS_DATE	string	8")] string cts_date, [Description("CTS_TIME	string	6")] string cts_time);
 
 /// <summary>
-/// 해외실시간지수(t3518): t3518: OutBlock1
+/// 해외실시간지수: t3518: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="time">시간	string	8</param>
@@ -9548,14 +9548,14 @@ public record t3518OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 해외지수조회(API용)(t3521): t3521: InBlock
+/// 해외지수조회(API용): t3521: InBlock
 /// </summary>
 /// <param name="kind">종목종류	string	1</param>
 /// <param name="symbol">SYMBOL	string	16</param>
 public record t3521InBlock([Description("종목종류	string	1")] string kind, [Description("SYMBOL	string	16")] string symbol);
 
 /// <summary>
-/// 해외지수조회(API용)(t3521): t3521: OutBlock
+/// 해외지수조회(API용): t3521: OutBlock
 /// </summary>
 /// <param name="symbol">심벌	string	16</param>
 /// <param name="hname">지수명	string	20</param>
@@ -9568,7 +9568,7 @@ public record t3521OutBlock([Description("심벌	string	16")] string symbol, [De
 
 
 /// <summary>
-/// 업종챠트(종합)(t4203): t4203: InBlock
+/// 업종챠트(종합): t4203: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	3</param>
 /// <param name="gubun">주기구분(0:틱1:분2:일3:주4:월)	string	1</param>
@@ -9583,7 +9583,7 @@ public record t3521OutBlock([Description("심벌	string	16")] string symbol, [De
 public record t4203InBlock([Description("단축코드	string	3")] string shcode, [Description("주기구분(0:틱1:분2:일3:주4:월)	string	1")] string gubun, [Description("틱개수	int	4")] int ncnt, [Description("건수	int	4")] int qrycnt, [Description("당일구분(0:전체1:당일만)	string	1")] string tdgb, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("연속당일구분(0:연속전체1:연속당일만2:연속전일만)	string	1")] string cts_daygb);
 
 /// <summary>
-/// 업종챠트(종합)(t4203): t4203: OutBlock
+/// 업종챠트(종합): t4203: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	3</param>
 /// <param name="jisiga">전일시가	double	7.2</param>
@@ -9602,7 +9602,7 @@ public record t4203InBlock([Description("단축코드	string	3")] string shcode,
 public record t4203OutBlock([Description("단축코드	string	3")] string shcode, [Description("전일시가	double	7.2")] double jisiga, [Description("전일고가	double	7.2")] double jihigh, [Description("전일저가	double	7.2")] double jilow, [Description("전일종가	double	7.2")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	7.2")] double disiga, [Description("당일고가	double	7.2")] double dihigh, [Description("당일저가	double	7.2")] double dilow, [Description("당일종가	double	7.2")] double diclose, [Description("당일거래대금	long	12")] long disvalue, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("연속당일구분	string	1")] string cts_daygb);
 
 /// <summary>
-/// 업종챠트(종합)(t4203): t4203: OutBlock1
+/// 업종챠트(종합): t4203: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -9616,13 +9616,13 @@ public record t4203OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 주식선물마스터조회(API용)(t8401): t8401: InBlock
+/// 주식선물마스터조회(API용): t8401: InBlock
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
 public record t8401InBlock([Description("Dummy	string	1")] string dummy);
 
 /// <summary>
-/// 주식선물마스터조회(API용)(t8401): t8401: OutBlock
+/// 주식선물마스터조회(API용): t8401: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
@@ -9632,13 +9632,13 @@ public record t8401OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 주식선물현재가조회(API용)(t8402): t8402: InBlock
+/// 주식선물현재가조회(API용): t8402: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 public record t8402InBlock([Description("단축코드	string	8")] string focode);
 
 /// <summary>
-/// 주식선물현재가조회(API용)(t8402): t8402: OutBlock
+/// 주식선물현재가조회(API용): t8402: OutBlock
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -9712,13 +9712,13 @@ public record t8402OutBlock([Description("한글명	string	20")] string hname, [
 
 
 /// <summary>
-/// 주식선물호가조회(API용)(t8403): t8403: InBlock
+/// 주식선물호가조회(API용): t8403: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 public record t8403InBlock([Description("단축코드	string	8")] string shcode);
 
 /// <summary>
-/// 주식선물호가조회(API용)(t8403): t8403: OutBlock
+/// 주식선물호가조회(API용): t8403: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="price">현재가	int	8</param>
@@ -9798,7 +9798,7 @@ public record t8403OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 주식선물시간대별체결조회(API용)(t8404): t8404: InBlock
+/// 주식선물시간대별체결조회(API용): t8404: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 /// <param name="cvolume">특이거래량	long	12</param>
@@ -9808,13 +9808,13 @@ public record t8403OutBlock([Description("종목명	string	20")] string hname, [
 public record t8404InBlock([Description("단축코드	string	8")] string focode, [Description("특이거래량	long	12")] long cvolume, [Description("시작시간	string	4")] string stime, [Description("종료시간	string	4")] string etime, [Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 주식선물시간대별체결조회(API용)(t8404): t8404: OutBlock
+/// 주식선물시간대별체결조회(API용): t8404: OutBlock
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
 public record t8404OutBlock([Description("시간CTS	string	10")] string cts_time);
 
 /// <summary>
-/// 주식선물시간대별체결조회(API용)(t8404): t8404: OutBlock1
+/// 주식선물시간대별체결조회(API용): t8404: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	10</param>
 /// <param name="price">현재가	int	8</param>
@@ -9842,7 +9842,7 @@ public record t8404OutBlock1([Description("시간	string	10")] string chetime, [
 
 
 /// <summary>
-/// 주식선물기간별주가(API용)(t8405): t8405: InBlock
+/// 주식선물기간별주가(API용): t8405: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="futcheck">선물최근월물	string	1</param>
@@ -9853,7 +9853,7 @@ public record t8404OutBlock1([Description("시간	string	10")] string chetime, [
 public record t8405InBlock([Description("단축코드	string	8")] string shcode, [Description("선물최근월물	string	1")] string futcheck, [Description("날짜	string	8")] string date, [Description("CTS종목코드	string	8")] string cts_code, [Description("전종목만기일	string	8")] string lastdate, [Description("조회요청건수	int	3")] int cnt);
 
 /// <summary>
-/// 주식선물기간별주가(API용)(t8405): t8405: OutBlock
+/// 주식선물기간별주가(API용): t8405: OutBlock
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="cts_code">CTS종목코드	string	8</param>
@@ -9862,7 +9862,7 @@ public record t8405InBlock([Description("단축코드	string	8")] string shcode,
 public record t8405OutBlock([Description("날짜	string	8")] string date, [Description("CTS종목코드	string	8")] string cts_code, [Description("전종목만기일	string	8")] string lastdate, [Description("최근월선물여부	string	1")] string nowfutyn);
 
 /// <summary>
-/// 주식선물기간별주가(API용)(t8405): t8405: OutBlock1
+/// 주식선물기간별주가(API용): t8405: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	int	8</param>
@@ -9881,7 +9881,7 @@ public record t8405OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 주식선물틱분별체결조회(API용)(t8406): t8406: InBlock
+/// 주식선물틱분별체결조회(API용): t8406: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 /// <param name="cgubun">챠트구분	string	1</param>
@@ -9890,7 +9890,7 @@ public record t8405OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8406InBlock([Description("단축코드	string	8")] string focode, [Description("챠트구분	string	1")] string cgubun, [Description("분구분	int	3")] int bgubun, [Description("조회건수	int	3")] int cnt);
 
 /// <summary>
-/// 주식선물틱분별체결조회(API용)(t8406): t8406: OutBlock1
+/// 주식선물틱분별체결조회(API용): t8406: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	10</param>
 /// <param name="price">현재가	int	8</param>
@@ -9916,14 +9916,14 @@ public record t8406OutBlock1([Description("시간	string	10")] string chetime, [
 
 
 /// <summary>
-/// API용주식멀티현재가조회(t8407): t8407: InBlock
+/// API용주식멀티현재가조회: t8407: InBlock
 /// </summary>
 /// <param name="nrec">건수	int	3</param>
 /// <param name="shcode">종목코드	string	300</param>
 public record t8407InBlock([Description("건수	int	3")] int nrec, [Description("종목코드	string	300")] string shcode);
 
 /// <summary>
-/// API용주식멀티현재가조회(t8407): t8407: OutBlock1
+/// API용주식멀티현재가조회: t8407: OutBlock1
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="hname">종목명	string	40</param>
@@ -9951,7 +9951,7 @@ public record t8407OutBlock1([Description("종목코드	string	6")] string shcod
 
 
 /// <summary>
-/// API전용주식챠트(일주월년)(t8410): t8410: InBlock
+/// API전용주식챠트(일주월년): t8410: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="gubun">주기구분(2:일3:주4:월5:년)	string	1</param>
@@ -9964,7 +9964,7 @@ public record t8407OutBlock1([Description("종목코드	string	6")] string shcod
 public record t8410InBlock([Description("단축코드	string	6")] string shcode, [Description("주기구분(2:일3:주4:월5:년)	string	1")] string gubun, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate, [Description("연속일자	string	8")] string cts_date, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn, [Description("수정주가여부(Y:적용N:비적용)	string	1")] string sujung);
 
 /// <summary>
-/// API전용주식챠트(일주월년)(t8410): t8410: OutBlock
+/// API전용주식챠트(일주월년): t8410: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="jisiga">전일시가	int	8</param>
@@ -9988,7 +9988,7 @@ public record t8410InBlock([Description("단축코드	string	6")] string shcode,
 public record t8410OutBlock([Description("단축코드	string	6")] string shcode, [Description("전일시가	int	8")] int jisiga, [Description("전일고가	int	8")] int jihigh, [Description("전일저가	int	8")] int jilow, [Description("전일종가	int	8")] int jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	int	8")] int disiga, [Description("당일고가	int	8")] int dihigh, [Description("당일저가	int	8")] int dilow, [Description("당일종가	int	8")] int diclose, [Description("상한가	int	8")] int highend, [Description("하한가	int	8")] int lowend, [Description("연속일자	string	8")] string cts_date, [Description("장시작시간(HHMMSS)	string	6")] string s_time, [Description("장종료시간(HHMMSS)	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count, [Description("정적VI상한가	int	8")] int svi_uplmtprice, [Description("정적VI하한가	int	8")] int svi_dnlmtprice);
 
 /// <summary>
-/// API전용주식챠트(일주월년)(t8410): t8410: OutBlock1
+/// API전용주식챠트(일주월년): t8410: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	long	12</param>
@@ -10006,7 +10006,7 @@ public record t8410OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 주식챠트(틱/n틱)(t8411): t8411: InBlock
+/// 주식챠트(틱/n틱): t8411: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="ncnt">단위(n틱)	int	4</param>
@@ -10022,7 +10022,7 @@ public record t8410OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8411InBlock([Description("단축코드	string	6")] string shcode, [Description("단위(n틱)	int	4")] int ncnt, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("조회영업일수(0:미사용1>=사용)	string	1")] string nday, [Description("시작일자	string	8")] string sdate, [Description("시작시간(현재미사용)	string	6")] string stime, [Description("종료일자	string	8")] string edate, [Description("종료시간(현재미사용)	string	6")] string etime, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn);
 
 /// <summary>
-/// 주식챠트(틱/n틱)(t8411): t8411: OutBlock
+/// 주식챠트(틱/n틱): t8411: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="jisiga">전일시가	int	8</param>
@@ -10045,7 +10045,7 @@ public record t8411InBlock([Description("단축코드	string	6")] string shcode,
 public record t8411OutBlock([Description("단축코드	string	6")] string shcode, [Description("전일시가	int	8")] int jisiga, [Description("전일고가	int	8")] int jihigh, [Description("전일저가	int	8")] int jilow, [Description("전일종가	int	8")] int jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	int	8")] int disiga, [Description("당일고가	int	8")] int dihigh, [Description("당일저가	int	8")] int dilow, [Description("당일종가	int	8")] int diclose, [Description("상한가	int	8")] int highend, [Description("하한가	int	8")] int lowend, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("장시작시간(HHMMSS)	string	6")] string s_time, [Description("장종료시간(HHMMSS)	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 주식챠트(틱/n틱)(t8411): t8411: OutBlock1
+/// 주식챠트(틱/n틱): t8411: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	10</param>
@@ -10061,7 +10061,7 @@ public record t8411OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 주식챠트(N분)(t8412): t8412: InBlock
+/// 주식챠트(N분): t8412: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="ncnt">단위(n분)	int	4</param>
@@ -10077,7 +10077,7 @@ public record t8411OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8412InBlock([Description("단축코드	string	6")] string shcode, [Description("단위(n분)	int	4")] int ncnt, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("조회영업일수(0:미사용1>=사용)	string	1")] string nday, [Description("시작일자	string	8")] string sdate, [Description("시작시간(현재미사용)	string	6")] string stime, [Description("종료일자	string	8")] string edate, [Description("종료시간(현재미사용)	string	6")] string etime, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn);
 
 /// <summary>
-/// 주식챠트(N분)(t8412): t8412: OutBlock
+/// 주식챠트(N분): t8412: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="jisiga">전일시가	int	8</param>
@@ -10100,7 +10100,7 @@ public record t8412InBlock([Description("단축코드	string	6")] string shcode,
 public record t8412OutBlock([Description("단축코드	string	6")] string shcode, [Description("전일시가	int	8")] int jisiga, [Description("전일고가	int	8")] int jihigh, [Description("전일저가	int	8")] int jilow, [Description("전일종가	int	8")] int jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	int	8")] int disiga, [Description("당일고가	int	8")] int dihigh, [Description("당일저가	int	8")] int dilow, [Description("당일종가	int	8")] int diclose, [Description("상한가	int	8")] int highend, [Description("하한가	int	8")] int lowend, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("장시작시간(HHMMSS)	string	6")] string s_time, [Description("장종료시간(HHMMSS)	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 주식챠트(N분)(t8412): t8412: OutBlock1
+/// 주식챠트(N분): t8412: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	10</param>
@@ -10117,7 +10117,7 @@ public record t8412OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 선물옵션차트(틱/n틱)(t8414): t8414: InBlock
+/// 선물옵션차트(틱/n틱): t8414: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="ncnt">단위(n틱)	int	4</param>
@@ -10133,7 +10133,7 @@ public record t8412OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8414InBlock([Description("단축코드	string	8")] string shcode, [Description("단위(n틱)	int	4")] int ncnt, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("조회영업일수(0:미사용1>=사용)	string	1")] string nday, [Description("시작일자	string	8")] string sdate, [Description("시작시간(현재미사용)	string	6")] string stime, [Description("종료일자	string	8")] string edate, [Description("종료시간(현재미사용)	string	6")] string etime, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn);
 
 /// <summary>
-/// 선물옵션차트(틱/n틱)(t8414): t8414: OutBlock
+/// 선물옵션차트(틱/n틱): t8414: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="jisiga">전일시가	double	6.2</param>
@@ -10156,7 +10156,7 @@ public record t8414InBlock([Description("단축코드	string	8")] string shcode,
 public record t8414OutBlock([Description("단축코드	string	8")] string shcode, [Description("전일시가	double	6.2")] double jisiga, [Description("전일고가	double	6.2")] double jihigh, [Description("전일저가	double	6.2")] double jilow, [Description("전일종가	double	6.2")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	6.2")] double disiga, [Description("당일고가	double	6.2")] double dihigh, [Description("당일저가	double	6.2")] double dilow, [Description("당일종가	double	6.2")] double diclose, [Description("상한가	double	6.2")] double highend, [Description("하한가	double	6.2")] double lowend, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("장시작시간(HHMMSS)	string	6")] string s_time, [Description("장종료시간(HHMMSS)	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 선물옵션차트(틱/n틱)(t8414): t8414: OutBlock1
+/// 선물옵션차트(틱/n틱): t8414: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	10</param>
@@ -10170,7 +10170,7 @@ public record t8414OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 선물/옵션챠트(N분)(t8415): t8415: InBlock
+/// 선물/옵션챠트(N분): t8415: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="ncnt">단위(n분)	int	4</param>
@@ -10186,7 +10186,7 @@ public record t8414OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8415InBlock([Description("단축코드	string	8")] string shcode, [Description("단위(n분)	int	4")] int ncnt, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("조회영업일수(0:미사용1>=사용)	string	1")] string nday, [Description("시작일자	string	8")] string sdate, [Description("시작시간(현재미사용)	string	6")] string stime, [Description("종료일자	string	8")] string edate, [Description("종료시간(현재미사용)	string	6")] string etime, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn);
 
 /// <summary>
-/// 선물/옵션챠트(N분)(t8415): t8415: OutBlock
+/// 선물/옵션챠트(N분): t8415: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="jisiga">전일시가	double	6.2</param>
@@ -10209,7 +10209,7 @@ public record t8415InBlock([Description("단축코드	string	8")] string shcode,
 public record t8415OutBlock([Description("단축코드	string	8")] string shcode, [Description("전일시가	double	6.2")] double jisiga, [Description("전일고가	double	6.2")] double jihigh, [Description("전일저가	double	6.2")] double jilow, [Description("전일종가	double	6.2")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	6.2")] double disiga, [Description("당일고가	double	6.2")] double dihigh, [Description("당일저가	double	6.2")] double dilow, [Description("당일종가	double	6.2")] double diclose, [Description("상한가	double	6.2")] double highend, [Description("하한가	double	6.2")] double lowend, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("장시작시간(HHMMSS)	string	6")] string s_time, [Description("장종료시간(HHMMSS)	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 선물/옵션챠트(N분)(t8415): t8415: OutBlock1
+/// 선물/옵션챠트(N분): t8415: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	10</param>
@@ -10224,7 +10224,7 @@ public record t8415OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 선물/옵션챠트(일주월)(t8416): t8416: InBlock
+/// 선물/옵션챠트(일주월): t8416: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="gubun">주기구분(2:일3:주4:월)	string	1</param>
@@ -10236,7 +10236,7 @@ public record t8415OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8416InBlock([Description("단축코드	string	8")] string shcode, [Description("주기구분(2:일3:주4:월)	string	1")] string gubun, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate, [Description("연속일자	string	8")] string cts_date, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn);
 
 /// <summary>
-/// 선물/옵션챠트(일주월)(t8416): t8416: OutBlock
+/// 선물/옵션챠트(일주월): t8416: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="jisiga">전일시가	double	6.2</param>
@@ -10258,7 +10258,7 @@ public record t8416InBlock([Description("단축코드	string	8")] string shcode,
 public record t8416OutBlock([Description("단축코드	string	8")] string shcode, [Description("전일시가	double	6.2")] double jisiga, [Description("전일고가	double	6.2")] double jihigh, [Description("전일저가	double	6.2")] double jilow, [Description("전일종가	double	6.2")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	6.2")] double disiga, [Description("당일고가	double	6.2")] double dihigh, [Description("당일저가	double	6.2")] double dilow, [Description("당일종가	double	6.2")] double diclose, [Description("상한가	double	6.2")] double highend, [Description("하한가	double	6.2")] double lowend, [Description("연속일자	string	8")] string cts_date, [Description("장시작시간(HHMMSS)	string	6")] string s_time, [Description("장종료시간(HHMMSS)	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 선물/옵션챠트(일주월)(t8416): t8416: OutBlock1
+/// 선물/옵션챠트(일주월): t8416: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	double	6.2</param>
@@ -10272,7 +10272,7 @@ public record t8416OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 업종차트(틱/n틱)(t8417): t8417: InBlock
+/// 업종차트(틱/n틱): t8417: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	3</param>
 /// <param name="ncnt">단위(n틱)	int	4</param>
@@ -10288,7 +10288,7 @@ public record t8416OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8417InBlock([Description("단축코드	string	3")] string shcode, [Description("단위(n틱)	int	4")] int ncnt, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("조회영업일수(0:미사용1>=사용)	string	1")] string nday, [Description("시작일자	string	8")] string sdate, [Description("시작시간(현재미사용)	string	6")] string stime, [Description("종료일자	string	8")] string edate, [Description("종료시간(현재미사용)	string	6")] string etime, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn);
 
 /// <summary>
-/// 업종차트(틱/n틱)(t8417): t8417: OutBlock
+/// 업종차트(틱/n틱): t8417: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	3</param>
 /// <param name="jisiga">전일시가	double	7.2</param>
@@ -10309,7 +10309,7 @@ public record t8417InBlock([Description("단축코드	string	3")] string shcode,
 public record t8417OutBlock([Description("단축코드	string	3")] string shcode, [Description("전일시가	double	7.2")] double jisiga, [Description("전일고가	double	7.2")] double jihigh, [Description("전일저가	double	7.2")] double jilow, [Description("전일종가	double	7.2")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	7.2")] double disiga, [Description("당일고가	double	7.2")] double dihigh, [Description("당일저가	double	7.2")] double dilow, [Description("당일종가	double	7.2")] double diclose, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("장시작시간(HHMMSS)	string	6")] string s_time, [Description("장종료시간(HHMMSS)	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 업종차트(틱/n틱)(t8417): t8417: OutBlock1
+/// 업종차트(틱/n틱): t8417: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -10322,7 +10322,7 @@ public record t8417OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 업종챠트(N분)(t8418): t8418: InBlock
+/// 업종챠트(N분): t8418: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	3</param>
 /// <param name="ncnt">단위(n분)	int	4</param>
@@ -10338,7 +10338,7 @@ public record t8417OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8418InBlock([Description("단축코드	string	3")] string shcode, [Description("단위(n분)	int	4")] int ncnt, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("조회영업일수(0:미사용1>=사용)	string	1")] string nday, [Description("시작일자	string	8")] string sdate, [Description("시작시간(현재미사용)	string	6")] string stime, [Description("종료일자	string	8")] string edate, [Description("종료시간(현재미사용)	string	6")] string etime, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn);
 
 /// <summary>
-/// 업종챠트(N분)(t8418): t8418: OutBlock
+/// 업종챠트(N분): t8418: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	3</param>
 /// <param name="jisiga">전일시가	double	7.2</param>
@@ -10360,7 +10360,7 @@ public record t8418InBlock([Description("단축코드	string	3")] string shcode,
 public record t8418OutBlock([Description("단축코드	string	3")] string shcode, [Description("전일시가	double	7.2")] double jisiga, [Description("전일고가	double	7.2")] double jihigh, [Description("전일저가	double	7.2")] double jilow, [Description("전일종가	double	7.2")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	7.2")] double disiga, [Description("당일고가	double	7.2")] double dihigh, [Description("당일저가	double	7.2")] double dilow, [Description("당일종가	double	7.2")] double diclose, [Description("당일거래대금	long	12")] long disvalue, [Description("연속일자	string	8")] string cts_date, [Description("연속시간	string	10")] string cts_time, [Description("업종시작시간(HHMMSS)	string	6")] string s_time, [Description("업종종료시간(HHMMSS)	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 업종챠트(N분)(t8418): t8418: OutBlock1
+/// 업종챠트(N분): t8418: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -10374,7 +10374,7 @@ public record t8418OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 업종챠트(일주월)(t8419): t8419: InBlock
+/// 업종챠트(일주월): t8419: InBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	3</param>
 /// <param name="gubun">주기구분(2:일3:주4:월)	string	1</param>
@@ -10386,7 +10386,7 @@ public record t8418OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8419InBlock([Description("단축코드	string	3")] string shcode, [Description("주기구분(2:일3:주4:월)	string	1")] string gubun, [Description("요청건수(최대-압축:2000비압축:500)	int	4")] int qrycnt, [Description("시작일자	string	8")] string sdate, [Description("종료일자	string	8")] string edate, [Description("연속일자	string	8")] string cts_date, [Description("압축여부(Y:압축N:비압축)	string	1")] string comp_yn);
 
 /// <summary>
-/// 업종챠트(일주월)(t8419): t8419: OutBlock
+/// 업종챠트(일주월): t8419: OutBlock
 /// </summary>
 /// <param name="shcode">단축코드	string	3</param>
 /// <param name="jisiga">전일시가	double	7.2</param>
@@ -10407,7 +10407,7 @@ public record t8419InBlock([Description("단축코드	string	3")] string shcode,
 public record t8419OutBlock([Description("단축코드	string	3")] string shcode, [Description("전일시가	double	7.2")] double jisiga, [Description("전일고가	double	7.2")] double jihigh, [Description("전일저가	double	7.2")] double jilow, [Description("전일종가	double	7.2")] double jiclose, [Description("전일거래량	long	12")] long jivolume, [Description("당일시가	double	7.2")] double disiga, [Description("당일고가	double	7.2")] double dihigh, [Description("당일저가	double	7.2")] double dilow, [Description("당일종가	double	7.2")] double diclose, [Description("당일거래대금	long	12")] long disvalue, [Description("연속일자	string	8")] string cts_date, [Description("업종시작시간	string	6")] string s_time, [Description("업종종료시간	string	6")] string e_time, [Description("동시호가처리시간(MM:분)	string	2")] string dshmin, [Description("레코드카운트	int	7")] int rec_count);
 
 /// <summary>
-/// 업종챠트(일주월)(t8419): t8419: OutBlock1
+/// 업종챠트(일주월): t8419: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="open">시가	double	7.2</param>
@@ -10420,13 +10420,13 @@ public record t8419OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 전체업종(t8424): t8424: InBlock
+/// 전체업종: t8424: InBlock
 /// </summary>
 /// <param name="gubun1">구분1	string	1</param>
 public record t8424InBlock([Description("구분1	string	1")] string gubun1);
 
 /// <summary>
-/// 전체업종(t8424): t8424: OutBlock
+/// 전체업종: t8424: OutBlock
 /// </summary>
 /// <param name="hname">업종명	string	20</param>
 /// <param name="upcode">업종코드	string	3</param>
@@ -10434,13 +10434,13 @@ public record t8424OutBlock([Description("업종명	string	20")] string hname, [
 
 
 /// <summary>
-/// 전체테마(t8425): t8425: InBlock
+/// 전체테마: t8425: InBlock
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
 public record t8425InBlock([Description("Dummy	string	1")] string dummy);
 
 /// <summary>
-/// 전체테마(t8425): t8425: OutBlock
+/// 전체테마: t8425: OutBlock
 /// </summary>
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="tmcode">테마코드	string	4</param>
@@ -10448,13 +10448,13 @@ public record t8425OutBlock([Description("테마명	string	36")] string tmname, 
 
 
 /// <summary>
-/// 상품선물마스터조회(API용)(t8426): t8426: InBlock
+/// 상품선물마스터조회(API용): t8426: InBlock
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
 public record t8426InBlock([Description("Dummy	string	1")] string dummy);
 
 /// <summary>
-/// 상품선물마스터조회(API용)(t8426): t8426: OutBlock
+/// 상품선물마스터조회(API용): t8426: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
@@ -10463,7 +10463,7 @@ public record t8426OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 과거데이터시간대별조회(t8427): t8427: InBlock
+/// 과거데이터시간대별조회: t8427: InBlock
 /// </summary>
 /// <param name="fo_gbn">선물옵션구분	string	1</param>
 /// <param name="yyyy">조회년도	string	4</param>
@@ -10478,7 +10478,7 @@ public record t8426OutBlock([Description("종목명	string	20")] string hname, [
 public record t8427InBlock([Description("선물옵션구분	string	1")] string fo_gbn, [Description("조회년도	string	4")] string yyyy, [Description("조회월	string	2")] string mm, [Description("옵션콜풋구분	string	1")] string cp_gbn, [Description("옵션행사가	double	6.2")] double actprice, [Description("선물옵션코드	string	8")] string focode, [Description("일분구분	string	1")] string dt_gbn, [Description("분간격	string	2")] string min_term, [Description("날짜	string	8")] string date, [Description("시간	string	6")] string time);
 
 /// <summary>
-/// 과거데이터시간대별조회(t8427): t8427: OutBlock
+/// 과거데이터시간대별조회: t8427: OutBlock
 /// </summary>
 /// <param name="focode">선물옵션코드	string	8</param>
 /// <param name="date">날짜	string	8</param>
@@ -10486,7 +10486,7 @@ public record t8427InBlock([Description("선물옵션구분	string	1")] string f
 public record t8427OutBlock([Description("선물옵션코드	string	8")] string focode, [Description("날짜	string	8")] string date, [Description("시간	string	6")] string time);
 
 /// <summary>
-/// 과거데이터시간대별조회(t8427): t8427: OutBlock1
+/// 과거데이터시간대별조회: t8427: OutBlock1
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
@@ -10506,7 +10506,7 @@ public record t8427OutBlock1([Description("날짜	string	8")] string date, [Desc
 
 
 /// <summary>
-/// 증시주변자금추이(t8428): t8428: InBlock
+/// 증시주변자금추이: t8428: InBlock
 /// </summary>
 /// <param name="fdate">from일자	string	8</param>
 /// <param name="tdate">to일자	string	8</param>
@@ -10517,14 +10517,14 @@ public record t8427OutBlock1([Description("날짜	string	8")] string date, [Desc
 public record t8428InBlock([Description("from일자	string	8")] string fdate, [Description("to일자	string	8")] string tdate, [Description("구분	string	1")] string gubun, [Description("날짜	string	8")] string key_date, [Description("업종코드	string	3")] string upcode, [Description("조회건수	int	3")] int cnt);
 
 /// <summary>
-/// 증시주변자금추이(t8428): t8428: OutBlock
+/// 증시주변자금추이: t8428: OutBlock
 /// </summary>
 /// <param name="date">날짜CTS	string	8</param>
 /// <param name="idx">IDX	int	4</param>
 public record t8428OutBlock([Description("날짜CTS	string	8")] string date, [Description("IDX	int	4")] int idx);
 
 /// <summary>
-/// 증시주변자금추이(t8428): t8428: OutBlock1
+/// 증시주변자금추이: t8428: OutBlock1
 /// </summary>
 /// <param name="date">일자	string	8</param>
 /// <param name="jisu">지수	double	7.2</param>
@@ -10548,7 +10548,7 @@ public record t8428OutBlock1([Description("일자	string	8")] string date, [Desc
 
 
 /// <summary>
-/// EUREX야간옵션선물틱분별체결조회챠트(t8429): t8429: InBlock
+/// EUREX야간옵션선물틱분별체결조회챠트: t8429: InBlock
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
 /// <param name="cgubun">챠트구분	string	1</param>
@@ -10557,7 +10557,7 @@ public record t8428OutBlock1([Description("일자	string	8")] string date, [Desc
 public record t8429InBlock([Description("단축코드	string	8")] string focode, [Description("챠트구분	string	1")] string cgubun, [Description("분구분	int	3")] int bgubun, [Description("조회건수	int	3")] int cnt);
 
 /// <summary>
-/// EUREX야간옵션선물틱분별체결조회챠트(t8429): t8429: OutBlock1
+/// EUREX야간옵션선물틱분별체결조회챠트: t8429: OutBlock1
 /// </summary>
 /// <param name="chetime">시간	string	10</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -10580,13 +10580,13 @@ public record t8429OutBlock1([Description("시간	string	10")] string chetime, [
 
 
 /// <summary>
-/// 주식종목조회(t8430): t8430: InBlock
+/// 주식종목조회: t8430: InBlock
 /// </summary>
 /// <param name="gubun">구분(0:전체1:코스피2:코스닥)	string	1</param>
 public record t8430InBlock([Description("구분(0:전체1:코스피2:코스닥)	string	1")] string gubun);
 
 /// <summary>
-/// 주식종목조회(t8430): t8430: OutBlock
+/// 주식종목조회: t8430: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	6</param>
@@ -10602,13 +10602,13 @@ public record t8430OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// ELW종목조회(t8431): t8431: InBlock
+/// ELW종목조회: t8431: InBlock
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
 public record t8431InBlock([Description("Dummy	string	1")] string dummy);
 
 /// <summary>
-/// ELW종목조회(t8431): t8431: OutBlock
+/// ELW종목조회: t8431: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	40</param>
 /// <param name="shcode">단축코드	string	6</param>
@@ -10621,13 +10621,13 @@ public record t8431OutBlock([Description("종목명	string	40")] string hname, [
 
 
 /// <summary>
-/// 지수선물마스터조회API용(t8432): t8432: InBlock
+/// 지수선물마스터조회API용: t8432: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 public record t8432InBlock([Description("구분	string	1")] string gubun);
 
 /// <summary>
-/// 지수선물마스터조회API용(t8432): t8432: OutBlock
+/// 지수선물마스터조회API용: t8432: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
@@ -10642,13 +10642,13 @@ public record t8432OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 지수옵션마스터조회API용(t8433): t8433: InBlock
+/// 지수옵션마스터조회API용: t8433: InBlock
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
 public record t8433InBlock([Description("Dummy	string	1")] string dummy);
 
 /// <summary>
-/// 지수옵션마스터조회API용(t8433): t8433: OutBlock
+/// 지수옵션마스터조회API용: t8433: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
@@ -10663,14 +10663,14 @@ public record t8433OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 선물/옵션멀티현재가조회(t8434): t8434: InBlock
+/// 선물/옵션멀티현재가조회: t8434: InBlock
 /// </summary>
 /// <param name="qrycnt">건수	int	3</param>
 /// <param name="focode">단축코드	string	400</param>
 public record t8434InBlock([Description("건수	int	3")] int qrycnt, [Description("단축코드	string	400")] string focode);
 
 /// <summary>
-/// 선물/옵션멀티현재가조회(t8434): t8434: OutBlock1
+/// 선물/옵션멀티현재가조회: t8434: OutBlock1
 /// </summary>
 /// <param name="hname">한글명	string	20</param>
 /// <param name="price">현재가	double	6.2</param>
@@ -10684,13 +10684,13 @@ public record t8434OutBlock1([Description("한글명	string	20")] string hname, 
 
 
 /// <summary>
-/// 파생종목마스터조회API용(t8435): t8435: InBlock
+/// 파생종목마스터조회API용: t8435: InBlock
 /// </summary>
 /// <param name="gubun">구분(MF/MO)	string	2</param>
 public record t8435InBlock([Description("구분(MF/MO)	string	2")] string gubun);
 
 /// <summary>
-/// 파생종목마스터조회API용(t8435): t8435: OutBlock
+/// 파생종목마스터조회API용: t8435: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
@@ -10705,13 +10705,13 @@ public record t8435OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 주식종목조회 API용(t8436): t8436: InBlock
+/// 주식종목조회 API용: t8436: InBlock
 /// </summary>
 /// <param name="gubun">구분(0:전체1:코스피2:코스닥)	string	1</param>
 public record t8436InBlock([Description("구분(0:전체1:코스피2:코스닥)	string	1")] string gubun);
 
 /// <summary>
-/// 주식종목조회 API용(t8436): t8436: OutBlock
+/// 주식종목조회 API용: t8436: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	6</param>
@@ -10730,13 +10730,13 @@ public record t8436OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// CME/EUREX마스터조회(API용)(t8437): t8437: InBlock
+/// CME/EUREX마스터조회(API용): t8437: InBlock
 /// </summary>
 /// <param name="gubun">구분(NF/NC/NM/NO)	string	2</param>
 public record t8437InBlock([Description("구분(NF/NC/NM/NO)	string	2")] string gubun);
 
 /// <summary>
-/// CME/EUREX마스터조회(API용)(t8437): t8437: OutBlock
+/// CME/EUREX마스터조회(API용): t8437: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">종목코드	string	8</param>
@@ -10747,13 +10747,13 @@ public record t8437OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 기초자산리스트조회(t9905): t9905: InBlock
+/// 기초자산리스트조회: t9905: InBlock
 /// </summary>
 /// <param name="dummy">DUMMY	string	1</param>
 public record t9905InBlock([Description("DUMMY	string	1")] string dummy);
 
 /// <summary>
-/// 기초자산리스트조회(t9905): t9905: OutBlock1
+/// 기초자산리스트조회: t9905: OutBlock1
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="expcode">표준코드	string	12</param>
@@ -10762,13 +10762,13 @@ public record t9905OutBlock1([Description("단축코드	string	6")] string shcod
 
 
 /// <summary>
-/// 만기월조회(t9907): t9907: InBlock
+/// 만기월조회: t9907: InBlock
 /// </summary>
 /// <param name="dummy">DUMMY	string	1</param>
 public record t9907InBlock([Description("DUMMY	string	1")] string dummy);
 
 /// <summary>
-/// 만기월조회(t9907): t9907: OutBlock1
+/// 만기월조회: t9907: OutBlock1
 /// </summary>
 /// <param name="lastym">만기월	string	6</param>
 /// <param name="lastnm">만기월명	string	10</param>
@@ -10776,13 +10776,13 @@ public record t9907OutBlock1([Description("만기월	string	6")] string lastym, 
 
 
 /// <summary>
-/// ELW마스터조회API용(t9942): t9942: InBlock
+/// ELW마스터조회API용: t9942: InBlock
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
 public record t9942InBlock([Description("Dummy	string	1")] string dummy);
 
 /// <summary>
-/// ELW마스터조회API용(t9942): t9942: OutBlock
+/// ELW마스터조회API용: t9942: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	40</param>
 /// <param name="shcode">단축코드	string	6</param>
@@ -10791,13 +10791,13 @@ public record t9942OutBlock([Description("종목명	string	40")] string hname, [
 
 
 /// <summary>
-/// 지수선물마스터조회API용(t9943): t9943: InBlock
+/// 지수선물마스터조회API용: t9943: InBlock
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 public record t9943InBlock([Description("구분	string	1")] string gubun);
 
 /// <summary>
-/// 지수선물마스터조회API용(t9943): t9943: OutBlock
+/// 지수선물마스터조회API용: t9943: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
@@ -10806,29 +10806,28 @@ public record t9943OutBlock([Description("종목명	string	20")] string hname, [
 
 
 /// <summary>
-/// 지수옵션마스터조회API용(t9944): t9944: InBlock
+/// 지수옵션마스터조회API용: t9944: InBlock
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
 public record t9944InBlock([Description("Dummy	string	1")] string dummy);
 
 /// <summary>
-/// 지수옵션마스터조회API용(t9944): t9944: OutBlock
+/// 지수옵션마스터조회API용: t9944: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="expcode">확장코드	string	12</param>
 public record t9944OutBlock([Description("종목명	string	20")] string hname, [Description("단축코드	string	8")] string shcode, [Description("확장코드	string	12")] string expcode);
 
-// 여기는 수동으로 추가함
 
 /// <summary>
-/// 주식마스터조회API용-종목명40bytes(t9945): t9945: InBlock
+/// 주식마스터조회API용-종목명40bytes: t9945: InBlock
 /// </summary>
 /// <param name="gubun">구분(KSP:1KSD:2)	string	1</param>
 public record t9945InBlock([Description("구분(KSP:1KSD:2)	string	1")] string gubun);
 
 /// <summary>
-/// 주식마스터조회API용-종목명40bytes(t9945): t9945: OutBlock
+/// 주식마스터조회API용-종목명40bytes: t9945: OutBlock
 /// </summary>
 /// <param name="hname">종목명	string	40</param>
 /// <param name="shcode">단축코드	string	6</param>
@@ -10838,189 +10837,3 @@ public record t9945InBlock([Description("구분(KSP:1KSD:2)	string	1")] string g
 public record t9945OutBlock([Description("종목명	string	40")] string hname, [Description("단축코드	string	6")] string shcode, [Description("확장코드	string	12")] string expcode, [Description("ETF구분	string	1")] string etfchk, [Description("filler	string	5")] string filler);
 
 
-#region [주식] 주문
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="IsuNo">종목번호	String	Y	12	주식/ETF	:	종목코드	or	A+종목코드(모의투자는	A+종목코드)</param>
-/// <param name="OrdQty">주문수량	Number	Y	16</param>
-/// <param name="OrdPrc">주문가	Number	Y	13.2</param>
-/// <param name="BnsTpCode">매매구분	String	Y	1	1:매도,	2:매수</param>
-/// <param name="OrdprcPtnCode">호가유형코드	String	Y	2	00@지정가</param>
-/// <param name="MgntrnCode">신용거래코드	String	Y	3	000:보통</param>
-/// <param name="LoanDt">대출일	String	Y	8</param>
-/// <param name="OrdCndiTpCode">주문조건구분	String	Y	1	0:없음,1:IOC,2:FOK</param>
-public record CSPAT00601InBlock1(string IsuNo, long OrdQty, double OrdPrc, string BnsTpCode, string OrdprcPtnCode, string MgntrnCode, string LoanDt, string OrdCndiTpCode);
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="RecCnt">레코드갯수	Number	Y	5</param>
-/// <param name="AcntNo">계좌번호	String	Y	20</param>
-/// <param name="InptPwd">입력비밀번호	String	Y	8</param>
-/// <param name="IsuNo">종목번호	String	Y	12</param>
-/// <param name="OrdQty">주문수량	Number	Y	16</param>
-/// <param name="OrdPrc">주문가	Number	Y	13.2</param>
-/// <param name="BnsTpCode">매매구분	String	Y	1</param>
-/// <param name="OrdprcPtnCode">호가유형코드	String	Y	2</param>
-/// <param name="PrgmOrdprcPtnCode">프로그램호가유형코드	String	Y	2</param>
-/// <param name="StslAbleYn">공매도가능여부	String	Y	1</param>
-/// <param name="StslOrdprcTpCode">공매도호가구분	String	Y	1</param>
-/// <param name="CommdaCode">통신매체코드	String	Y	2</param>
-/// <param name="MgntrnCode">신용거래코드	String	Y	3</param>
-/// <param name="LoanDt">대출일	String	Y	8</param>
-/// <param name="MbrNo">회원번호	String	Y	3</param>
-/// <param name="OrdCndiTpCode">주문조건구분	String	Y	1</param>
-/// <param name="StrtgCode">전략코드	String	Y	6</param>
-/// <param name="GrpId">그룹ID	String	Y	20</param>
-/// <param name="OrdSeqNo">주문회차	Number	Y	10</param>
-/// <param name="PtflNo">포트폴리오번호	Number	Y	10</param>
-/// <param name="BskNo">바스켓번호	Number	Y	10</param>
-/// <param name="TrchNo">트렌치번호	Number	Y	10</param>
-/// <param name="ItemNo">아이템번호	Number	Y	10</param>
-/// <param name="OpDrtnNo">운용지시번호	String	Y	12</param>
-/// <param name="LpYn">유동성공급자여부	String	Y	1</param>
-/// <param name="CvrgTpCode">반대매매구분	String	Y	1</param>
-public record CSPAT00601OutBlock1(int RecCnt, string AcntNo, string InptPwd, string IsuNo, long OrdQty, double OrdPrc, string BnsTpCode, string OrdprcPtnCode, string PrgmOrdprcPtnCode, string StslAbleYn, string StslOrdprcTpCode, string CommdaCode, string MgntrnCode, string LoanDt, string MbrNo, string OrdCndiTpCode, string StrtgCode, string GrpId, long OrdSeqNo, long PtflNo, long BskNo, long TrchNo, long ItemNo, string OpDrtnNo, string LpYn, string CvrgTpCode);
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="RecCnt">레코드갯수	Number	Y	5</param>
-/// <param name="OrdNo">주문번호	Number	Y	10</param>
-/// <param name="OrdTime">주문시각	String	Y	9</param>
-/// <param name="OrdMktCode">주문시장코드	String	Y	2</param>
-/// <param name="OrdPtnCode">주문유형코드	String	Y	2</param>
-/// <param name="ShtnIsuNo">단축종목번호	String	Y	9</param>
-/// <param name="MgempNo">관리사원번호	String	Y	9</param>
-/// <param name="OrdAmt">주문금액	Number	Y	16</param>
-/// <param name="SpareOrdNo">예비주문번호	Number	Y	10</param>
-/// <param name="CvrgSeqno">반대매매일련번호	Number	Y	10</param>
-/// <param name="RsvOrdNo">예약주문번호	Number	Y	10</param>
-/// <param name="SpotOrdQty">실물주문수량	Number	Y	16</param>
-/// <param name="RuseOrdQty">재사용주문수량	Number	Y	16</param>
-/// <param name="MnyOrdAmt">현금주문금액	Number	Y	16</param>
-/// <param name="SubstOrdAmt">대용주문금액	Number	Y	16</param>
-/// <param name="RuseOrdAmt">재사용주문금액	Number	Y	16</param>
-/// <param name="AcntNm">계좌명	String	Y	40</param>
-/// <param name="IsuNm">종목명	String	Y	40</param>
-public record CSPAT00601OutBlock2(int RecCnt, long OrdNo, string OrdTime, string OrdMktCode, string OrdPtnCode, string ShtnIsuNo, string MgempNo, long OrdAmt, long SpareOrdNo, long CvrgSeqno, long RsvOrdNo, long SpotOrdQty, long RuseOrdQty, long MnyOrdAmt, long SubstOrdAmt, long RuseOrdAmt, string AcntNm, string IsuNm);
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="OrgOrdNo">원주문번호	Number	Y	10</param>
-/// <param name="IsuNo">종목번호	String	Y	12	주식	:	종목코드	or	A+종목코드(모의투자는	A+종목코드)</param>
-/// <param name="OrdQty">주문수량	Number	Y	16</param>
-/// <param name="OrdprcPtnCode">호가유형코드	String	Y	2	00@지정가</param>
-/// <param name="OrdCndiTpCode">주문조건구분	String	Y	1	0:없음,	1:IOC,	2:FOK</param>
-/// <param name="OrdPrc">주문가	Number	Y	13.2</param>
-public record CSPAT00701InBlock1(long OrgOrdNo, string IsuNo, long OrdQty, string OrdprcPtnCode, string OrdCndiTpCode, double OrdPrc);
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="RecCnt">레코드갯수	Number	Y	5</param>
-/// <param name="OrgOrdNo">원주문번호	Number	Y	10</param>
-/// <param name="AcntNo">계좌번호	String	Y	20</param>
-/// <param name="InptPwd">입력비밀번호	String	Y	8</param>
-/// <param name="IsuNo">종목번호	String	Y	12</param>
-/// <param name="OrdQty">주문수량	Number	Y	16</param>
-/// <param name="OrdprcPtnCode">호가유형코드	String	Y	2</param>
-/// <param name="OrdCndiTpCode">주문조건구분	String	Y	1</param>
-/// <param name="OrdPrc">주문가	Number	Y	13.2</param>
-/// <param name="CommdaCode">통신매체코드	String	Y	2</param>
-/// <param name="StrtgCode">전략코드	String	Y	6</param>
-/// <param name="GrpId">그룹ID	String	Y	20</param>
-/// <param name="OrdSeqNo">주문회차	Number	Y	10</param>
-/// <param name="PtflNo">포트폴리오번호	Number	Y	10</param>
-/// <param name="BskNo">바스켓번호	Number	Y	10</param>
-/// <param name="TrchNo">트렌치번호	Number	Y	10</param>
-/// <param name="ItemNo">아이템번호	Number	Y	10</param>
-public record CSPAT00701OutBlock1(int RecCnt, long OrgOrdNo, string AcntNo, string InptPwd, string IsuNo, long OrdQty, string OrdprcPtnCode, string OrdCndiTpCode, double OrdPrc, string CommdaCode, string StrtgCode, string GrpId, long OrdSeqNo, long PtflNo, long BskNo, long TrchNo, long ItemNo);
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="RecCnt">레코드갯수	Number	Y	5</param>
-/// <param name="OrdNo">주문번호	Number	Y	10</param>
-/// <param name="PrntOrdNo">모주문번호	Number	Y	10</param>
-/// <param name="OrdTime">주문시각	String	Y	9</param>
-/// <param name="OrdMktCode">주문시장코드	String	Y	2</param>
-/// <param name="OrdPtnCode">주문유형코드	String	Y	2</param>
-/// <param name="ShtnIsuNo">단축종목번호	String	Y	9</param>
-/// <param name="PrgmOrdprcPtnCode">프로그램호가유형코드	String	Y	2</param>
-/// <param name="StslOrdprcTpCode">공매도호가구분	String	Y	1</param>
-/// <param name="StslAbleYn">공매도가능여부	String	Y	1</param>
-/// <param name="MgntrnCode">신용거래코드	String	Y	3</param>
-/// <param name="LoanDt">대출일	String	Y	8</param>
-/// <param name="CvrgOrdTp">반대매매주문구분	String	Y	1</param>
-/// <param name="LpYn">유동성공급자여부	String	Y	1</param>
-/// <param name="MgempNo">관리사원번호	String	Y	9</param>
-/// <param name="OrdAmt">주문금액	Number	Y	16</param>
-/// <param name="BnsTpCode">매매구분	String	Y	1</param>
-/// <param name="SpareOrdNo">예비주문번호	Number	Y	10</param>
-/// <param name="CvrgSeqno">반대매매일련번호	Number	Y	10</param>
-/// <param name="RsvOrdNo">예약주문번호	Number	Y	10</param>
-/// <param name="MnyOrdAmt">현금주문금액	Number	Y	16</param>
-/// <param name="SubstOrdAmt">대용주문금액	Number	Y	16</param>
-/// <param name="RuseOrdAmt">재사용주문금액	Number	Y	16</param>
-/// <param name="AcntNm">계좌명	String	Y	40</param>
-/// <param name="IsuNm">종목명	String	Y	40</param>
-public record CSPAT00701OutBlock2(int RecCnt, long OrdNo, long PrntOrdNo, string OrdTime, string OrdMktCode, string OrdPtnCode, string ShtnIsuNo, string PrgmOrdprcPtnCode, string StslOrdprcTpCode, string StslAbleYn, string MgntrnCode, string LoanDt, string CvrgOrdTp, string LpYn, string MgempNo, long OrdAmt, string BnsTpCode, long SpareOrdNo, long CvrgSeqno, long RsvOrdNo, long MnyOrdAmt, long SubstOrdAmt, long RuseOrdAmt, string AcntNm, string IsuNm);
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="OrgOrdNo">원주문번호	Number	Y	10</param>
-/// <param name="IsuNo">종목번호	String	Y	12	주식	:	종목코드	or	A+종목코드(모의투자는	A+종목코드)</param>
-/// <param name="OrdQty">주문수량	Number	Y	16</param>
-public record CSPAT00801InBlock1(long OrgOrdNo, string IsuNo, long OrdQty);
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="RecCnt">레코드갯수	Number	Y	5</param>
-/// <param name="OrgOrdNo">원주문번호	Number	Y	10</param>
-/// <param name="AcntNo">계좌번호	String	Y	20</param>
-/// <param name="InptPwd">입력비밀번호	String	Y	8</param>
-/// <param name="IsuNo">종목번호	String	Y	12</param>
-/// <param name="OrdQty">주문수량	Number	Y	16</param>
-/// <param name="CommdaCode">통신매체코드	String	Y	2</param>
-/// <param name="GrpId">그룹ID	String	Y	20</param>
-/// <param name="StrtgCode">전략코드	String	Y	6</param>
-/// <param name="OrdSeqNo">주문회차	Number	Y	10</param>
-/// <param name="PtflNo">포트폴리오번호	Number	Y	10</param>
-/// <param name="BskNo">바스켓번호	Number	Y	10</param>
-/// <param name="TrchNo">트렌치번호	Number	Y	10</param>
-/// <param name="ItemNo">아이템번호	Number	Y	10</param>
-public record CSPAT00801OutBlock1(int RecCnt, long OrgOrdNo, string AcntNo, string InptPwd, string IsuNo, long OrdQty, string CommdaCode, string GrpId, string StrtgCode, long OrdSeqNo, long PtflNo, long BskNo, long TrchNo, long ItemNo);
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="RecCnt">레코드갯수	Number	Y	5</param>
-/// <param name="OrdNo">주문번호	Number	Y	10</param>
-/// <param name="PrntOrdNo">모주문번호	Number	Y	10</param>
-/// <param name="OrdTime">주문시각	String	Y	9</param>
-/// <param name="OrdMktCode">주문시장코드	String	Y	2</param>
-/// <param name="OrdPtnCode">주문유형코드	String	Y	2</param>
-/// <param name="ShtnIsuNo">단축종목번호	String	Y	9</param>
-/// <param name="PrgmOrdprcPtnCode">프로그램호가유형코드	String	Y	2</param>
-/// <param name="StslOrdprcTpCode">공매도호가구분	String	Y	1</param>
-/// <param name="StslAbleYn">공매도가능여부	String	Y	1</param>
-/// <param name="MgntrnCode">신용거래코드	String	Y	3</param>
-/// <param name="LoanDt">대출일	String	Y	8</param>
-/// <param name="CvrgOrdTp">반대매매주문구분	String	Y	1</param>
-/// <param name="LpYn">유동성공급자여부	String	Y	1</param>
-/// <param name="MgempNo">관리사원번호	String	Y	9</param>
-/// <param name="BnsTpCode">매매구분	String	Y	1</param>
-/// <param name="SpareOrdNo">예비주문번호	Number	Y	10</param>
-/// <param name="CvrgSeqno">반대매매일련번호	Number	Y	10</param>
-/// <param name="RsvOrdNo">예약주문번호	Number	Y	10</param>
-/// <param name="AcntNm">계좌명	String	Y	40</param>
-/// <param name="IsuNm">종목명	String	Y	40</param>
-public record CSPAT00801OutBlock2(int RecCnt, long OrdNo, long PrntOrdNo, string OrdTime, string OrdMktCode, string OrdPtnCode, string ShtnIsuNo, string PrgmOrdprcPtnCode, string StslOrdprcTpCode, string StslAbleYn, string MgntrnCode, string LoanDt, string CvrgOrdTp, string LpYn, string MgempNo, string BnsTpCode, long SpareOrdNo, long CvrgSeqno, long RsvOrdNo, string AcntNm, string IsuNm);
-
-#endregion

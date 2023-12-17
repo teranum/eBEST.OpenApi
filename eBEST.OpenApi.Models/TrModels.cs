@@ -9,7 +9,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 업종기간별추이
 /// </summary>
-[Path("/indtp/market-data")] public class t1514 : TrBase
+[Path("/indtp/market-data", Description = "업종기간별추이")]
+public class t1514 : TrBase
 {
     /// 요청
     public t1514InBlock? t1514InBlock { get; set; }
@@ -22,7 +23,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 전체업종
 /// </summary>
-[Path("/indtp/market-data")] public class t8424 : TrBase
+[Path("/indtp/market-data", Description = "전체업종")]
+public class t8424 : TrBase
 {
     /// 요청
     public t8424InBlock? t8424InBlock { get; set; }
@@ -34,7 +36,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 예상지수
 /// </summary>
-[Path("/indtp/market-data")] public class t1485 : TrBase
+[Path("/indtp/market-data", Description = "예상지수")]
+public class t1485 : TrBase
 {
     /// 요청
     public t1485InBlock? t1485InBlock { get; set; }
@@ -47,7 +50,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 업종현재가
 /// </summary>
-[Path("/indtp/market-data")] public class t1511 : TrBase
+[Path("/indtp/market-data", Description = "업종현재가")]
+public class t1511 : TrBase
 {
     /// 요청
     public t1511InBlock? t1511InBlock { get; set; }
@@ -59,7 +63,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 업종별종목시세
 /// </summary>
-[Path("/indtp/market-data")] public class t1516 : TrBase
+[Path("/indtp/market-data", Description = "업종별종목시세")]
+public class t1516 : TrBase
 {
     /// 요청
     public t1516InBlock? t1516InBlock { get; set; }
@@ -75,7 +80,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 업종챠트(종합)
 /// </summary>
-[Path("/indtp/chart")] public class t4203 : TrBase
+[Path("/indtp/chart", Description = "업종챠트(종합)")]
+public class t4203 : TrBase
 {
     /// 요청
     public t4203InBlock? t4203InBlock { get; set; }
@@ -88,7 +94,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 업종차트(틱/n틱)
 /// </summary>
-[Path("/indtp/chart")] public class t8417 : TrBase
+[Path("/indtp/chart", Description = "업종차트(틱/n틱)")]
+public class t8417 : TrBase
 {
     /// 요청
     public t8417InBlock? t8417InBlock { get; set; }
@@ -101,7 +108,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 업종챠트(N분)
 /// </summary>
-[Path("/indtp/chart")] public class t8418 : TrBase
+[Path("/indtp/chart", Description = "업종챠트(N분)")]
+public class t8418 : TrBase
 {
     /// 요청
     public t8418InBlock? t8418InBlock { get; set; }
@@ -114,7 +122,8 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 업종챠트(일주월)
 /// </summary>
-[Path("/indtp/chart")] public class t8419 : TrBase
+[Path("/indtp/chart", Description = "업종챠트(일주월)")]
+public class t8419 : TrBase
 {
     /// 요청
     public t8419InBlock? t8419InBlock { get; set; }
@@ -135,7 +144,7 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 주식현재가호가조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식현재가호가조회")]
 public class t1101 : TrBase
 {
     /// 요청
@@ -148,7 +157,7 @@ public class t1101 : TrBase
 /// <summary>
 /// 주식현재가(시세)조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식현재가(시세)조회")]
 public class t1102 : TrBase
 {
     /// 요청
@@ -161,7 +170,7 @@ public class t1102 : TrBase
 /// <summary>
 /// 주식현재가시세메모
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식현재가시세메모")]
 public class t1104 : TrBase
 {
     /// 요청
@@ -176,7 +185,7 @@ public class t1104 : TrBase
 /// <summary>
 /// 주식피봇/디마크조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식피봇/디마크조회")]
 public class t1105 : TrBase
 {
     /// 요청
@@ -189,7 +198,7 @@ public class t1105 : TrBase
 /// <summary>
 /// 시간외체결량
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "시간외체결량")]
 public class t1109 : TrBase
 {
     /// 요청
@@ -203,7 +212,7 @@ public class t1109 : TrBase
 /// <summary>
 /// 주식시간대별체결조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식시간대별체결조회")]
 public class t1301 : TrBase
 {
     /// 요청
@@ -217,7 +226,7 @@ public class t1301 : TrBase
 /// <summary>
 /// 주식분별주가조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식분별주가조회")]
 public class t1302 : TrBase
 {
     /// 요청
@@ -231,7 +240,7 @@ public class t1302 : TrBase
 /// <summary>
 /// 기간별주가
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "기간별주가")]
 public class t1305 : TrBase
 {
     /// 요청
@@ -245,7 +254,7 @@ public class t1305 : TrBase
 /// <summary>
 /// 주식시간대별체결조회챠트
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식시간대별체결조회챠트")]
 public class t1308 : TrBase
 {
     /// 요청
@@ -258,7 +267,7 @@ public class t1308 : TrBase
 /// <summary>
 /// 주식당일전일분틱조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식당일전일분틱조회")]
 public class t1310 : TrBase
 {
     /// 요청
@@ -272,7 +281,7 @@ public class t1310 : TrBase
 /// <summary>
 /// 관리/불성실/투자유의조회	
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "관리/불성실/투자유의조회")]
 public class t1404 : TrBase
 {
     /// 요청
@@ -284,9 +293,9 @@ public class t1404 : TrBase
 }
 
 /// <summary>
-/// 투자경고/매매정지/정리매매조회	
+/// 투자경고/매매정지/정리매매조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "투자경고/매매정지/정리매매조회")]
 public class t1405 : TrBase
 {
     /// 요청
@@ -300,7 +309,7 @@ public class t1405 : TrBase
 /// <summary>
 /// 초저유동성조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "초저유동성조회")]
 public class t1410 : TrBase
 {
     /// 요청
@@ -314,7 +323,7 @@ public class t1410 : TrBase
 /// <summary>
 /// 상/하한	
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "상/하한")]
 public class t1422 : TrBase
 {
     /// 요청
@@ -328,7 +337,7 @@ public class t1422 : TrBase
 /// <summary>
 /// 상/하한가직전
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "상/하한가직전")]
 public class t1427 : TrBase
 {
     /// 요청
@@ -342,7 +351,7 @@ public class t1427 : TrBase
 /// <summary>
 /// 신고/신저가
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "신고/신저가")]
 public class t1442 : TrBase
 {
     /// 요청
@@ -356,7 +365,7 @@ public class t1442 : TrBase
 /// <summary>
 /// 가격대별매매비중조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "가격대별매매비중조회")]
 public class t1449 : TrBase
 {
     /// 요청
@@ -370,7 +379,7 @@ public class t1449 : TrBase
 /// <summary>
 /// 시간대별호가잔량추이
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "시간대별호가잔량추이")]
 public class t1471 : TrBase
 {
     /// 요청
@@ -384,7 +393,7 @@ public class t1471 : TrBase
 /// <summary>
 /// 체결강도추이
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "체결강도추이")]
 public class t1475 : TrBase
 {
     /// 요청
@@ -398,7 +407,7 @@ public class t1475 : TrBase
 /// <summary>
 /// 시간별예상체결가
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "시간별예상체결가")]
 public class t1486 : TrBase
 {
     /// 요청
@@ -412,7 +421,7 @@ public class t1486 : TrBase
 /// <summary>
 /// 예상체결가등락율상위조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "예상체결가등락율상위조회")]
 public class t1488 : TrBase
 {
     /// 요청
@@ -426,7 +435,7 @@ public class t1488 : TrBase
 /// <summary>
 /// API용주식멀티현재가조회
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "API용주식멀티현재가조회")]
 public class t8407 : TrBase
 {
     /// 요청
@@ -439,7 +448,7 @@ public class t8407 : TrBase
 /// <summary>
 /// 주식마스터조회API용
 /// </summary>
-[Path("/stock/market-data")]
+[Path("/stock/market-data", Description = "주식마스터조회API용")]
 public class t9945 : TrBase
 {
     /// 요청
@@ -455,7 +464,7 @@ public class t9945 : TrBase
 /// <summary>
 /// 종목별상위회원사
 /// </summary>
-[Path("/stock/exchange")]
+[Path("/stock/exchange", Description = "종목별상위회원사")]
 public class t1752 : TrBase
 {
     /// 요청
@@ -469,7 +478,7 @@ public class t1752 : TrBase
 /// <summary>
 /// 회원사리스트
 /// </summary>
-[Path("/stock/exchange")]
+[Path("/stock/exchange", Description = "회원사리스트")]
 public class t1764 : TrBase
 {
     /// 요청
@@ -482,7 +491,7 @@ public class t1764 : TrBase
 /// <summary>
 /// 종목별회원사추이
 /// </summary>
-[Path("/stock/exchange")]
+[Path("/stock/exchange", Description = "종목별회원사추이")]
 public class t1771 : TrBase
 {
     /// 요청
@@ -500,7 +509,7 @@ public class t1771 : TrBase
 /// <summary>
 /// 뉴스본문
 /// </summary>
-[Path("/stock/investinfo")]
+[Path("/stock/investinfo", Description = "뉴스본문")]
 public class t3102 : TrBase
 {
     /// 요청
@@ -515,7 +524,7 @@ public class t3102 : TrBase
 /// <summary>
 /// 종목별증시일정
 /// </summary>
-[Path("/stock/investinfo")]
+[Path("/stock/investinfo", Description = "종목별증시일정")]
 public class t3202 : TrBase
 {
     /// 요청
@@ -528,7 +537,7 @@ public class t3202 : TrBase
 /// <summary>
 /// FNG_요약
 /// </summary>
-[Path("/stock/investinfo")]
+[Path("/stock/investinfo", Description = "FNG_요약")]
 public class t3320 : TrBase
 {
     /// 요청
@@ -542,7 +551,7 @@ public class t3320 : TrBase
 /// <summary>
 /// 재무순위종합
 /// </summary>
-[Path("/stock/investinfo")]
+[Path("/stock/investinfo", Description = "재무순위종합")]
 public class t3341 : TrBase
 {
     /// 요청
@@ -556,7 +565,7 @@ public class t3341 : TrBase
 /// <summary>
 /// 투자의견
 /// </summary>
-[Path("/stock/investinfo")]
+[Path("/stock/investinfo", Description = "투자의견")]
 public class t3401 : TrBase
 {
     /// 요청
@@ -570,7 +579,7 @@ public class t3401 : TrBase
 /// <summary>
 /// 해외실시간지수
 /// </summary>
-[Path("/stock/investinfo")]
+[Path("/stock/investinfo", Description = "해외실시간지수")]
 public class t3518 : TrBase
 {
     /// 요청
@@ -584,7 +593,7 @@ public class t3518 : TrBase
 /// <summary>
 /// 해외지수조회(API용)	
 /// </summary>
-[Path("/stock/investinfo")]
+[Path("/stock/investinfo", Description = "해외지수조회(API용)")]
 public class t3521 : TrBase
 {
     /// 요청
@@ -597,7 +606,7 @@ public class t3521 : TrBase
 /// <summary>
 /// 증시주변자금추이
 /// </summary>
-[Path("/stock/investinfo")]
+[Path("/stock/investinfo", Description = "증시주변자금추이")]
 public class t8428 : TrBase
 {
     /// 요청
@@ -614,7 +623,7 @@ public class t8428 : TrBase
 /// <summary>
 /// 프로그램매매종합조회
 /// </summary>
-[Path("/stock/program")]
+[Path("/stock/program", Description = "프로그램매매종합조회")]
 public class t1631 : TrBase
 {
     /// 요청
@@ -628,7 +637,7 @@ public class t1631 : TrBase
 /// <summary>
 /// 시간대별프로그램매매추이
 /// </summary>
-[Path("/stock/program")]
+[Path("/stock/program", Description = "시간대별프로그램매매추이")]
 public class t1632 : TrBase
 {
     /// 요청
@@ -642,7 +651,7 @@ public class t1632 : TrBase
 /// <summary>
 /// 기간별프로그램매매추이
 /// </summary>
-[Path("/stock/program")]
+[Path("/stock/program", Description = "기간별프로그램매매추이")]
 public class t1633 : TrBase
 {
     /// 요청
@@ -656,7 +665,7 @@ public class t1633 : TrBase
 /// <summary>
 /// 종목별프로그램매매동향
 /// </summary>
-[Path("/stock/program")]
+[Path("/stock/program", Description = "종목별프로그램매매동향")]
 public class t1636 : TrBase
 {
     /// 요청
@@ -670,7 +679,7 @@ public class t1636 : TrBase
 /// <summary>
 /// 종목별프로그램매매추이
 /// </summary>
-[Path("/stock/program")]
+[Path("/stock/program", Description = "종목별프로그램매매추이")]
 public class t1637 : TrBase
 {
     /// 요청
@@ -684,7 +693,7 @@ public class t1637 : TrBase
 /// <summary>
 /// 프로그램매매종합조회(미니)
 /// </summary>
-[Path("/stock/program")]
+[Path("/stock/program", Description = "프로그램매매종합조회(미니)")]
 public class t1640 : TrBase
 {
     /// 요청
@@ -697,7 +706,7 @@ public class t1640 : TrBase
 /// <summary>
 /// 시간대별프로그램매매추이(차트)
 /// </summary>
-[Path("/stock/program")]
+[Path("/stock/program", Description = "시간대별프로그램매매추이(차트)")]
 public class t1662 : TrBase
 {
     /// 요청
@@ -713,7 +722,7 @@ public class t1662 : TrBase
 /// <summary>
 /// 투자자별종합
 /// </summary>
-[Path("/stock/investor")]
+[Path("/stock/investor", Description = "투자자별종합")]
 public class t1601 : TrBase
 {
     /// 요청
@@ -731,7 +740,7 @@ public class t1601 : TrBase
 /// <summary>
 /// 시간대별투자자매매추이
 /// </summary>
-[Path("/stock/investor")]
+[Path("/stock/investor", Description = "시간대별투자자매매추이")]
 public class t1602 : TrBase
 {
     /// 요청
@@ -745,7 +754,7 @@ public class t1602 : TrBase
 /// <summary>
 /// 시간대별투자자매매추이상세
 /// </summary>
-[Path("/stock/investor")]
+[Path("/stock/investor", Description = "시간대별투자자매매추이상세")]
 public class t1603 : TrBase
 {
     /// 요청
@@ -759,7 +768,7 @@ public class t1603 : TrBase
 /// <summary>
 /// 투자자매매종합1
 /// </summary>
-[Path("/stock/investor")]
+[Path("/stock/investor", Description = "투자자매매종합1")]
 public class t1615 : TrBase
 {
     /// 요청
@@ -773,7 +782,7 @@ public class t1615 : TrBase
 /// <summary>
 /// 투자자매매종합2
 /// </summary>
-[Path("/stock/investor")]
+[Path("/stock/investor", Description = "투자자매매종합2")]
 public class t1617 : TrBase
 {
     /// 요청
@@ -787,7 +796,7 @@ public class t1617 : TrBase
 /// <summary>
 /// 업종별분별투자자매매동향(챠트용)
 /// </summary>
-[Path("/stock/investor")]
+[Path("/stock/investor", Description = "업종별분별투자자매매동향(챠트용)")]
 public class t1621 : TrBase
 {
     /// 요청
@@ -801,7 +810,7 @@ public class t1621 : TrBase
 /// <summary>
 /// 투자자매매종합(챠트)
 /// </summary>
-[Path("/stock/investor")]
+[Path("/stock/investor", Description = "투자자매매종합(챠트)")]
 public class t1664 : TrBase
 {
     /// 요청
@@ -817,7 +826,7 @@ public class t1664 : TrBase
 /// <summary>
 /// 외인기관종목별동향
 /// </summary>
-[Path("/stock/frgr-itt")]
+[Path("/stock/frgr-itt", Description = "외인기관종목별동향")]
 public class t1702 : TrBase
 {
     /// 요청
@@ -831,7 +840,7 @@ public class t1702 : TrBase
 /// <summary>
 /// 외인기관종목별동향
 /// </summary>
-[Path("/stock/frgr-itt")]
+[Path("/stock/frgr-itt", Description = "외인기관종목별동향")]
 public class t1716 : TrBase
 {
     /// 요청
@@ -844,7 +853,7 @@ public class t1716 : TrBase
 /// <summary>
 /// 외인기관종목별동향
 /// </summary>
-[Path("/stock/frgr-itt")]
+[Path("/stock/frgr-itt", Description = "외인기관종목별동향")]
 public class t1717 : TrBase
 {
     /// 요청
@@ -860,7 +869,7 @@ public class t1717 : TrBase
 /// <summary>
 /// ELW현재가(시세)조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW현재가(시세)조회")]
 public class t1950 : TrBase
 {
     /// 요청
@@ -874,7 +883,7 @@ public class t1950 : TrBase
 /// <summary>
 /// ELW시간대별체결조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW시간대별체결조회")]
 public class t1951 : TrBase
 {
     /// 요청
@@ -888,7 +897,7 @@ public class t1951 : TrBase
 /// <summary>
 /// ELW일별주가
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW일별주가")]
 public class t1954 : TrBase
 {
     /// 요청
@@ -902,7 +911,7 @@ public class t1954 : TrBase
 /// <summary>
 /// ELW현재가(확정지급액)조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW현재가(확정지급액)조회")]
 public class t1956 : TrBase
 {
     /// 요청
@@ -916,7 +925,7 @@ public class t1956 : TrBase
 /// <summary>
 /// ELW종목비교
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW종목비교")]
 public class t1958 : TrBase
 {
     /// 요청
@@ -931,7 +940,7 @@ public class t1958 : TrBase
 /// <summary>
 /// LP대상종목정보조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "LP대상종목정보조회")]
 public class t1959 : TrBase
 {
     /// 요청
@@ -944,7 +953,7 @@ public class t1959 : TrBase
 /// <summary>
 /// ELW등락율상위
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW등락율상위")]
 public class t1960 : TrBase
 {
     /// 요청
@@ -958,7 +967,7 @@ public class t1960 : TrBase
 /// <summary>
 /// ELW거래량상위
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW거래량상위")]
 public class t1961 : TrBase
 {
     /// 요청
@@ -972,7 +981,7 @@ public class t1961 : TrBase
 /// <summary>
 /// ELW전광판
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW전광판")]
 public class t1964 : TrBase
 {
     /// 요청
@@ -985,7 +994,7 @@ public class t1964 : TrBase
 /// <summary>
 /// ELW거래대금상위
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW거래대금상위")]
 public class t1966 : TrBase
 {
     /// 요청
@@ -999,7 +1008,7 @@ public class t1966 : TrBase
 /// <summary>
 /// ELW지표검색
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW지표검색")]
 public class t1969 : TrBase
 {
     /// 요청
@@ -1013,7 +1022,7 @@ public class t1969 : TrBase
 /// <summary>
 /// ELW현재가호가조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW현재가호가조회")]
 public class t1971 : TrBase
 {
     /// 요청
@@ -1026,7 +1035,7 @@ public class t1971 : TrBase
 /// <summary>
 /// ELW현재가(거래원)조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW현재가(거래원)조회")]
 public class t1972 : TrBase
 {
     /// 요청
@@ -1039,7 +1048,7 @@ public class t1972 : TrBase
 /// <summary>
 /// ELW시간대별예상체결조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW시간대별예상체결조회")]
 public class t1973 : TrBase
 {
     /// 요청
@@ -1053,7 +1062,7 @@ public class t1973 : TrBase
 /// <summary>
 /// ELW기초자산동일종목
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW기초자산동일종목")]
 public class t1974 : TrBase
 {
     /// 요청
@@ -1067,7 +1076,7 @@ public class t1974 : TrBase
 /// <summary>
 /// 기초자산리스트조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "기초자산리스트조회")]
 public class t1988 : TrBase
 {
     /// 요청
@@ -1081,7 +1090,7 @@ public class t1988 : TrBase
 /// <summary>
 /// ELW종목조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW종목조회")]
 public class t8431 : TrBase
 {
     /// 요청
@@ -1094,7 +1103,7 @@ public class t8431 : TrBase
 /// <summary>
 /// 기초자산리스트조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "기초자산리스트조회")]
 public class t9905 : TrBase
 {
     /// 요청
@@ -1107,7 +1116,7 @@ public class t9905 : TrBase
 /// <summary>
 /// 만기월조회
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "만기월조회")]
 public class t9907 : TrBase
 {
     /// 요청
@@ -1120,7 +1129,7 @@ public class t9907 : TrBase
 /// <summary>
 /// ELW마스터조회API용
 /// </summary>
-[Path("/stock/elw")]
+[Path("/stock/elw", Description = "ELW마스터조회API용")]
 public class t9942 : TrBase
 {
     /// 요청
@@ -1136,7 +1145,7 @@ public class t9942 : TrBase
 /// <summary>
 /// ETF현재가(시세)조회
 /// </summary>
-[Path("/stock/etf")]
+[Path("/stock/etf", Description = "ETF현재가(시세)조회")]
 public class t1901 : TrBase
 {
     /// 요청
@@ -1149,7 +1158,7 @@ public class t1901 : TrBase
 /// <summary>
 /// ETF시간별추이
 /// </summary>
-[Path("/stock/etf")]
+[Path("/stock/etf", Description = "ETF시간별추이")]
 public class t1902 : TrBase
 {
     /// 요청
@@ -1163,7 +1172,7 @@ public class t1902 : TrBase
 /// <summary>
 /// ETF일별추이
 /// </summary>
-[Path("/stock/etf")]
+[Path("/stock/etf", Description = "ETF일별추이")]
 public class t1903 : TrBase
 {
     /// 요청
@@ -1177,7 +1186,7 @@ public class t1903 : TrBase
 /// <summary>
 /// ETF구성종목조회
 /// </summary>
-[Path("/stock/etf")]
+[Path("/stock/etf", Description = "ETF구성종목조회")]
 public class t1904 : TrBase
 {
     /// 요청
@@ -1191,7 +1200,7 @@ public class t1904 : TrBase
 /// <summary>
 /// ETFLP호가
 /// </summary>
-[Path("/stock/etf")]
+[Path("/stock/etf", Description = "ETFLP호가")]
 public class t1906 : TrBase
 {
     /// 요청
@@ -1207,7 +1216,7 @@ public class t1906 : TrBase
 /// <summary>
 /// 테마별종목
 /// </summary>
-[Path("/stock/sector")]
+[Path("/stock/sector", Description = "테마별종목")]
 public class t1531 : TrBase
 {
     /// 요청
@@ -1220,7 +1229,7 @@ public class t1531 : TrBase
 /// <summary>
 /// 종목별테마
 /// </summary>
-[Path("/stock/sector")]
+[Path("/stock/sector", Description = "종목별테마")]
 public class t1532 : TrBase
 {
     /// 요청
@@ -1233,7 +1242,7 @@ public class t1532 : TrBase
 /// <summary>
 /// 특이테마
 /// </summary>
-[Path("/stock/sector")]
+[Path("/stock/sector", Description = "특이테마")]
 public class t1533 : TrBase
 {
     /// 요청
@@ -1247,7 +1256,7 @@ public class t1533 : TrBase
 /// <summary>
 /// 테마종목별시세조회
 /// </summary>
-[Path("/stock/sector")]
+[Path("/stock/sector", Description = "테마종목별시세조회")]
 public class t1537 : TrBase
 {
     /// 요청
@@ -1261,7 +1270,7 @@ public class t1537 : TrBase
 /// <summary>
 /// 전체테마
 /// </summary>
-[Path("/stock/sector")]
+[Path("/stock/sector", Description = "전체테마")]
 public class t8425 : TrBase
 {
     /// 요청
@@ -1277,7 +1286,7 @@ public class t8425 : TrBase
 /// <summary>
 /// 신호조회
 /// </summary>
-[Path("/stock/item-search")]
+[Path("/stock/item-search", Description = "신호조회")]
 public class t1809 : TrBase
 {
     /// 요청
@@ -1291,7 +1300,7 @@ public class t1809 : TrBase
 /// <summary>
 /// 종목Q클릭검색(씽큐스마트)
 /// </summary>
-[Path("/stock/item-search")]
+[Path("/stock/item-search", Description = "종목Q클릭검색(씽큐스마트)")]
 public class t1825 : TrBase
 {
     /// 요청
@@ -1305,7 +1314,7 @@ public class t1825 : TrBase
 /// <summary>
 /// 종목Q클릭검색리스트조회(씽큐스마트)
 /// </summary>
-[Path("/stock/item-search")]
+[Path("/stock/item-search", Description = "종목Q클릭검색리스트조회(씽큐스마트)")]
 public class t1826 : TrBase
 {
     /// 요청
@@ -1321,7 +1330,7 @@ public class t1826 : TrBase
 /// <summary>
 /// 등락율상위
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "등락율상위")]
 public class t1441 : TrBase
 {
     /// 요청
@@ -1335,7 +1344,7 @@ public class t1441 : TrBase
 /// <summary>
 /// 시가총액상위
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "시가총액상위")]
 public class t1444 : TrBase
 {
     /// 요청
@@ -1349,7 +1358,7 @@ public class t1444 : TrBase
 /// <summary>
 /// 거래량상위
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "거래량상위")]
 public class t1452 : TrBase
 {
     /// 요청
@@ -1363,7 +1372,7 @@ public class t1452 : TrBase
 /// <summary>
 /// 거래대금상위
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "거래대금상위")]
 public class t1463 : TrBase
 {
     /// 요청
@@ -1377,7 +1386,7 @@ public class t1463 : TrBase
 /// <summary>
 /// 전일동시간대비거래급증
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "전일동시간대비거래급증")]
 public class t1466 : TrBase
 {
     /// 요청
@@ -1391,7 +1400,7 @@ public class t1466 : TrBase
 /// <summary>
 /// 시간외등락율상위
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "시간외등락율상위")]
 public class t1481 : TrBase
 {
     /// 요청
@@ -1405,7 +1414,7 @@ public class t1481 : TrBase
 /// <summary>
 /// 시간외거래량상위
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "시간외거래량상위")]
 public class t1482 : TrBase
 {
     /// 요청
@@ -1419,7 +1428,7 @@ public class t1482 : TrBase
 /// <summary>
 /// 예상체결량상위조회
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "예상체결량상위조회")]
 public class t1489 : TrBase
 {
     /// 요청
@@ -1433,7 +1442,7 @@ public class t1489 : TrBase
 /// <summary>
 /// 단일가예상등락율상위
 /// </summary>
-[Path("/stock/high-item")]
+[Path("/stock/high-item", Description = "단일가예상등락율상위")]
 public class t1492 : TrBase
 {
     /// 요청
@@ -1450,7 +1459,7 @@ public class t1492 : TrBase
 /// <summary>
 /// 기간별투자자매매추이(챠트)
 /// </summary>
-[Path("/stock/chart")]
+[Path("/stock/chart", Description = "기간별투자자매매추이(챠트)")]
 public class t1665 : TrBase
 {
     /// 요청
@@ -1464,7 +1473,7 @@ public class t1665 : TrBase
 /// <summary>
 /// API전용주식챠트(일주월년)
 /// </summary>
-[Path("/stock/chart")]
+[Path("/stock/chart", Description = "API전용주식챠트(일주월년)")]
 public class t8410 : TrBase
 {
     /// 요청
@@ -1478,7 +1487,7 @@ public class t8410 : TrBase
 /// <summary>
 /// 주식챠트(틱/n틱)
 /// </summary>
-[Path("/stock/chart")]
+[Path("/stock/chart", Description = "주식챠트(틱/n틱)")]
 public class t8411 : TrBase
 {
     /// 요청
@@ -1492,7 +1501,7 @@ public class t8411 : TrBase
 /// <summary>
 /// 주식챠트(N분)
 /// </summary>
-[Path("/stock/chart")]
+[Path("/stock/chart", Description = "주식챠트(N분)")]
 public class t8412 : TrBase
 {
     /// 요청
@@ -1509,7 +1518,7 @@ public class t8412 : TrBase
 /// <summary>
 /// 예탁담보융자가능종목현황조회
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "예탁담보융자가능종목현황조회")]
 public class CLNAQ00100 : TrBase
 {
     /// 요청
@@ -1523,7 +1532,7 @@ public class CLNAQ00100 : TrBase
 /// <summary>
 /// 신규상장종목조회
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "신규상장종목조회")]
 public class t1403 : TrBase
 {
     /// 요청
@@ -1537,7 +1546,7 @@ public class t1403 : TrBase
 /// <summary>
 /// 증거금율별종목조회
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "증거금율별종목조회")]
 public class t1411 : TrBase
 {
     /// 요청
@@ -1551,7 +1560,7 @@ public class t1411 : TrBase
 /// <summary>
 /// 종목별잔량/사전공시
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "종목별잔량/사전공시")]
 public class t1638 : TrBase
 {
     /// 요청
@@ -1564,7 +1573,7 @@ public class t1638 : TrBase
 /// <summary>
 /// 신용거래동향
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "신용거래동향")]
 public class t1921 : TrBase
 {
     /// 요청
@@ -1578,7 +1587,7 @@ public class t1921 : TrBase
 /// <summary>
 /// 종목별신용정보
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "종목별신용정보")]
 public class t1926 : TrBase
 {
     /// 요청
@@ -1591,7 +1600,7 @@ public class t1926 : TrBase
 /// <summary>
 /// 공매도일별추이
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "공매도일별추이")]
 public class t1927 : TrBase
 {
     /// 요청
@@ -1605,7 +1614,7 @@ public class t1927 : TrBase
 /// <summary>
 /// 종목별대차거래일간추이
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "종목별대차거래일간추이")]
 public class t1941 : TrBase
 {
     /// 요청
@@ -1618,7 +1627,7 @@ public class t1941 : TrBase
 /// <summary>
 /// 주식종목조회
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "주식종목조회")]
 public class t8430 : TrBase
 {
     /// 요청
@@ -1631,7 +1640,7 @@ public class t8430 : TrBase
 /// <summary>
 /// 주식종목조회 API용
 /// </summary>
-[Path("/stock/etc")]
+[Path("/stock/etc", Description = "주식종목조회 API용")]
 public class t8436 : TrBase
 {
     /// 요청
@@ -1647,7 +1656,7 @@ public class t8436 : TrBase
 /// <summary>
 /// 계좌 거래내역
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "계좌 거래내역")]
 public class CDPCQ04700 : TrBase
 {
     /// 요청
@@ -1664,7 +1673,7 @@ public class CDPCQ04700 : TrBase
 /// <summary>
 /// 계좌별신용한도조회
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "계좌별신용한도조회")]
 public class CSPAQ00600 : TrBase
 {
     /// 요청
@@ -1679,7 +1688,7 @@ public class CSPAQ00600 : TrBase
 /// <summary>
 /// 현물계좌예수금 주문가능금액 총평가 조회
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "현물계좌예수금 주문가능금액 총평가 조회")]
 public class CSPAQ12200 : TrBase
 {
     /// 요청
@@ -1693,7 +1702,7 @@ public class CSPAQ12200 : TrBase
 /// <summary>
 /// BEP단가조회
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "BEP단가조회")]
 public class CSPAQ12300 : TrBase
 {
     /// 요청
@@ -1708,7 +1717,7 @@ public class CSPAQ12300 : TrBase
 /// <summary>
 /// 현물계좌 주문체결내역 조회(API)
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "현물계좌 주문체결내역 조회(API)")]
 public class CSPAQ13700 : TrBase
 {
     /// 요청
@@ -1723,7 +1732,7 @@ public class CSPAQ13700 : TrBase
 /// <summary>
 /// 현물계좌예수금 주문가능금액 총평가2
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "현물계좌예수금 주문가능금액 총평가2")]
 public class CSPAQ22200 : TrBase
 {
     /// 요청
@@ -1737,7 +1746,7 @@ public class CSPAQ22200 : TrBase
 /// <summary>
 /// 현물계좌증거금률별주문가능수량조회
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "현물계좌증거금률별주문가능수량조회")]
 public class CSPBQ00200 : TrBase
 {
     /// 요청
@@ -1751,7 +1760,7 @@ public class CSPBQ00200 : TrBase
 /// <summary>
 /// 주식계좌 기간별수익률 상세
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "주식계좌 기간별수익률 상세")]
 public class FOCCQ33600 : TrBase
 {
     /// 요청
@@ -1766,7 +1775,7 @@ public class FOCCQ33600 : TrBase
 /// <summary>
 /// 주식당일매매일지/수수료
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "주식당일매매일지")]
 public class t0150 : TrBase
 {
     /// 요청
@@ -1780,7 +1789,7 @@ public class t0150 : TrBase
 /// <summary>
 /// 주식당일매매일지/수수료(전일)
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "주식당일매매일지/수수료(전일)")]
 public class t0151 : TrBase
 {
     /// 요청
@@ -1794,7 +1803,7 @@ public class t0151 : TrBase
 /// <summary>
 /// 주식잔고2
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "주식잔고2")]
 public class t0424 : TrBase
 {
     /// 요청
@@ -1808,7 +1817,7 @@ public class t0424 : TrBase
 /// <summary>
 /// 주식체결/미체결
 /// </summary>
-[Path("/stock/accno")]
+[Path("/stock/accno", Description = "주식체결/미체결")]
 public class t0425 : TrBase
 {
     /// 요청
@@ -1825,7 +1834,7 @@ public class t0425 : TrBase
 /// <summary>
 /// 현물주문
 /// </summary>
-[Path("/stock/order")]
+[Path("/stock/order", Description = "현물주문")]
 public class CSPAT00601 : TrBase
 {
     /// 요청
@@ -1839,7 +1848,7 @@ public class CSPAT00601 : TrBase
 /// <summary>
 /// 현물정정주문
 /// </summary>
-[Path("/stock/order")]
+[Path("/stock/order", Description = "현물정정주문")]
 public class CSPAT00701 : TrBase
 {
     /// 요청
@@ -1853,7 +1862,7 @@ public class CSPAT00701 : TrBase
 /// <summary>
 /// 현물취소주문
 /// </summary>
-[Path("/stock/order")]
+[Path("/stock/order", Description = "현물취소주문")]
 public class CSPAT00801 : TrBase
 {
     /// 요청
@@ -1875,7 +1884,7 @@ public class CSPAT00801 : TrBase
 /// <summary>
 /// 선물/옵션현재가(시세)조회
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "선물/옵션현재가(시세)조회")]
 public class t2101 : TrBase
 {
     /// 요청
@@ -1888,7 +1897,7 @@ public class t2101 : TrBase
 /// <summary>
 /// 선물/옵션현재가호가조회
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "선물/옵션현재가호가조회")]
 public class t2105 : TrBase
 {
     /// 요청
@@ -1901,7 +1910,7 @@ public class t2105 : TrBase
 /// <summary>
 /// 선물/옵션현재가시세메모
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "선물/옵션현재가시세메모")]
 public class t2106 : TrBase
 {
     /// 요청
@@ -1916,7 +1925,7 @@ public class t2106 : TrBase
 /// <summary>
 /// 선물옵션시간대별체결조회
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "선물옵션시간대별체결조회")]
 public class t2201 : TrBase
 {
     /// 요청
@@ -1930,7 +1939,7 @@ public class t2201 : TrBase
 /// <summary>
 /// 기간별주가
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "기간별주가")]
 public class t2203 : TrBase
 {
     /// 요청
@@ -1944,7 +1953,7 @@ public class t2203 : TrBase
 /// <summary>
 /// 선물옵션시간대별체결조회(단일출력용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "선물옵션시간대별체결조회(단일출력용)")]
 public class t2210 : TrBase
 {
     /// 요청
@@ -1957,7 +1966,7 @@ public class t2210 : TrBase
 /// <summary>
 /// 옵션전광판
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "옵션전광판")]
 public class t2301 : TrBase
 {
     /// 요청
@@ -1972,7 +1981,7 @@ public class t2301 : TrBase
 /// <summary>
 /// 선물옵션호가잔량비율챠트
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "선물옵션호가잔량비율챠트")]
 public class t2405 : TrBase
 {
     /// 요청
@@ -1986,7 +1995,7 @@ public class t2405 : TrBase
 /// <summary>
 /// 미결제약정추이
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "미결제약정추이")]
 public class t2421 : TrBase
 {
     /// 요청
@@ -2000,7 +2009,7 @@ public class t2421 : TrBase
 /// <summary>
 /// EUREXKOSPI200옵션선물현재가(시세)조회
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "EUREXKOSPI200옵션선물현재가(시세)조회")]
 public class t2830 : TrBase
 {
     /// 요청
@@ -2013,7 +2022,7 @@ public class t2830 : TrBase
 /// <summary>
 /// EUREXKOSPI200옵션선물호가조회
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "EUREXKOSPI200옵션선물호가조회")]
 public class t2831 : TrBase
 {
     /// 요청
@@ -2026,7 +2035,7 @@ public class t2831 : TrBase
 /// <summary>
 /// EUREX야간옵션선물시간대별체결조회
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "EUREX야간옵션선물시간대별체결조회")]
 public class t2832 : TrBase
 {
     /// 요청
@@ -2040,7 +2049,7 @@ public class t2832 : TrBase
 /// <summary>
 /// EUREX야간옵션선물기간별추이
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "EUREX야간옵션선물기간별추이")]
 public class t2833 : TrBase
 {
     /// 요청
@@ -2054,7 +2063,7 @@ public class t2833 : TrBase
 /// <summary>
 /// EUREX옵션선물시세전광판
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "EUREX옵션선물시세전광판")]
 public class t2835 : TrBase
 {
     /// 요청
@@ -2068,7 +2077,7 @@ public class t2835 : TrBase
 /// <summary>
 /// 주식선물마스터조회(API용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "주식선물마스터조회(API용)")]
 public class t8401 : TrBase
 {
     /// 요청
@@ -2081,7 +2090,7 @@ public class t8401 : TrBase
 /// <summary>
 /// 주식선물현재가조회(API용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "주식선물현재가조회(API용)")]
 public class t8402 : TrBase
 {
     /// 요청
@@ -2094,7 +2103,7 @@ public class t8402 : TrBase
 /// <summary>
 /// 주식선물호가조회(API용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "주식선물호가조회(API용)")]
 public class t8403 : TrBase
 {
     /// 요청
@@ -2107,7 +2116,7 @@ public class t8403 : TrBase
 /// <summary>
 /// 주식선물시간대별체결조회(API용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "주식선물시간대별체결조회(API용)")]
 public class t8404 : TrBase
 {
     /// 요청
@@ -2121,7 +2130,7 @@ public class t8404 : TrBase
 /// <summary>
 /// 주식선물기간별주가(API용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "주식선물기간별주가(API용)")]
 public class t8405 : TrBase
 {
     /// 요청
@@ -2135,7 +2144,7 @@ public class t8405 : TrBase
 /// <summary>
 /// 주식선물틱분별체결조회(API용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "주식선물틱분별체결조회(API용)")]
 public class t8406 : TrBase
 {
     /// 요청
@@ -2148,7 +2157,7 @@ public class t8406 : TrBase
 /// <summary>
 /// 상품선물마스터조회(API용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "상품선물마스터조회(API용)")]
 public class t8426 : TrBase
 {
     /// 요청
@@ -2161,7 +2170,7 @@ public class t8426 : TrBase
 /// <summary>
 /// 과거데이터시간대별조회
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "과거데이터시간대별조회")]
 public class t8427 : TrBase
 {
     /// 요청
@@ -2175,7 +2184,7 @@ public class t8427 : TrBase
 /// <summary>
 /// 지수선물마스터조회API용
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "지수선물마스터조회API용")]
 public class t8432 : TrBase
 {
     /// 요청
@@ -2188,7 +2197,7 @@ public class t8432 : TrBase
 /// <summary>
 /// 지수옵션마스터조회API용
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "지수옵션마스터조회API용")]
 public class t8433 : TrBase
 {
     /// 요청
@@ -2201,7 +2210,7 @@ public class t8433 : TrBase
 /// <summary>
 /// 선물/옵션멀티현재가조회
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "선물/옵션멀티현재가조회")]
 public class t8434 : TrBase
 {
     /// 요청
@@ -2214,7 +2223,7 @@ public class t8434 : TrBase
 /// <summary>
 /// 파생종목마스터조회API용
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "파생종목마스터조회API용")]
 public class t8435 : TrBase
 {
     /// 요청
@@ -2227,7 +2236,7 @@ public class t8435 : TrBase
 /// <summary>
 /// CME/EUREX마스터조회(API용)
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "CME/EUREX마스터조회(API용)")]
 public class t8437 : TrBase
 {
     /// 요청
@@ -2240,7 +2249,7 @@ public class t8437 : TrBase
 /// <summary>
 /// 지수선물마스터조회API용
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "지수선물마스터조회API용")]
 public class t9943 : TrBase
 {
     /// 요청
@@ -2253,7 +2262,7 @@ public class t9943 : TrBase
 /// <summary>
 /// 지수옵션마스터조회API용
 /// </summary>
-[Path("/futureoption/market-data")]
+[Path("/futureoption/market-data", Description = "지수옵션마스터조회API용")]
 public class t9944 : TrBase
 {
     /// 요청
@@ -2269,7 +2278,7 @@ public class t9944 : TrBase
 /// <summary>
 /// 상품선물투자자매매동향(실시간)
 /// </summary>
-[Path("/futureoption/investor")]
+[Path("/futureoption/investor", Description = "상품선물투자자매매동향(실시간)")]
 public class t2541 : TrBase
 {
     /// 요청
@@ -2283,7 +2292,7 @@ public class t2541 : TrBase
 /// <summary>
 /// 상품선물투자자매매동향(챠트용)
 /// </summary>
-[Path("/futureoption/investor")]
+[Path("/futureoption/investor", Description = "상품선물투자자매매동향(챠트용)")]
 public class t2545 : TrBase
 {
     /// 요청
@@ -2300,7 +2309,7 @@ public class t2545 : TrBase
 /// <summary>
 /// 선물옵션틱분별체결조회챠트
 /// </summary>
-[Path("/futureoption/chart")]
+[Path("/futureoption/chart", Description = "선물옵션틱분별체결조회챠트")]
 public class t2209 : TrBase
 {
     /// 요청
@@ -2313,7 +2322,7 @@ public class t2209 : TrBase
 /// <summary>
 /// 선물옵션차트(틱/n틱)
 /// </summary>
-[Path("/futureoption/chart")]
+[Path("/futureoption/chart", Description = "선물옵션차트(틱/n틱)")]
 public class t8414 : TrBase
 {
     /// 요청
@@ -2327,7 +2336,7 @@ public class t8414 : TrBase
 /// <summary>
 /// 선물/옵션챠트(N분)
 /// </summary>
-[Path("/futureoption/chart")]
+[Path("/futureoption/chart", Description = "선물/옵션챠트(N분)")]
 public class t8415 : TrBase
 {
     /// 요청
@@ -2341,7 +2350,7 @@ public class t8415 : TrBase
 /// <summary>
 /// 선물/옵션챠트(일주월)
 /// </summary>
-[Path("/futureoption/chart")]
+[Path("/futureoption/chart", Description = "선물/옵션챠트(일주월)")]
 public class t8416 : TrBase
 {
     /// 요청
@@ -2355,7 +2364,7 @@ public class t8416 : TrBase
 /// <summary>
 /// EUREX야간옵션선물틱분별체결조회챠트
 /// </summary>
-[Path("/futureoption/chart")]
+[Path("/futureoption/chart", Description = "EUREX야간옵션선물틱분별체결조회챠트")]
 public class t8429 : TrBase
 {
     /// 요청
@@ -2371,7 +2380,7 @@ public class t8429 : TrBase
 /// <summary>
 /// 선물옵션 계좌 주문체결내역 조회
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "선물옵션 계좌 주문체결내역 조회")]
 public class CFOAQ00600 : TrBase
 {
     /// 요청
@@ -2386,7 +2395,7 @@ public class CFOAQ00600 : TrBase
 /// <summary>
 /// 선물옵션 주문가능수량조회
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "선물옵션 주문가능수량조회")]
 public class CFOAQ10100 : TrBase
 {
     /// 요청
@@ -2400,7 +2409,7 @@ public class CFOAQ10100 : TrBase
 /// <summary>
 /// 선물옵션 계좌예탁금증거금조회
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "선물옵션 계좌예탁금증거금조회")]
 public class CFOBQ10500 : TrBase
 {
     /// 요청
@@ -2415,7 +2424,7 @@ public class CFOBQ10500 : TrBase
 /// <summary>
 /// 선물옵션가정산예탁금상세
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "선물옵션가정산예탁금상세")]
 public class CFOEQ11100 : TrBase
 {
     /// 요청
@@ -2429,7 +2438,7 @@ public class CFOEQ11100 : TrBase
 /// <summary>
 /// 선물옵션 일별 계좌손익내역
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "선물옵션 일별 계좌손익내역")]
 public class CFOEQ82600 : TrBase
 {
     /// 요청
@@ -2444,7 +2453,7 @@ public class CFOEQ82600 : TrBase
 /// <summary>
 /// 계좌 미결제 약정현황(평균가)
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "계좌 미결제 약정현황(평균가)")]
 public class CFOFQ02400 : TrBase
 {
     /// 요청
@@ -2460,7 +2469,7 @@ public class CFOFQ02400 : TrBase
 /// <summary>
 /// 선물/옵션체결/미체결
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "선물/옵션체결/미체결")]
 public class t0434 : TrBase
 {
     /// 요청
@@ -2474,7 +2483,7 @@ public class t0434 : TrBase
 /// <summary>
 /// 선물/옵션잔고평가(이동평균)
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "선물/옵션잔고평가(이동평균)")]
 public class t0441 : TrBase
 {
     /// 요청
@@ -2488,7 +2497,7 @@ public class t0441 : TrBase
 /// <summary>
 /// EUREX 주문체결내역조회
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "EUREX 주문체결내역조회")]
 public class CEXAQ21100 : TrBase
 {
     /// 요청
@@ -2503,7 +2512,7 @@ public class CEXAQ21100 : TrBase
 /// <summary>
 /// EUREX 주문가능 수량/금액 조회
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "EUREX 주문가능 수량/금액 조회")]
 public class CEXAQ21200 : TrBase
 {
     /// 요청
@@ -2517,7 +2526,7 @@ public class CEXAQ21200 : TrBase
 /// <summary>
 /// EUREX 야간장잔고및 평가현황
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "EUREX 야간장잔고및 평가현황")]
 public class CEXAQ31100 : TrBase
 {
     /// 요청
@@ -2532,7 +2541,7 @@ public class CEXAQ31100 : TrBase
 /// <summary>
 /// EUREX 예탁금 및 통합잔고조회
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "EUREX 예탁금 및 통합잔고조회")]
 public class CEXAQ31200 : TrBase
 {
     /// 요청
@@ -2547,7 +2556,7 @@ public class CEXAQ31200 : TrBase
 /// <summary>
 /// EUREX 야간옵션 기간주문체결조회
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "EUREX 야간옵션 기간주문체결조회")]
 public class CEXAQ44200 : TrBase
 {
     /// 요청
@@ -2562,7 +2571,7 @@ public class CEXAQ44200 : TrBase
 /// <summary>
 /// 선물옵션 기간별 계좌 수익률 현황
 /// </summary>
-[Path("/futureoption/accno")]
+[Path("/futureoption/accno", Description = "선물옵션 기간별 계좌 수익률 현황")]
 public class FOCCQ33700 : TrBase
 {
     /// 요청
@@ -2580,7 +2589,7 @@ public class FOCCQ33700 : TrBase
 /// <summary>
 /// 선물옵션 정상주문
 /// </summary>
-[Path("/futureoption/order")]
+[Path("/futureoption/order", Description = "선물옵션 정상주문")]
 public class CFOAT00100 : TrBase
 {
     /// 요청
@@ -2594,7 +2603,7 @@ public class CFOAT00100 : TrBase
 /// <summary>
 /// 선물옵션 정정주문
 /// </summary>
-[Path("/futureoption/order")]
+[Path("/futureoption/order", Description = "선물옵션 정정주문")]
 public class CFOAT00200 : TrBase
 {
     /// 요청
@@ -2608,7 +2617,7 @@ public class CFOAT00200 : TrBase
 /// <summary>
 /// 선물옵션 취소주문
 /// </summary>
-[Path("/futureoption/order")]
+[Path("/futureoption/order", Description = "선물옵션 취소주문")]
 public class CFOAT00300 : TrBase
 {
     /// 요청
@@ -2622,7 +2631,7 @@ public class CFOAT00300 : TrBase
 /// <summary>
 /// 선물옵션 옵션매도시 주문증거금조회(옵션매도시 1계약당 주문증거금)
 /// </summary>
-[Path("/futureoption/order")]
+[Path("/futureoption/order", Description = "선물옵션 옵션매도시 주문증거금조회(옵션매도시 1계약당 주문증거금)")]
 public class CFOBQ10800 : TrBase
 {
     /// 요청
@@ -2636,7 +2645,7 @@ public class CFOBQ10800 : TrBase
 /// <summary>
 /// EUREX 매수/매도주문
 /// </summary>
-[Path("/futureoption/order")]
+[Path("/futureoption/order", Description = "EUREX 매수/매도주문")]
 public class CEXAT11100 : TrBase
 {
     /// 요청
@@ -2650,7 +2659,7 @@ public class CEXAT11100 : TrBase
 /// <summary>
 /// EUREX 정정주문
 /// </summary>
-[Path("/futureoption/order")]
+[Path("/futureoption/order", Description = "EUREX 정정주문")]
 public class CEXAT11200 : TrBase
 {
     /// 요청
@@ -2664,7 +2673,7 @@ public class CEXAT11200 : TrBase
 /// <summary>
 /// EUREX 취소주문
 /// </summary>
-[Path("/futureoption/order")]
+[Path("/futureoption/order", Description = "EUREX 취소주문")]
 public class CEXAT11300 : TrBase
 {
     /// 요청
@@ -2681,7 +2690,7 @@ public class CEXAT11300 : TrBase
 /// <summary>
 /// 파생상품증거금율조회
 /// </summary>
-[Path("/futureoption/etc")]
+[Path("/futureoption/etc", Description = "파생상품증거금율조회")]
 public class MMDAQ91200 : TrBase
 {
     /// 요청
@@ -2703,7 +2712,7 @@ public class MMDAQ91200 : TrBase
 /// <summary>
 /// 해외선물마스터조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물마스터조회")]
 public class o3101 : TrBase
 {
     /// 요청
@@ -2716,7 +2725,7 @@ public class o3101 : TrBase
 /// <summary>
 /// 해외선물 일별체결 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물 일별체결 조회")]
 public class o3104 : TrBase
 {
     /// 요청
@@ -2729,7 +2738,7 @@ public class o3104 : TrBase
 /// <summary>
 /// 해외선물 현재가(종목정보) 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물 현재가(종목정보) 조회")]
 public class o3105 : TrBase
 {
     /// 요청
@@ -2742,7 +2751,7 @@ public class o3105 : TrBase
 /// <summary>
 /// 해외선물 현재가호가 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물 현재가호가 조회")]
 public class o3106 : TrBase
 {
     /// 요청
@@ -2755,7 +2764,7 @@ public class o3106 : TrBase
 /// <summary>
 /// 해외선물 관심종목 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물 관심종목 조회")]
 public class o3107 : TrBase
 {
     /// 요청
@@ -2768,7 +2777,7 @@ public class o3107 : TrBase
 /// <summary>
 /// 해외선물 시간대별(Tick)체결 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물 시간대별(Tick)체결 조회")]
 public class o3116 : TrBase
 {
     /// 요청
@@ -2782,7 +2791,7 @@ public class o3116 : TrBase
 /// <summary>
 /// 해외선물옵션 마스터 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션 마스터 조회")]
 public class o3121 : TrBase
 {
     /// 요청
@@ -2795,7 +2804,7 @@ public class o3121 : TrBase
 /// <summary>
 /// 해외선물옵션 차트 분봉 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션 차트 분봉 조회")]
 public class o3123 : TrBase
 {
     /// 요청
@@ -2809,7 +2818,7 @@ public class o3123 : TrBase
 /// <summary>
 /// 해외선물옵션 현재가(종목정보) 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션 현재가(종목정보) 조회")]
 public class o3125 : TrBase
 {
     /// 요청
@@ -2822,7 +2831,7 @@ public class o3125 : TrBase
 /// <summary>
 /// 해외선물옵션 현재가호가 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션 현재가호가 조회")]
 public class o3126 : TrBase
 {
     /// 요청
@@ -2835,7 +2844,7 @@ public class o3126 : TrBase
 /// <summary>
 /// 해외선물옵션 관심종목 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션 관심종목 조회")]
 public class o3127 : TrBase
 {
     /// 요청
@@ -2849,7 +2858,7 @@ public class o3127 : TrBase
 /// <summary>
 /// 해외선물옵션 차트 일주월 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션 차트 일주월 조회")]
 public class o3128 : TrBase
 {
     /// 요청
@@ -2863,7 +2872,7 @@ public class o3128 : TrBase
 /// <summary>
 /// 해외선물옵션 시간대별 Tick 체결 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션 시간대별 Tick 체결 조회")]
 public class o3136 : TrBase
 {
     /// 요청
@@ -2877,7 +2886,7 @@ public class o3136 : TrBase
 /// <summary>
 /// 해외선물옵션 차트 NTick 체결 조회
 /// </summary>
-[Path("/overseas-futureoption/market-data")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션 차트 NTick 체결 조회")]
 public class o3137 : TrBase
 {
     /// 요청
@@ -2894,7 +2903,7 @@ public class o3137 : TrBase
 /// <summary>
 /// 해외선물 체결내역개별 조회(주문가능수량)
 /// </summary>
-[Path("/overseas-futureoption/accno")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 체결내역개별 조회(주문가능수량)")]
 public class CIDBQ01400 : TrBase
 {
     /// 요청
@@ -2908,7 +2917,7 @@ public class CIDBQ01400 : TrBase
 /// <summary>
 /// 해외선물 미결제잔고내역 조회
 /// </summary>
-[Path("/overseas-futureoption/accno")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 미결제잔고내역 조회")]
 public class CIDBQ01500 : TrBase
 {
     /// 요청
@@ -2922,7 +2931,7 @@ public class CIDBQ01500 : TrBase
 /// <summary>
 /// 해외선물 주문내역 조회
 /// </summary>
-[Path("/overseas-futureoption/accno")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 주문내역 조회")]
 public class CIDBQ01800 : TrBase
 {
     /// 요청
@@ -2936,7 +2945,7 @@ public class CIDBQ01800 : TrBase
 /// <summary>
 /// 해외선물 주문체결내역 상세 조회
 /// </summary>
-[Path("/overseas-futureoption/accno")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 주문체결내역 상세 조회")]
 public class CIDBQ02400 : TrBase
 {
     /// 요청
@@ -2950,7 +2959,7 @@ public class CIDBQ02400 : TrBase
 /// <summary>
 /// 해외선물 예수금/잔고현황
 /// </summary>
-[Path("/overseas-futureoption/accno")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 예수금/잔고현황")]
 public class CIDBQ03000 : TrBase
 {
     /// 요청
@@ -2964,7 +2973,7 @@ public class CIDBQ03000 : TrBase
 /// <summary>
 /// 해외선물 예탁자산 조회
 /// </summary>
-[Path("/overseas-futureoption/accno")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 예탁자산 조회")]
 public class CIDBQ05300 : TrBase
 {
     /// 요청
@@ -2979,7 +2988,7 @@ public class CIDBQ05300 : TrBase
 /// <summary>
 /// 일자별 미결제 잔고내역
 /// </summary>
-[Path("/overseas-futureoption/accno")]
+[Path("/overseas-futureoption/accno", Description = "일자별 미결제 잔고내역")]
 public class CIDEQ00800 : TrBase
 {
     /// 요청
@@ -2996,7 +3005,7 @@ public class CIDEQ00800 : TrBase
 /// <summary>
 /// 해외선물 신규주문
 /// </summary>
-[Path("/overseas-futureoption/order")]
+[Path("/overseas-futureoption/order", Description = "해외선물 신규주문")]
 public class CIDBT00100 : TrBase
 {
     /// 요청
@@ -3010,7 +3019,7 @@ public class CIDBT00100 : TrBase
 /// <summary>
 /// 해외선물 정정주문
 /// </summary>
-[Path("/overseas-futureoption/order")]
+[Path("/overseas-futureoption/order", Description = "해외선물 정정주문")]
 public class CIDBT00900 : TrBase
 {
     /// 요청
@@ -3024,7 +3033,7 @@ public class CIDBT00900 : TrBase
 /// <summary>
 /// 해외선물 취소주문
 /// </summary>
-[Path("/overseas-futureoption/order")]
+[Path("/overseas-futureoption/order", Description = "해외선물 취소주문")]
 public class CIDBT01000 : TrBase
 {
     /// 요청
@@ -3041,7 +3050,7 @@ public class CIDBT01000 : TrBase
 /// <summary>
 /// 해외선물차트 분봉 조회
 /// </summary>
-[Path("/overseas-futureoption/chart")]
+[Path("/overseas-futureoption/chart", Description = "해외선물차트 분봉 조회")]
 public class o3103 : TrBase
 {
     /// 요청
@@ -3055,7 +3064,7 @@ public class o3103 : TrBase
 /// <summary>
 /// 해외선물차트(일주월) 조회
 /// </summary>
-[Path("/overseas-futureoption/chart")]
+[Path("/overseas-futureoption/chart", Description = "해외선물차트(일주월) 조회")]
 public class o3108 : TrBase
 {
     /// 요청
@@ -3069,7 +3078,7 @@ public class o3108 : TrBase
 /// <summary>
 /// 해외선물 차트 NTick 체결 조회
 /// </summary>
-[Path("/overseas-futureoption/chart")]
+[Path("/overseas-futureoption/chart", Description = "해외선물 차트 NTick 체결 조회")]
 public class o3117 : TrBase
 {
     /// 요청
@@ -3083,7 +3092,7 @@ public class o3117 : TrBase
 /// <summary>
 /// 해외선물옵션차트용NTick(고정형)-API용
 /// </summary>
-[Path("/overseas-futureoption/chart")]
+[Path("/overseas-futureoption/chart", Description = "해외선물옵션차트용NTick(고정형)-API용")]
 public class o3139 : TrBase
 {
     /// 요청
@@ -3105,7 +3114,7 @@ public class o3139 : TrBase
 /// <summary>
 /// 서버시간조회
 /// </summary>
-[Path("/etc/time-search")]
+[Path("/etc/time-search", Description = "서버시간조회")]
 public class t0167 : TrBase
 {
     public t0167InBlock? t0167InBlock { get; set; }
