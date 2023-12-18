@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFrameworks>net8.0;net48</TargetFrameworks>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Description>Models extension for eBEST.OpenApi</Description>
-		<Version>1.1.3</Version>
+		<Version>1.2.0</Version>
 		<Title>eBEST.OpenApi.Models</Title>
 		<PackageTags>eBEST, OpenApi</PackageTags>
 		<Authors>teranum</Authors>
@@ -26,7 +26,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="eBEST.OpenApi" Version="1.1.3" />
+		<PackageReference Include="eBEST.OpenApi" Version="1.2.0" />
 	</ItemGroup>
 
 </Project>

@@ -1,6 +1,15 @@
 ﻿using eBEST.OpenApi.Blocks;
 
-namespace eBEST.OpenApi.Models;
+#pragma warning disable MA0004
+
+#if !NETCOREAPP
+namespace System.Runtime.CompilerServices { internal class IsExternalInit { } }
+#endif
+
+
+namespace eBEST.OpenApi.Models
+{
+
 
 #region 업종
 
@@ -3146,6 +3155,9 @@ public class t0167 : TrBase
     public t0167InBlock? t0167InBlock { get; set; }
     public t0167OutBlock? t0167OutBlock { get; set; }
 }
-#endregion
+    #endregion
 
-#endregion
+    #endregion
+
+
+}

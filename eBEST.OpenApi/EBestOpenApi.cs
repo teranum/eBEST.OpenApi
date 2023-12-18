@@ -1,5 +1,6 @@
 using eBEST.OpenApi.Events;
 using eBEST.OpenApi.Models;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.WebSockets;
 using System.Reflection;
@@ -8,6 +9,10 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 
 #pragma warning disable MA0004
+
+#if !NETCOREAPP
+namespace System.Runtime.CompilerServices { internal class IsExternalInit { } }
+#endif
 
 namespace eBEST.OpenApi
 {
@@ -130,7 +135,11 @@ namespace eBEST.OpenApi
                         return;
                     }
 
+#if NETCOREAPP
                     await ms.WriteAsync(buffer.AsMemory(0, result.Count), CancellationToken.None);
+#else
+                    await ms.WriteAsync(buffer.Array, 0, result.Count, CancellationToken.None);
+#endif
                 }
                 while (!result.EndOfMessage);
 
@@ -181,7 +190,11 @@ namespace eBEST.OpenApi
             try
             {
                 string jsonbody = JsonSerializer.Serialize(request);
+#if NETCOREAPP
                 await _wssClient.SendAsync(Encoding.UTF8.GetBytes(jsonbody), WebSocketMessageType.Text, true, CancellationToken.None);
+#else
+                await _wssClient.SendAsync(new(Encoding.UTF8.GetBytes(jsonbody)), WebSocketMessageType.Text, true, CancellationToken.None);
+#endif
             }
             catch (Exception ex)
             {
@@ -263,30 +276,34 @@ namespace eBEST.OpenApi
                 var responseMsg = await _httpClient.SendAsync(httpRequestMessage).ConfigureAwait(false);
 
                 // 응답을 받는다
-                var contentStream = await responseMsg.Content.ReadAsStreamAsync().ConfigureAwait(false);
-                await using (contentStream.ConfigureAwait(false))
-                {
-                    var response = await JsonSerializer.DeserializeAsync(contentStream, TType, _jsonOptions).ConfigureAwait(false);
-                   
-                    // OutBlock 속성을 찾는다
-                    var outBlockProperties = TType.GetProperties().Where(m => m.Name.Contains("OutBlock"));
-                    if (outBlockProperties.Any())
-                    {
-                        foreach (var p in outBlockProperties)
-                        {
-                            var Property = TType.GetProperty(p.Name)!;
-                            Property.SetValue(request, Property.GetValue(response));
-                        }
-                    }
+                //var contentStream = await responseMsg.Content.ReadAsStreamAsync().ConfigureAwait(false);
+                ////await using (contentStream.ConfigureAwait(false))
+                ////{
+                //var response = await JsonSerializer.DeserializeAsync(contentStream, TType, _jsonOptions).ConfigureAwait(false);
 
-                    // TrBase 의 베이스 속성값 설정한다    
-                    request.rsp_cd = TType.GetProperty("rsp_cd")!.GetValue(response) as string ?? string.Empty;
-                    request.rsp_msg = TType.GetProperty("rsp_msg")!.GetValue(response) as string ?? string.Empty;
-                    if (responseMsg.Headers.TryGetValues("tr_cont", out IEnumerable<string>? tr_cont))
-                        request.tr_cont = tr_cont.First();
-                    if (responseMsg.Headers.TryGetValues("tr_cont_key", out IEnumerable<string>? tr_cont_key))
-                        request.tr_cont_key = tr_cont_key.First();
+
+                var jsonResponse = await responseMsg.Content.ReadAsStringAsync().ConfigureAwait(false);
+                var response = JsonSerializer.Deserialize(jsonResponse, TType, _jsonOptions);
+
+                // OutBlock 속성을 찾는다
+                var outBlockProperties = TType.GetProperties().Where(m => m.Name.Contains("OutBlock"));
+                if (outBlockProperties.Any())
+                {
+                    foreach (var p in outBlockProperties)
+                    {
+                        var Property = TType.GetProperty(p.Name)!;
+                        Property.SetValue(request, Property.GetValue(response));
+                    }
                 }
+
+                // TrBase 의 베이스 속성값 설정한다    
+                request.rsp_cd = TType.GetProperty("rsp_cd")!.GetValue(response) as string ?? string.Empty;
+                request.rsp_msg = TType.GetProperty("rsp_msg")!.GetValue(response) as string ?? string.Empty;
+                if (responseMsg.Headers.TryGetValues("tr_cont", out IEnumerable<string>? tr_cont))
+                    request.tr_cont = tr_cont.First();
+                if (responseMsg.Headers.TryGetValues("tr_cont_key", out IEnumerable<string>? tr_cont_key))
+                    request.tr_cont_key = tr_cont_key.First();
+                //}
             }
             catch (Exception ex)
             {
@@ -294,7 +311,7 @@ namespace eBEST.OpenApi
             }
         }
 
-        public async ValueTask<string> GetDataWithText(string path, string tr_cd, string jsonRequest)
+        public async ValueTask<(string tr_cont, string tr_cont_key, string jsonResponse)> GetDataWithText(string path, string tr_cd, string tr_cont, string tr_cont_key, string jsonRequest)
         {
             try
             {
@@ -305,21 +322,29 @@ namespace eBEST.OpenApi
                 };
 
                 httpRequestMessage.Headers.Add("tr_cd", tr_cd);
-                httpRequestMessage.Headers.Add("tr_cont", "N");
-                httpRequestMessage.Headers.Add("tr_cont_key", "");
+                httpRequestMessage.Headers.Add("tr_cont", tr_cont);
+                httpRequestMessage.Headers.Add("tr_cont_key", tr_cont_key);
                 if (_macAddress.Length > 0) httpRequestMessage.Headers.Add("mac_address", _macAddress);
 
                 var responseMsg = await _httpClient.SendAsync(httpRequestMessage).ConfigureAwait(false);
 
-                var stringResult = await responseMsg.Content.ReadAsStringAsync().ConfigureAwait(false);
-                return stringResult;
+                string out_tr_cont = string.Empty;
+                string out_tr_cont_key = string.Empty;
+                var jsonResponse = await responseMsg.Content.ReadAsStringAsync().ConfigureAwait(false);
+                if (responseMsg.Headers.TryGetValues("tr_cont", out IEnumerable<string>? list_tr_cont))
+                    out_tr_cont = list_tr_cont.First();
+                if (responseMsg.Headers.TryGetValues("tr_cont_key", out IEnumerable<string>? list_tr_cont_key))
+                    out_tr_cont_key = list_tr_cont_key.First();
+                return (out_tr_cont, out_tr_cont_key, jsonResponse);
             }
             catch (Exception ex)
             {
                 LastErrorMessage = ex.Message;
             }
-            return string.Empty;
+            return (string.Empty, string.Empty, string.Empty);
         }
+
+        public async ValueTask<string> GetDataWithText(string path, string tr_cd, string jsonRequest) => (await GetDataWithText(path, tr_cd, "N", "", jsonRequest).ConfigureAwait(false)).jsonResponse;
 
         record CSPAQ12300InBlock1(string BalCreTp, string CmsnAppTpCode, string D2balBaseQryTp, string UprcTpCode);
 
