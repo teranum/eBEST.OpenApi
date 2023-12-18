@@ -3,7 +3,7 @@
 eBEST.OpenApi는 eBEST OpenAPI를 C#에서 사용하기 위한 Wrapper입니다.
 
 ## 개발환경
-Visual Studio 2022, NET8.0
+Visual Studio 2022, NET48, NET8.0
 
 ## 사용법
 
@@ -58,6 +58,9 @@ Samples/WpfSample
 ![](./Samples/img/run-004.png)
 
 ## 업데이트
+
+### version 1.2.0
+net48, net8.0지원
 
 ### version 1.1.1
 eBEST.OpenApi.Models 에 xml Document file 추가
