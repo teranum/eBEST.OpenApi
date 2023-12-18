@@ -14,7 +14,8 @@
 		<PackageIcon>icon.png</PackageIcon>
 		<Company>$(Authors)</Company>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<NoWarn>$(NoWarn);IDE1006</NoWarn>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);CS1591;IDE1006</NoWarn>
 	</PropertyGroup>
 	
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">

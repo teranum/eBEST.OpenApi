@@ -18,6 +18,9 @@ namespace eBEST.OpenApi
 {
     public class EBestOpenApi
     {
+        /// <summary>
+        /// 로그인 서버 타입
+        /// </summary>
         public enum SERVER_TYPE
         {
             실투자,
@@ -53,13 +56,39 @@ namespace eBEST.OpenApi
             _wssClient = new ClientWebSocket();
         }
 
+        /// <summary>
+        /// 로그인 서버 타입 (실투자, 모의투자)
+        /// </summary>
         public SERVER_TYPE ServerType { get; private set; }
+
+        /// <summary>
+        /// 로그인 된 경우 true
+        /// </summary>
         public bool Connected { get; private set; }
+
+        /// <summary>
+        /// 마지막 에러 메시지
+        /// </summary>
         public string LastErrorMessage = string.Empty;
-        // 법인인 경우 필수 세팅
+
+        /// <summary>
+        /// MAC 주소, 법인 경우 필수
+        /// </summary>
+        /// <param name="macAddress">macAddress</param>
         public void SetMacAdress(string macAddress) => _macAddress = macAddress;
+
+        /// <summary>
+        /// 접근토큰 유효기간(초)
+        /// </summary>
+        /// <returns></returns>
         public long GetExpires() => _expires_in;
 
+        /// <summary>
+        /// 연결 요청
+        /// </summary>
+        /// <param name="appKey">포탈에서 발급된 고객의 앱Key</param>
+        /// <param name="appSecretKey">포탈에서 발급된 고객의 앱 비밀Key</param>
+        /// <returns></returns>
         public async Task ConnectAsync(string appKey, string appSecretKey)
         {
             if (Connected)
@@ -112,9 +141,34 @@ namespace eBEST.OpenApi
                 OnConnectEvent?.Invoke(this, new(Ok: false, LastErrorMessage));
         }
 
+        /// <summary>
+        /// 계좌 실시간 등록
+        /// </summary>
+        /// <param name="tr_cd">이베스트증권 거래코드</param>
+        /// <returns></returns>
         public Task AddAccountRealtimeRequest(string tr_cd) => RealtimeRequest<WssRequest>(new(new(_authorization, "1"), new(tr_cd, string.Empty)));
+
+        /// <summary>
+        /// 계좌 실시간 해제
+        /// </summary>
+        /// <param name="tr_cd">이베스트증권 거래코드</param>
+        /// <returns></returns>
         public Task RemoveAccountRealtimeRequest(string tr_cd) => RealtimeRequest<WssRequest>(new(new(_authorization, "2"), new(tr_cd, string.Empty)));
+
+        /// <summary>
+        /// 실시간 시세등록
+        /// </summary>
+        /// <param name="tr_cd">이베스트증권 거래코드</param>
+        /// <param name="tr_key">단축코드 6자리 또는 8자리 (단건, 연속)</param>
+        /// <returns></returns>
         public Task AddRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "3"), new(tr_cd, tr_key)));
+
+        /// <summary>
+        /// 실시간 시세해제
+        /// </summary>
+        /// <param name="tr_cd">이베스트증권 거래코드</param>
+        /// <param name="tr_key">단축코드 6자리 또는 8자리 (단건, 연속)</param>
+        /// <returns></returns>
         public Task RemoveRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "4"), new(tr_cd, tr_key)));
 
         private async Task WebsocketListen(ClientWebSocket webSocket)
@@ -235,8 +289,11 @@ namespace eBEST.OpenApi
         }
 
 
-        // For Models
-
+        /// <summary>
+        /// TR 비동기 요청
+        /// </summary>
+        /// <param name="request">요청 데이터</param>
+        /// <returns></returns>
         public async Task GetTRData(TrBase request)
         {
             try
@@ -311,6 +368,15 @@ namespace eBEST.OpenApi
             }
         }
 
+        /// <summary>
+        /// JSON 요청
+        /// </summary>
+        /// <param name="path">URL경로</param>
+        /// <param name="tr_cd">이베스트증권 거래코드</param>
+        /// <param name="tr_cont">연속거래 여부(Y:연속○, N:연속×)</param>
+        /// <param name="tr_cont_key">연속일 경우 그전에 내려온 연속키 값 올림</param>
+        /// <param name="jsonRequest">요청 전문</param>
+        /// <returns></returns>
         public async ValueTask<(string tr_cont, string tr_cont_key, string jsonResponse)> GetDataWithText(string path, string tr_cd, string tr_cont, string tr_cont_key, string jsonRequest)
         {
             try
@@ -344,6 +410,13 @@ namespace eBEST.OpenApi
             return (string.Empty, string.Empty, string.Empty);
         }
 
+        /// <summary>
+        /// JSON 요청
+        /// </summary>
+        /// <param name="path">URL경로</param>
+        /// <param name="tr_cd">이베스트증권 거래코드</param>
+        /// <param name="jsonRequest">요청 전문</param>
+        /// <returns>응답 전문</returns>
         public async ValueTask<string> GetDataWithText(string path, string tr_cd, string jsonRequest) => (await GetDataWithText(path, tr_cd, "N", "", jsonRequest).ConfigureAwait(false)).jsonResponse;
 
         record CSPAQ12300InBlock1(string BalCreTp, string CmsnAppTpCode, string D2balBaseQryTp, string UprcTpCode);
