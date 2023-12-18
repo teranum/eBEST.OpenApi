@@ -13,13 +13,13 @@ namespace WpfSample
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        private eBEST.OpenApi.EBestOpenApi _client;
+        private readonly eBEST.OpenApi.EBestOpenApi _openApi;
         public MainWindow()
         {
             InitializeComponent();
 
-            _client = new eBEST.OpenApi.EBestOpenApi();
-            _client.OnConnectEvent += _client_OnConnectEvent;
+            _openApi = new eBEST.OpenApi.EBestOpenApi();
+            _openApi.OnConnectEvent += OpenApi_OnConnectEvent;
 
 
             로그인Command = new RelayCommand(Proc_로그인);
@@ -34,7 +34,7 @@ namespace WpfSample
             DataContext = this;
         }
 
-        private void _client_OnConnectEvent(object? sender, EBestOnConnectEventArgs e)
+        private void OpenApi_OnConnectEvent(object? sender, EBestOnConnectEventArgs e)
         {
             if (e.Ok)
             {
@@ -66,7 +66,7 @@ namespace WpfSample
 
         void Proc_로그인()
         {
-            if (_client.Connected)
+            if (_openApi.Connected)
             {
                 ResultText += "\r\n이미 로그인 되었습니다.";
                 return;
@@ -78,13 +78,13 @@ namespace WpfSample
                 return;
             }
 
-            _ = _client.ConnectAsync(AccKey, AccSecretKey);
+            _ = _openApi.ConnectAsync(AccKey, AccSecretKey);
             ResultText += "\r\n로그인 요청중....";
         }
 
         void Proc_종목조회()
         {
-            if (!_client.Connected)
+            if (!_openApi.Connected)
             {
                 ResultText += "\r\n로그인을 먼저 해주세요.";
                 return;
@@ -100,21 +100,7 @@ namespace WpfSample
             {
                 t1102InBlock = new(code),
             };
-            await _client.GetTRData(주식현재가).ConfigureAwait(true);
-            if (주식현재가.t1102OutBlock != null)
-            {
-                ResultText += $"\r\n{주식현재가.t1102OutBlock}";
-            }
-        }
-
-        // TR 현재가 요청 ("005930" 입력시 삼성전자 현재가 요청)
-        void Test(string code)
-        {
-            t1102 주식현재가 = new()
-            {
-                t1102InBlock = new(code),
-            };
-            _client.GetTRData(주식현재가).Wait();
+            await _openApi.GetTRData(주식현재가).ConfigureAwait(true);
             if (주식현재가.t1102OutBlock != null)
             {
                 ResultText += $"\r\n{주식현재가.t1102OutBlock}";
@@ -124,14 +110,9 @@ namespace WpfSample
         public event PropertyChangedEventHandler? PropertyChanged;
     }
 
-    internal class RelayCommand : ICommand
+    internal class RelayCommand(Action action) : ICommand
     {
-        private readonly Action _action;
-
-        public RelayCommand(Action action)
-        {
-            _action = action;
-        }
+        private readonly Action _action = action;
 
         public event EventHandler? CanExecuteChanged;
 

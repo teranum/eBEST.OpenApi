@@ -1,5 +1,7 @@
 ﻿namespace eBEST.OpenApi.Models;
 
+#pragma warning disable IDE1006 // Naming Styles
+
 /// <summary>
 /// 주식현재가(시세)조회
 /// </summary>

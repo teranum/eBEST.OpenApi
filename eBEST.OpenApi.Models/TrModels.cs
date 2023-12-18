@@ -261,7 +261,7 @@ public class t1308 : TrBase
     public t1308InBlock? t1308InBlock { get; set; }
 
     // 응답
-    public t1308OutBlock1? t1308OutBlock1 { get; set; }
+    public t1308OutBlock1[]? t1308OutBlock1 { get; set; }
 }
 
 /// <summary>
@@ -455,7 +455,7 @@ public class t9945 : TrBase
     public t9945InBlock? t9945InBlock { get; set; }
 
     // 응답
-    public t9945OutBlock? t9945OutBlock { get; set; }
+    public t9945OutBlock[]? t9945OutBlock { get; set; }
 }
 #endregion
 
@@ -485,7 +485,7 @@ public class t1764 : TrBase
     public t1764InBlock? t1764InBlock { get; set; }
 
     // 응답
-    public t1764OutBlock? t1764OutBlock { get; set; }
+    public t1764OutBlock[]? t1764OutBlock { get; set; }
 }
 
 /// <summary>
@@ -1323,6 +1323,34 @@ public class t1826 : TrBase
     // 응답
     public t1826OutBlock[]? t1826OutBlock { get; set; }
 }
+
+/// <summary>
+/// e종목검색(신버전API용)
+/// </summary>
+[Path("/stock/item-search", Description = "e종목검색(신버전API용)")]
+public class t1857 : TrBase
+{
+    /// 요청
+    public t1857InBlock? t1857InBlock { get; set; }
+
+    // 응답
+    public t1857OutBlock? t1857OutBlock { get; set; }
+    public t1857OutBlock1[]? t1857OutBlock1 { get; set; }
+}
+
+/// <summary>
+/// 서버저장조건리스트조회(API)
+/// </summary>
+[Path("/stock/item-search", Description = "서버저장조건리스트조회(API)")]
+public class t1866 : TrBase
+{
+    /// 요청
+    public t1866InBlock? t1866InBlock { get; set; }
+
+    // 응답
+    public t1866OutBlock? t1866OutBlock { get; set; }
+    public t1866OutBlock1[]? t1866OutBlock1 { get; set; }
+}
 #endregion
 
 #region [주식] 상위종목
@@ -1682,7 +1710,6 @@ public class CSPAQ00600 : TrBase
     // 응답
     public CSPAQ00600OutBlock1? CSPAQ00600OutBlock1 { get; set; }
     public CSPAQ00600OutBlock2? CSPAQ00600OutBlock2 { get; set; }
-    public t1621OutBlock1[]? t1621OutBlock1 { get; set; }
 }
 
 /// <summary>
@@ -2652,8 +2679,7 @@ public class CEXAT11100 : TrBase
     public CEXAT11100InBlock1? CEXAT11100InBlock1 { get; set; }
 
     // 응답
-    public CEXAT11100OutBlock1? CEXAT11100OutBlock1 { get; set; }
-    public t1621OutBlock1[]? t1621OutBlock1 { get; set; }
+    public CEXAT11100OutBlock2? CEXAT11100OutBlock2 { get; set; }
 }
 
 /// <summary>
@@ -2719,7 +2745,7 @@ public class o3101 : TrBase
     public o3101InBlock? o3101InBlock { get; set; }
 
     // 응답
-    public o3101OutBlock? o3101OutBlock { get; set; }
+    public o3101OutBlock[]? o3101OutBlock { get; set; }
 }
 
 /// <summary>
@@ -2768,7 +2794,7 @@ public class o3106 : TrBase
 public class o3107 : TrBase
 {
     /// 요청
-    public o3107InBlock? o3107InBlock { get; set; }
+    public o3107InBlock[]? o3107InBlock { get; set; }
 
     // 응답
     public o3107OutBlock[]? o3107OutBlock { get; set; }
@@ -2967,7 +2993,7 @@ public class CIDBQ03000 : TrBase
 
     // 응답
     public CIDBQ03000OutBlock1? CIDBQ03000OutBlock1 { get; set; }
-    public CIDBQ03000OutBlock2? CIDBQ03000OutBlock2 { get; set; }
+    public CIDBQ03000OutBlock2[]? CIDBQ03000OutBlock2 { get; set; }
 }
 
 /// <summary>
