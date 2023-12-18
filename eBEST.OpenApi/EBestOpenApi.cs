@@ -373,11 +373,11 @@ namespace eBEST.OpenApi
         /// </summary>
         /// <param name="path">URL경로</param>
         /// <param name="tr_cd">이베스트증권 거래코드</param>
+        /// <param name="jsonRequest">요청 전문</param>
         /// <param name="tr_cont">연속거래 여부(Y:연속○, N:연속×)</param>
         /// <param name="tr_cont_key">연속일 경우 그전에 내려온 연속키 값 올림</param>
-        /// <param name="jsonRequest">요청 전문</param>
         /// <returns></returns>
-        public async ValueTask<(string tr_cont, string tr_cont_key, string jsonResponse)> GetDataWithText(string path, string tr_cd, string tr_cont, string tr_cont_key, string jsonRequest)
+        public async ValueTask<(string jsonResponse, string tr_cont, string tr_cont_key)> GetDataWithText(string path, string tr_cd, string jsonRequest, string tr_cont, string tr_cont_key)
         {
             try
             {
