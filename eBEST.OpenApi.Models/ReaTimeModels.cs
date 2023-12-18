@@ -43,7 +43,7 @@ public class BM_
 
 /// <summary>
 /// 선물주문체결: C01/// </summary>
-[Path("/websocket/futureoption", Description = "선물주문체결")]
+[Path("/websocket/futureoption", Description = "선물주문체결", Key = "account")]
 public class C01
 {
     //요청
@@ -163,7 +163,7 @@ public class EH0
 
 /// <summary>
 /// 뉴ELW투자지표민감도: ESN/// </summary>
-[Path("/websocket/stock", Description = "뉴ELW투자지표민감도")]
+[Path("/websocket/elw", Description = "뉴ELW투자지표민감도")]
 public class ESN
 {
     //요청
@@ -175,7 +175,7 @@ public class ESN
 
 /// <summary>
 /// EUX접수: EU0/// </summary>
-[Path("/websocket/futureoption", Description = "EUX접수")]
+[Path("/websocket/futureoption", Description = "EUX접수", Key = "account")]
 public class EU0
 {
     //요청
@@ -187,7 +187,7 @@ public class EU0
 
 /// <summary>
 /// EUX체결: EU1/// </summary>
-[Path("/websocket/futureoption", Description = "EUX체결")]
+[Path("/websocket/futureoption", Description = "EUX체결", Key = "account")]
 public class EU1
 {
     //요청
@@ -199,7 +199,7 @@ public class EU1
 
 /// <summary>
 /// EUX확인: EU2/// </summary>
-[Path("/websocket/futureoption", Description = "EUX확인")]
+[Path("/websocket/futureoption", Description = "EUX확인", Key = "account")]
 public class EU2
 {
     //요청
@@ -259,7 +259,7 @@ public class FX0
 
 /// <summary>
 /// 선물주문정정취소: H01/// </summary>
-[Path("/websocket/futureoption", Description = "선물주문정정취소")]
+[Path("/websocket/futureoption", Description = "선물주문정정취소", Key = "account")]
 public class H01
 {
     //요청
@@ -295,7 +295,7 @@ public class H2_
 
 /// <summary>
 /// ELW장전시간외호가잔량: h2_/// </summary>
-[Path("/websocket/stock", Description = "ELW장전시간외호가잔량")]
+[Path("/websocket/elw", Description = "ELW장전시간외호가잔량")]
 public class h2_
 {
     //요청
@@ -307,7 +307,7 @@ public class h2_
 
 /// <summary>
 /// ELW호가잔량: h3_/// </summary>
-[Path("/websocket/stock", Description = "ELW호가잔량")]
+[Path("/websocket/elw", Description = "ELW호가잔량")]
 public class h3_
 {
     //요청
@@ -439,7 +439,7 @@ public class K1_
 
 /// <summary>
 /// ELW거래원: k1_/// </summary>
-[Path("/websocket/stock", Description = "ELW거래원")]
+[Path("/websocket/elw", Description = "ELW거래원")]
 public class k1_
 {
     //요청
@@ -523,7 +523,7 @@ public class NWS
 
 /// <summary>
 /// 선물접수: O01/// </summary>
-[Path("/websocket/futureoption", Description = "선물접수")]
+[Path("/websocket/futureoption", Description = "선물접수", Key = "account")]
 public class O01
 {
     //요청
@@ -667,7 +667,7 @@ public class S2_
 
 /// <summary>
 /// ELW우선호가: s2_/// </summary>
-[Path("/websocket/stock", Description = "ELW우선호가")]
+[Path("/websocket/elw", Description = "ELW우선호가")]
 public class s2_
 {
     //요청
@@ -691,7 +691,7 @@ public class S3_
 
 /// <summary>
 /// ELW체결: s3_/// </summary>
-[Path("/websocket/stock", Description = "ELW체결")]
+[Path("/websocket/elw", Description = "ELW체결")]
 public class s3_
 {
     //요청
@@ -715,7 +715,7 @@ public class S4_
 
 /// <summary>
 /// ELW기세: s4_/// </summary>
-[Path("/websocket/stock", Description = "ELW기세")]
+[Path("/websocket/elw", Description = "ELW기세")]
 public class s4_
 {
     //요청
@@ -727,7 +727,7 @@ public class s4_
 
 /// <summary>
 /// 주식주문접수: SC0/// </summary>
-[Path("/websocket/stock", Description = "주식주문접수")]
+[Path("/websocket/stock", Description = "주식주문접수", Key = "account")]
 public class SC0
 {
     //요청
@@ -739,7 +739,7 @@ public class SC0
 
 /// <summary>
 /// 주식주문체결: SC1/// </summary>
-[Path("/websocket/stock", Description = "주식주문체결")]
+[Path("/websocket/stock", Description = "주식주문체결", Key = "account")]
 public class SC1
 {
     //요청
@@ -751,7 +751,7 @@ public class SC1
 
 /// <summary>
 /// 주식주문정정: SC2/// </summary>
-[Path("/websocket/stock", Description = "주식주문정정")]
+[Path("/websocket/stock", Description = "주식주문정정", Key = "account")]
 public class SC2
 {
     //요청
@@ -763,7 +763,7 @@ public class SC2
 
 /// <summary>
 /// 주식주문취소: SC3/// </summary>
-[Path("/websocket/stock", Description = "주식주문취소")]
+[Path("/websocket/stock", Description = "주식주문취소", Key = "account")]
 public class SC3
 {
     //요청
@@ -775,7 +775,7 @@ public class SC3
 
 /// <summary>
 /// 주식주문거부: SC4/// </summary>
-[Path("/websocket/stock", Description = "주식주문거부")]
+[Path("/websocket/stock", Description = "주식주문거부", Key = "account")]
 public class SC4
 {
     //요청
@@ -835,7 +835,7 @@ public class SHO
 
 /// <summary>
 /// 해외선물주문: TC1/// </summary>
-[Path("/websocket/overseas-futureoption", Description = "해외선물주문")]
+[Path("/websocket/overseas-futureoption", Description = "해외선물주문", Key = "account")]
 public class TC1
 {
     //요청
@@ -847,7 +847,7 @@ public class TC1
 
 /// <summary>
 /// 해외선물응답: TC2/// </summary>
-[Path("/websocket/overseas-futureoption", Description = "해외선물응답")]
+[Path("/websocket/overseas-futureoption", Description = "해외선물응답", Key = "account")]
 public class TC2
 {
     //요청
@@ -859,7 +859,7 @@ public class TC2
 
 /// <summary>
 /// 해외선물체결: TC3/// </summary>
-[Path("/websocket/overseas-futureoption", Description = "해외선물체결")]
+[Path("/websocket/overseas-futureoption", Description = "해외선물체결", Key = "account")]
 public class TC3
 {
     //요청
@@ -991,7 +991,7 @@ public class YS3
 
 /// <summary>
 /// ELW예상체결: Ys3/// </summary>
-[Path("/websocket/stock", Description = "ELW예상체결")]
+[Path("/websocket/elw", Description = "ELW예상체결")]
 public class Ys3
 {
     //요청

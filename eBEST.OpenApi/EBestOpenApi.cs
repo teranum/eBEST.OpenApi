@@ -27,6 +27,7 @@ namespace eBEST.OpenApi
         private string _authorization = string.Empty;
         private string _macAddress = string.Empty;
         private long _expires_in;
+        private readonly JsonSerializerOptions _jsonOptions;
 
         public event EventHandler<EBestOnConnectEventArgs>? OnConnectEvent;
         public event EventHandler<EBestOnMessageEventArgs>? OnMessageEvent;
@@ -34,6 +35,11 @@ namespace eBEST.OpenApi
 
         public EBestOpenApi()
         {
+            _jsonOptions = new()
+            {
+                NumberHandling = JsonNumberHandling.AllowReadingFromString
+            };
+
             _httpClient = new HttpClient
             {
                 BaseAddress = new Uri(_baseUrl),
@@ -48,8 +54,6 @@ namespace eBEST.OpenApi
         // 법인인 경우 필수 세팅
         public void SetMacAdress(string macAddress) => _macAddress = macAddress;
         public long GetExpires() => _expires_in;
-
-        //protected double 주문가능금액;
 
         public async Task ConnectAsync(string appKey, string appSecretKey)
         {
@@ -93,8 +97,6 @@ namespace eBEST.OpenApi
                     Connected = true;
                     _ = WebsocketListen(_wssClient);
 
-                    //// 장운영정보 실시간 시세 등록
-                    //_ = AddRealtimeRequest("JIF", "0");
                     OnConnectEvent?.Invoke(this, new(Ok: true, $"{ServerType} 연결 성공"));
                     return;
                 }
@@ -105,7 +107,7 @@ namespace eBEST.OpenApi
                 OnConnectEvent?.Invoke(this, new(Ok: false, LastErrorMessage));
         }
 
-        public Task AddAccountRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "1"), new(tr_cd, tr_key)));
+        public Task AddAccountRealtimeRequest(string tr_cd) => RealtimeRequest<WssRequest>(new(new(_authorization, "1"), new(tr_cd, string.Empty)));
         public Task RemoveAccountRealtimeRequest(string tr_cd) => RealtimeRequest<WssRequest>(new(new(_authorization, "2"), new(tr_cd, string.Empty)));
         public Task AddRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "3"), new(tr_cd, tr_key)));
         public Task RemoveRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "4"), new(tr_cd, tr_key)));
@@ -128,7 +130,7 @@ namespace eBEST.OpenApi
                         return;
                     }
 
-                    await ms.WriteAsync(buffer.Array!, buffer.Offset, result.Count);
+                    await ms.WriteAsync(buffer.AsMemory(0, result.Count), CancellationToken.None);
                 }
                 while (!result.EndOfMessage);
 
@@ -163,11 +165,6 @@ namespace eBEST.OpenApi
 
                     if (response.body is JsonElement jsonElement)
                     {
-                        //if (response.header.tr_cd.Equals("JIF"))
-                        //{
-
-                        //}
-
                         OnRealtimeEvent?.Invoke(this, new(response.header.tr_cd, response.header.tr_key, jsonElement));
                     }
                 }
@@ -233,16 +230,13 @@ namespace eBEST.OpenApi
             {
                 Type TType = request.GetType();
                 PathAttribute? pathAttribute = TType.GetCustomAttribute<PathAttribute>()
-                        ?? throw new Exception("Path Attribute is undefined");
+                        ?? throw new Exception("Path Attribute is not defined");
                 string path = pathAttribute.Path;
 
                 // 속성 이름중 InBlock 이 포함된 속성들을 모두 찾는다
                 var inBlockProperties = TType.GetProperties().Where(m => m.Name.Contains("InBlock"));
                 if (!inBlockProperties.Any())
-                    throw new Exception("InBlock is undefined");
-
-                var prop = inBlockProperties.First();
-                var sss = prop.GetValue(request);
+                    throw new Exception("InBlock is not defined");
 
                 Dictionary<string, object?> nameValueCollection = [];
                 foreach (var p in inBlockProperties)
@@ -251,32 +245,29 @@ namespace eBEST.OpenApi
                 }
                 string jsonbody = JsonSerializer.Serialize(nameValueCollection);
 
+                // 요청 전문을 만든다
                 var content = new StringContent(jsonbody, Encoding.UTF8, "application/json");
                 HttpRequestMessage httpRequestMessage = new(HttpMethod.Post, path)
                 {
                     Content = content,
                 };
 
-
                 httpRequestMessage.Headers.Add("tr_cd", pathAttribute.TRCode.Length > 0 ? pathAttribute.TRCode : TType.Name);
                 httpRequestMessage.Headers.Add("tr_cont", request.tr_cont);
                 httpRequestMessage.Headers.Add("tr_cont_key", request.tr_cont_key);
+
+                // 법인 경우 mac_address 필수
                 if (_macAddress.Length > 0) httpRequestMessage.Headers.Add("mac_address", _macAddress);
 
+                // 요청을 보낸다
                 var responseMsg = await _httpClient.SendAsync(httpRequestMessage).ConfigureAwait(false);
 
-                var jsonOptions = new JsonSerializerOptions()
-                {
-                    NumberHandling = JsonNumberHandling.AllowReadingFromString
-                };
-
-                //var stringResult = await responseMsg.Content.ReadAsStringAsync().ConfigureAwait(false);
-                //var response = JsonSerializer.Deserialize(stringResult, TType, jsonOptions);
-
+                // 응답을 받는다
                 var contentStream = await responseMsg.Content.ReadAsStreamAsync().ConfigureAwait(false);
                 await using (contentStream.ConfigureAwait(false))
                 {
-                    var response = await JsonSerializer.DeserializeAsync(contentStream, TType, jsonOptions).ConfigureAwait(false);
+                    var response = await JsonSerializer.DeserializeAsync(contentStream, TType, _jsonOptions).ConfigureAwait(false);
+                   
                     // OutBlock 속성을 찾는다
                     var outBlockProperties = TType.GetProperties().Where(m => m.Name.Contains("OutBlock"));
                     if (outBlockProperties.Any())
@@ -288,7 +279,7 @@ namespace eBEST.OpenApi
                         }
                     }
 
-                    // TrBase 의 베이스 속성들을 찾는다    
+                    // TrBase 의 베이스 속성값 설정한다    
                     request.rsp_cd = TType.GetProperty("rsp_cd")!.GetValue(response) as string ?? string.Empty;
                     request.rsp_msg = TType.GetProperty("rsp_msg")!.GetValue(response) as string ?? string.Empty;
                     if (responseMsg.Headers.TryGetValues("tr_cont", out IEnumerable<string>? tr_cont))
