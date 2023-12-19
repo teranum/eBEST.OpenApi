@@ -373,11 +373,11 @@ namespace eBEST.OpenApi
         /// </summary>
         /// <param name="path">URL경로</param>
         /// <param name="tr_cd">이베스트증권 거래코드</param>
-        /// <param name="jsonRequest">요청 전문</param>
         /// <param name="tr_cont">연속거래 여부(Y:연속○, N:연속×)</param>
         /// <param name="tr_cont_key">연속일 경우 그전에 내려온 연속키 값 올림</param>
+        /// <param name="jsonRequest">요청 전문</param>
         /// <returns></returns>
-        public async ValueTask<(string jsonResponse, string tr_cont, string tr_cont_key)> GetDataWithText(string path, string tr_cd, string jsonRequest, string tr_cont, string tr_cont_key)
+        public async ValueTask<(string tr_cd, string tr_cont, string tr_cont_key, string jsonResponse)> GetDataWithJsonString(string path, string tr_cd, string tr_cont, string tr_cont_key, string jsonRequest)
         {
             try
             {
@@ -394,30 +394,24 @@ namespace eBEST.OpenApi
 
                 var responseMsg = await _httpClient.SendAsync(httpRequestMessage).ConfigureAwait(false);
 
+                string out_tr_cd = string.Empty;
                 string out_tr_cont = string.Empty;
                 string out_tr_cont_key = string.Empty;
                 var jsonResponse = await responseMsg.Content.ReadAsStringAsync().ConfigureAwait(false);
+                if (responseMsg.Headers.TryGetValues("tr_cd", out IEnumerable<string>? list_tr_cd))
+                    out_tr_cd = list_tr_cd.First();
                 if (responseMsg.Headers.TryGetValues("tr_cont", out IEnumerable<string>? list_tr_cont))
                     out_tr_cont = list_tr_cont.First();
                 if (responseMsg.Headers.TryGetValues("tr_cont_key", out IEnumerable<string>? list_tr_cont_key))
                     out_tr_cont_key = list_tr_cont_key.First();
-                return (out_tr_cont, out_tr_cont_key, jsonResponse);
+                return (out_tr_cd, out_tr_cont, out_tr_cont_key, jsonResponse);
             }
             catch (Exception ex)
             {
                 LastErrorMessage = ex.Message;
             }
-            return (string.Empty, string.Empty, string.Empty);
+            return (string.Empty, string.Empty, string.Empty, string.Empty);
         }
-
-        /// <summary>
-        /// JSON 요청
-        /// </summary>
-        /// <param name="path">URL경로</param>
-        /// <param name="tr_cd">이베스트증권 거래코드</param>
-        /// <param name="jsonRequest">요청 전문</param>
-        /// <returns>응답 전문</returns>
-        public async ValueTask<string> GetDataWithText(string path, string tr_cd, string jsonRequest) => (await GetDataWithText(path, tr_cd, "N", "", jsonRequest).ConfigureAwait(false)).jsonResponse;
 
         record CSPAQ12300InBlock1(string BalCreTp, string CmsnAppTpCode, string D2balBaseQryTp, string UprcTpCode);
 
