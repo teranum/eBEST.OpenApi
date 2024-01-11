@@ -12,7 +12,7 @@ Visual Studio 2022, NET48, NET8.0
 	* InOutBlocks, TR Models 확장 용 사용 시에는 eBEST.OpenApi.Models 패키지를 참조
 	* 일부TR 응답 시, 매뉴얼과 실제 응답 데이터가 차이 나는 경우가 있습니다. 확인 후 사용 하시기 바랍니다.
  
-### 2. eBEST.OpenApi.EBestOpenApi 클래스를 생성 합니다.
+### 2. eBEST.OpenApi.EBestOpenApi 클래스
 
 ```csharp
 	// 프로퍼티
@@ -33,12 +33,12 @@ Visual Studio 2022, NET48, NET8.0
 
 	// 이벤트
 	OnConnectEvent : 로그인 이벤트 (로그인 성공 또는 연결해제시 발생)
-	OnMessageEvent : 서버 메시지 이벤트 (서버에서 메시지를 보낼때 또는 웹소켓 메시지 형식 오류일 때 발생)
+	OnMessageEvent : 서버 메시지 이벤트 (서버에서 메시지를 보낼때 또는 웹소켓 메시지 타입 오류일 때 발생)
 	OnRealtimeEvent : 실시간 웹소켓 이벤트 (실시간 웹소켓 메시지를 받을때 발생)
 
 ```
 
-### 3. 로그인후 TR을 요청 합니다.
+### 3. 클래스를 생성/로그인후 TR을 요청 합니다.
 
 ```csharp
 	_client = new eBEST.OpenApi.EBestOpenApi();
@@ -87,6 +87,7 @@ Samples/WpfSample
 
 ### version 1.3.0
 MacAddress 프로퍼티 추가
+
 비동기요청메소드 리턴 변경 : Task -> ValueTask<bool>
 
 ### version 1.2.0
