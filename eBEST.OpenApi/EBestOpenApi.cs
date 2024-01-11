@@ -37,15 +37,26 @@ namespace eBEST.OpenApi
         private long _expires_in;
         private readonly JsonSerializerOptions _jsonOptions;
 
+        /// <summary>
+        /// 서버연결 이벤트
+        /// </summary>
         public event EventHandler<EBestOnConnectEventArgs>? OnConnectEvent;
+
+        /// <summary>
+        /// 서버 메시지 이벤트
+        /// </summary>
         public event EventHandler<EBestOnMessageEventArgs>? OnMessageEvent;
+
+        /// <summary>
+        /// 실시간 웹소켓 이벤트
+        /// </summary>
         public event EventHandler<EBestOnRealtimeEventArgs>? OnRealtimeEvent;
 
         public EBestOpenApi()
         {
             _jsonOptions = new()
             {
-                NumberHandling = JsonNumberHandling.AllowReadingFromString
+                NumberHandling = JsonNumberHandling.AllowReadingFromString,
             };
 
             _httpClient = new HttpClient
@@ -75,7 +86,17 @@ namespace eBEST.OpenApi
         /// MAC 주소, 법인 경우 필수
         /// </summary>
         /// <param name="macAddress">macAddress</param>
+        [Obsolete("use MacAddress Property")]
         public void SetMacAdress(string macAddress) => _macAddress = macAddress;
+
+        /// <summary>
+        /// MAC 주소 (법인 경우 필수 세팅)
+        /// </summary>
+        public string MacAddress
+        {
+            get => _macAddress;
+            set => _macAddress = value;
+        }
 
         /// <summary>
         /// 접근토큰 유효기간(초)
@@ -88,13 +109,13 @@ namespace eBEST.OpenApi
         /// </summary>
         /// <param name="appKey">포탈에서 발급된 고객의 앱Key</param>
         /// <param name="appSecretKey">포탈에서 발급된 고객의 앱 비밀Key</param>
-        /// <returns></returns>
-        public async Task ConnectAsync(string appKey, string appSecretKey)
+        /// <returns>true: 연결성공, false: 연결실패</returns>
+        public async ValueTask<bool> ConnectAsync(string appKey, string appSecretKey)
         {
             if (Connected)
             {
                 LastErrorMessage = "Aleady connected";
-                return;
+                return true;
             }
             LastErrorMessage = string.Empty;
 
@@ -107,69 +128,74 @@ namespace eBEST.OpenApi
                     new("scope", "oob"),
                 ]).ConfigureAwait(true);
 
-            if (oAuth != null) // 인증성공
+            if (oAuth == null)
             {
-                _authorization = oAuth.access_token;
-                _expires_in = oAuth.expires_in;
-                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuth.token_type, _authorization);
-
-                // 모의투자인지 실투자인지 구분한다
-                Simple_CSPAQ12300 더미조회 = new()
-                {
-                    CSPAQ12300InBlock1 = new("0", "0", "0", "0"),
-                };
-                await GetTRData(더미조회).ConfigureAwait(true);
-                if (더미조회.rsp_msg is not null && 더미조회.rsp_msg.StartsWith("모의투자", StringComparison.Ordinal))
-                {
-                    ServerType = SERVER_TYPE.모의투자;
-                }
-
-                // 실시간 웹소켓 연결
-                Uri wssUri = new(ServerType == SERVER_TYPE.실투자 ? _wssUrlReal : _wssUrlSimulation);
-                if (_wssClient.ConnectAsync(wssUri, CancellationToken.None).Wait(2000))
-                {
-                    Connected = true;
-                    _ = WebsocketListen(_wssClient);
-
-                    OnConnectEvent?.Invoke(this, new(Ok: true, $"{ServerType} 연결 성공"));
-                    return;
-                }
-
-                OnConnectEvent?.Invoke(this, new(Ok: false, "연결 실패: Websocket서버 응답 없습니다"));
-            }
-            else
+                LastErrorMessage = "인증키 가져오기 실패";
                 OnConnectEvent?.Invoke(this, new(Ok: false, LastErrorMessage));
+                return false;
+            }
+
+            // 인증성공
+            _authorization = oAuth.access_token;
+            _expires_in = oAuth.expires_in;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuth.token_type, _authorization);
+
+            // 모의투자인지 실투자인지 구분한다
+            Simple_CSPAQ12300 더미조회 = new()
+            {
+                CSPAQ12300InBlock1 = new("0", "0", "0", "0"),
+            };
+            await GetTRData(더미조회).ConfigureAwait(true);
+            if (더미조회.rsp_msg is not null && 더미조회.rsp_msg.StartsWith("모의투자", StringComparison.Ordinal))
+            {
+                ServerType = SERVER_TYPE.모의투자;
+            }
+
+            // 실시간 웹소켓 연결
+            Uri wssUri = new(ServerType == SERVER_TYPE.실투자 ? _wssUrlReal : _wssUrlSimulation);
+            if (_wssClient.ConnectAsync(wssUri, CancellationToken.None).Wait(2000))
+            {
+                Connected = true;
+                _ = WebsocketListen(_wssClient);
+
+                OnConnectEvent?.Invoke(this, new(Ok: true, $"{ServerType} 연결 성공"));
+                return true;
+            }
+
+            LastErrorMessage = "Websocket서버 연결 응답 없습니다";
+            OnConnectEvent?.Invoke(this, new(Ok: false, LastErrorMessage));
+            return false;
         }
 
         /// <summary>
         /// 계좌 실시간 등록
         /// </summary>
         /// <param name="tr_cd">이베스트증권 거래코드</param>
-        /// <returns></returns>
-        public Task AddAccountRealtimeRequest(string tr_cd) => RealtimeRequest<WssRequest>(new(new(_authorization, "1"), new(tr_cd, string.Empty)));
+        /// <returns>true: 요청성공, false: 요청실패</returns>
+        public ValueTask<bool> AddAccountRealtimeRequest(string tr_cd) => RealtimeRequest<WssRequest>(new(new(_authorization, "1"), new(tr_cd, string.Empty)));
 
         /// <summary>
         /// 계좌 실시간 해제
         /// </summary>
         /// <param name="tr_cd">이베스트증권 거래코드</param>
-        /// <returns></returns>
-        public Task RemoveAccountRealtimeRequest(string tr_cd) => RealtimeRequest<WssRequest>(new(new(_authorization, "2"), new(tr_cd, string.Empty)));
+        /// <returns>true: 요청성공, false: 요청실패</returns>
+        public ValueTask<bool> RemoveAccountRealtimeRequest(string tr_cd) => RealtimeRequest<WssRequest>(new(new(_authorization, "2"), new(tr_cd, string.Empty)));
 
         /// <summary>
         /// 실시간 시세등록
         /// </summary>
         /// <param name="tr_cd">이베스트증권 거래코드</param>
         /// <param name="tr_key">단축코드 6자리 또는 8자리 (단건, 연속)</param>
-        /// <returns></returns>
-        public Task AddRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "3"), new(tr_cd, tr_key)));
+        /// <returns>true: 요청성공, false: 요청실패</returns>
+        public ValueTask<bool> AddRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "3"), new(tr_cd, tr_key)));
 
         /// <summary>
         /// 실시간 시세해제
         /// </summary>
         /// <param name="tr_cd">이베스트증권 거래코드</param>
         /// <param name="tr_key">단축코드 6자리 또는 8자리 (단건, 연속)</param>
-        /// <returns></returns>
-        public Task RemoveRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "4"), new(tr_cd, tr_key)));
+        /// <returns>true: 요청성공, false: 요청실패</returns>
+        public ValueTask<bool> RemoveRealtimeRequest(string tr_cd, string tr_key) => RealtimeRequest<WssRequest>(new(new(_authorization, "4"), new(tr_cd, tr_key)));
 
         private async Task WebsocketListen(ClientWebSocket webSocket)
         {
@@ -211,7 +237,8 @@ namespace eBEST.OpenApi
             if (Connected)
             {
                 Connected = false;
-                OnConnectEvent?.Invoke(this, new(Ok: false, message));
+                LastErrorMessage = message;
+                OnConnectEvent?.Invoke(this, new(Ok: false, LastErrorMessage));
             }
         }
         private void OnWssReceive(string stringData)
@@ -239,8 +266,9 @@ namespace eBEST.OpenApi
             }
         }
 
-        protected async Task RealtimeRequest<T>(T request)
+        protected async ValueTask<bool> RealtimeRequest<T>(T request)
         {
+            LastErrorMessage = string.Empty;
             try
             {
                 string jsonbody = JsonSerializer.Serialize(request);
@@ -249,15 +277,18 @@ namespace eBEST.OpenApi
 #else
                 await _wssClient.SendAsync(new(Encoding.UTF8.GetBytes(jsonbody)), WebSocketMessageType.Text, true, CancellationToken.None);
 #endif
+                return true;
             }
             catch (Exception ex)
             {
                 LastErrorMessage = ex.Message;
+                return false;
             }
         }
 
         protected async ValueTask<T?> PostUrlEncodedAsync<T>(string path, IEnumerable<KeyValuePair<string, string>> nameValueCollection)
         {
+            LastErrorMessage = string.Empty;
             try
             {
                 var response = await _httpClient.PostAsync(path, new FormUrlEncodedContent(nameValueCollection)).ConfigureAwait(false);
@@ -293,9 +324,10 @@ namespace eBEST.OpenApi
         /// TR 비동기 요청
         /// </summary>
         /// <param name="request">요청 데이터</param>
-        /// <returns></returns>
-        public async Task GetTRData(TrBase request)
+        /// <returns>true: 요청성공, false: 요청실패</returns>
+        public async ValueTask<bool> GetTRData(TrBase request)
         {
+            LastErrorMessage = string.Empty;
             try
             {
                 Type TType = request.GetType();
@@ -360,11 +392,13 @@ namespace eBEST.OpenApi
                     request.tr_cont = tr_cont.First();
                 if (responseMsg.Headers.TryGetValues("tr_cont_key", out IEnumerable<string>? tr_cont_key))
                     request.tr_cont_key = tr_cont_key.First();
-                //}
+                
+                return true;
             }
             catch (Exception ex)
             {
                 LastErrorMessage = ex.Message;
+                return false;
             }
         }
 
