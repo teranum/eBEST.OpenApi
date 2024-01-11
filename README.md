@@ -87,7 +87,7 @@ Samples/WpfSample
 
 ### version 1.3.0
 MacAddress 프로퍼티 추가
-
+<br/>
 비동기요청메소드 리턴 변경 : Task -> ValueTask<bool>
 
 ### version 1.2.0
