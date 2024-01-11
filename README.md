@@ -38,7 +38,7 @@ Visual Studio 2022, NET48, NET8.0
 
 ```
 
-### 3. 클래스를 생성/로그인후 TR을 요청 합니다.
+### 3. 클래스 생성/로그인후 TR을 요청 합니다.
 
 ```csharp
 	_client = new eBEST.OpenApi.EBestOpenApi();
