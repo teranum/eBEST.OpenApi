@@ -6,7 +6,8 @@ using eBEST.OpenApi.Blocks;
 namespace eBEST.OpenApi.Models;
 
 /// <summary>
-/// ETF호가잔량: B7_/// </summary>
+/// ETF호가잔량: B7_
+/// </summary>
 [Path("/websocket/stock", Description = "ETF호가잔량")]
 public class B7_
 {
@@ -18,7 +19,8 @@ public class B7_
 }
 
 /// <summary>
-/// 시간대별투자자매매추이: BMT/// </summary>
+/// 시간대별투자자매매추이: BMT
+/// </summary>
 [Path("/websocket/investinfo", Description = "시간대별투자자매매추이")]
 public class BMT
 {
@@ -30,7 +32,8 @@ public class BMT
 }
 
 /// <summary>
-/// 업종별투자자별매매현황: BM_/// </summary>
+/// 업종별투자자별매매현황: BM_
+/// </summary>
 [Path("/websocket/indtp", Description = "업종별투자자별매매현황")]
 public class BM_
 {
@@ -42,7 +45,8 @@ public class BM_
 }
 
 /// <summary>
-/// 선물주문체결: C01/// </summary>
+/// 선물주문체결: C01
+/// </summary>
 [Path("/websocket/futureoption", Description = "선물주문체결", Key = "account")]
 public class C01
 {
@@ -54,7 +58,8 @@ public class C01
 }
 
 /// <summary>
-/// 상품선물실시간상하한가(D0): CD0/// </summary>
+/// 상품선물실시간상하한가(D0): CD0
+/// </summary>
 [Path("/websocket/futureoption", Description = "상품선물실시간상하한가(D0)")]
 public class CD0
 {
@@ -66,7 +71,8 @@ public class CD0
 }
 
 /// <summary>
-/// 현물정보 USD 실시간: CUR/// </summary>
+/// 현물정보 USD 실시간: CUR
+/// </summary>
 [Path("/websocket/investinfo", Description = "현물정보 USD 실시간")]
 public class CUR
 {
@@ -78,7 +84,8 @@ public class CUR
 }
 
 /// <summary>
-/// KOSPI시간외단일가호가잔량: DH1/// </summary>
+/// KOSPI시간외단일가호가잔량: DH1
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI시간외단일가호가잔량")]
 public class DH1
 {
@@ -90,7 +97,8 @@ public class DH1
 }
 
 /// <summary>
-/// KOSDAQ시간외단일가호가잔량: DHA/// </summary>
+/// KOSDAQ시간외단일가호가잔량: DHA
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ시간외단일가호가잔량")]
 public class DHA
 {
@@ -102,7 +110,8 @@ public class DHA
 }
 
 /// <summary>
-/// KOSDAQ시간외단일가체결: DK3/// </summary>
+/// KOSDAQ시간외단일가체결: DK3
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ시간외단일가체결")]
 public class DK3
 {
@@ -114,7 +123,8 @@ public class DK3
 }
 
 /// <summary>
-/// KOSPI시간외단일가체결: DS3/// </summary>
+/// KOSPI시간외단일가체결: DS3
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI시간외단일가체결")]
 public class DS3
 {
@@ -126,7 +136,8 @@ public class DS3
 }
 
 /// <summary>
-/// 시간외단일가VI발동해제: DVI/// </summary>
+/// 시간외단일가VI발동해제: DVI
+/// </summary>
 [Path("/websocket/stock", Description = "시간외단일가VI발동해제")]
 public class DVI
 {
@@ -138,7 +149,8 @@ public class DVI
 }
 
 /// <summary>
-/// EUREX연계KP200지수옵션선물체결: EC0/// </summary>
+/// EUREX연계KP200지수옵션선물체결: EC0
+/// </summary>
 [Path("/websocket/futureoption", Description = "EUREX연계KP200지수옵션선물체결")]
 public class EC0
 {
@@ -150,7 +162,8 @@ public class EC0
 }
 
 /// <summary>
-/// EUREX연계KP200지수옵션선물호가: EH0/// </summary>
+/// EUREX연계KP200지수옵션선물호가: EH0
+/// </summary>
 [Path("/websocket/futureoption", Description = "EUREX연계KP200지수옵션선물호가")]
 public class EH0
 {
@@ -162,7 +175,8 @@ public class EH0
 }
 
 /// <summary>
-/// 뉴ELW투자지표민감도: ESN/// </summary>
+/// 뉴ELW투자지표민감도: ESN
+/// </summary>
 [Path("/websocket/elw", Description = "뉴ELW투자지표민감도")]
 public class ESN
 {
@@ -174,7 +188,8 @@ public class ESN
 }
 
 /// <summary>
-/// EUX접수: EU0/// </summary>
+/// EUX접수: EU0
+/// </summary>
 [Path("/websocket/futureoption", Description = "EUX접수", Key = "account")]
 public class EU0
 {
@@ -186,7 +201,8 @@ public class EU0
 }
 
 /// <summary>
-/// EUX체결: EU1/// </summary>
+/// EUX체결: EU1
+/// </summary>
 [Path("/websocket/futureoption", Description = "EUX체결", Key = "account")]
 public class EU1
 {
@@ -198,7 +214,8 @@ public class EU1
 }
 
 /// <summary>
-/// EUX확인: EU2/// </summary>
+/// EUX확인: EU2
+/// </summary>
 [Path("/websocket/futureoption", Description = "EUX확인", Key = "account")]
 public class EU2
 {
@@ -210,7 +227,8 @@ public class EU2
 }
 
 /// <summary>
-/// KOSPI200선물체결(C0): FC0/// </summary>
+/// KOSPI200선물체결(C0): FC0
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200선물체결(C0)")]
 public class FC0
 {
@@ -222,7 +240,8 @@ public class FC0
 }
 
 /// <summary>
-/// KOSPI200선물실시간상하한가(D0): FD0/// </summary>
+/// KOSPI200선물실시간상하한가(D0): FD0
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200선물실시간상하한가(D0)")]
 public class FD0
 {
@@ -234,7 +253,8 @@ public class FD0
 }
 
 /// <summary>
-/// KOSPI200선물호가(H0): FH0/// </summary>
+/// KOSPI200선물호가(H0): FH0
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200선물호가(H0)")]
 public class FH0
 {
@@ -246,7 +266,8 @@ public class FH0
 }
 
 /// <summary>
-/// KOSPI200선물가격제한폭확대(X0): FX0/// </summary>
+/// KOSPI200선물가격제한폭확대(X0): FX0
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200선물가격제한폭확대(X0)")]
 public class FX0
 {
@@ -258,7 +279,8 @@ public class FX0
 }
 
 /// <summary>
-/// 선물주문정정취소: H01/// </summary>
+/// 선물주문정정취소: H01
+/// </summary>
 [Path("/websocket/futureoption", Description = "선물주문정정취소", Key = "account")]
 public class H01
 {
@@ -270,7 +292,8 @@ public class H01
 }
 
 /// <summary>
-/// KOSPI호가잔량: H1_/// </summary>
+/// KOSPI호가잔량: H1_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI호가잔량")]
 public class H1_
 {
@@ -282,7 +305,8 @@ public class H1_
 }
 
 /// <summary>
-/// KOSPI장전시간외호가잔량: H2_/// </summary>
+/// KOSPI장전시간외호가잔량: H2_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI장전시간외호가잔량")]
 public class H2_
 {
@@ -294,7 +318,8 @@ public class H2_
 }
 
 /// <summary>
-/// ELW장전시간외호가잔량: h2_/// </summary>
+/// ELW장전시간외호가잔량: h2_
+/// </summary>
 [Path("/websocket/elw", Description = "ELW장전시간외호가잔량")]
 public class h2_
 {
@@ -306,7 +331,8 @@ public class h2_
 }
 
 /// <summary>
-/// ELW호가잔량: h3_/// </summary>
+/// ELW호가잔량: h3_
+/// </summary>
 [Path("/websocket/elw", Description = "ELW호가잔량")]
 public class h3_
 {
@@ -318,7 +344,8 @@ public class h3_
 }
 
 /// <summary>
-/// KOSDAQ호가잔량: HA_/// </summary>
+/// KOSDAQ호가잔량: HA_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ호가잔량")]
 public class HA_
 {
@@ -330,7 +357,8 @@ public class HA_
 }
 
 /// <summary>
-/// KOSDAQ장전시간외호가잔량: HB_/// </summary>
+/// KOSDAQ장전시간외호가잔량: HB_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ장전시간외호가잔량")]
 public class HB_
 {
@@ -342,7 +370,8 @@ public class HB_
 }
 
 /// <summary>
-/// 코스피ETF종목실시간NAV: I5_/// </summary>
+/// 코스피ETF종목실시간NAV: I5_
+/// </summary>
 [Path("/websocket/stock", Description = "코스피ETF종목실시간NAV")]
 public class I5_
 {
@@ -354,7 +383,8 @@ public class I5_
 }
 
 /// <summary>
-/// 지수: IJ_/// </summary>
+/// 지수: IJ_
+/// </summary>
 [Path("/websocket/stock", Description = "지수")]
 public class IJ_
 {
@@ -366,7 +396,8 @@ public class IJ_
 }
 
 /// <summary>
-/// 주식선물체결: JC0/// </summary>
+/// 주식선물체결: JC0
+/// </summary>
 [Path("/websocket/futureoption", Description = "주식선물체결")]
 public class JC0
 {
@@ -378,7 +409,8 @@ public class JC0
 }
 
 /// <summary>
-/// 주식선물실시간상하한가: JD0/// </summary>
+/// 주식선물실시간상하한가: JD0
+/// </summary>
 [Path("/websocket/futureoption", Description = "주식선물실시간상하한가")]
 public class JD0
 {
@@ -390,7 +422,8 @@ public class JD0
 }
 
 /// <summary>
-/// 주식선물호가: JH0/// </summary>
+/// 주식선물호가: JH0
+/// </summary>
 [Path("/websocket/futureoption", Description = "주식선물호가")]
 public class JH0
 {
@@ -402,7 +435,8 @@ public class JH0
 }
 
 /// <summary>
-/// 장운영정보: JIF/// </summary>
+/// 장운영정보: JIF
+/// </summary>
 [Path("/websocket/etc", Description = "장운영정보")]
 public class JIF
 {
@@ -414,7 +448,8 @@ public class JIF
 }
 
 /// <summary>
-/// 주식선물가격제한폭확대: JX0/// </summary>
+/// 주식선물가격제한폭확대: JX0
+/// </summary>
 [Path("/websocket/futureoption", Description = "주식선물가격제한폭확대")]
 public class JX0
 {
@@ -426,7 +461,8 @@ public class JX0
 }
 
 /// <summary>
-/// KOSPI거래원: K1_/// </summary>
+/// KOSPI거래원: K1_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI거래원")]
 public class K1_
 {
@@ -438,7 +474,8 @@ public class K1_
 }
 
 /// <summary>
-/// ELW거래원: k1_/// </summary>
+/// ELW거래원: k1_
+/// </summary>
 [Path("/websocket/elw", Description = "ELW거래원")]
 public class k1_
 {
@@ -450,7 +487,8 @@ public class k1_
 }
 
 /// <summary>
-/// KOSDAQ체결: K3_/// </summary>
+/// KOSDAQ체결: K3_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ체결")]
 public class K3_
 {
@@ -462,7 +500,8 @@ public class K3_
 }
 
 /// <summary>
-/// KOSDAQ프로그램매매종목별: KH_/// </summary>
+/// KOSDAQ프로그램매매종목별: KH_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ프로그램매매종목별")]
 public class KH_
 {
@@ -474,7 +513,8 @@ public class KH_
 }
 
 /// <summary>
-/// KOSDAQ프로그램매매전체집계: KM_/// </summary>
+/// KOSDAQ프로그램매매전체집계: KM_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ프로그램매매전체집계")]
 public class KM_
 {
@@ -486,7 +526,8 @@ public class KM_
 }
 
 /// <summary>
-/// KOSDAQ우선호가: KS_/// </summary>
+/// KOSDAQ우선호가: KS_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ우선호가")]
 public class KS_
 {
@@ -498,7 +539,8 @@ public class KS_
 }
 
 /// <summary>
-/// US지수: MK2/// </summary>
+/// US지수: MK2
+/// </summary>
 [Path("/websocket/investinfo", Description = "US지수")]
 public class MK2
 {
@@ -510,7 +552,8 @@ public class MK2
 }
 
 /// <summary>
-/// 실시간 뉴스 제목 패킷: NWS/// </summary>
+/// 실시간 뉴스 제목 패킷: NWS
+/// </summary>
 [Path("/websocket/etc", Description = "실시간 뉴스 제목 패킷")]
 public class NWS
 {
@@ -522,7 +565,8 @@ public class NWS
 }
 
 /// <summary>
-/// 선물접수: O01/// </summary>
+/// 선물접수: O01
+/// </summary>
 [Path("/websocket/futureoption", Description = "선물접수", Key = "account")]
 public class O01
 {
@@ -534,7 +578,8 @@ public class O01
 }
 
 /// <summary>
-/// KOSPI200옵션체결(C0): OC0/// </summary>
+/// KOSPI200옵션체결(C0): OC0
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200옵션체결(C0)")]
 public class OC0
 {
@@ -546,7 +591,8 @@ public class OC0
 }
 
 /// <summary>
-/// KOSPI200옵션실시간상하한가(D0): OD0/// </summary>
+/// KOSPI200옵션실시간상하한가(D0): OD0
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200옵션실시간상하한가(D0)")]
 public class OD0
 {
@@ -558,7 +604,8 @@ public class OD0
 }
 
 /// <summary>
-/// KOSPI200옵션호가(H0): OH0/// </summary>
+/// KOSPI200옵션호가(H0): OH0
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200옵션호가(H0)")]
 public class OH0
 {
@@ -570,7 +617,8 @@ public class OH0
 }
 
 /// <summary>
-/// KOSDAQ거래원: OK_/// </summary>
+/// KOSDAQ거래원: OK_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ거래원")]
 public class OK_
 {
@@ -582,7 +630,8 @@ public class OK_
 }
 
 /// <summary>
-/// KOSPI200옵션민감도(MG): OMG/// </summary>
+/// KOSPI200옵션민감도(MG): OMG
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200옵션민감도(MG)")]
 public class OMG
 {
@@ -594,7 +643,8 @@ public class OMG
 }
 
 /// <summary>
-/// 해외선물 현재가체결: OVC/// </summary>
+/// 해외선물 현재가체결: OVC
+/// </summary>
 [Path("/websocket/overseas-futureoption", Description = "해외선물 현재가체결")]
 public class OVC
 {
@@ -606,7 +656,8 @@ public class OVC
 }
 
 /// <summary>
-/// 해외선물 호가: OVH/// </summary>
+/// 해외선물 호가: OVH
+/// </summary>
 [Path("/websocket/overseas-futureoption", Description = "해외선물 호가")]
 public class OVH
 {
@@ -618,7 +669,8 @@ public class OVH
 }
 
 /// <summary>
-/// KOSPI200옵션가격제한폭확대(X0): OX0/// </summary>
+/// KOSPI200옵션가격제한폭확대(X0): OX0
+/// </summary>
 [Path("/websocket/futureoption", Description = "KOSPI200옵션가격제한폭확대(X0)")]
 public class OX0
 {
@@ -630,7 +682,8 @@ public class OX0
 }
 
 /// <summary>
-/// KOSPI프로그램매매종목별: PH_/// </summary>
+/// KOSPI프로그램매매종목별: PH_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI프로그램매매종목별")]
 public class PH_
 {
@@ -642,7 +695,8 @@ public class PH_
 }
 
 /// <summary>
-/// KOSPI프로그램매매전체집계: PM_/// </summary>
+/// KOSPI프로그램매매전체집계: PM_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI프로그램매매전체집계")]
 public class PM_
 {
@@ -654,7 +708,8 @@ public class PM_
 }
 
 /// <summary>
-/// KOSPI우선호가: S2_/// </summary>
+/// KOSPI우선호가: S2_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI우선호가")]
 public class S2_
 {
@@ -666,7 +721,8 @@ public class S2_
 }
 
 /// <summary>
-/// ELW우선호가: s2_/// </summary>
+/// ELW우선호가: s2_
+/// </summary>
 [Path("/websocket/elw", Description = "ELW우선호가")]
 public class s2_
 {
@@ -678,7 +734,8 @@ public class s2_
 }
 
 /// <summary>
-/// KOSPI체결: S3_/// </summary>
+/// KOSPI체결: S3_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI체결")]
 public class S3_
 {
@@ -690,7 +747,8 @@ public class S3_
 }
 
 /// <summary>
-/// ELW체결: s3_/// </summary>
+/// ELW체결: s3_
+/// </summary>
 [Path("/websocket/elw", Description = "ELW체결")]
 public class s3_
 {
@@ -702,7 +760,8 @@ public class s3_
 }
 
 /// <summary>
-/// KOSPI기세: S4_/// </summary>
+/// KOSPI기세: S4_
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI기세")]
 public class S4_
 {
@@ -714,7 +773,8 @@ public class S4_
 }
 
 /// <summary>
-/// ELW기세: s4_/// </summary>
+/// ELW기세: s4_
+/// </summary>
 [Path("/websocket/elw", Description = "ELW기세")]
 public class s4_
 {
@@ -726,7 +786,8 @@ public class s4_
 }
 
 /// <summary>
-/// 주식주문접수: SC0/// </summary>
+/// 주식주문접수: SC0
+/// </summary>
 [Path("/websocket/stock", Description = "주식주문접수", Key = "account")]
 public class SC0
 {
@@ -738,7 +799,8 @@ public class SC0
 }
 
 /// <summary>
-/// 주식주문체결: SC1/// </summary>
+/// 주식주문체결: SC1
+/// </summary>
 [Path("/websocket/stock", Description = "주식주문체결", Key = "account")]
 public class SC1
 {
@@ -750,7 +812,8 @@ public class SC1
 }
 
 /// <summary>
-/// 주식주문정정: SC2/// </summary>
+/// 주식주문정정: SC2
+/// </summary>
 [Path("/websocket/stock", Description = "주식주문정정", Key = "account")]
 public class SC2
 {
@@ -762,7 +825,8 @@ public class SC2
 }
 
 /// <summary>
-/// 주식주문취소: SC3/// </summary>
+/// 주식주문취소: SC3
+/// </summary>
 [Path("/websocket/stock", Description = "주식주문취소", Key = "account")]
 public class SC3
 {
@@ -774,7 +838,8 @@ public class SC3
 }
 
 /// <summary>
-/// 주식주문거부: SC4/// </summary>
+/// 주식주문거부: SC4
+/// </summary>
 [Path("/websocket/stock", Description = "주식주문거부", Key = "account")]
 public class SC4
 {
@@ -786,7 +851,8 @@ public class SC4
 }
 
 /// <summary>
-/// 상/하한가근접진입: SHC/// </summary>
+/// 상/하한가근접진입: SHC
+/// </summary>
 [Path("/websocket/stock", Description = "상/하한가근접진입")]
 public class SHC
 {
@@ -798,7 +864,8 @@ public class SHC
 }
 
 /// <summary>
-/// 상/하한가근접이탈: SHD/// </summary>
+/// 상/하한가근접이탈: SHD
+/// </summary>
 [Path("/websocket/stock", Description = "상/하한가근접이탈")]
 public class SHD
 {
@@ -810,7 +877,8 @@ public class SHD
 }
 
 /// <summary>
-/// 상/하한가진입: SHI/// </summary>
+/// 상/하한가진입: SHI
+/// </summary>
 [Path("/websocket/stock", Description = "상/하한가진입")]
 public class SHI
 {
@@ -822,7 +890,8 @@ public class SHI
 }
 
 /// <summary>
-/// 상/하한가이탈: SHO/// </summary>
+/// 상/하한가이탈: SHO
+/// </summary>
 [Path("/websocket/stock", Description = "상/하한가이탈")]
 public class SHO
 {
@@ -834,7 +903,8 @@ public class SHO
 }
 
 /// <summary>
-/// 해외선물주문: TC1/// </summary>
+/// 해외선물주문: TC1
+/// </summary>
 [Path("/websocket/overseas-futureoption", Description = "해외선물주문", Key = "account")]
 public class TC1
 {
@@ -846,7 +916,8 @@ public class TC1
 }
 
 /// <summary>
-/// 해외선물응답: TC2/// </summary>
+/// 해외선물응답: TC2
+/// </summary>
 [Path("/websocket/overseas-futureoption", Description = "해외선물응답", Key = "account")]
 public class TC2
 {
@@ -858,7 +929,8 @@ public class TC2
 }
 
 /// <summary>
-/// 해외선물체결: TC3/// </summary>
+/// 해외선물체결: TC3
+/// </summary>
 [Path("/websocket/overseas-futureoption", Description = "해외선물체결", Key = "account")]
 public class TC3
 {
@@ -870,7 +942,8 @@ public class TC3
 }
 
 /// <summary>
-/// VI발동해제: VI_/// </summary>
+/// VI발동해제: VI_
+/// </summary>
 [Path("/websocket/stock", Description = "VI발동해제")]
 public class VI_
 {
@@ -882,7 +955,8 @@ public class VI_
 }
 
 /// <summary>
-/// 해외옵션 현재가체결: WOC/// </summary>
+/// 해외옵션 현재가체결: WOC
+/// </summary>
 [Path("/websocket/overseas-futureoption", Description = "해외옵션 현재가체결")]
 public class WOC
 {
@@ -894,7 +968,8 @@ public class WOC
 }
 
 /// <summary>
-/// 해외옵션 호가: WOH/// </summary>
+/// 해외옵션 호가: WOH
+/// </summary>
 [Path("/websocket/overseas-futureoption", Description = "해외옵션 호가")]
 public class WOH
 {
@@ -906,7 +981,8 @@ public class WOH
 }
 
 /// <summary>
-/// 상품선물예상체결: YC3/// </summary>
+/// 상품선물예상체결: YC3
+/// </summary>
 [Path("/websocket/futureoption", Description = "상품선물예상체결")]
 public class YC3
 {
@@ -918,7 +994,8 @@ public class YC3
 }
 
 /// <summary>
-/// 지수선물예상체결: YFC/// </summary>
+/// 지수선물예상체결: YFC
+/// </summary>
 [Path("/websocket/futureoption", Description = "지수선물예상체결")]
 public class YFC
 {
@@ -930,7 +1007,8 @@ public class YFC
 }
 
 /// <summary>
-/// 주식선물예상체결: YJC/// </summary>
+/// 주식선물예상체결: YJC
+/// </summary>
 [Path("/websocket/futureoption", Description = "주식선물예상체결")]
 public class YJC
 {
@@ -942,7 +1020,8 @@ public class YJC
 }
 
 /// <summary>
-/// 예상지수: YJ_/// </summary>
+/// 예상지수: YJ_
+/// </summary>
 [Path("/websocket/stock", Description = "예상지수")]
 public class YJ_
 {
@@ -954,7 +1033,8 @@ public class YJ_
 }
 
 /// <summary>
-/// KOSDAQ예상체결: YK3/// </summary>
+/// KOSDAQ예상체결: YK3
+/// </summary>
 [Path("/websocket/stock", Description = "KOSDAQ예상체결")]
 public class YK3
 {
@@ -966,7 +1046,8 @@ public class YK3
 }
 
 /// <summary>
-/// 지수옵션예상체결: YOC/// </summary>
+/// 지수옵션예상체결: YOC
+/// </summary>
 [Path("/websocket/futureoption", Description = "지수옵션예상체결")]
 public class YOC
 {
@@ -978,7 +1059,8 @@ public class YOC
 }
 
 /// <summary>
-/// KOSPI예상체결: YS3/// </summary>
+/// KOSPI예상체결: YS3
+/// </summary>
 [Path("/websocket/stock", Description = "KOSPI예상체결")]
 public class YS3
 {
@@ -990,7 +1072,8 @@ public class YS3
 }
 
 /// <summary>
-/// ELW예상체결: Ys3/// </summary>
+/// ELW예상체결: Ys3
+/// </summary>
 [Path("/websocket/elw", Description = "ELW예상체결")]
 public class Ys3
 {
