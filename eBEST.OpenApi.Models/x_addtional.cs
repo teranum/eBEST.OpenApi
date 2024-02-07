@@ -11,10 +11,10 @@ namespace eBEST.OpenApi.Models
     public class AFR
     {
         //요청
-        public AFRInBlock? Ys3InBlock { get; set; }
+        public AFRInBlock? AFRInBlock { get; set; }
 
         //응답
-        public AFROutBlock? Ys3OutBlock { get; set; }
+        public AFROutBlock? AFROutBlock { get; set; }
     }
 
 
