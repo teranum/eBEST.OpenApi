@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+		<LangVersion>default</LangVersion>
 		<TargetFrameworks>net8.0;net48</TargetFrameworks>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Description>NET wrapper for eBEST OpenApi</Description>
-		<Version>1.3.0</Version>
+		<Version>1.4.0</Version>
 		<Title>eBEST.OpenApi</Title>
 		<PackageTags>eBEST, OpenApi</PackageTags>
 		<Authors>teranum</Authors>
@@ -20,7 +21,7 @@
 	
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
 		<Reference Include="System.Net.Http" />
-		<PackageReference Include="System.Text.Json" Version="8.0.0"/>
+		<PackageReference Include="System.Text.Json" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -28,6 +29,10 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="eBEST.OpenApi.Abstractions" Version="1.0.0" />
 	</ItemGroup>
 
 </Project>

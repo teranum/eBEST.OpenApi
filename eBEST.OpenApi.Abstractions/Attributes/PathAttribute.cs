@@ -1,4 +1,4 @@
-﻿namespace eBEST.Abstractions
+﻿namespace eBEST.OpenApi
 {
     /// <summary>
     /// TR 요청 속성

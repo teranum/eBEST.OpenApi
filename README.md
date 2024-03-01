@@ -85,6 +85,9 @@ Samples/WpfSample
 
 ## 업데이트
 
+### version 1.4.0
+eBEST.OpenApi.Abstractions 추가
+
 ### version 1.3.0
 MacAddress 프로퍼티 추가
 <br/>
