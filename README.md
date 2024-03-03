@@ -73,7 +73,8 @@ void Test(string code)
 }
 	
 ```
-Samples/WpfSample
+- Samples/WpfSample
+- 샘플 프로젝트 https://github.com/teranum/ebest-openapi-samples)
 
 ![](./Samples/img/run-001.png)
 
