@@ -73,7 +73,8 @@ void Test(string code)
 }
 	
 ```
-Samples/WpfSample
+- Samples/WpfSample
+- 샘플 프로젝트 https://github.com/teranum/ebest-openapi-samples)
 
 ![](./Samples/img/run-001.png)
 
@@ -84,6 +85,9 @@ Samples/WpfSample
 ![](./Samples/img/run-004.png)
 
 ## 업데이트
+
+### version 1.4.0
+eBEST.OpenApi.Abstractions 추가
 
 ### version 1.3.0
 MacAddress 프로퍼티 추가

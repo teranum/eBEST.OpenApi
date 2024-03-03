@@ -1,5 +1,4 @@
 using eBEST.OpenApi.Events;
-using eBEST.OpenApi.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.WebSockets;
@@ -392,7 +391,7 @@ namespace eBEST.OpenApi
                     request.tr_cont = tr_cont.First();
                 if (responseMsg.Headers.TryGetValues("tr_cont_key", out IEnumerable<string>? tr_cont_key))
                     request.tr_cont_key = tr_cont_key.First();
-                
+
                 return true;
             }
             catch (Exception ex)

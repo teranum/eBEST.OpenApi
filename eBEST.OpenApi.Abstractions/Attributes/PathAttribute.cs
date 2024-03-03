@@ -1,4 +1,4 @@
-﻿namespace eBEST.OpenApi.Models
+﻿namespace eBEST.OpenApi
 {
     /// <summary>
     /// TR 요청 속성

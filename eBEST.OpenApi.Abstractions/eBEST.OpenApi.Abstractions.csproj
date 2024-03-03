@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<LangVersion>default</LangVersion>
@@ -6,8 +6,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Description>NET wrapper for eBEST OpenApi</Description>
-		<Version>1.4.0</Version>
-		<Title>eBEST.OpenApi</Title>
+		<Version>1.0.0</Version>
+		<Title>eBEST.OpenApi.Abstractions</Title>
 		<PackageTags>eBEST, OpenApi</PackageTags>
 		<Authors>teranum</Authors>
 		<Copyright>Copyright © teranum 2023</Copyright>
@@ -16,23 +16,14 @@
 		<Company>$(Authors)</Company>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<NoWarn>$(NoWarn);CS1591;IDE1006</NoWarn>
+		<NoWarn>$(NoWarn);CS8618;CS8619;IDE1006</NoWarn>
 	</PropertyGroup>
-	
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
-		<Reference Include="System.Net.Http" />
-		<PackageReference Include="System.Text.Json" Version="8.0.0" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="icon.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="eBEST.OpenApi.Abstractions" Version="1.0.0" />
 	</ItemGroup>
 
 </Project>
