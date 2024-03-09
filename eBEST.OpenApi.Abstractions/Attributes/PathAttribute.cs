@@ -26,5 +26,15 @@
         /// Key
         /// </summary>
         public string Key { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Headtype
+        /// </summary>
+        public string Headtype { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Attr
+        /// </summary>
+        public bool Attr { get; set; } = false;
     }
 }

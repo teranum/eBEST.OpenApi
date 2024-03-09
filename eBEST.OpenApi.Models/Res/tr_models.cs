@@ -1,4 +1,4 @@
-// [2024-02-13 오후 9:25:02]
+// [2024-03-09 오후 11:44:23]
 // 이 파일은 ResToModel 에 의해 자동으로 만들어졌습니다.
 // XingAPI Res폴더의 .res 파일에서 변환되었습니다.
 namespace eBEST.OpenApi.Models;
@@ -6,7 +6,7 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// 계좌 거래내역: CDPCQ04700
 /// </summary>
-[Path("/stock/accno", Description = "계좌 거래내역")]
+[Path("/stock/accno", Description = "계좌 거래내역", Headtype = "B")]
 public class CDPCQ04700 : TrBase
 {
     // InBlock
@@ -24,7 +24,7 @@ public class CDPCQ04700 : TrBase
 /// <summary>
 /// 유렉스 주문체결내역조회: CEXAQ21100
 /// </summary>
-[Path("/futureoption/accno", Description = "유렉스 주문체결내역조회")]
+[Path("/futureoption/accno", Description = "유렉스 주문체결내역조회", Headtype = "B")]
 public class CEXAQ21100 : TrBase
 {
     // InBlock
@@ -40,7 +40,7 @@ public class CEXAQ21100 : TrBase
 /// <summary>
 /// 유렉스 주문가능 수량/금액 조회: CEXAQ21200
 /// </summary>
-[Path("/futureoption/accno", Description = "유렉스 주문가능 수량/금액 조회")]
+[Path("/futureoption/accno", Description = "유렉스 주문가능 수량/금액 조회", Headtype = "B")]
 public class CEXAQ21200 : TrBase
 {
     // InBlock
@@ -55,7 +55,7 @@ public class CEXAQ21200 : TrBase
 /// <summary>
 /// 유렉스 야간장잔고및 평가현황: CEXAQ31100
 /// </summary>
-[Path("/futureoption/accno", Description = "유렉스 야간장잔고및 평가현황")]
+[Path("/futureoption/accno", Description = "유렉스 야간장잔고및 평가현황", Headtype = "B")]
 public class CEXAQ31100 : TrBase
 {
     // InBlock
@@ -71,7 +71,7 @@ public class CEXAQ31100 : TrBase
 /// <summary>
 /// 유렉스 예탁금 및 통합잔고조회: CEXAQ31200
 /// </summary>
-[Path("/futureoption/accno", Description = "유렉스 예탁금 및 통합잔고조회")]
+[Path("/futureoption/accno", Description = "유렉스 예탁금 및 통합잔고조회", Headtype = "B")]
 public class CEXAQ31200 : TrBase
 {
     // InBlock
@@ -87,7 +87,7 @@ public class CEXAQ31200 : TrBase
 /// <summary>
 /// EUREX 야간옵션 기간주문체결조회: CEXAQ44200
 /// </summary>
-[Path("/futureoption/accno", Description = "EUREX 야간옵션 기간주문체결조회")]
+[Path("/futureoption/accno", Description = "EUREX 야간옵션 기간주문체결조회", Headtype = "B")]
 public class CEXAQ44200 : TrBase
 {
     // InBlock
@@ -103,7 +103,7 @@ public class CEXAQ44200 : TrBase
 /// <summary>
 /// 유렉스 매수/매도주문: CEXAT11100
 /// </summary>
-[Path("/futureoption/order", Description = "유렉스 매수/매도주문")]
+[Path("/futureoption/order", Description = "유렉스 매수/매도주문", Headtype = "B")]
 public class CEXAT11100 : TrBase
 {
     // InBlock
@@ -118,7 +118,7 @@ public class CEXAT11100 : TrBase
 /// <summary>
 /// 유렉스 정정주문: CEXAT11200
 /// </summary>
-[Path("/futureoption/order", Description = "유렉스 정정주문")]
+[Path("/futureoption/order", Description = "유렉스 정정주문", Headtype = "B")]
 public class CEXAT11200 : TrBase
 {
     // InBlock
@@ -133,7 +133,7 @@ public class CEXAT11200 : TrBase
 /// <summary>
 /// 유렉스 취소주문: CEXAT11300
 /// </summary>
-[Path("/futureoption/order", Description = "유렉스 취소주문")]
+[Path("/futureoption/order", Description = "유렉스 취소주문", Headtype = "B")]
 public class CEXAT11300 : TrBase
 {
     // InBlock
@@ -148,7 +148,7 @@ public class CEXAT11300 : TrBase
 /// <summary>
 /// 선물옵션 계좌주문체결내역조회: CFOAQ00600
 /// </summary>
-[Path("/futureoption/accno", Description = "선물옵션 계좌주문체결내역조회")]
+[Path("/futureoption/accno", Description = "선물옵션 계좌주문체결내역조회", Headtype = "B")]
 public class CFOAQ00600 : TrBase
 {
     // InBlock
@@ -164,7 +164,7 @@ public class CFOAQ00600 : TrBase
 /// <summary>
 /// 선물옵션 주문가능수량조회: CFOAQ10100
 /// </summary>
-[Path("/futureoption/accno", Description = "선물옵션 주문가능수량조회")]
+[Path("/futureoption/accno", Description = "선물옵션 주문가능수량조회", Headtype = "B")]
 public class CFOAQ10100 : TrBase
 {
     // InBlock
@@ -179,7 +179,7 @@ public class CFOAQ10100 : TrBase
 /// <summary>
 /// 선물옵션 정상주문: CFOAT00100
 /// </summary>
-[Path("/futureoption/order", Description = "선물옵션 정상주문")]
+[Path("/futureoption/order", Description = "선물옵션 정상주문", Headtype = "B")]
 public class CFOAT00100 : TrBase
 {
     // InBlock
@@ -194,7 +194,7 @@ public class CFOAT00100 : TrBase
 /// <summary>
 /// 선물옵션 정정주문: CFOAT00200
 /// </summary>
-[Path("/futureoption/order", Description = "선물옵션 정정주문")]
+[Path("/futureoption/order", Description = "선물옵션 정정주문", Headtype = "B")]
 public class CFOAT00200 : TrBase
 {
     // InBlock
@@ -209,7 +209,7 @@ public class CFOAT00200 : TrBase
 /// <summary>
 /// 선물옵션 취소주문: CFOAT00300
 /// </summary>
-[Path("/futureoption/order", Description = "선물옵션 취소주문")]
+[Path("/futureoption/order", Description = "선물옵션 취소주문", Headtype = "B")]
 public class CFOAT00300 : TrBase
 {
     // InBlock
@@ -224,7 +224,7 @@ public class CFOAT00300 : TrBase
 /// <summary>
 /// 선물옵션 계좌예탁금증거금조회: CFOBQ10500
 /// </summary>
-[Path("/futureoption/accno", Description = "선물옵션 계좌예탁금증거금조회")]
+[Path("/futureoption/accno", Description = "선물옵션 계좌예탁금증거금조회", Headtype = "B")]
 public class CFOBQ10500 : TrBase
 {
     // InBlock
@@ -240,7 +240,7 @@ public class CFOBQ10500 : TrBase
 /// <summary>
 /// 선물옵션 옵션매도시 주문증거금조회: CFOBQ10800
 /// </summary>
-[Path("/futureoption/order", Description = "선물옵션 옵션매도시 주문증거금조회")]
+[Path("/futureoption/order", Description = "선물옵션 옵션매도시 주문증거금조회", Headtype = "B")]
 public class CFOBQ10800 : TrBase
 {
     // InBlock
@@ -255,7 +255,7 @@ public class CFOBQ10800 : TrBase
 /// <summary>
 /// 선물옵션가정산예탁금상세: CFOEQ11100
 /// </summary>
-[Path("/futureoption/accno", Description = "선물옵션가정산예탁금상세")]
+[Path("/futureoption/accno", Description = "선물옵션가정산예탁금상세", Headtype = "B")]
 public class CFOEQ11100 : TrBase
 {
     // InBlock
@@ -270,7 +270,7 @@ public class CFOEQ11100 : TrBase
 /// <summary>
 /// 선물옵션 일별 계좌손익내역: CFOEQ82600
 /// </summary>
-[Path("/futureoption/accno", Description = "선물옵션 일별 계좌손익내역")]
+[Path("/futureoption/accno", Description = "선물옵션 일별 계좌손익내역", Headtype = "B")]
 public class CFOEQ82600 : TrBase
 {
     // InBlock
@@ -286,7 +286,7 @@ public class CFOEQ82600 : TrBase
 /// <summary>
 /// 계좌 미결제 약정현황(평균가): CFOFQ02400
 /// </summary>
-[Path("/futureoption/accno", Description = "계좌 미결제 약정현황(평균가)")]
+[Path("/futureoption/accno", Description = "계좌 미결제 약정현황(평균가)", Headtype = "B")]
 public class CFOFQ02400 : TrBase
 {
     // InBlock
@@ -303,7 +303,7 @@ public class CFOFQ02400 : TrBase
 /// <summary>
 /// 챠트엑셀데이터조회: CHARTEXCEL
 /// </summary>
-[Path("", Description = "챠트엑셀데이터조회")]
+[Path("", Description = "챠트엑셀데이터조회", Headtype = "B")]
 public class CHARTEXCEL : TrBase
 {
     // InBlock
@@ -318,7 +318,7 @@ public class CHARTEXCEL : TrBase
 /// <summary>
 /// 챠트지표데이터조회: CHARTINDEX
 /// </summary>
-[Path("", Description = "챠트지표데이터조회")]
+[Path("", Description = "챠트지표데이터조회", Headtype = "B")]
 public class CHARTINDEX : TrBase
 {
     // InBlock
@@ -333,7 +333,7 @@ public class CHARTINDEX : TrBase
 /// <summary>
 /// 해외선물 체결내역개별 조회: CIDBQ01400
 /// </summary>
-[Path("/overseas-futureoption/accno", Description = "해외선물 체결내역개별 조회")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 체결내역개별 조회", Headtype = "B")]
 public class CIDBQ01400 : TrBase
 {
     // InBlock
@@ -348,7 +348,7 @@ public class CIDBQ01400 : TrBase
 /// <summary>
 /// 해외선물 미결제 잔고내역: CIDBQ01500
 /// </summary>
-[Path("/overseas-futureoption/accno", Description = "해외선물 미결제 잔고내역")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 미결제 잔고내역", Headtype = "B")]
 public class CIDBQ01500 : TrBase
 {
     // InBlock
@@ -363,7 +363,7 @@ public class CIDBQ01500 : TrBase
 /// <summary>
 /// 해외선물 주문체결내역 조회: CIDBQ01800
 /// </summary>
-[Path("/overseas-futureoption/accno", Description = "해외선물 주문체결내역 조회")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 주문체결내역 조회", Headtype = "B")]
 public class CIDBQ01800 : TrBase
 {
     // InBlock
@@ -378,7 +378,7 @@ public class CIDBQ01800 : TrBase
 /// <summary>
 /// 해외선물 주문체결내역 상세 조회: CIDBQ02400
 /// </summary>
-[Path("/overseas-futureoption/accno", Description = "해외선물 주문체결내역 상세 조회")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 주문체결내역 상세 조회", Headtype = "B")]
 public class CIDBQ02400 : TrBase
 {
     // InBlock
@@ -393,7 +393,7 @@ public class CIDBQ02400 : TrBase
 /// <summary>
 /// 해외선물 예수금/잔고현황: CIDBQ03000
 /// </summary>
-[Path("/overseas-futureoption/accno", Description = "해외선물 예수금/잔고현황")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 예수금/잔고현황", Headtype = "B")]
 public class CIDBQ03000 : TrBase
 {
     // InBlock
@@ -408,7 +408,7 @@ public class CIDBQ03000 : TrBase
 /// <summary>
 /// 해외선물 계좌예탁자산조회: CIDBQ05300
 /// </summary>
-[Path("/overseas-futureoption/accno", Description = "해외선물 계좌예탁자산조회")]
+[Path("/overseas-futureoption/accno", Description = "해외선물 계좌예탁자산조회", Headtype = "B")]
 public class CIDBQ05300 : TrBase
 {
     // InBlock
@@ -424,7 +424,7 @@ public class CIDBQ05300 : TrBase
 /// <summary>
 /// 해외선물신규주문: CIDBT00100
 /// </summary>
-[Path("/overseas-futureoption/order", Description = "해외선물신규주문")]
+[Path("/overseas-futureoption/order", Description = "해외선물신규주문", Headtype = "B")]
 public class CIDBT00100 : TrBase
 {
     // InBlock
@@ -439,7 +439,7 @@ public class CIDBT00100 : TrBase
 /// <summary>
 /// 해외선물정정주문: CIDBT00900
 /// </summary>
-[Path("/overseas-futureoption/order", Description = "해외선물정정주문")]
+[Path("/overseas-futureoption/order", Description = "해외선물정정주문", Headtype = "B")]
 public class CIDBT00900 : TrBase
 {
     // InBlock
@@ -454,7 +454,7 @@ public class CIDBT00900 : TrBase
 /// <summary>
 /// 해외선물취소주문: CIDBT01000
 /// </summary>
-[Path("/overseas-futureoption/order", Description = "해외선물취소주문")]
+[Path("/overseas-futureoption/order", Description = "해외선물취소주문", Headtype = "B")]
 public class CIDBT01000 : TrBase
 {
     // InBlock
@@ -469,7 +469,7 @@ public class CIDBT01000 : TrBase
 /// <summary>
 /// 일자별 미결제 잔고내역: CIDEQ00800
 /// </summary>
-[Path("/overseas-futureoption/accno", Description = "일자별 미결제 잔고내역")]
+[Path("/overseas-futureoption/accno", Description = "일자별 미결제 잔고내역", Headtype = "B")]
 public class CIDEQ00800 : TrBase
 {
     // InBlock
@@ -484,7 +484,7 @@ public class CIDEQ00800 : TrBase
 /// <summary>
 /// 예탁담보융자가능종목현황조회: CLNAQ00100
 /// </summary>
-[Path("/stock/etc", Description = "예탁담보융자가능종목현황조회")]
+[Path("/stock/etc", Description = "예탁담보융자가능종목현황조회", Headtype = "B")]
 public class CLNAQ00100 : TrBase
 {
     // InBlock
@@ -500,7 +500,7 @@ public class CLNAQ00100 : TrBase
 /// <summary>
 /// 계좌별신용한도조회: CSPAQ00600
 /// </summary>
-[Path("/stock/accno", Description = "계좌별신용한도조회")]
+[Path("/stock/accno", Description = "계좌별신용한도조회", Headtype = "B")]
 public class CSPAQ00600 : TrBase
 {
     // InBlock
@@ -515,7 +515,7 @@ public class CSPAQ00600 : TrBase
 /// <summary>
 /// 현물계좌예수금 주문가능금액 총평가 조회: CSPAQ12200
 /// </summary>
-[Path("/stock/accno", Description = "현물계좌예수금 주문가능금액 총평가 조회")]
+[Path("/stock/accno", Description = "현물계좌예수금 주문가능금액 총평가 조회", Headtype = "B")]
 public class CSPAQ12200 : TrBase
 {
     // InBlock
@@ -530,7 +530,7 @@ public class CSPAQ12200 : TrBase
 /// <summary>
 /// BEP단가조회: CSPAQ12300
 /// </summary>
-[Path("/stock/accno", Description = "BEP단가조회")]
+[Path("/stock/accno", Description = "BEP단가조회", Headtype = "B")]
 public class CSPAQ12300 : TrBase
 {
     // InBlock
@@ -546,7 +546,7 @@ public class CSPAQ12300 : TrBase
 /// <summary>
 /// 현물계좌주문체결내역조회: CSPAQ13700
 /// </summary>
-[Path("/stock/accno", Description = "현물계좌주문체결내역조회")]
+[Path("/stock/accno", Description = "현물계좌주문체결내역조회", Headtype = "B")]
 public class CSPAQ13700 : TrBase
 {
     // InBlock
@@ -562,7 +562,7 @@ public class CSPAQ13700 : TrBase
 /// <summary>
 /// 현물계좌예수금 주문가능금액 총평가2: CSPAQ22200
 /// </summary>
-[Path("/stock/accno", Description = "현물계좌예수금 주문가능금액 총평가2")]
+[Path("/stock/accno", Description = "현물계좌예수금 주문가능금액 총평가2", Headtype = "B")]
 public class CSPAQ22200 : TrBase
 {
     // InBlock
@@ -577,7 +577,7 @@ public class CSPAQ22200 : TrBase
 /// <summary>
 /// 현물주문: CSPAT00600
 /// </summary>
-[Path("", Description = "현물주문")]
+[Path("", Description = "현물주문", Headtype = "B")]
 public class CSPAT00600 : TrBase
 {
     // InBlock
@@ -592,7 +592,7 @@ public class CSPAT00600 : TrBase
 /// <summary>
 /// 현물정정주문: CSPAT00700
 /// </summary>
-[Path("", Description = "현물정정주문")]
+[Path("", Description = "현물정정주문", Headtype = "B")]
 public class CSPAT00700 : TrBase
 {
     // InBlock
@@ -607,7 +607,7 @@ public class CSPAT00700 : TrBase
 /// <summary>
 /// 현물취소주문: CSPAT00800
 /// </summary>
-[Path("", Description = "현물취소주문")]
+[Path("", Description = "현물취소주문", Headtype = "B")]
 public class CSPAT00800 : TrBase
 {
     // InBlock
@@ -622,7 +622,7 @@ public class CSPAT00800 : TrBase
 /// <summary>
 /// 현물계좌증거금률별주문가능수량조회: CSPBQ00200
 /// </summary>
-[Path("/stock/accno", Description = "현물계좌증거금률별주문가능수량조회")]
+[Path("/stock/accno", Description = "현물계좌증거금률별주문가능수량조회", Headtype = "B")]
 public class CSPBQ00200 : TrBase
 {
     // InBlock
@@ -637,7 +637,7 @@ public class CSPBQ00200 : TrBase
 /// <summary>
 /// 주식계좌 기간별수익률 상세: FOCCQ33600
 /// </summary>
-[Path("/stock/accno", Description = "주식계좌 기간별수익률 상세")]
+[Path("/stock/accno", Description = "주식계좌 기간별수익률 상세", Headtype = "B")]
 public class FOCCQ33600 : TrBase
 {
     // InBlock
@@ -653,7 +653,7 @@ public class FOCCQ33600 : TrBase
 /// <summary>
 /// 선물옵션 기간별 계좌 수익률 현황: FOCCQ33700
 /// </summary>
-[Path("/futureoption/accno", Description = "선물옵션 기간별 계좌 수익률 현황")]
+[Path("/futureoption/accno", Description = "선물옵션 기간별 계좌 수익률 현황", Headtype = "B")]
 public class FOCCQ33700 : TrBase
 {
     // InBlock
@@ -669,7 +669,7 @@ public class FOCCQ33700 : TrBase
 /// <summary>
 /// 파생상품증거금율조회: MMDAQ91200
 /// </summary>
-[Path("/futureoption/etc", Description = "파생상품증거금율조회")]
+[Path("/futureoption/etc", Description = "파생상품증거금율조회", Headtype = "B")]
 public class MMDAQ91200 : TrBase
 {
     // InBlock
@@ -684,7 +684,7 @@ public class MMDAQ91200 : TrBase
 /// <summary>
 /// 해외선물마스터조회-API용: o3101
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물마스터조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물마스터조회-API용", Attr = true, Headtype = "A")]
 public class o3101 : TrBase
 {
     // InBlock
@@ -698,7 +698,7 @@ public class o3101 : TrBase
 /// <summary>
 /// 해외선물차트(분)-API용: o3103
 /// </summary>
-[Path("/overseas-futureoption/chart", Description = "해외선물차트(분)-API용")]
+[Path("/overseas-futureoption/chart", Description = "해외선물차트(분)-API용", Attr = true, Headtype = "A")]
 public class o3103 : TrBase
 {
     // InBlock
@@ -713,7 +713,7 @@ public class o3103 : TrBase
 /// <summary>
 /// 해외선물일별체결조회-API용: o3104
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물일별체결조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물일별체결조회-API용", Attr = true, Headtype = "A")]
 public class o3104 : TrBase
 {
     // InBlock
@@ -727,7 +727,7 @@ public class o3104 : TrBase
 /// <summary>
 /// 해외선물현재가(종목정보)조회-API용: o3105
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물현재가(종목정보)조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물현재가(종목정보)조회-API용", Attr = true, Headtype = "A")]
 public class o3105 : TrBase
 {
     // InBlock
@@ -741,7 +741,7 @@ public class o3105 : TrBase
 /// <summary>
 /// 해외선물현재가호가조회-API용: o3106
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물현재가호가조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물현재가호가조회-API용", Attr = true, Headtype = "A")]
 public class o3106 : TrBase
 {
     // InBlock
@@ -755,7 +755,7 @@ public class o3106 : TrBase
 /// <summary>
 /// 해외선물관심종목조회-API용: o3107
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물관심종목조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물관심종목조회-API용", Attr = true, Headtype = "A")]
 public class o3107 : TrBase
 {
     // InBlock
@@ -769,7 +769,7 @@ public class o3107 : TrBase
 /// <summary>
 /// 해외선물차트(일주월)-API용: o3108
 /// </summary>
-[Path("/overseas-futureoption/chart", Description = "해외선물차트(일주월)-API용")]
+[Path("/overseas-futureoption/chart", Description = "해외선물차트(일주월)-API용", Attr = true, Headtype = "A")]
 public class o3108 : TrBase
 {
     // InBlock
@@ -784,7 +784,7 @@ public class o3108 : TrBase
 /// <summary>
 /// 해외선물시간대별(Tick)체결-API용: o3116
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물시간대별(Tick)체결-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물시간대별(Tick)체결-API용", Attr = true, Headtype = "A")]
 public class o3116 : TrBase
 {
     // InBlock
@@ -799,7 +799,7 @@ public class o3116 : TrBase
 /// <summary>
 /// 해외선물차트용NTick-API용: o3117
 /// </summary>
-[Path("/overseas-futureoption/chart", Description = "해외선물차트용NTick-API용")]
+[Path("/overseas-futureoption/chart", Description = "해외선물차트용NTick-API용", Attr = true, Headtype = "A")]
 public class o3117 : TrBase
 {
     // InBlock
@@ -814,7 +814,7 @@ public class o3117 : TrBase
 /// <summary>
 /// 해외선물옵션마스터조회-API용: o3121
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물옵션마스터조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션마스터조회-API용", Attr = true, Headtype = "A")]
 public class o3121 : TrBase
 {
     // InBlock
@@ -828,7 +828,7 @@ public class o3121 : TrBase
 /// <summary>
 /// 해외선물옵션차트(분)-API용: o3123
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물옵션차트(분)-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션차트(분)-API용", Attr = true, Headtype = "A")]
 public class o3123 : TrBase
 {
     // InBlock
@@ -843,7 +843,7 @@ public class o3123 : TrBase
 /// <summary>
 /// 해외선물옵션현재가(종목정보)조회-API용: o3125
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물옵션현재가(종목정보)조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션현재가(종목정보)조회-API용", Attr = true, Headtype = "A")]
 public class o3125 : TrBase
 {
     // InBlock
@@ -857,7 +857,7 @@ public class o3125 : TrBase
 /// <summary>
 /// 해외선물옵션현재가호가조회-API용: o3126
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물옵션현재가호가조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션현재가호가조회-API용", Attr = true, Headtype = "A")]
 public class o3126 : TrBase
 {
     // InBlock
@@ -871,7 +871,7 @@ public class o3126 : TrBase
 /// <summary>
 /// 해외선물옵션관심종목조회-API용: o3127
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물옵션관심종목조회-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션관심종목조회-API용", Attr = true, Headtype = "A")]
 public class o3127 : TrBase
 {
     // InBlock
@@ -886,7 +886,7 @@ public class o3127 : TrBase
 /// <summary>
 /// 해외선물옵션차트일주월-API용: o3128
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물옵션차트일주월-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션차트일주월-API용", Attr = true, Headtype = "A")]
 public class o3128 : TrBase
 {
     // InBlock
@@ -901,7 +901,7 @@ public class o3128 : TrBase
 /// <summary>
 /// 해외선물옵션시간대별(Tick)체결-API용: o3136
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물옵션시간대별(Tick)체결-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션시간대별(Tick)체결-API용", Attr = true, Headtype = "A")]
 public class o3136 : TrBase
 {
     // InBlock
@@ -916,7 +916,7 @@ public class o3136 : TrBase
 /// <summary>
 /// 해외선물옵션차트용NTick-API용: o3137
 /// </summary>
-[Path("/overseas-futureoption/market-data", Description = "해외선물옵션차트용NTick-API용")]
+[Path("/overseas-futureoption/market-data", Description = "해외선물옵션차트용NTick-API용", Attr = true, Headtype = "A")]
 public class o3137 : TrBase
 {
     // InBlock
@@ -931,7 +931,7 @@ public class o3137 : TrBase
 /// <summary>
 /// 해외선물옵션차트용NTick(고정형)-API용: o3139
 /// </summary>
-[Path("/overseas-futureoption/chart", Description = "해외선물옵션차트용NTick(고정형)-API용")]
+[Path("/overseas-futureoption/chart", Description = "해외선물옵션차트용NTick(고정형)-API용", Attr = true, Headtype = "A")]
 public class o3139 : TrBase
 {
     // InBlock
@@ -946,7 +946,7 @@ public class o3139 : TrBase
 /// <summary>
 /// 주식당일매매일지/수수료: t0150
 /// </summary>
-[Path("/stock/accno", Description = "주식당일매매일지/수수료")]
+[Path("/stock/accno", Description = "주식당일매매일지/수수료", Headtype = "C")]
 public class t0150 : TrBase
 {
     // InBlock
@@ -961,7 +961,7 @@ public class t0150 : TrBase
 /// <summary>
 /// 주식당일매매일지/수수료(전일): t0151
 /// </summary>
-[Path("/stock/accno", Description = "주식당일매매일지/수수료(전일)")]
+[Path("/stock/accno", Description = "주식당일매매일지/수수료(전일)", Headtype = "C")]
 public class t0151 : TrBase
 {
     // InBlock
@@ -976,7 +976,7 @@ public class t0151 : TrBase
 /// <summary>
 /// 서버시간조회: t0167
 /// </summary>
-[Path("/etc/time-search", Description = "서버시간조회")]
+[Path("/etc/time-search", Description = "서버시간조회", Headtype = "A")]
 public class t0167 : TrBase
 {
     // InBlock
@@ -990,7 +990,7 @@ public class t0167 : TrBase
 /// <summary>
 /// 주식잔고2: t0424
 /// </summary>
-[Path("/stock/accno", Description = "주식잔고2")]
+[Path("/stock/accno", Description = "주식잔고2", Attr = true, Headtype = "D")]
 public class t0424 : TrBase
 {
     // InBlock
@@ -1005,7 +1005,7 @@ public class t0424 : TrBase
 /// <summary>
 /// 주식체결/미체결: t0425
 /// </summary>
-[Path("/stock/accno", Description = "주식체결/미체결")]
+[Path("/stock/accno", Description = "주식체결/미체결", Attr = true, Headtype = "D")]
 public class t0425 : TrBase
 {
     // InBlock
@@ -1020,7 +1020,7 @@ public class t0425 : TrBase
 /// <summary>
 /// 선물/옵션체결/미체결: t0434
 /// </summary>
-[Path("/futureoption/accno", Description = "선물/옵션체결/미체결")]
+[Path("/futureoption/accno", Description = "선물/옵션체결/미체결", Headtype = "D")]
 public class t0434 : TrBase
 {
     // InBlock
@@ -1035,7 +1035,7 @@ public class t0434 : TrBase
 /// <summary>
 /// 선물/옵션잔고평가(이동평균): t0441
 /// </summary>
-[Path("/futureoption/accno", Description = "선물/옵션잔고평가(이동평균)")]
+[Path("/futureoption/accno", Description = "선물/옵션잔고평가(이동평균)", Attr = true, Headtype = "D")]
 public class t0441 : TrBase
 {
     // InBlock
@@ -1050,7 +1050,7 @@ public class t0441 : TrBase
 /// <summary>
 /// 주식현재가호가조회: t1101
 /// </summary>
-[Path("/stock/market-data", Description = "주식현재가호가조회")]
+[Path("/stock/market-data", Description = "주식현재가호가조회", Attr = true, Headtype = "A")]
 public class t1101 : TrBase
 {
     // InBlock
@@ -1064,7 +1064,7 @@ public class t1101 : TrBase
 /// <summary>
 /// 주식현재가(시세)조회: t1102
 /// </summary>
-[Path("/stock/market-data", Description = "주식현재가(시세)조회")]
+[Path("/stock/market-data", Description = "주식현재가(시세)조회", Attr = true, Headtype = "A")]
 public class t1102 : TrBase
 {
     // InBlock
@@ -1078,7 +1078,7 @@ public class t1102 : TrBase
 /// <summary>
 /// 주식현재가시세메모: t1104
 /// </summary>
-[Path("/stock/market-data", Description = "주식현재가시세메모")]
+[Path("/stock/market-data", Description = "주식현재가시세메모", Headtype = "A")]
 public class t1104 : TrBase
 {
     // InBlock
@@ -1094,7 +1094,7 @@ public class t1104 : TrBase
 /// <summary>
 /// 주식피못/디마크조회: t1105
 /// </summary>
-[Path("/stock/market-data", Description = "주식피못/디마크조회")]
+[Path("/stock/market-data", Description = "주식피못/디마크조회", Attr = true, Headtype = "A")]
 public class t1105 : TrBase
 {
     // InBlock
@@ -1108,7 +1108,7 @@ public class t1105 : TrBase
 /// <summary>
 /// 시간외체결량: t1109
 /// </summary>
-[Path("/stock/market-data", Description = "시간외체결량")]
+[Path("/stock/market-data", Description = "시간외체결량", Attr = true, Headtype = "A")]
 public class t1109 : TrBase
 {
     // InBlock
@@ -1123,7 +1123,7 @@ public class t1109 : TrBase
 /// <summary>
 /// 주식시간대별체결조회: t1301
 /// </summary>
-[Path("/stock/market-data", Description = "주식시간대별체결조회")]
+[Path("/stock/market-data", Description = "주식시간대별체결조회", Attr = true, Headtype = "A")]
 public class t1301 : TrBase
 {
     // InBlock
@@ -1138,7 +1138,7 @@ public class t1301 : TrBase
 /// <summary>
 /// 주식분별주가조회: t1302
 /// </summary>
-[Path("/stock/market-data", Description = "주식분별주가조회")]
+[Path("/stock/market-data", Description = "주식분별주가조회", Attr = true, Headtype = "A")]
 public class t1302 : TrBase
 {
     // InBlock
@@ -1153,7 +1153,7 @@ public class t1302 : TrBase
 /// <summary>
 /// 기간별주가: t1305
 /// </summary>
-[Path("/stock/market-data", Description = "기간별주가")]
+[Path("/stock/market-data", Description = "기간별주가", Attr = true, Headtype = "A")]
 public class t1305 : TrBase
 {
     // InBlock
@@ -1168,7 +1168,7 @@ public class t1305 : TrBase
 /// <summary>
 /// 주식시간대별체결조회챠트: t1308
 /// </summary>
-[Path("/stock/market-data", Description = "주식시간대별체결조회챠트")]
+[Path("/stock/market-data", Description = "주식시간대별체결조회챠트", Attr = true, Headtype = "A")]
 public class t1308 : TrBase
 {
     // InBlock
@@ -1182,7 +1182,7 @@ public class t1308 : TrBase
 /// <summary>
 /// 주식당일전일분틱조회: t1310
 /// </summary>
-[Path("/stock/market-data", Description = "주식당일전일분틱조회")]
+[Path("/stock/market-data", Description = "주식당일전일분틱조회", Attr = true, Headtype = "A")]
 public class t1310 : TrBase
 {
     // InBlock
@@ -1197,7 +1197,7 @@ public class t1310 : TrBase
 /// <summary>
 /// 신규상장종목조회: t1403
 /// </summary>
-[Path("/stock/etc", Description = "신규상장종목조회")]
+[Path("/stock/etc", Description = "신규상장종목조회", Attr = true, Headtype = "A")]
 public class t1403 : TrBase
 {
     // InBlock
@@ -1212,7 +1212,7 @@ public class t1403 : TrBase
 /// <summary>
 /// 관리/불성실/투자유의조회: t1404
 /// </summary>
-[Path("/stock/market-data", Description = "관리/불성실/투자유의조회")]
+[Path("/stock/market-data", Description = "관리/불성실/투자유의조회", Attr = true, Headtype = "A")]
 public class t1404 : TrBase
 {
     // InBlock
@@ -1227,7 +1227,7 @@ public class t1404 : TrBase
 /// <summary>
 /// 투자경고/매매정지/정리매매조회: t1405
 /// </summary>
-[Path("/stock/market-data", Description = "투자경고/매매정지/정리매매조회")]
+[Path("/stock/market-data", Description = "투자경고/매매정지/정리매매조회", Attr = true, Headtype = "A")]
 public class t1405 : TrBase
 {
     // InBlock
@@ -1242,7 +1242,7 @@ public class t1405 : TrBase
 /// <summary>
 /// 초저유동성조회: t1410
 /// </summary>
-[Path("/stock/market-data", Description = "초저유동성조회")]
+[Path("/stock/market-data", Description = "초저유동성조회", Attr = true, Headtype = "A")]
 public class t1410 : TrBase
 {
     // InBlock
@@ -1257,7 +1257,7 @@ public class t1410 : TrBase
 /// <summary>
 /// 증거금율별종목조회: t1411
 /// </summary>
-[Path("/stock/etc", Description = "증거금율별종목조회")]
+[Path("/stock/etc", Description = "증거금율별종목조회", Attr = true, Headtype = "A")]
 public class t1411 : TrBase
 {
     // InBlock
@@ -1272,7 +1272,7 @@ public class t1411 : TrBase
 /// <summary>
 /// 상/하한: t1422
 /// </summary>
-[Path("/stock/market-data", Description = "상/하한")]
+[Path("/stock/market-data", Description = "상/하한", Attr = true, Headtype = "A")]
 public class t1422 : TrBase
 {
     // InBlock
@@ -1287,7 +1287,7 @@ public class t1422 : TrBase
 /// <summary>
 /// 상/하한가직전: t1427
 /// </summary>
-[Path("/stock/market-data", Description = "상/하한가직전")]
+[Path("/stock/market-data", Description = "상/하한가직전", Attr = true, Headtype = "A")]
 public class t1427 : TrBase
 {
     // InBlock
@@ -1302,7 +1302,7 @@ public class t1427 : TrBase
 /// <summary>
 /// 등락율상위: t1441
 /// </summary>
-[Path("/stock/high-item", Description = "등락율상위")]
+[Path("/stock/high-item", Description = "등락율상위", Attr = true, Headtype = "A")]
 public class t1441 : TrBase
 {
     // InBlock
@@ -1317,7 +1317,7 @@ public class t1441 : TrBase
 /// <summary>
 /// 신고/신저가: t1442
 /// </summary>
-[Path("/stock/market-data", Description = "신고/신저가")]
+[Path("/stock/market-data", Description = "신고/신저가", Attr = true, Headtype = "A")]
 public class t1442 : TrBase
 {
     // InBlock
@@ -1332,7 +1332,7 @@ public class t1442 : TrBase
 /// <summary>
 /// 시가총액상위: t1444
 /// </summary>
-[Path("/stock/high-item", Description = "시가총액상위")]
+[Path("/stock/high-item", Description = "시가총액상위", Attr = true, Headtype = "A")]
 public class t1444 : TrBase
 {
     // InBlock
@@ -1347,7 +1347,7 @@ public class t1444 : TrBase
 /// <summary>
 /// 가격대별매매비중조회: t1449
 /// </summary>
-[Path("/stock/market-data", Description = "가격대별매매비중조회")]
+[Path("/stock/market-data", Description = "가격대별매매비중조회", Attr = true, Headtype = "A")]
 public class t1449 : TrBase
 {
     // InBlock
@@ -1362,7 +1362,7 @@ public class t1449 : TrBase
 /// <summary>
 /// 거래량상위: t1452
 /// </summary>
-[Path("/stock/high-item", Description = "거래량상위")]
+[Path("/stock/high-item", Description = "거래량상위", Attr = true, Headtype = "A")]
 public class t1452 : TrBase
 {
     // InBlock
@@ -1377,7 +1377,7 @@ public class t1452 : TrBase
 /// <summary>
 /// 거래대금상위: t1463
 /// </summary>
-[Path("/stock/high-item", Description = "거래대금상위")]
+[Path("/stock/high-item", Description = "거래대금상위", Attr = true, Headtype = "A")]
 public class t1463 : TrBase
 {
     // InBlock
@@ -1392,7 +1392,7 @@ public class t1463 : TrBase
 /// <summary>
 /// 전일동시간대비거래급증: t1466
 /// </summary>
-[Path("/stock/high-item", Description = "전일동시간대비거래급증")]
+[Path("/stock/high-item", Description = "전일동시간대비거래급증", Attr = true, Headtype = "A")]
 public class t1466 : TrBase
 {
     // InBlock
@@ -1407,7 +1407,7 @@ public class t1466 : TrBase
 /// <summary>
 /// 시간대별호가잔량추이: t1471
 /// </summary>
-[Path("/stock/market-data", Description = "시간대별호가잔량추이")]
+[Path("/stock/market-data", Description = "시간대별호가잔량추이", Attr = true, Headtype = "A")]
 public class t1471 : TrBase
 {
     // InBlock
@@ -1422,7 +1422,7 @@ public class t1471 : TrBase
 /// <summary>
 /// 체결강도추이: t1475
 /// </summary>
-[Path("/stock/market-data", Description = "체결강도추이")]
+[Path("/stock/market-data", Description = "체결강도추이", Attr = true, Headtype = "A")]
 public class t1475 : TrBase
 {
     // InBlock
@@ -1437,7 +1437,7 @@ public class t1475 : TrBase
 /// <summary>
 /// 시간외등락율상위: t1481
 /// </summary>
-[Path("/stock/high-item", Description = "시간외등락율상위")]
+[Path("/stock/high-item", Description = "시간외등락율상위", Attr = true, Headtype = "A")]
 public class t1481 : TrBase
 {
     // InBlock
@@ -1452,7 +1452,7 @@ public class t1481 : TrBase
 /// <summary>
 /// 시간외거래량상위: t1482
 /// </summary>
-[Path("/stock/high-item", Description = "시간외거래량상위")]
+[Path("/stock/high-item", Description = "시간외거래량상위", Attr = true, Headtype = "A")]
 public class t1482 : TrBase
 {
     // InBlock
@@ -1467,7 +1467,7 @@ public class t1482 : TrBase
 /// <summary>
 /// 예상지수: t1485
 /// </summary>
-[Path("/indtp/market-data", Description = "예상지수")]
+[Path("/indtp/market-data", Description = "예상지수", Attr = true, Headtype = "A")]
 public class t1485 : TrBase
 {
     // InBlock
@@ -1482,7 +1482,7 @@ public class t1485 : TrBase
 /// <summary>
 /// 시간별예상체결가: t1486
 /// </summary>
-[Path("/stock/market-data", Description = "시간별예상체결가")]
+[Path("/stock/market-data", Description = "시간별예상체결가", Attr = true, Headtype = "A")]
 public class t1486 : TrBase
 {
     // InBlock
@@ -1497,7 +1497,7 @@ public class t1486 : TrBase
 /// <summary>
 /// 예상체결가등락율상위조회: t1488
 /// </summary>
-[Path("/stock/market-data", Description = "예상체결가등락율상위조회")]
+[Path("/stock/market-data", Description = "예상체결가등락율상위조회", Attr = true, Headtype = "A")]
 public class t1488 : TrBase
 {
     // InBlock
@@ -1512,7 +1512,7 @@ public class t1488 : TrBase
 /// <summary>
 /// 예상체결량상위조회: t1489
 /// </summary>
-[Path("/stock/high-item", Description = "예상체결량상위조회")]
+[Path("/stock/high-item", Description = "예상체결량상위조회", Attr = true, Headtype = "A")]
 public class t1489 : TrBase
 {
     // InBlock
@@ -1527,7 +1527,7 @@ public class t1489 : TrBase
 /// <summary>
 /// 단일가예상등락율상위: t1492
 /// </summary>
-[Path("/stock/high-item", Description = "단일가예상등락율상위")]
+[Path("/stock/high-item", Description = "단일가예상등락율상위", Attr = true, Headtype = "A")]
 public class t1492 : TrBase
 {
     // InBlock
@@ -1542,7 +1542,7 @@ public class t1492 : TrBase
 /// <summary>
 /// 업종현재가: t1511
 /// </summary>
-[Path("/indtp/market-data", Description = "업종현재가")]
+[Path("/indtp/market-data", Description = "업종현재가", Attr = true, Headtype = "A")]
 public class t1511 : TrBase
 {
     // InBlock
@@ -1556,7 +1556,7 @@ public class t1511 : TrBase
 /// <summary>
 /// 업종기간별추이: t1514
 /// </summary>
-[Path("/indtp/market-data", Description = "업종기간별추이")]
+[Path("/indtp/market-data", Description = "업종기간별추이", Attr = true, Headtype = "A")]
 public class t1514 : TrBase
 {
     // InBlock
@@ -1571,7 +1571,7 @@ public class t1514 : TrBase
 /// <summary>
 /// 업종별종목시세: t1516
 /// </summary>
-[Path("/indtp/market-data", Description = "업종별종목시세")]
+[Path("/indtp/market-data", Description = "업종별종목시세", Attr = true, Headtype = "A")]
 public class t1516 : TrBase
 {
     // InBlock
@@ -1586,7 +1586,7 @@ public class t1516 : TrBase
 /// <summary>
 /// 테마별종목: t1531
 /// </summary>
-[Path("/stock/sector", Description = "테마별종목")]
+[Path("/stock/sector", Description = "테마별종목", Attr = true, Headtype = "A")]
 public class t1531 : TrBase
 {
     // InBlock
@@ -1600,7 +1600,7 @@ public class t1531 : TrBase
 /// <summary>
 /// 종목별테마: t1532
 /// </summary>
-[Path("/stock/sector", Description = "종목별테마")]
+[Path("/stock/sector", Description = "종목별테마", Attr = true, Headtype = "A")]
 public class t1532 : TrBase
 {
     // InBlock
@@ -1614,7 +1614,7 @@ public class t1532 : TrBase
 /// <summary>
 /// 특이테마: t1533
 /// </summary>
-[Path("/stock/sector", Description = "특이테마")]
+[Path("/stock/sector", Description = "특이테마", Attr = true, Headtype = "A")]
 public class t1533 : TrBase
 {
     // InBlock
@@ -1629,7 +1629,7 @@ public class t1533 : TrBase
 /// <summary>
 /// 테마종목별시세조회: t1537
 /// </summary>
-[Path("/stock/sector", Description = "테마종목별시세조회")]
+[Path("/stock/sector", Description = "테마종목별시세조회", Attr = true, Headtype = "A")]
 public class t1537 : TrBase
 {
     // InBlock
@@ -1644,7 +1644,7 @@ public class t1537 : TrBase
 /// <summary>
 /// 투자자별종합: t1601
 /// </summary>
-[Path("/stock/investor", Description = "투자자별종합")]
+[Path("/stock/investor", Description = "투자자별종합", Attr = true, Headtype = "A")]
 public class t1601 : TrBase
 {
     // InBlock
@@ -1663,7 +1663,7 @@ public class t1601 : TrBase
 /// <summary>
 /// 시간대별투자자매매추이: t1602
 /// </summary>
-[Path("/stock/investor", Description = "시간대별투자자매매추이")]
+[Path("/stock/investor", Description = "시간대별투자자매매추이", Attr = true, Headtype = "A")]
 public class t1602 : TrBase
 {
     // InBlock
@@ -1678,7 +1678,7 @@ public class t1602 : TrBase
 /// <summary>
 /// 시간대별투자자매매추이상세: t1603
 /// </summary>
-[Path("/stock/investor", Description = "시간대별투자자매매추이상세")]
+[Path("/stock/investor", Description = "시간대별투자자매매추이상세", Attr = true, Headtype = "A")]
 public class t1603 : TrBase
 {
     // InBlock
@@ -1693,7 +1693,7 @@ public class t1603 : TrBase
 /// <summary>
 /// 투자자매매종합1: t1615
 /// </summary>
-[Path("/stock/investor", Description = "투자자매매종합1")]
+[Path("/stock/investor", Description = "투자자매매종합1", Attr = true, Headtype = "A")]
 public class t1615 : TrBase
 {
     // InBlock
@@ -1708,7 +1708,7 @@ public class t1615 : TrBase
 /// <summary>
 /// 투자자매매종합2: t1617
 /// </summary>
-[Path("/stock/investor", Description = "투자자매매종합2")]
+[Path("/stock/investor", Description = "투자자매매종합2", Attr = true, Headtype = "A")]
 public class t1617 : TrBase
 {
     // InBlock
@@ -1723,7 +1723,7 @@ public class t1617 : TrBase
 /// <summary>
 /// 업종별분별투자자매매동향(챠트용): t1621
 /// </summary>
-[Path("/stock/investor", Description = "업종별분별투자자매매동향(챠트용)")]
+[Path("/stock/investor", Description = "업종별분별투자자매매동향(챠트용)", Attr = true, Headtype = "A")]
 public class t1621 : TrBase
 {
     // InBlock
@@ -1738,7 +1738,7 @@ public class t1621 : TrBase
 /// <summary>
 /// 프로그램매매종합조회: t1631
 /// </summary>
-[Path("/stock/program", Description = "프로그램매매종합조회")]
+[Path("/stock/program", Description = "프로그램매매종합조회", Attr = true, Headtype = "A")]
 public class t1631 : TrBase
 {
     // InBlock
@@ -1753,7 +1753,7 @@ public class t1631 : TrBase
 /// <summary>
 /// 시간대별프로그램매매추이: t1632
 /// </summary>
-[Path("/stock/program", Description = "시간대별프로그램매매추이")]
+[Path("/stock/program", Description = "시간대별프로그램매매추이", Attr = true, Headtype = "A")]
 public class t1632 : TrBase
 {
     // InBlock
@@ -1768,7 +1768,7 @@ public class t1632 : TrBase
 /// <summary>
 /// 기간별프로그램매매추이: t1633
 /// </summary>
-[Path("/stock/program", Description = "기간별프로그램매매추이")]
+[Path("/stock/program", Description = "기간별프로그램매매추이", Attr = true, Headtype = "A")]
 public class t1633 : TrBase
 {
     // InBlock
@@ -1783,7 +1783,7 @@ public class t1633 : TrBase
 /// <summary>
 /// 종목별프로그램매매동향: t1636
 /// </summary>
-[Path("/stock/program", Description = "종목별프로그램매매동향")]
+[Path("/stock/program", Description = "종목별프로그램매매동향", Attr = true, Headtype = "A")]
 public class t1636 : TrBase
 {
     // InBlock
@@ -1798,7 +1798,7 @@ public class t1636 : TrBase
 /// <summary>
 /// 종목별프로그램매매추이: t1637
 /// </summary>
-[Path("/stock/program", Description = "종목별프로그램매매추이")]
+[Path("/stock/program", Description = "종목별프로그램매매추이", Attr = true, Headtype = "A")]
 public class t1637 : TrBase
 {
     // InBlock
@@ -1813,7 +1813,7 @@ public class t1637 : TrBase
 /// <summary>
 /// 종목별잔량/사전공시: t1638
 /// </summary>
-[Path("/stock/etc", Description = "종목별잔량/사전공시")]
+[Path("/stock/etc", Description = "종목별잔량/사전공시", Attr = true, Headtype = "A")]
 public class t1638 : TrBase
 {
     // InBlock
@@ -1827,7 +1827,7 @@ public class t1638 : TrBase
 /// <summary>
 /// 프로그램매매종합조회(미니): t1640
 /// </summary>
-[Path("/stock/program", Description = "프로그램매매종합조회(미니)")]
+[Path("/stock/program", Description = "프로그램매매종합조회(미니)", Attr = true, Headtype = "A")]
 public class t1640 : TrBase
 {
     // InBlock
@@ -1841,7 +1841,7 @@ public class t1640 : TrBase
 /// <summary>
 /// 시간대별프로그램매매추이(차트): t1662
 /// </summary>
-[Path("/stock/program", Description = "시간대별프로그램매매추이(차트)")]
+[Path("/stock/program", Description = "시간대별프로그램매매추이(차트)", Attr = true, Headtype = "A")]
 public class t1662 : TrBase
 {
     // InBlock
@@ -1855,7 +1855,7 @@ public class t1662 : TrBase
 /// <summary>
 /// 투자자매매종합(챠트): t1664
 /// </summary>
-[Path("/stock/investor", Description = "투자자매매종합(챠트)")]
+[Path("/stock/investor", Description = "투자자매매종합(챠트)", Attr = true, Headtype = "A")]
 public class t1664 : TrBase
 {
     // InBlock
@@ -1869,7 +1869,7 @@ public class t1664 : TrBase
 /// <summary>
 /// 기간별투자자매매추이(챠트): t1665
 /// </summary>
-[Path("/stock/chart", Description = "기간별투자자매매추이(챠트)")]
+[Path("/stock/chart", Description = "기간별투자자매매추이(챠트)", Attr = true, Headtype = "A")]
 public class t1665 : TrBase
 {
     // InBlock
@@ -1884,7 +1884,7 @@ public class t1665 : TrBase
 /// <summary>
 /// 외인기관종목별동향: t1702
 /// </summary>
-[Path("/stock/frgr-itt", Description = "외인기관종목별동향")]
+[Path("/stock/frgr-itt", Description = "외인기관종목별동향", Attr = true, Headtype = "A")]
 public class t1702 : TrBase
 {
     // InBlock
@@ -1899,7 +1899,7 @@ public class t1702 : TrBase
 /// <summary>
 /// 외인기관종목별동향: t1716
 /// </summary>
-[Path("/stock/frgr-itt", Description = "외인기관종목별동향")]
+[Path("/stock/frgr-itt", Description = "외인기관종목별동향", Attr = true, Headtype = "A")]
 public class t1716 : TrBase
 {
     // InBlock
@@ -1913,7 +1913,7 @@ public class t1716 : TrBase
 /// <summary>
 /// 외인기관종목별동향: t1717
 /// </summary>
-[Path("/stock/frgr-itt", Description = "외인기관종목별동향")]
+[Path("/stock/frgr-itt", Description = "외인기관종목별동향", Attr = true, Headtype = "A")]
 public class t1717 : TrBase
 {
     // InBlock
@@ -1927,7 +1927,7 @@ public class t1717 : TrBase
 /// <summary>
 /// 종목별상위회원사: t1752
 /// </summary>
-[Path("/stock/exchange", Description = "종목별상위회원사")]
+[Path("/stock/exchange", Description = "종목별상위회원사", Attr = true, Headtype = "A")]
 public class t1752 : TrBase
 {
     // InBlock
@@ -1942,7 +1942,7 @@ public class t1752 : TrBase
 /// <summary>
 /// 회원사리스트: t1764
 /// </summary>
-[Path("/stock/exchange", Description = "회원사리스트")]
+[Path("/stock/exchange", Description = "회원사리스트", Attr = true, Headtype = "A")]
 public class t1764 : TrBase
 {
     // InBlock
@@ -1956,7 +1956,7 @@ public class t1764 : TrBase
 /// <summary>
 /// 종목별회원사추이: t1771
 /// </summary>
-[Path("/stock/exchange", Description = "종목별회원사추이")]
+[Path("/stock/exchange", Description = "종목별회원사추이", Attr = true, Headtype = "A")]
 public class t1771 : TrBase
 {
     // InBlock
@@ -1971,7 +1971,7 @@ public class t1771 : TrBase
 /// <summary>
 /// 신호조회: t1809
 /// </summary>
-[Path("/stock/item-search", Description = "신호조회")]
+[Path("/stock/item-search", Description = "신호조회", Headtype = "A")]
 public class t1809 : TrBase
 {
     // InBlock
@@ -1986,7 +1986,7 @@ public class t1809 : TrBase
 /// <summary>
 /// 종목Q클릭검색(씽큐스마트): t1825
 /// </summary>
-[Path("/stock/item-search", Description = "종목Q클릭검색(씽큐스마트)")]
+[Path("/stock/item-search", Description = "종목Q클릭검색(씽큐스마트)", Attr = true, Headtype = "A")]
 public class t1825 : TrBase
 {
     // InBlock
@@ -2001,7 +2001,7 @@ public class t1825 : TrBase
 /// <summary>
 /// 종목Q클릭검색리스트조회(씽큐스마트): t1826
 /// </summary>
-[Path("/stock/item-search", Description = "종목Q클릭검색리스트조회(씽큐스마트)")]
+[Path("/stock/item-search", Description = "종목Q클릭검색리스트조회(씽큐스마트)", Headtype = "A")]
 public class t1826 : TrBase
 {
     // InBlock
@@ -2015,7 +2015,7 @@ public class t1826 : TrBase
 /// <summary>
 /// e종목검색(신버전API용): t1857
 /// </summary>
-[Path("", Description = "e종목검색(신버전API용)")]
+[Path("", Description = "e종목검색(신버전API용)", Attr = true, Headtype = "A")]
 public class t1857 : TrBase
 {
     // InBlock
@@ -2030,7 +2030,7 @@ public class t1857 : TrBase
 /// <summary>
 /// 서버저장조건리스트조회(API): t1866
 /// </summary>
-[Path("/stock/item-search", Description = "서버저장조건리스트조회(API)")]
+[Path("/stock/item-search", Description = "서버저장조건리스트조회(API)", Headtype = "A")]
 public class t1866 : TrBase
 {
     // InBlock
@@ -2045,7 +2045,7 @@ public class t1866 : TrBase
 /// <summary>
 /// ETF현재가(시세)조회: t1901
 /// </summary>
-[Path("/stock/etf", Description = "ETF현재가(시세)조회")]
+[Path("/stock/etf", Description = "ETF현재가(시세)조회", Attr = true, Headtype = "A")]
 public class t1901 : TrBase
 {
     // InBlock
@@ -2059,7 +2059,7 @@ public class t1901 : TrBase
 /// <summary>
 /// ETF시간별추이: t1902
 /// </summary>
-[Path("/stock/etf", Description = "ETF시간별추이")]
+[Path("/stock/etf", Description = "ETF시간별추이", Attr = true, Headtype = "A")]
 public class t1902 : TrBase
 {
     // InBlock
@@ -2074,7 +2074,7 @@ public class t1902 : TrBase
 /// <summary>
 /// ETF일별추이: t1903
 /// </summary>
-[Path("/stock/etf", Description = "ETF일별추이")]
+[Path("/stock/etf", Description = "ETF일별추이", Attr = true, Headtype = "A")]
 public class t1903 : TrBase
 {
     // InBlock
@@ -2089,7 +2089,7 @@ public class t1903 : TrBase
 /// <summary>
 /// ETF구성종목조회: t1904
 /// </summary>
-[Path("/stock/etf", Description = "ETF구성종목조회")]
+[Path("/stock/etf", Description = "ETF구성종목조회", Attr = true, Headtype = "A")]
 public class t1904 : TrBase
 {
     // InBlock
@@ -2104,7 +2104,7 @@ public class t1904 : TrBase
 /// <summary>
 /// ETFLP호가: t1906
 /// </summary>
-[Path("/stock/etf", Description = "ETFLP호가")]
+[Path("/stock/etf", Description = "ETFLP호가", Attr = true, Headtype = "A")]
 public class t1906 : TrBase
 {
     // InBlock
@@ -2118,7 +2118,7 @@ public class t1906 : TrBase
 /// <summary>
 /// 신용거래동향: t1921
 /// </summary>
-[Path("/stock/etc", Description = "신용거래동향")]
+[Path("/stock/etc", Description = "신용거래동향", Attr = true, Headtype = "A")]
 public class t1921 : TrBase
 {
     // InBlock
@@ -2133,7 +2133,7 @@ public class t1921 : TrBase
 /// <summary>
 /// 종목별신용정보: t1926
 /// </summary>
-[Path("/stock/etc", Description = "종목별신용정보")]
+[Path("/stock/etc", Description = "종목별신용정보", Attr = true, Headtype = "A")]
 public class t1926 : TrBase
 {
     // InBlock
@@ -2147,7 +2147,7 @@ public class t1926 : TrBase
 /// <summary>
 /// 공매도일별추이: t1927
 /// </summary>
-[Path("/stock/etc", Description = "공매도일별추이")]
+[Path("/stock/etc", Description = "공매도일별추이", Attr = true, Headtype = "A")]
 public class t1927 : TrBase
 {
     // InBlock
@@ -2162,7 +2162,7 @@ public class t1927 : TrBase
 /// <summary>
 /// 종목별대차거래일간추이: t1941
 /// </summary>
-[Path("/stock/etc", Description = "종목별대차거래일간추이")]
+[Path("/stock/etc", Description = "종목별대차거래일간추이", Attr = true, Headtype = "A")]
 public class t1941 : TrBase
 {
     // InBlock
@@ -2176,7 +2176,7 @@ public class t1941 : TrBase
 /// <summary>
 /// ELW현재가(시세)조회: t1950
 /// </summary>
-[Path("/stock/elw", Description = "ELW현재가(시세)조회")]
+[Path("/stock/elw", Description = "ELW현재가(시세)조회", Attr = true, Headtype = "A")]
 public class t1950 : TrBase
 {
     // InBlock
@@ -2191,7 +2191,7 @@ public class t1950 : TrBase
 /// <summary>
 /// ELW시간대별체결조회: t1951
 /// </summary>
-[Path("/stock/elw", Description = "ELW시간대별체결조회")]
+[Path("/stock/elw", Description = "ELW시간대별체결조회", Attr = true, Headtype = "A")]
 public class t1951 : TrBase
 {
     // InBlock
@@ -2206,7 +2206,7 @@ public class t1951 : TrBase
 /// <summary>
 /// ELW일별주가: t1954
 /// </summary>
-[Path("/stock/elw", Description = "ELW일별주가")]
+[Path("/stock/elw", Description = "ELW일별주가", Attr = true, Headtype = "A")]
 public class t1954 : TrBase
 {
     // InBlock
@@ -2221,7 +2221,7 @@ public class t1954 : TrBase
 /// <summary>
 /// ELW현재가(확정지급액)조회: t1956
 /// </summary>
-[Path("/stock/elw", Description = "ELW현재가(확정지급액)조회")]
+[Path("/stock/elw", Description = "ELW현재가(확정지급액)조회", Attr = true, Headtype = "A")]
 public class t1956 : TrBase
 {
     // InBlock
@@ -2236,7 +2236,7 @@ public class t1956 : TrBase
 /// <summary>
 /// ELW종목비교: t1958
 /// </summary>
-[Path("/stock/elw", Description = "ELW종목비교")]
+[Path("/stock/elw", Description = "ELW종목비교", Attr = true, Headtype = "A")]
 public class t1958 : TrBase
 {
     // InBlock
@@ -2252,7 +2252,7 @@ public class t1958 : TrBase
 /// <summary>
 /// LP대상종목정보조회: t1959
 /// </summary>
-[Path("/stock/elw", Description = "LP대상종목정보조회")]
+[Path("/stock/elw", Description = "LP대상종목정보조회", Attr = true, Headtype = "A")]
 public class t1959 : TrBase
 {
     // InBlock
@@ -2266,7 +2266,7 @@ public class t1959 : TrBase
 /// <summary>
 /// ELW등락율상위: t1960
 /// </summary>
-[Path("/stock/elw", Description = "ELW등락율상위")]
+[Path("/stock/elw", Description = "ELW등락율상위", Attr = true, Headtype = "A")]
 public class t1960 : TrBase
 {
     // InBlock
@@ -2281,7 +2281,7 @@ public class t1960 : TrBase
 /// <summary>
 /// ELW거래량상위: t1961
 /// </summary>
-[Path("/stock/elw", Description = "ELW거래량상위")]
+[Path("/stock/elw", Description = "ELW거래량상위", Attr = true, Headtype = "A")]
 public class t1961 : TrBase
 {
     // InBlock
@@ -2296,7 +2296,7 @@ public class t1961 : TrBase
 /// <summary>
 /// ELW전광판: t1964
 /// </summary>
-[Path("/stock/elw", Description = "ELW전광판")]
+[Path("/stock/elw", Description = "ELW전광판", Attr = true, Headtype = "A")]
 public class t1964 : TrBase
 {
     // InBlock
@@ -2310,7 +2310,7 @@ public class t1964 : TrBase
 /// <summary>
 /// ELW거래대금상위: t1966
 /// </summary>
-[Path("/stock/elw", Description = "ELW거래대금상위")]
+[Path("/stock/elw", Description = "ELW거래대금상위", Attr = true, Headtype = "A")]
 public class t1966 : TrBase
 {
     // InBlock
@@ -2325,7 +2325,7 @@ public class t1966 : TrBase
 /// <summary>
 /// ELW지표검색: t1969
 /// </summary>
-[Path("/stock/elw", Description = "ELW지표검색")]
+[Path("/stock/elw", Description = "ELW지표검색", Attr = true, Headtype = "A")]
 public class t1969 : TrBase
 {
     // InBlock
@@ -2340,7 +2340,7 @@ public class t1969 : TrBase
 /// <summary>
 /// ELW현재가호가조회: t1971
 /// </summary>
-[Path("/stock/elw", Description = "ELW현재가호가조회")]
+[Path("/stock/elw", Description = "ELW현재가호가조회", Attr = true, Headtype = "A")]
 public class t1971 : TrBase
 {
     // InBlock
@@ -2354,7 +2354,7 @@ public class t1971 : TrBase
 /// <summary>
 /// ELW현재가(거래원)조회: t1972
 /// </summary>
-[Path("/stock/elw", Description = "ELW현재가(거래원)조회")]
+[Path("/stock/elw", Description = "ELW현재가(거래원)조회", Attr = true, Headtype = "A")]
 public class t1972 : TrBase
 {
     // InBlock
@@ -2368,7 +2368,7 @@ public class t1972 : TrBase
 /// <summary>
 /// ELW시간대별예상체결조회: t1973
 /// </summary>
-[Path("/stock/elw", Description = "ELW시간대별예상체결조회")]
+[Path("/stock/elw", Description = "ELW시간대별예상체결조회", Attr = true, Headtype = "A")]
 public class t1973 : TrBase
 {
     // InBlock
@@ -2383,7 +2383,7 @@ public class t1973 : TrBase
 /// <summary>
 /// ELW기초자산동일종목: t1974
 /// </summary>
-[Path("/stock/elw", Description = "ELW기초자산동일종목")]
+[Path("/stock/elw", Description = "ELW기초자산동일종목", Attr = true, Headtype = "A")]
 public class t1974 : TrBase
 {
     // InBlock
@@ -2398,7 +2398,7 @@ public class t1974 : TrBase
 /// <summary>
 /// 기초자산리스트조회: t1988
 /// </summary>
-[Path("/stock/elw", Description = "기초자산리스트조회")]
+[Path("/stock/elw", Description = "기초자산리스트조회", Attr = true, Headtype = "A")]
 public class t1988 : TrBase
 {
     // InBlock
@@ -2413,7 +2413,7 @@ public class t1988 : TrBase
 /// <summary>
 /// 선물/옵션현재가(시세)조회: t2101
 /// </summary>
-[Path("/futureoption/market-data", Description = "선물/옵션현재가(시세)조회")]
+[Path("/futureoption/market-data", Description = "선물/옵션현재가(시세)조회", Attr = true, Headtype = "A")]
 public class t2101 : TrBase
 {
     // InBlock
@@ -2427,7 +2427,7 @@ public class t2101 : TrBase
 /// <summary>
 /// 선물/옵션현재가호가조회: t2105
 /// </summary>
-[Path("/futureoption/market-data", Description = "선물/옵션현재가호가조회")]
+[Path("/futureoption/market-data", Description = "선물/옵션현재가호가조회", Attr = true, Headtype = "A")]
 public class t2105 : TrBase
 {
     // InBlock
@@ -2441,7 +2441,7 @@ public class t2105 : TrBase
 /// <summary>
 /// 선물/옵션현재가시세메모: t2106
 /// </summary>
-[Path("/futureoption/market-data", Description = "선물/옵션현재가시세메모")]
+[Path("/futureoption/market-data", Description = "선물/옵션현재가시세메모", Headtype = "A")]
 public class t2106 : TrBase
 {
     // InBlock
@@ -2457,7 +2457,7 @@ public class t2106 : TrBase
 /// <summary>
 /// 선물옵션시간대별체결조회: t2201
 /// </summary>
-[Path("/futureoption/market-data", Description = "선물옵션시간대별체결조회")]
+[Path("/futureoption/market-data", Description = "선물옵션시간대별체결조회", Attr = true, Headtype = "A")]
 public class t2201 : TrBase
 {
     // InBlock
@@ -2472,7 +2472,7 @@ public class t2201 : TrBase
 /// <summary>
 /// 기간별주가: t2203
 /// </summary>
-[Path("/futureoption/market-data", Description = "기간별주가")]
+[Path("/futureoption/market-data", Description = "기간별주가", Attr = true, Headtype = "A")]
 public class t2203 : TrBase
 {
     // InBlock
@@ -2487,7 +2487,7 @@ public class t2203 : TrBase
 /// <summary>
 /// 선물옵션틱분별체결조회챠트: t2209
 /// </summary>
-[Path("/futureoption/chart", Description = "선물옵션틱분별체결조회챠트")]
+[Path("/futureoption/chart", Description = "선물옵션틱분별체결조회챠트", Attr = true, Headtype = "A")]
 public class t2209 : TrBase
 {
     // InBlock
@@ -2501,7 +2501,7 @@ public class t2209 : TrBase
 /// <summary>
 /// 선물옵션시간대별체결조회(단일출력용): t2210
 /// </summary>
-[Path("/futureoption/market-data", Description = "선물옵션시간대별체결조회(단일출력용)")]
+[Path("/futureoption/market-data", Description = "선물옵션시간대별체결조회(단일출력용)", Attr = true, Headtype = "A")]
 public class t2210 : TrBase
 {
     // InBlock
@@ -2515,7 +2515,7 @@ public class t2210 : TrBase
 /// <summary>
 /// 옵션전광판: t2301
 /// </summary>
-[Path("/futureoption/market-data", Description = "옵션전광판")]
+[Path("/futureoption/market-data", Description = "옵션전광판", Attr = true, Headtype = "A")]
 public class t2301 : TrBase
 {
     // InBlock
@@ -2531,7 +2531,7 @@ public class t2301 : TrBase
 /// <summary>
 /// 선물옵션호가잔량비율챠트: t2405
 /// </summary>
-[Path("/futureoption/market-data", Description = "선물옵션호가잔량비율챠트")]
+[Path("/futureoption/market-data", Description = "선물옵션호가잔량비율챠트", Attr = true, Headtype = "A")]
 public class t2405 : TrBase
 {
     // InBlock
@@ -2546,7 +2546,7 @@ public class t2405 : TrBase
 /// <summary>
 /// 미결제약정추이: t2421
 /// </summary>
-[Path("/futureoption/market-data", Description = "미결제약정추이")]
+[Path("/futureoption/market-data", Description = "미결제약정추이", Attr = true, Headtype = "A")]
 public class t2421 : TrBase
 {
     // InBlock
@@ -2561,7 +2561,7 @@ public class t2421 : TrBase
 /// <summary>
 /// 상품선물투자자매매동향(실시간): t2541
 /// </summary>
-[Path("/futureoption/investor", Description = "상품선물투자자매매동향(실시간)")]
+[Path("/futureoption/investor", Description = "상품선물투자자매매동향(실시간)", Attr = true, Headtype = "A")]
 public class t2541 : TrBase
 {
     // InBlock
@@ -2576,7 +2576,7 @@ public class t2541 : TrBase
 /// <summary>
 /// 상품선물투자자매매동향(챠트용): t2545
 /// </summary>
-[Path("/futureoption/investor", Description = "상품선물투자자매매동향(챠트용)")]
+[Path("/futureoption/investor", Description = "상품선물투자자매매동향(챠트용)", Attr = true, Headtype = "A")]
 public class t2545 : TrBase
 {
     // InBlock
@@ -2591,7 +2591,7 @@ public class t2545 : TrBase
 /// <summary>
 /// EUREXKOSPI200옵션선물현재가(시세)조회: t2830
 /// </summary>
-[Path("/futureoption/market-data", Description = "EUREXKOSPI200옵션선물현재가(시세)조회")]
+[Path("/futureoption/market-data", Description = "EUREXKOSPI200옵션선물현재가(시세)조회", Attr = true, Headtype = "A")]
 public class t2830 : TrBase
 {
     // InBlock
@@ -2605,7 +2605,7 @@ public class t2830 : TrBase
 /// <summary>
 /// EUREXKOSPI200옵션선물호가조회: t2831
 /// </summary>
-[Path("/futureoption/market-data", Description = "EUREXKOSPI200옵션선물호가조회")]
+[Path("/futureoption/market-data", Description = "EUREXKOSPI200옵션선물호가조회", Attr = true, Headtype = "A")]
 public class t2831 : TrBase
 {
     // InBlock
@@ -2619,7 +2619,7 @@ public class t2831 : TrBase
 /// <summary>
 /// EUREX야간옵션선물시간대별체결조회: t2832
 /// </summary>
-[Path("/futureoption/market-data", Description = "EUREX야간옵션선물시간대별체결조회")]
+[Path("/futureoption/market-data", Description = "EUREX야간옵션선물시간대별체결조회", Attr = true, Headtype = "A")]
 public class t2832 : TrBase
 {
     // InBlock
@@ -2634,7 +2634,7 @@ public class t2832 : TrBase
 /// <summary>
 /// EUREX야간옵션선물기간별추이: t2833
 /// </summary>
-[Path("/futureoption/market-data", Description = "EUREX야간옵션선물기간별추이")]
+[Path("/futureoption/market-data", Description = "EUREX야간옵션선물기간별추이", Attr = true, Headtype = "A")]
 public class t2833 : TrBase
 {
     // InBlock
@@ -2649,7 +2649,7 @@ public class t2833 : TrBase
 /// <summary>
 /// EUREX옵션선물시세전광판: t2835
 /// </summary>
-[Path("/futureoption/market-data", Description = "EUREX옵션선물시세전광판")]
+[Path("/futureoption/market-data", Description = "EUREX옵션선물시세전광판", Attr = true, Headtype = "A")]
 public class t2835 : TrBase
 {
     // InBlock
@@ -2665,7 +2665,7 @@ public class t2835 : TrBase
 /// <summary>
 /// 뉴스본문: t3102
 /// </summary>
-[Path("/stock/investinfo", Description = "뉴스본문")]
+[Path("/stock/investinfo", Description = "뉴스본문", Headtype = "A")]
 public class t3102 : TrBase
 {
     // InBlock
@@ -2681,7 +2681,7 @@ public class t3102 : TrBase
 /// <summary>
 /// 종목별증시일정: t3202
 /// </summary>
-[Path("/stock/investinfo", Description = "종목별증시일정")]
+[Path("/stock/investinfo", Description = "종목별증시일정", Attr = true, Headtype = "A")]
 public class t3202 : TrBase
 {
     // InBlock
@@ -2695,7 +2695,7 @@ public class t3202 : TrBase
 /// <summary>
 /// FNG_요약: t3320
 /// </summary>
-[Path("/stock/investinfo", Description = "FNG_요약")]
+[Path("/stock/investinfo", Description = "FNG_요약", Attr = true, Headtype = "A")]
 public class t3320 : TrBase
 {
     // InBlock
@@ -2710,7 +2710,7 @@ public class t3320 : TrBase
 /// <summary>
 /// 재무순위종합: t3341
 /// </summary>
-[Path("/stock/investinfo", Description = "재무순위종합")]
+[Path("/stock/investinfo", Description = "재무순위종합", Attr = true, Headtype = "A")]
 public class t3341 : TrBase
 {
     // InBlock
@@ -2725,7 +2725,7 @@ public class t3341 : TrBase
 /// <summary>
 /// 투자의견: t3401
 /// </summary>
-[Path("/stock/investinfo", Description = "투자의견")]
+[Path("/stock/investinfo", Description = "투자의견", Attr = true, Headtype = "A")]
 public class t3401 : TrBase
 {
     // InBlock
@@ -2740,7 +2740,7 @@ public class t3401 : TrBase
 /// <summary>
 /// 해외실시간지수: t3518
 /// </summary>
-[Path("/stock/investinfo", Description = "해외실시간지수")]
+[Path("/stock/investinfo", Description = "해외실시간지수", Attr = true, Headtype = "A")]
 public class t3518 : TrBase
 {
     // InBlock
@@ -2755,7 +2755,7 @@ public class t3518 : TrBase
 /// <summary>
 /// 해외지수조회(API용): t3521
 /// </summary>
-[Path("/stock/investinfo", Description = "해외지수조회(API용)")]
+[Path("/stock/investinfo", Description = "해외지수조회(API용)", Attr = true, Headtype = "A")]
 public class t3521 : TrBase
 {
     // InBlock
@@ -2769,7 +2769,7 @@ public class t3521 : TrBase
 /// <summary>
 /// 업종챠트(종합): t4203
 /// </summary>
-[Path("/indtp/chart", Description = "업종챠트(종합)")]
+[Path("/indtp/chart", Description = "업종챠트(종합)", Attr = true, Headtype = "A")]
 public class t4203 : TrBase
 {
     // InBlock
@@ -2784,7 +2784,7 @@ public class t4203 : TrBase
 /// <summary>
 /// 주식선물마스터조회(API용): t8401
 /// </summary>
-[Path("/futureoption/market-data", Description = "주식선물마스터조회(API용)")]
+[Path("/futureoption/market-data", Description = "주식선물마스터조회(API용)", Headtype = "A")]
 public class t8401 : TrBase
 {
     // InBlock
@@ -2798,7 +2798,7 @@ public class t8401 : TrBase
 /// <summary>
 /// 주식선물현재가조회(API용): t8402
 /// </summary>
-[Path("/futureoption/market-data", Description = "주식선물현재가조회(API용)")]
+[Path("/futureoption/market-data", Description = "주식선물현재가조회(API용)", Attr = true, Headtype = "A")]
 public class t8402 : TrBase
 {
     // InBlock
@@ -2812,7 +2812,7 @@ public class t8402 : TrBase
 /// <summary>
 /// 주식선물호가조회(API용): t8403
 /// </summary>
-[Path("/futureoption/market-data", Description = "주식선물호가조회(API용)")]
+[Path("/futureoption/market-data", Description = "주식선물호가조회(API용)", Attr = true, Headtype = "A")]
 public class t8403 : TrBase
 {
     // InBlock
@@ -2826,7 +2826,7 @@ public class t8403 : TrBase
 /// <summary>
 /// 주식선물시간대별체결조회(API용): t8404
 /// </summary>
-[Path("/futureoption/market-data", Description = "주식선물시간대별체결조회(API용)")]
+[Path("/futureoption/market-data", Description = "주식선물시간대별체결조회(API용)", Attr = true, Headtype = "A")]
 public class t8404 : TrBase
 {
     // InBlock
@@ -2841,7 +2841,7 @@ public class t8404 : TrBase
 /// <summary>
 /// 주식선물기간별주가(API용): t8405
 /// </summary>
-[Path("/futureoption/market-data", Description = "주식선물기간별주가(API용)")]
+[Path("/futureoption/market-data", Description = "주식선물기간별주가(API용)", Attr = true, Headtype = "A")]
 public class t8405 : TrBase
 {
     // InBlock
@@ -2856,7 +2856,7 @@ public class t8405 : TrBase
 /// <summary>
 /// 주식선물틱분별체결조회(API용): t8406
 /// </summary>
-[Path("/futureoption/market-data", Description = "주식선물틱분별체결조회(API용)")]
+[Path("/futureoption/market-data", Description = "주식선물틱분별체결조회(API용)", Attr = true, Headtype = "A")]
 public class t8406 : TrBase
 {
     // InBlock
@@ -2870,7 +2870,7 @@ public class t8406 : TrBase
 /// <summary>
 /// API용주식멀티현재가조회: t8407
 /// </summary>
-[Path("/stock/market-data", Description = "API용주식멀티현재가조회")]
+[Path("/stock/market-data", Description = "API용주식멀티현재가조회", Attr = true, Headtype = "A")]
 public class t8407 : TrBase
 {
     // InBlock
@@ -2884,7 +2884,7 @@ public class t8407 : TrBase
 /// <summary>
 /// API전용주식챠트(일주월년): t8410
 /// </summary>
-[Path("/stock/chart", Description = "API전용주식챠트(일주월년)")]
+[Path("/stock/chart", Description = "API전용주식챠트(일주월년)", Attr = true, Headtype = "A")]
 public class t8410 : TrBase
 {
     // InBlock
@@ -2899,7 +2899,7 @@ public class t8410 : TrBase
 /// <summary>
 /// 주식챠트(틱/n틱): t8411
 /// </summary>
-[Path("/stock/chart", Description = "주식챠트(틱/n틱)")]
+[Path("/stock/chart", Description = "주식챠트(틱/n틱)", Attr = true, Headtype = "A")]
 public class t8411 : TrBase
 {
     // InBlock
@@ -2914,7 +2914,7 @@ public class t8411 : TrBase
 /// <summary>
 /// 주식챠트(N분): t8412
 /// </summary>
-[Path("/stock/chart", Description = "주식챠트(N분)")]
+[Path("/stock/chart", Description = "주식챠트(N분)", Attr = true, Headtype = "A")]
 public class t8412 : TrBase
 {
     // InBlock
@@ -2929,7 +2929,7 @@ public class t8412 : TrBase
 /// <summary>
 /// 선물옵션차트(틱/n틱): t8414
 /// </summary>
-[Path("/futureoption/chart", Description = "선물옵션차트(틱/n틱)")]
+[Path("/futureoption/chart", Description = "선물옵션차트(틱/n틱)", Attr = true, Headtype = "A")]
 public class t8414 : TrBase
 {
     // InBlock
@@ -2944,7 +2944,7 @@ public class t8414 : TrBase
 /// <summary>
 /// 선물/옵션챠트(N분): t8415
 /// </summary>
-[Path("/futureoption/chart", Description = "선물/옵션챠트(N분)")]
+[Path("/futureoption/chart", Description = "선물/옵션챠트(N분)", Attr = true, Headtype = "A")]
 public class t8415 : TrBase
 {
     // InBlock
@@ -2959,7 +2959,7 @@ public class t8415 : TrBase
 /// <summary>
 /// 선물/옵션챠트(일주월): t8416
 /// </summary>
-[Path("/futureoption/chart", Description = "선물/옵션챠트(일주월)")]
+[Path("/futureoption/chart", Description = "선물/옵션챠트(일주월)", Attr = true, Headtype = "A")]
 public class t8416 : TrBase
 {
     // InBlock
@@ -2974,7 +2974,7 @@ public class t8416 : TrBase
 /// <summary>
 /// 업종차트(틱/n틱): t8417
 /// </summary>
-[Path("/indtp/chart", Description = "업종차트(틱/n틱)")]
+[Path("/indtp/chart", Description = "업종차트(틱/n틱)", Attr = true, Headtype = "A")]
 public class t8417 : TrBase
 {
     // InBlock
@@ -2989,7 +2989,7 @@ public class t8417 : TrBase
 /// <summary>
 /// 업종챠트(N분): t8418
 /// </summary>
-[Path("/indtp/chart", Description = "업종챠트(N분)")]
+[Path("/indtp/chart", Description = "업종챠트(N분)", Attr = true, Headtype = "A")]
 public class t8418 : TrBase
 {
     // InBlock
@@ -3004,7 +3004,7 @@ public class t8418 : TrBase
 /// <summary>
 /// 업종챠트(일주월): t8419
 /// </summary>
-[Path("/indtp/chart", Description = "업종챠트(일주월)")]
+[Path("/indtp/chart", Description = "업종챠트(일주월)", Attr = true, Headtype = "A")]
 public class t8419 : TrBase
 {
     // InBlock
@@ -3019,7 +3019,7 @@ public class t8419 : TrBase
 /// <summary>
 /// 전체업종: t8424
 /// </summary>
-[Path("/indtp/market-data", Description = "전체업종")]
+[Path("/indtp/market-data", Description = "전체업종", Attr = true, Headtype = "A")]
 public class t8424 : TrBase
 {
     // InBlock
@@ -3033,7 +3033,7 @@ public class t8424 : TrBase
 /// <summary>
 /// 전체테마: t8425
 /// </summary>
-[Path("/stock/sector", Description = "전체테마")]
+[Path("/stock/sector", Description = "전체테마", Attr = true, Headtype = "A")]
 public class t8425 : TrBase
 {
     // InBlock
@@ -3047,7 +3047,7 @@ public class t8425 : TrBase
 /// <summary>
 /// 상품선물마스터조회(API용): t8426
 /// </summary>
-[Path("/futureoption/market-data", Description = "상품선물마스터조회(API용)")]
+[Path("/futureoption/market-data", Description = "상품선물마스터조회(API용)", Headtype = "A")]
 public class t8426 : TrBase
 {
     // InBlock
@@ -3061,7 +3061,7 @@ public class t8426 : TrBase
 /// <summary>
 /// 과거데이터시간대별조회: t8427
 /// </summary>
-[Path("/futureoption/market-data", Description = "과거데이터시간대별조회")]
+[Path("/futureoption/market-data", Description = "과거데이터시간대별조회", Attr = true, Headtype = "A")]
 public class t8427 : TrBase
 {
     // InBlock
@@ -3076,7 +3076,7 @@ public class t8427 : TrBase
 /// <summary>
 /// 증시주변자금추이: t8428
 /// </summary>
-[Path("/stock/investinfo", Description = "증시주변자금추이")]
+[Path("/stock/investinfo", Description = "증시주변자금추이", Attr = true, Headtype = "A")]
 public class t8428 : TrBase
 {
     // InBlock
@@ -3091,7 +3091,7 @@ public class t8428 : TrBase
 /// <summary>
 /// EUREX야간옵션선물틱분별체결조회챠트: t8429
 /// </summary>
-[Path("/futureoption/chart", Description = "EUREX야간옵션선물틱분별체결조회챠트")]
+[Path("/futureoption/chart", Description = "EUREX야간옵션선물틱분별체결조회챠트", Attr = true, Headtype = "A")]
 public class t8429 : TrBase
 {
     // InBlock
@@ -3105,7 +3105,7 @@ public class t8429 : TrBase
 /// <summary>
 /// 주식종목조회: t8430
 /// </summary>
-[Path("/stock/etc", Description = "주식종목조회")]
+[Path("/stock/etc", Description = "주식종목조회", Headtype = "A")]
 public class t8430 : TrBase
 {
     // InBlock
@@ -3119,7 +3119,7 @@ public class t8430 : TrBase
 /// <summary>
 /// ELW종목조회: t8431
 /// </summary>
-[Path("/stock/elw", Description = "ELW종목조회")]
+[Path("/stock/elw", Description = "ELW종목조회", Headtype = "A")]
 public class t8431 : TrBase
 {
     // InBlock
@@ -3133,7 +3133,7 @@ public class t8431 : TrBase
 /// <summary>
 /// 지수선물마스터조회API용: t8432
 /// </summary>
-[Path("/futureoption/market-data", Description = "지수선물마스터조회API용")]
+[Path("/futureoption/market-data", Description = "지수선물마스터조회API용", Headtype = "A")]
 public class t8432 : TrBase
 {
     // InBlock
@@ -3147,7 +3147,7 @@ public class t8432 : TrBase
 /// <summary>
 /// 지수옵션마스터조회API용: t8433
 /// </summary>
-[Path("/futureoption/market-data", Description = "지수옵션마스터조회API용")]
+[Path("/futureoption/market-data", Description = "지수옵션마스터조회API용", Headtype = "A")]
 public class t8433 : TrBase
 {
     // InBlock
@@ -3161,7 +3161,7 @@ public class t8433 : TrBase
 /// <summary>
 /// 선물/옵션멀티현재가조회: t8434
 /// </summary>
-[Path("/futureoption/market-data", Description = "선물/옵션멀티현재가조회")]
+[Path("/futureoption/market-data", Description = "선물/옵션멀티현재가조회", Attr = true, Headtype = "A")]
 public class t8434 : TrBase
 {
     // InBlock
@@ -3175,7 +3175,7 @@ public class t8434 : TrBase
 /// <summary>
 /// 파생종목마스터조회API용: t8435
 /// </summary>
-[Path("/futureoption/market-data", Description = "파생종목마스터조회API용")]
+[Path("/futureoption/market-data", Description = "파생종목마스터조회API용", Headtype = "A")]
 public class t8435 : TrBase
 {
     // InBlock
@@ -3189,7 +3189,7 @@ public class t8435 : TrBase
 /// <summary>
 /// 주식종목조회 API용: t8436
 /// </summary>
-[Path("/stock/etc", Description = "주식종목조회 API용")]
+[Path("/stock/etc", Description = "주식종목조회 API용", Headtype = "A")]
 public class t8436 : TrBase
 {
     // InBlock
@@ -3203,7 +3203,7 @@ public class t8436 : TrBase
 /// <summary>
 /// CME/EUREX마스터조회(API용): t8437
 /// </summary>
-[Path("/futureoption/market-data", Description = "CME/EUREX마스터조회(API용)")]
+[Path("/futureoption/market-data", Description = "CME/EUREX마스터조회(API용)", Headtype = "A")]
 public class t8437 : TrBase
 {
     // InBlock
@@ -3217,7 +3217,7 @@ public class t8437 : TrBase
 /// <summary>
 /// 기초자산리스트조회: t9905
 /// </summary>
-[Path("/stock/elw", Description = "기초자산리스트조회")]
+[Path("/stock/elw", Description = "기초자산리스트조회", Headtype = "A")]
 public class t9905 : TrBase
 {
     // InBlock
@@ -3231,7 +3231,7 @@ public class t9905 : TrBase
 /// <summary>
 /// 만기월조회: t9907
 /// </summary>
-[Path("/stock/elw", Description = "만기월조회")]
+[Path("/stock/elw", Description = "만기월조회", Headtype = "A")]
 public class t9907 : TrBase
 {
     // InBlock
@@ -3245,7 +3245,7 @@ public class t9907 : TrBase
 /// <summary>
 /// ELW마스터조회API용: t9942
 /// </summary>
-[Path("/stock/elw", Description = "ELW마스터조회API용")]
+[Path("/stock/elw", Description = "ELW마스터조회API용", Headtype = "A")]
 public class t9942 : TrBase
 {
     // InBlock
@@ -3259,7 +3259,7 @@ public class t9942 : TrBase
 /// <summary>
 /// 지수선물마스터조회API용: t9943
 /// </summary>
-[Path("/futureoption/market-data", Description = "지수선물마스터조회API용")]
+[Path("/futureoption/market-data", Description = "지수선물마스터조회API용", Headtype = "A")]
 public class t9943 : TrBase
 {
     // InBlock
@@ -3273,7 +3273,7 @@ public class t9943 : TrBase
 /// <summary>
 /// 지수옵션마스터조회API용: t9944
 /// </summary>
-[Path("/futureoption/market-data", Description = "지수옵션마스터조회API용")]
+[Path("/futureoption/market-data", Description = "지수옵션마스터조회API용", Headtype = "A")]
 public class t9944 : TrBase
 {
     // InBlock
@@ -3287,7 +3287,7 @@ public class t9944 : TrBase
 /// <summary>
 /// 주식마스터조회API용-종목명40bytes: t9945
 /// </summary>
-[Path("/stock/market-data", Description = "주식마스터조회API용-종목명40bytes")]
+[Path("/stock/market-data", Description = "주식마스터조회API용-종목명40bytes", Headtype = "A")]
 public class t9945 : TrBase
 {
     // InBlock

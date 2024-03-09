@@ -1,4 +1,4 @@
-// [2024-02-13 오후 9:25:02]
+// [2024-03-09 오후 11:44:23]
 // 이 파일은 ResToModel 에 의해 자동으로 만들어졌습니다.
 // XingAPI Res폴더의 .res 파일에서 변환되었습니다.
 namespace eBEST.OpenApi.Models;
@@ -6,7 +6,7 @@ namespace eBEST.OpenApi.Models;
 /// <summary>
 /// ETF호가잔량: B7_
 /// </summary>
-[Path("/websocket/stock", Description = "ETF호가잔량")]
+[Path("/websocket/stock", Description = "ETF호가잔량", Attr = true)]
 public class B7_ : TrBase
 {
     // InBlock
@@ -20,7 +20,7 @@ public class B7_ : TrBase
 /// <summary>
 /// 시간대별투자자매매추이: BMT
 /// </summary>
-[Path("/websocket/investinfo", Description = "시간대별투자자매매추이")]
+[Path("/websocket/investinfo", Description = "시간대별투자자매매추이", Attr = true)]
 public class BMT : TrBase
 {
     // InBlock
@@ -34,7 +34,7 @@ public class BMT : TrBase
 /// <summary>
 /// 업종별투자자별매매현황: BM_
 /// </summary>
-[Path("/websocket/indtp", Description = "업종별투자자별매매현황")]
+[Path("/websocket/indtp", Description = "업종별투자자별매매현황", Attr = true)]
 public class BM_ : TrBase
 {
     // InBlock
@@ -62,7 +62,7 @@ public class C01 : TrBase
 /// <summary>
 /// 상품선물실시간상하한가(D0): CD0
 /// </summary>
-[Path("/websocket/futureoption", Description = "상품선물실시간상하한가(D0)")]
+[Path("/websocket/futureoption", Description = "상품선물실시간상하한가(D0)", Attr = true)]
 public class CD0 : TrBase
 {
     // InBlock
@@ -76,7 +76,7 @@ public class CD0 : TrBase
 /// <summary>
 /// 현물정보 USD 실시간: CUR
 /// </summary>
-[Path("/websocket/investinfo", Description = "현물정보 USD 실시간")]
+[Path("/websocket/investinfo", Description = "현물정보 USD 실시간", Attr = true)]
 public class CUR : TrBase
 {
     // InBlock
@@ -90,7 +90,7 @@ public class CUR : TrBase
 /// <summary>
 /// KOSPI시간외단일가호가잔량: DH1
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI시간외단일가호가잔량")]
+[Path("/websocket/stock", Description = "KOSPI시간외단일가호가잔량", Attr = true)]
 public class DH1 : TrBase
 {
     // InBlock
@@ -104,7 +104,7 @@ public class DH1 : TrBase
 /// <summary>
 /// KOSDAQ시간외단일가호가잔량: DHA
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ시간외단일가호가잔량")]
+[Path("/websocket/stock", Description = "KOSDAQ시간외단일가호가잔량", Attr = true)]
 public class DHA : TrBase
 {
     // InBlock
@@ -118,7 +118,7 @@ public class DHA : TrBase
 /// <summary>
 /// KOSDAQ시간외단일가체결: DK3
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ시간외단일가체결")]
+[Path("/websocket/stock", Description = "KOSDAQ시간외단일가체결", Attr = true)]
 public class DK3 : TrBase
 {
     // InBlock
@@ -132,7 +132,7 @@ public class DK3 : TrBase
 /// <summary>
 /// KOSPI시간외단일가체결: DS3
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI시간외단일가체결")]
+[Path("/websocket/stock", Description = "KOSPI시간외단일가체결", Attr = true)]
 public class DS3 : TrBase
 {
     // InBlock
@@ -146,7 +146,7 @@ public class DS3 : TrBase
 /// <summary>
 /// 시간외단일가VI발동해제: DVI
 /// </summary>
-[Path("/websocket/stock", Description = "시간외단일가VI발동해제")]
+[Path("/websocket/stock", Description = "시간외단일가VI발동해제", Attr = true)]
 public class DVI : TrBase
 {
     // InBlock
@@ -160,7 +160,7 @@ public class DVI : TrBase
 /// <summary>
 /// EUREX연계KP200지수옵션선물체결: EC0
 /// </summary>
-[Path("/websocket/futureoption", Description = "EUREX연계KP200지수옵션선물체결")]
+[Path("/websocket/futureoption", Description = "EUREX연계KP200지수옵션선물체결", Attr = true)]
 public class EC0 : TrBase
 {
     // InBlock
@@ -174,7 +174,7 @@ public class EC0 : TrBase
 /// <summary>
 /// EUREX연계KP200지수옵션선물호가: EH0
 /// </summary>
-[Path("/websocket/futureoption", Description = "EUREX연계KP200지수옵션선물호가")]
+[Path("/websocket/futureoption", Description = "EUREX연계KP200지수옵션선물호가", Attr = true)]
 public class EH0 : TrBase
 {
     // InBlock
@@ -188,7 +188,7 @@ public class EH0 : TrBase
 /// <summary>
 /// 뉴ELW투자지표민감도: ESN
 /// </summary>
-[Path("/websocket/stock", Description = "뉴ELW투자지표민감도")]
+[Path("/websocket/stock", Description = "뉴ELW투자지표민감도", Attr = true)]
 public class ESN : TrBase
 {
     // InBlock
@@ -244,7 +244,7 @@ public class EU2 : TrBase
 /// <summary>
 /// KOSPI200선물체결(C0): FC0
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200선물체결(C0)")]
+[Path("/websocket/futureoption", Description = "KOSPI200선물체결(C0)", Attr = true)]
 public class FC0 : TrBase
 {
     // InBlock
@@ -258,7 +258,7 @@ public class FC0 : TrBase
 /// <summary>
 /// KOSPI200선물실시간상하한가(D0): FD0
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200선물실시간상하한가(D0)")]
+[Path("/websocket/futureoption", Description = "KOSPI200선물실시간상하한가(D0)", Attr = true)]
 public class FD0 : TrBase
 {
     // InBlock
@@ -272,7 +272,7 @@ public class FD0 : TrBase
 /// <summary>
 /// KOSPI200선물호가(H0): FH0
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200선물호가(H0)")]
+[Path("/websocket/futureoption", Description = "KOSPI200선물호가(H0)", Attr = true)]
 public class FH0 : TrBase
 {
     // InBlock
@@ -286,7 +286,7 @@ public class FH0 : TrBase
 /// <summary>
 /// KOSPI200선물가격제한폭확대(X0): FX0
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200선물가격제한폭확대(X0)")]
+[Path("/websocket/futureoption", Description = "KOSPI200선물가격제한폭확대(X0)", Attr = true)]
 public class FX0 : TrBase
 {
     // InBlock
@@ -314,7 +314,7 @@ public class H01 : TrBase
 /// <summary>
 /// KOSPI호가잔량: H1_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI호가잔량")]
+[Path("/websocket/stock", Description = "KOSPI호가잔량", Attr = true)]
 public class H1_ : TrBase
 {
     // InBlock
@@ -328,7 +328,7 @@ public class H1_ : TrBase
 /// <summary>
 /// KOSPI장전시간외호가잔량: H2_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI장전시간외호가잔량")]
+[Path("/websocket/stock", Description = "KOSPI장전시간외호가잔량", Attr = true)]
 public class H2_ : TrBase
 {
     // InBlock
@@ -342,7 +342,7 @@ public class H2_ : TrBase
 /// <summary>
 /// ELW장전시간외호가잔량: h2_
 /// </summary>
-[Path("/websocket/stock", Description = "ELW장전시간외호가잔량")]
+[Path("/websocket/stock", Description = "ELW장전시간외호가잔량", Attr = true)]
 public class h2_ : TrBase
 {
     // InBlock
@@ -356,7 +356,7 @@ public class h2_ : TrBase
 /// <summary>
 /// ELW호가잔량: h3_
 /// </summary>
-[Path("/websocket/stock", Description = "ELW호가잔량")]
+[Path("/websocket/stock", Description = "ELW호가잔량", Attr = true)]
 public class h3_ : TrBase
 {
     // InBlock
@@ -370,7 +370,7 @@ public class h3_ : TrBase
 /// <summary>
 /// KOSDAQ호가잔량: HA_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ호가잔량")]
+[Path("/websocket/stock", Description = "KOSDAQ호가잔량", Attr = true)]
 public class HA_ : TrBase
 {
     // InBlock
@@ -384,7 +384,7 @@ public class HA_ : TrBase
 /// <summary>
 /// KOSDAQ장전시간외호가잔량: HB_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ장전시간외호가잔량")]
+[Path("/websocket/stock", Description = "KOSDAQ장전시간외호가잔량", Attr = true)]
 public class HB_ : TrBase
 {
     // InBlock
@@ -398,7 +398,7 @@ public class HB_ : TrBase
 /// <summary>
 /// 코스피ETF종목실시간NAV: I5_
 /// </summary>
-[Path("/websocket/stock", Description = "코스피ETF종목실시간NAV")]
+[Path("/websocket/stock", Description = "코스피ETF종목실시간NAV", Attr = true)]
 public class I5_ : TrBase
 {
     // InBlock
@@ -412,7 +412,7 @@ public class I5_ : TrBase
 /// <summary>
 /// 지수: IJ_
 /// </summary>
-[Path("/websocket/stock", Description = "지수")]
+[Path("/websocket/stock", Description = "지수", Attr = true)]
 public class IJ_ : TrBase
 {
     // InBlock
@@ -426,7 +426,7 @@ public class IJ_ : TrBase
 /// <summary>
 /// 주식선물체결: JC0
 /// </summary>
-[Path("/websocket/futureoption", Description = "주식선물체결")]
+[Path("/websocket/futureoption", Description = "주식선물체결", Attr = true)]
 public class JC0 : TrBase
 {
     // InBlock
@@ -440,7 +440,7 @@ public class JC0 : TrBase
 /// <summary>
 /// 주식선물실시간상하한가: JD0
 /// </summary>
-[Path("/websocket/futureoption", Description = "주식선물실시간상하한가")]
+[Path("/websocket/futureoption", Description = "주식선물실시간상하한가", Attr = true)]
 public class JD0 : TrBase
 {
     // InBlock
@@ -454,7 +454,7 @@ public class JD0 : TrBase
 /// <summary>
 /// 주식선물호가: JH0
 /// </summary>
-[Path("/websocket/futureoption", Description = "주식선물호가")]
+[Path("/websocket/futureoption", Description = "주식선물호가", Attr = true)]
 public class JH0 : TrBase
 {
     // InBlock
@@ -482,7 +482,7 @@ public class JIF : TrBase
 /// <summary>
 /// 주식선물가격제한폭확대: JX0
 /// </summary>
-[Path("/websocket/futureoption", Description = "주식선물가격제한폭확대")]
+[Path("/websocket/futureoption", Description = "주식선물가격제한폭확대", Attr = true)]
 public class JX0 : TrBase
 {
     // InBlock
@@ -496,7 +496,7 @@ public class JX0 : TrBase
 /// <summary>
 /// KOSPI거래원: K1_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI거래원")]
+[Path("/websocket/stock", Description = "KOSPI거래원", Attr = true)]
 public class K1_ : TrBase
 {
     // InBlock
@@ -510,7 +510,7 @@ public class K1_ : TrBase
 /// <summary>
 /// ELW거래원: k1_
 /// </summary>
-[Path("/websocket/stock", Description = "ELW거래원")]
+[Path("/websocket/stock", Description = "ELW거래원", Attr = true)]
 public class k1_ : TrBase
 {
     // InBlock
@@ -524,7 +524,7 @@ public class k1_ : TrBase
 /// <summary>
 /// KOSDAQ체결: K3_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ체결")]
+[Path("/websocket/stock", Description = "KOSDAQ체결", Attr = true)]
 public class K3_ : TrBase
 {
     // InBlock
@@ -538,7 +538,7 @@ public class K3_ : TrBase
 /// <summary>
 /// KOSDAQ프로그램매매종목별: KH_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ프로그램매매종목별")]
+[Path("/websocket/stock", Description = "KOSDAQ프로그램매매종목별", Attr = true)]
 public class KH_ : TrBase
 {
     // InBlock
@@ -552,7 +552,7 @@ public class KH_ : TrBase
 /// <summary>
 /// KOSDAQ프로그램매매전체집계: KM_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ프로그램매매전체집계")]
+[Path("/websocket/stock", Description = "KOSDAQ프로그램매매전체집계", Attr = true)]
 public class KM_ : TrBase
 {
     // InBlock
@@ -566,7 +566,7 @@ public class KM_ : TrBase
 /// <summary>
 /// KOSDAQ우선호가: KS_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ우선호가")]
+[Path("/websocket/stock", Description = "KOSDAQ우선호가", Attr = true)]
 public class KS_ : TrBase
 {
     // InBlock
@@ -580,7 +580,7 @@ public class KS_ : TrBase
 /// <summary>
 /// US지수: MK2
 /// </summary>
-[Path("/websocket/investinfo", Description = "US지수")]
+[Path("/websocket/investinfo", Description = "US지수", Attr = true)]
 public class MK2 : TrBase
 {
     // InBlock
@@ -622,7 +622,7 @@ public class O01 : TrBase
 /// <summary>
 /// KOSPI200옵션체결(C0): OC0
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200옵션체결(C0)")]
+[Path("/websocket/futureoption", Description = "KOSPI200옵션체결(C0)", Attr = true)]
 public class OC0 : TrBase
 {
     // InBlock
@@ -636,7 +636,7 @@ public class OC0 : TrBase
 /// <summary>
 /// KOSPI200옵션실시간상하한가(D0): OD0
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200옵션실시간상하한가(D0)")]
+[Path("/websocket/futureoption", Description = "KOSPI200옵션실시간상하한가(D0)", Attr = true)]
 public class OD0 : TrBase
 {
     // InBlock
@@ -650,7 +650,7 @@ public class OD0 : TrBase
 /// <summary>
 /// KOSPI200옵션호가(H0): OH0
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200옵션호가(H0)")]
+[Path("/websocket/futureoption", Description = "KOSPI200옵션호가(H0)", Attr = true)]
 public class OH0 : TrBase
 {
     // InBlock
@@ -664,7 +664,7 @@ public class OH0 : TrBase
 /// <summary>
 /// KOSDAQ거래원: OK_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ거래원")]
+[Path("/websocket/stock", Description = "KOSDAQ거래원", Attr = true)]
 public class OK_ : TrBase
 {
     // InBlock
@@ -678,7 +678,7 @@ public class OK_ : TrBase
 /// <summary>
 /// KOSPI200옵션민감도(MG): OMG
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200옵션민감도(MG)")]
+[Path("/websocket/futureoption", Description = "KOSPI200옵션민감도(MG)", Attr = true)]
 public class OMG : TrBase
 {
     // InBlock
@@ -692,7 +692,7 @@ public class OMG : TrBase
 /// <summary>
 /// 해외선물 현재가체결: OVC
 /// </summary>
-[Path("/websocket/overseas-futureoption", Description = "해외선물 현재가체결")]
+[Path("/websocket/overseas-futureoption", Description = "해외선물 현재가체결", Attr = true)]
 public class OVC : TrBase
 {
     // InBlock
@@ -706,7 +706,7 @@ public class OVC : TrBase
 /// <summary>
 /// 해외선물 호가: OVH
 /// </summary>
-[Path("/websocket/overseas-futureoption", Description = "해외선물 호가")]
+[Path("/websocket/overseas-futureoption", Description = "해외선물 호가", Attr = true)]
 public class OVH : TrBase
 {
     // InBlock
@@ -720,7 +720,7 @@ public class OVH : TrBase
 /// <summary>
 /// KOSPI200옵션가격제한폭확대(X0): OX0
 /// </summary>
-[Path("/websocket/futureoption", Description = "KOSPI200옵션가격제한폭확대(X0)")]
+[Path("/websocket/futureoption", Description = "KOSPI200옵션가격제한폭확대(X0)", Attr = true)]
 public class OX0 : TrBase
 {
     // InBlock
@@ -734,7 +734,7 @@ public class OX0 : TrBase
 /// <summary>
 /// KOSPI프로그램매매종목별: PH_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI프로그램매매종목별")]
+[Path("/websocket/stock", Description = "KOSPI프로그램매매종목별", Attr = true)]
 public class PH_ : TrBase
 {
     // InBlock
@@ -748,7 +748,7 @@ public class PH_ : TrBase
 /// <summary>
 /// KOSPI프로그램매매전체집계: PM_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI프로그램매매전체집계")]
+[Path("/websocket/stock", Description = "KOSPI프로그램매매전체집계", Attr = true)]
 public class PM_ : TrBase
 {
     // InBlock
@@ -762,7 +762,7 @@ public class PM_ : TrBase
 /// <summary>
 /// KOSPI우선호가: S2_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI우선호가")]
+[Path("/websocket/stock", Description = "KOSPI우선호가", Attr = true)]
 public class S2_ : TrBase
 {
     // InBlock
@@ -776,7 +776,7 @@ public class S2_ : TrBase
 /// <summary>
 /// ELW우선호가: s2_
 /// </summary>
-[Path("/websocket/stock", Description = "ELW우선호가")]
+[Path("/websocket/stock", Description = "ELW우선호가", Attr = true)]
 public class s2_ : TrBase
 {
     // InBlock
@@ -790,7 +790,7 @@ public class s2_ : TrBase
 /// <summary>
 /// KOSPI체결: S3_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI체결")]
+[Path("/websocket/stock", Description = "KOSPI체결", Attr = true)]
 public class S3_ : TrBase
 {
     // InBlock
@@ -804,7 +804,7 @@ public class S3_ : TrBase
 /// <summary>
 /// ELW체결: s3_
 /// </summary>
-[Path("/websocket/stock", Description = "ELW체결")]
+[Path("/websocket/stock", Description = "ELW체결", Attr = true)]
 public class s3_ : TrBase
 {
     // InBlock
@@ -818,7 +818,7 @@ public class s3_ : TrBase
 /// <summary>
 /// KOSPI기세: S4_
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI기세")]
+[Path("/websocket/stock", Description = "KOSPI기세", Attr = true)]
 public class S4_ : TrBase
 {
     // InBlock
@@ -832,7 +832,7 @@ public class S4_ : TrBase
 /// <summary>
 /// ELW기세: s4_
 /// </summary>
-[Path("/websocket/stock", Description = "ELW기세")]
+[Path("/websocket/stock", Description = "ELW기세", Attr = true)]
 public class s4_ : TrBase
 {
     // InBlock
@@ -916,7 +916,7 @@ public class SC4 : TrBase
 /// <summary>
 /// 상/하한가근접진입: SHC
 /// </summary>
-[Path("/websocket/stock", Description = "상/하한가근접진입")]
+[Path("/websocket/stock", Description = "상/하한가근접진입", Attr = true)]
 public class SHC : TrBase
 {
     // InBlock
@@ -930,7 +930,7 @@ public class SHC : TrBase
 /// <summary>
 /// 상/하한가근접이탈: SHD
 /// </summary>
-[Path("/websocket/stock", Description = "상/하한가근접이탈")]
+[Path("/websocket/stock", Description = "상/하한가근접이탈", Attr = true)]
 public class SHD : TrBase
 {
     // InBlock
@@ -944,7 +944,7 @@ public class SHD : TrBase
 /// <summary>
 /// 상/하한가진입: SHI
 /// </summary>
-[Path("/websocket/stock", Description = "상/하한가진입")]
+[Path("/websocket/stock", Description = "상/하한가진입", Attr = true)]
 public class SHI : TrBase
 {
     // InBlock
@@ -958,7 +958,7 @@ public class SHI : TrBase
 /// <summary>
 /// 상/하한가이탈: SHO
 /// </summary>
-[Path("/websocket/stock", Description = "상/하한가이탈")]
+[Path("/websocket/stock", Description = "상/하한가이탈", Attr = true)]
 public class SHO : TrBase
 {
     // InBlock
@@ -1014,7 +1014,7 @@ public class TC3 : TrBase
 /// <summary>
 /// VI발동해제: VI_
 /// </summary>
-[Path("/websocket/stock", Description = "VI발동해제")]
+[Path("/websocket/stock", Description = "VI발동해제", Attr = true)]
 public class VI_ : TrBase
 {
     // InBlock
@@ -1028,7 +1028,7 @@ public class VI_ : TrBase
 /// <summary>
 /// 해외옵션 현재가체결: WOC
 /// </summary>
-[Path("/websocket/overseas-futureoption", Description = "해외옵션 현재가체결")]
+[Path("/websocket/overseas-futureoption", Description = "해외옵션 현재가체결", Attr = true)]
 public class WOC : TrBase
 {
     // InBlock
@@ -1042,7 +1042,7 @@ public class WOC : TrBase
 /// <summary>
 /// 해외옵션 호가: WOH
 /// </summary>
-[Path("/websocket/overseas-futureoption", Description = "해외옵션 호가")]
+[Path("/websocket/overseas-futureoption", Description = "해외옵션 호가", Attr = true)]
 public class WOH : TrBase
 {
     // InBlock
@@ -1056,7 +1056,7 @@ public class WOH : TrBase
 /// <summary>
 /// 상품선물예상체결: YC3
 /// </summary>
-[Path("/websocket/futureoption", Description = "상품선물예상체결")]
+[Path("/websocket/futureoption", Description = "상품선물예상체결", Attr = true)]
 public class YC3 : TrBase
 {
     // InBlock
@@ -1070,7 +1070,7 @@ public class YC3 : TrBase
 /// <summary>
 /// 지수선물예상체결: YFC
 /// </summary>
-[Path("/websocket/futureoption", Description = "지수선물예상체결")]
+[Path("/websocket/futureoption", Description = "지수선물예상체결", Attr = true)]
 public class YFC : TrBase
 {
     // InBlock
@@ -1084,7 +1084,7 @@ public class YFC : TrBase
 /// <summary>
 /// 주식선물예상체결: YJC
 /// </summary>
-[Path("/websocket/futureoption", Description = "주식선물예상체결")]
+[Path("/websocket/futureoption", Description = "주식선물예상체결", Attr = true)]
 public class YJC : TrBase
 {
     // InBlock
@@ -1098,7 +1098,7 @@ public class YJC : TrBase
 /// <summary>
 /// 예상지수: YJ_
 /// </summary>
-[Path("/websocket/stock", Description = "예상지수")]
+[Path("/websocket/stock", Description = "예상지수", Attr = true)]
 public class YJ_ : TrBase
 {
     // InBlock
@@ -1112,7 +1112,7 @@ public class YJ_ : TrBase
 /// <summary>
 /// KOSDAQ예상체결: YK3
 /// </summary>
-[Path("/websocket/stock", Description = "KOSDAQ예상체결")]
+[Path("/websocket/stock", Description = "KOSDAQ예상체결", Attr = true)]
 public class YK3 : TrBase
 {
     // InBlock
@@ -1126,7 +1126,7 @@ public class YK3 : TrBase
 /// <summary>
 /// 지수옵션예상체결: YOC
 /// </summary>
-[Path("/websocket/futureoption", Description = "지수옵션예상체결")]
+[Path("/websocket/futureoption", Description = "지수옵션예상체결", Attr = true)]
 public class YOC : TrBase
 {
     // InBlock
@@ -1140,7 +1140,7 @@ public class YOC : TrBase
 /// <summary>
 /// KOSPI예상체결: YS3
 /// </summary>
-[Path("/websocket/stock", Description = "KOSPI예상체결")]
+[Path("/websocket/stock", Description = "KOSPI예상체결", Attr = true)]
 public class YS3 : TrBase
 {
     // InBlock
@@ -1154,7 +1154,7 @@ public class YS3 : TrBase
 /// <summary>
 /// ELW예상체결: Ys3
 /// </summary>
-[Path("/websocket/stock", Description = "ELW예상체결")]
+[Path("/websocket/stock", Description = "ELW예상체결", Attr = true)]
 public class Ys3 : TrBase
 {
     // InBlock
