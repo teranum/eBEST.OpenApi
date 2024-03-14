@@ -1,4 +1,4 @@
-// [2024-02-13 오후 9:25:02]
+// [2024-03-11 오전 11:59:00]
 // 이 파일은 ResToModel 에 의해 자동으로 만들어졌습니다.
 // XingAPI Res폴더의 .res 파일에서 변환되었습니다.
 namespace eBEST.OpenApi.Models;
@@ -7,6 +7,7 @@ namespace eBEST.OpenApi.Models;
 /// ETF호가잔량: B7_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record B7_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -80,6 +81,7 @@ public record B7_InBlock(
 /// <param name="totbidrem">총매수호가잔량	long	9</param>
 /// <param name="donsigubun">동시호가구분	string	1</param>
 /// <param name="alloc_gubun">배분적용구분	string	1</param>
+[BlockInfo(true, 598)]
 public record B7_OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("LP매도호가수량1", 9)] long lp_offerho1,
@@ -154,6 +156,7 @@ public record B7_OutBlock(
 /// 시간대별투자자매매추이: BMT
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 4)]
 public record BMTInBlock(
     [BlockField("업종코드", 3)] string upcode
     );
@@ -247,6 +250,7 @@ public record BMTInBlock(
 /// <param name="msvalue0">매수 거래대금0	int	6</param>
 /// <param name="mdvalue0">매도 거래대금0	int	6</param>
 /// <param name="msval0">거래대금 순매수0	int	6</param>
+[BlockInfo(true, 649)]
 public record BMTOutBlock(
     [BlockField("수신시간", 8)] string tjjtime,
     [BlockField("투자자코드1(개인)", 4)] string tjjcode1,
@@ -341,6 +345,7 @@ public record BMTOutBlock(
 /// 업종별투자자별매매현황: BM_
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 4)]
 public record BM_InBlock(
     [BlockField("업종코드", 3)] string upcode
     );
@@ -359,6 +364,7 @@ public record BM_InBlock(
 /// <param name="msval">거래대금 순매수	int	6</param>
 /// <param name="p_msval">거래대금 순매수 직전대비	int	6</param>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 82)]
 public record BM_OutBlock(
     [BlockField("투자자코드", 4)] string tjjcode,
     [BlockField("수신시간", 8)] string tjjtime,
@@ -377,6 +383,7 @@ public record BM_OutBlock(
 /// <summary>
 /// 선물주문체결: C01
 /// </summary>
+[BlockInfo(false, 0)]
 public record C01InBlock(
     );
 
@@ -411,6 +418,7 @@ public record C01InBlock(
 /// <param name="mem_filler">mem_filler	string	7</param>
 /// <param name="mem_accno">mem_accno	string	11</param>
 /// <param name="mem_filler1">mem_filler1	string	42</param>
+[BlockInfo(false, 261)]
 public record C01OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -447,6 +455,7 @@ public record C01OutBlock(
 /// 상품선물실시간상하한가(D0): CD0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record CD0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -459,6 +468,7 @@ public record CD0InBlock(
 /// <param name="dy_uplmtprice">실시간상한가	double	8.2</param>
 /// <param name="dy_dnlmtprice">실시간하한가	double	8.2</param>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 31)]
 public record CD0OutBlock(
     [BlockField("접속매매여부", 1)] string gubun,
     [BlockField("실시간가격제한여부", 1)] string dy_gubun,
@@ -472,6 +482,7 @@ public record CD0OutBlock(
 /// 현물정보 USD 실시간: CUR
 /// </summary>
 /// <param name="base_id">기초자산ID	string	6</param>
+[BlockInfo(true, 7)]
 public record CURInBlock(
     [BlockField("기초자산ID", 6)] string base_id
     );
@@ -491,6 +502,7 @@ public record CURInBlock(
 /// <param name="drate">등락율	double	7.2</param>
 /// <param name="ctime">데이타 발생시간	string	6</param>
 /// <param name="base_id">기초자산ID	string	6</param>
+[BlockInfo(true, 87)]
 public record CUROutBlock(
     [BlockField("전송시간", 6)] string time,
     [BlockField("매도호가", 7.2)] double offer,
@@ -511,6 +523,7 @@ public record CUROutBlock(
 /// KOSPI시간외단일가호가잔량: DH1
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record DH1InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -562,6 +575,7 @@ public record DH1InBlock(
 /// <param name="dan_jnilychange">시간외단일가예상가전일가대비	int	8</param>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="volume">누적거래량	long	12</param>
+[BlockInfo(true, 476)]
 public record DH1OutBlock(
     [BlockField("시간외단일가호가시간", 6)] string dan_hotime,
     [BlockField("시간외단일가장구분", 2)] string dan_hstatus,
@@ -614,6 +628,7 @@ public record DH1OutBlock(
 /// KOSDAQ시간외단일가호가잔량: DHA
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record DHAInBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -665,6 +680,7 @@ public record DHAInBlock(
 /// <param name="dan_jnilychange">시간외단일가예상가전일가대비	int	8</param>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="volume">누적거래량	long	12</param>
+[BlockInfo(true, 476)]
 public record DHAOutBlock(
     [BlockField("시간외단일가호가시간", 6)] string dan_hotime,
     [BlockField("시간외단일가장구분", 2)] string dan_hstatus,
@@ -717,6 +733,7 @@ public record DHAOutBlock(
 /// KOSDAQ시간외단일가체결: DK3
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record DK3InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -748,6 +765,7 @@ public record DK3InBlock(
 /// <param name="dan_cpower">시간외단일가체결강도	double	9.2</param>
 /// <param name="dan_status">시간외단일가장정보	string	2</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 201)]
 public record DK3OutBlock(
     [BlockField("시간외단일가체결시간", 6)] string dan_chetime,
     [BlockField("시간외단일가전일대비구분", 1)] string dan_sign,
@@ -780,6 +798,7 @@ public record DK3OutBlock(
 /// KOSPI시간외단일가체결: DS3
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record DS3InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -811,6 +830,7 @@ public record DS3InBlock(
 /// <param name="dan_cpower">시간외단일가체결강도	double	9.2</param>
 /// <param name="dan_status">시간외단일가장정보	string	2</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 201)]
 public record DS3OutBlock(
     [BlockField("시간외단일가체결시간", 6)] string dan_chetime,
     [BlockField("시간외단일가전일대비구분", 1)] string dan_sign,
@@ -843,6 +863,7 @@ public record DS3OutBlock(
 /// 시간외단일가VI발동해제: DVI
 /// </summary>
 /// <param name="shcode">단축코드(KEY)	string	6</param>
+[BlockInfo(true, 7)]
 public record DVIInBlock(
     [BlockField("단축코드(KEY)", 6)] string shcode
     );
@@ -857,6 +878,7 @@ public record DVIInBlock(
 /// <param name="shcode">단축코드(KEY)	string	6</param>
 /// <param name="ref_shcode">참조코드(미사용)	string	6</param>
 /// <param name="time">시간	string	6</param>
+[BlockInfo(true, 50)]
 public record DVIOutBlock(
     [BlockField("구분(0:해제 1:정적발동 2:동적발동 3:정적&동적)", 1)] string vi_gubun,
     [BlockField("정적VI발동기준가격", 8)] int svi_recprice,
@@ -872,6 +894,7 @@ public record DVIOutBlock(
 /// EUREX연계KP200지수옵션선물체결: EC0
 /// </summary>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record EC0InBlock(
     [BlockField("단축코드", 8)] string optcode
     );
@@ -909,6 +932,7 @@ public record EC0InBlock(
 /// <param name="jgubun">장운영정보	string	2</param>
 /// <param name="jnilvolume">전일동시간대거래량	long	12</param>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 240)]
 public record EC0OutBlock(
     [BlockField("체결시간(24시간)", 6)] string chetime,
     [BlockField("체결시간(36시간)", 6)] string chetime1,
@@ -947,6 +971,7 @@ public record EC0OutBlock(
 /// EUREX연계KP200지수옵션선물호가: EH0
 /// </summary>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record EH0InBlock(
     [BlockField("단축코드", 8)] string optcode
     );
@@ -992,6 +1017,7 @@ public record EH0InBlock(
 /// <param name="totbidcnt">매수호가총건수	int	5</param>
 /// <param name="optcode">단축코드	string	8</param>
 /// <param name="danhochk">단일가호가여부	string	1</param>
+[BlockInfo(true, 263)]
 public record EH0OutBlock(
     [BlockField("호가시간(24시간)", 6)] string hotime,
     [BlockField("호가시간(36시간)", 6)] string hotime1,
@@ -1038,6 +1064,7 @@ public record EH0OutBlock(
 /// 뉴ELW투자지표민감도: ESN
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record ESNInBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -1061,6 +1088,7 @@ public record ESNInBlock(
 /// <param name="date">일자	string	8</param>
 /// <param name="tickvalue">틱환산	double	10.2</param>
 /// <param name="lp_impv">LP내재변동성	double	5.2</param>
+[BlockInfo(true, 141)]
 public record ESNOutBlock(
     [BlockField("시간", 6)] string time,
     [BlockField("장중이론가", 10.2)] double theoryprice,
@@ -1084,6 +1112,7 @@ public record ESNOutBlock(
 /// <summary>
 /// EUX접수: EU0
 /// </summary>
+[BlockInfo(false, 0)]
 public record EU0InBlock(
     );
 
@@ -1209,6 +1238,7 @@ public record EU0InBlock(
 /// <param name="unsttqty_2">미결제수량2	long	16</param>
 /// <param name="lqdtableqty_2">주문가능수량2	long	16</param>
 /// <param name="avrprc_2">평균가2	double	13.2</param>
+[BlockInfo(false, 1142)]
 public record EU0OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -1335,6 +1365,7 @@ public record EU0OutBlock(
 /// <summary>
 /// EUX체결: EU1
 /// </summary>
+[BlockInfo(false, 0)]
 public record EU1InBlock(
     );
 
@@ -1460,6 +1491,7 @@ public record EU1InBlock(
 /// <param name="unsttqty_2">미결제수량2	long	16</param>
 /// <param name="lqdtableqty_2">주문가능수량2	long	16</param>
 /// <param name="avrprc_2">평균가2	double	13.2</param>
+[BlockInfo(false, 1142)]
 public record EU1OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -1586,6 +1618,7 @@ public record EU1OutBlock(
 /// <summary>
 /// EUX확인: EU2
 /// </summary>
+[BlockInfo(false, 0)]
 public record EU2InBlock(
     );
 
@@ -1711,6 +1744,7 @@ public record EU2InBlock(
 /// <param name="unsttqty_2">미결제수량2	long	16</param>
 /// <param name="lqdtableqty_2">주문가능수량2	long	16</param>
 /// <param name="avrprc_2">평균가2	double	13.2</param>
+[BlockInfo(false, 1142)]
 public record EU2OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -1838,6 +1872,7 @@ public record EU2OutBlock(
 /// KOSPI200선물체결(C0): FC0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record FC0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -1874,6 +1909,7 @@ public record FC0InBlock(
 /// <param name="jgubun">장운영정보	string	2</param>
 /// <param name="jnilvolume">전일동시간대거래량	long	12</param>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 232)]
 public record FC0OutBlock(
     [BlockField("체결시간", 6)] string chetime,
     [BlockField("전일대비구분", 1)] string sign,
@@ -1911,6 +1947,7 @@ public record FC0OutBlock(
 /// KOSPI200선물실시간상하한가(D0): FD0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record FD0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -1923,6 +1960,7 @@ public record FD0InBlock(
 /// <param name="dy_uplmtprice">실시간상한가	double	8.2</param>
 /// <param name="dy_dnlmtprice">실시간하한가	double	8.2</param>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 31)]
 public record FD0OutBlock(
     [BlockField("접속매매여부", 1)] string gubun,
     [BlockField("실시간가격제한여부", 1)] string dy_gubun,
@@ -1936,6 +1974,7 @@ public record FD0OutBlock(
 /// KOSPI200선물호가(H0): FH0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record FH0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -1981,6 +2020,7 @@ public record FH0InBlock(
 /// <param name="futcode">단축코드	string	8</param>
 /// <param name="danhochk">단일가호가여부	string	1</param>
 /// <param name="alloc_gubun">배분적용구분	string	1</param>
+[BlockInfo(true, 246)]
 public record FH0OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("매도호가1", 6.2)] double offerho1,
@@ -2027,6 +2067,7 @@ public record FH0OutBlock(
 /// KOSPI200선물가격제한폭확대(X0): FX0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record FX0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -2039,6 +2080,7 @@ public record FX0InBlock(
 /// <param name="uplmtprice">적용 상한가	double	6.2</param>
 /// <param name="dnlmtprice">적용 하한가	double	6.2</param>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 29)]
 public record FX0OutBlock(
     [BlockField("적용 상한단계", 2)] string upstep,
     [BlockField("적용 하한단계", 2)] string dnstep,
@@ -2051,6 +2093,7 @@ public record FX0OutBlock(
 /// <summary>
 /// 선물주문정정취소: H01
 /// </summary>
+[BlockInfo(false, 0)]
 public record H01InBlock(
     );
 
@@ -2103,6 +2146,7 @@ public record H01InBlock(
 /// <param name="autogb">자동취소구분	string	1</param>
 /// <param name="rejcode">거부사유	string	4</param>
 /// <param name="prgordde">프로그램호가신고	string	1</param>
+[BlockInfo(false, 316)]
 public record H01OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -2157,6 +2201,7 @@ public record H01OutBlock(
 /// KOSPI호가잔량: H1_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record H1_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -2211,6 +2256,7 @@ public record H1_InBlock(
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="alloc_gubun">배분적용구분	string	1</param>
 /// <param name="volume">누적거래량	long	12</param>
+[BlockInfo(true, 411)]
 public record H1_OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("매도호가1", 7)] int offerho1,
@@ -2266,6 +2312,7 @@ public record H1_OutBlock(
 /// KOSPI장전시간외호가잔량: H2_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record H2_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -2279,6 +2326,7 @@ public record H2_InBlock(
 /// <param name="pretmoffercha">시간외매도수량직전대비	long	12</param>
 /// <param name="pretmbidcha">시간외매수수량직전대비	long	12</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 66)]
 public record H2_OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("시간외매도잔량", 12)] long tmofferrem,
@@ -2293,6 +2341,7 @@ public record H2_OutBlock(
 /// ELW장전시간외호가잔량: h2_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record h2_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -2306,6 +2355,7 @@ public record h2_InBlock(
 /// <param name="pretmoffercha">시간외매도수량직전대비	long	12</param>
 /// <param name="pretmbidcha">시간외매수수량직전대비	long	12</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 66)]
 public record h2_OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("시간외매도잔량", 12)] long tmofferrem,
@@ -2320,6 +2370,7 @@ public record h2_OutBlock(
 /// ELW호가잔량: h3_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record h3_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -2393,6 +2444,7 @@ public record h3_InBlock(
 /// <param name="donsigubun">동시호가구분	string	1</param>
 /// <param name="spread">스프레드	double	6.2</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 603)]
 public record h3_OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("매도호가1", 7)] int offerho1,
@@ -2467,6 +2519,7 @@ public record h3_OutBlock(
 /// KOSDAQ호가잔량: HA_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record HA_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -2521,6 +2574,7 @@ public record HA_InBlock(
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="alloc_gubun">배분적용구분	string	1</param>
 /// <param name="volume">누적거래량	long	12</param>
+[BlockInfo(true, 411)]
 public record HA_OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("매도호가1", 7)] int offerho1,
@@ -2576,6 +2630,7 @@ public record HA_OutBlock(
 /// KOSDAQ장전시간외호가잔량: HB_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record HB_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -2589,6 +2644,7 @@ public record HB_InBlock(
 /// <param name="pretmoffercha">시간외매도수량직전대비	long	12</param>
 /// <param name="pretmbidcha">시간외매수수량직전대비	long	12</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 66)]
 public record HB_OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("시간외매도잔량", 12)] long tmofferrem,
@@ -2603,6 +2659,7 @@ public record HB_OutBlock(
 /// 코스피ETF종목실시간NAV: I5_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record I5_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -2624,6 +2681,7 @@ public record I5_InBlock(
 /// <param name="jichange">전일대비	double	8.2</param>
 /// <param name="jirate">전일대비율	double	8.2</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 126)]
 public record I5_OutBlock(
     [BlockField("시간", 8)] string time,
     [BlockField("현재가", 8)] int price,
@@ -2646,6 +2704,7 @@ public record I5_OutBlock(
 /// 지수: IJ_
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 4)]
 public record IJ_InBlock(
     [BlockField("업종코드", 3)] string upcode
     );
@@ -2678,6 +2737,7 @@ public record IJ_InBlock(
 /// <param name="frgsvalue">외인순매수금액	long	10</param>
 /// <param name="orgsvalue">기관순매수금액	long	10</param>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 185)]
 public record IJ_OutBlock(
     [BlockField("시간", 6)] string time,
     [BlockField("지수", 8.2)] double jisu,
@@ -2711,6 +2771,7 @@ public record IJ_OutBlock(
 /// 주식선물체결: JC0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record JC0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -2748,6 +2809,7 @@ public record JC0InBlock(
 /// <param name="jgubun">장운영정보	string	2</param>
 /// <param name="jnilvolume">전일동시간대거래량	long	12</param>
 /// <param name="basprice">기초자산현재가	int	8</param>
+[BlockInfo(true, 274)]
 public record JC0OutBlock(
     [BlockField("단축코드", 8)] string futcode,
     [BlockField("체결시간", 6)] string chetime,
@@ -2786,6 +2848,7 @@ public record JC0OutBlock(
 /// 주식선물실시간상하한가: JD0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record JD0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -2798,6 +2861,7 @@ public record JD0InBlock(
 /// <param name="dy_uplmtprice">실시간상한가	long	10</param>
 /// <param name="dy_dnlmtprice">실시간하한가	long	10</param>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 35)]
 public record JD0OutBlock(
     [BlockField("접속매매여부", 1)] string gubun,
     [BlockField("실시간가격제한여부", 1)] string dy_gubun,
@@ -2811,6 +2875,7 @@ public record JD0OutBlock(
 /// 주식선물호가: JH0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record JH0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -2886,6 +2951,7 @@ public record JH0InBlock(
 /// <param name="totbidcnt">매수호가총건수	int	5</param>
 /// <param name="danhochk">단일가호가여부	string	1</param>
 /// <param name="alloc_gubun">배분적용구분	string	1</param>
+[BlockInfo(true, 550)]
 public record JH0OutBlock(
     [BlockField("단축코드", 8)] string futcode,
     [BlockField("호가시간", 6)] string hotime,
@@ -2962,6 +3028,7 @@ public record JH0OutBlock(
 /// 장운영정보: JIF
 /// </summary>
 /// <param name="jangubun">장구분	string	1</param>
+[BlockInfo(false, 1)]
 public record JIFInBlock(
     [BlockField("장구분", 1)] string jangubun
     );
@@ -2971,6 +3038,7 @@ public record JIFInBlock(
 /// </summary>
 /// <param name="jangubun">장구분	string	1</param>
 /// <param name="jstatus">장상태	string	2</param>
+[BlockInfo(false, 3)]
 public record JIFOutBlock(
     [BlockField("장구분", 1)] string jangubun,
     [BlockField("장상태", 2)] string jstatus
@@ -2981,6 +3049,7 @@ public record JIFOutBlock(
 /// 주식선물가격제한폭확대: JX0
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record JX0InBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -2993,6 +3062,7 @@ public record JX0InBlock(
 /// <param name="uplmtprice">적용 상한가	long	10</param>
 /// <param name="dnlmtprice">적용 하한가	long	10</param>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 37)]
 public record JX0OutBlock(
     [BlockField("적용 상한단계", 2)] string upstep,
     [BlockField("적용 하한단계", 2)] string dnstep,
@@ -3006,6 +3076,7 @@ public record JX0OutBlock(
 /// KOSPI거래원: K1_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record K1_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -3094,6 +3165,7 @@ public record K1_InBlock(
 /// <param name="ftradmsval">외국계증권사매수거래대금	long	15</param>
 /// <param name="ftradmdavg">외국계증권사매도평균단가	int	7</param>
 /// <param name="ftradmsavg">외국계증권사매수평균단가	int	7</param>
+[BlockInfo(true, 753)]
 public record K1_OutBlock(
     [BlockField("매도증권사코드1", 3)] string offerno1,
     [BlockField("매수증권사코드1", 3)] string bidno1,
@@ -3183,6 +3255,7 @@ public record K1_OutBlock(
 /// ELW거래원: k1_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record k1_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -3247,6 +3320,7 @@ public record k1_InBlock(
 /// <param name="ftradmdcha">외국계증권사매도거래량직전대비	string	10</param>
 /// <param name="ftradmscha">외국계증권사매수거래량직전대비	string	10</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 465)]
 public record k1_OutBlock(
     [BlockField("매도증권사코드1", 3)] string offerno1,
     [BlockField("매수증권사코드1", 3)] string bidno1,
@@ -3312,6 +3386,7 @@ public record k1_OutBlock(
 /// KOSDAQ체결: K3_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record K3_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -3345,6 +3420,7 @@ public record K3_InBlock(
 /// <param name="status">장정보	string	2</param>
 /// <param name="jnilvolume">전일동시간대거래량	long	12</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 223)]
 public record K3_OutBlock(
     [BlockField("체결시간", 6)] string chetime,
     [BlockField("전일대비구분", 1)] string sign,
@@ -3379,6 +3455,7 @@ public record K3_OutBlock(
 /// KOSDAQ프로그램매매종목별: KH_
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 7)]
 public record KH_InBlock(
     [BlockField("종목코드", 6)] string shcode
     );
@@ -3417,6 +3494,7 @@ public record KH_InBlock(
 /// <param name="pdgvolume">매도 사전공시수량	long	12</param>
 /// <param name="psgvolume">매수 사전공시수량	long	12</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 385)]
 public record KH_OutBlock(
     [BlockField("수신시간", 6)] string time,
     [BlockField("현재가", 8)] int price,
@@ -3456,6 +3534,7 @@ public record KH_OutBlock(
 /// KOSDAQ프로그램매매전체집계: KM_
 /// </summary>
 /// <param name="gubun">구분값	string	1</param>
+[BlockInfo(true, 2)]
 public record KM_InBlock(
     [BlockField("구분값", 1)] string gubun
     );
@@ -3549,6 +3628,7 @@ public record KM_InBlock(
 /// <param name="p_tsvalcha">전체매수체결금액직전대비	int	8</param>
 /// <param name="p_tvalcha">전체순매수 금액직전대비	int	8</param>
 /// <param name="gubun">구분값	string	1</param>
+[BlockInfo(true, 662)]
 public record KM_OutBlock(
     [BlockField("수신시간", 6)] string time,
     [BlockField("차익매도호가 잔량", 6)] int cdhrem,
@@ -3643,6 +3723,7 @@ public record KM_OutBlock(
 /// KOSDAQ우선호가: KS_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record KS_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -3653,6 +3734,7 @@ public record KS_InBlock(
 /// <param name="offerho">매도호가	int	8</param>
 /// <param name="bidho">매수호가	int	8</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 25)]
 public record KS_OutBlock(
     [BlockField("매도호가", 8)] int offerho,
     [BlockField("매수호가", 8)] int bidho,
@@ -3664,6 +3746,7 @@ public record KS_OutBlock(
 /// US지수: MK2
 /// </summary>
 /// <param name="symbol">심볼코드	string	16</param>
+[BlockInfo(true, 17)]
 public record MK2InBlock(
     [BlockField("심볼코드", 16)] string symbol
     );
@@ -3689,6 +3772,7 @@ public record MK2InBlock(
 /// <param name="volume">누적거래량	double	12</param>
 /// <param name="xsymbol">심벌	string	16</param>
 /// <param name="cvolume">체결거래량	double	8</param>
+[BlockInfo(true, 173)]
 public record MK2OutBlock(
     [BlockField("일자", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -3715,6 +3799,7 @@ public record MK2OutBlock(
 /// 실시간 뉴스 제목 패킷: NWS
 /// </summary>
 /// <param name="nwcode">뉴스코드	string	6</param>
+[BlockInfo(false, 6)]
 public record NWSInBlock(
     [BlockField("뉴스코드", 6)] string nwcode
     );
@@ -3729,6 +3814,7 @@ public record NWSInBlock(
 /// <param name="title">제목	string	300</param>
 /// <param name="code">단축종목코드	string	240</param>
 /// <param name="bodysize">BODY길이	int	8</param>
+[BlockInfo(false, 588)]
 public record NWSOutBlock(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -3743,6 +3829,7 @@ public record NWSOutBlock(
 /// <summary>
 /// 선물접수: O01
 /// </summary>
+[BlockInfo(false, 0)]
 public record O01InBlock(
     );
 
@@ -3868,6 +3955,7 @@ public record O01InBlock(
 /// <param name="unsttqty_2">미결제수량2	long	16</param>
 /// <param name="lqdtableqty_2">주문가능수량2	long	16</param>
 /// <param name="avrprc_2">평균가2	double	13.2</param>
+[BlockInfo(false, 1141)]
 public record O01OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -3995,6 +4083,7 @@ public record O01OutBlock(
 /// KOSPI200옵션체결(C0): OC0
 /// </summary>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record OC0InBlock(
     [BlockField("단축코드", 8)] string optcode
     );
@@ -4031,6 +4120,7 @@ public record OC0InBlock(
 /// <param name="jgubun">장운영정보	string	2</param>
 /// <param name="jnilvolume">전일동시간대거래량	long	12</param>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 233)]
 public record OC0OutBlock(
     [BlockField("체결시간", 6)] string chetime,
     [BlockField("전일대비구분", 1)] string sign,
@@ -4068,6 +4158,7 @@ public record OC0OutBlock(
 /// KOSPI200옵션실시간상하한가(D0): OD0
 /// </summary>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record OD0InBlock(
     [BlockField("단축코드", 8)] string optcode
     );
@@ -4080,6 +4171,7 @@ public record OD0InBlock(
 /// <param name="dy_uplmtprice">실시간상한가	double	8.2</param>
 /// <param name="dy_dnlmtprice">실시간하한가	double	8.2</param>
 /// <param name="opttcode">단축코드	string	8</param>
+[BlockInfo(true, 31)]
 public record OD0OutBlock(
     [BlockField("접속매매여부", 1)] string gubun,
     [BlockField("실시간가격제한여부", 1)] string dy_gubun,
@@ -4093,6 +4185,7 @@ public record OD0OutBlock(
 /// KOSPI200옵션호가(H0): OH0
 /// </summary>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record OH0InBlock(
     [BlockField("단축코드", 8)] string optcode
     );
@@ -4138,6 +4231,7 @@ public record OH0InBlock(
 /// <param name="optcode">단축코드	string	8</param>
 /// <param name="danhochk">단일가호가여부	string	1</param>
 /// <param name="alloc_gubun">배분적용구분	string	1</param>
+[BlockInfo(true, 258)]
 public record OH0OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("매도호가1", 6.2)] double offerho1,
@@ -4184,6 +4278,7 @@ public record OH0OutBlock(
 /// KOSDAQ거래원: OK_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record OK_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -4272,6 +4367,7 @@ public record OK_InBlock(
 /// <param name="ftradmsval">외국계증권사매수거래대금	long	15</param>
 /// <param name="ftradmdavg">외국계증권사매도평균단가	int	7</param>
 /// <param name="ftradmsavg">외국계증권사매수평균단가	int	7</param>
+[BlockInfo(true, 753)]
 public record OK_OutBlock(
     [BlockField("매도증권사코드1", 3)] string offerno1,
     [BlockField("매수증권사코드1", 3)] string bidno1,
@@ -4361,6 +4457,7 @@ public record OK_OutBlock(
 /// KOSPI200옵션민감도(MG): OMG
 /// </summary>
 /// <param name="optcode">옵션코드	string	8</param>
+[BlockInfo(true, 9)]
 public record OMGInBlock(
     [BlockField("옵션코드", 8)] string optcode
     );
@@ -4385,6 +4482,7 @@ public record OMGInBlock(
 /// <param name="offerimpv">매도가내재변동성	double	6.2</param>
 /// <param name="bidimpv">매수가내재변동성	double	6.2</param>
 /// <param name="optcode">옵션코드	string	8</param>
+[BlockInfo(true, 126)]
 public record OMGOutBlock(
     [BlockField("체결시간", 6)] string chetime,
     [BlockField("행사가", 6.2)] double actprice,
@@ -4410,6 +4508,7 @@ public record OMGOutBlock(
 /// 해외선물 현재가체결: OVC
 /// </summary>
 /// <param name="symbol">종목코드	string	8</param>
+[BlockInfo(true, 9)]
 public record OVCInBlock(
     [BlockField("종목코드", 8)] string symbol
     );
@@ -4435,6 +4534,7 @@ public record OVCInBlock(
 /// <param name="mdvolume">매도누적체결수량	string	15</param>
 /// <param name="msvolume">매수누적체결수량	string	15</param>
 /// <param name="ovsmkend">장마감일	string	8</param>
+[BlockInfo(true, 200)]
 public record OVCOutBlock(
     [BlockField("종목코드", 8)] string symbol,
     [BlockField("체결일자(현지)", 8)] string ovsdate,
@@ -4461,6 +4561,7 @@ public record OVCOutBlock(
 /// 해외선물 호가: OVH
 /// </summary>
 /// <param name="symbol">종목코드	string	8</param>
+[BlockInfo(true, 9)]
 public record OVHInBlock(
     [BlockField("종목코드", 8)] string symbol
     );
@@ -4504,6 +4605,7 @@ public record OVHInBlock(
 /// <param name="totbidcnt">매수호가총건수	long	10</param>
 /// <param name="totofferrem">매도호가총수량	long	10</param>
 /// <param name="totbidrem">매수호가총수량	long	10</param>
+[BlockInfo(true, 440)]
 public record OVHOutBlock(
     [BlockField("종목코드", 8)] string symbol,
     [BlockField("호가시간", 6)] string hotime,
@@ -4548,6 +4650,7 @@ public record OVHOutBlock(
 /// KOSPI200옵션가격제한폭확대(X0): OX0
 /// </summary>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record OX0InBlock(
     [BlockField("단축코드", 8)] string optcode
     );
@@ -4560,6 +4663,7 @@ public record OX0InBlock(
 /// <param name="uplmtprice">적용 상한가	double	6.2</param>
 /// <param name="dnlmtprice">적용 하한가	double	6.2</param>
 /// <param name="opttcode">단축코드	string	8</param>
+[BlockInfo(true, 29)]
 public record OX0OutBlock(
     [BlockField("적용 상한단계", 2)] string upstep,
     [BlockField("적용 하한단계", 2)] string dnstep,
@@ -4573,6 +4677,7 @@ public record OX0OutBlock(
 /// KOSPI프로그램매매종목별: PH_
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 7)]
 public record PH_InBlock(
     [BlockField("종목코드", 6)] string shcode
     );
@@ -4611,6 +4716,7 @@ public record PH_InBlock(
 /// <param name="pdgvolume">매도 사전공시수량	long	12</param>
 /// <param name="psgvolume">매수 사전공시수량	long	12</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 385)]
 public record PH_OutBlock(
     [BlockField("수신시간", 6)] string time,
     [BlockField("현재가", 8)] int price,
@@ -4650,6 +4756,7 @@ public record PH_OutBlock(
 /// KOSPI프로그램매매전체집계: PM_
 /// </summary>
 /// <param name="gubun">구분값	string	1</param>
+[BlockInfo(true, 2)]
 public record PM_InBlock(
     [BlockField("구분값", 1)] string gubun
     );
@@ -4743,6 +4850,7 @@ public record PM_InBlock(
 /// <param name="p_tsvalcha">전체매수체결금액직전대비	int	8</param>
 /// <param name="p_tvalcha">전체순매수 금액직전대비	int	8</param>
 /// <param name="gubun">구분값	string	1</param>
+[BlockInfo(true, 662)]
 public record PM_OutBlock(
     [BlockField("수신시간", 6)] string time,
     [BlockField("차익매도호가 잔량", 6)] int cdhrem,
@@ -4837,6 +4945,7 @@ public record PM_OutBlock(
 /// KOSPI우선호가: S2_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record S2_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -4847,6 +4956,7 @@ public record S2_InBlock(
 /// <param name="offerho">매도호가	int	8</param>
 /// <param name="bidho">매수호가	int	8</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 25)]
 public record S2_OutBlock(
     [BlockField("매도호가", 8)] int offerho,
     [BlockField("매수호가", 8)] int bidho,
@@ -4858,6 +4968,7 @@ public record S2_OutBlock(
 /// ELW우선호가: s2_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record s2_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -4868,6 +4979,7 @@ public record s2_InBlock(
 /// <param name="offerho">매도호가	int	8</param>
 /// <param name="bidho">매수호가	int	8</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 25)]
 public record s2_OutBlock(
     [BlockField("매도호가", 8)] int offerho,
     [BlockField("매수호가", 8)] int bidho,
@@ -4879,6 +4991,7 @@ public record s2_OutBlock(
 /// KOSPI체결: S3_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record S3_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -4912,6 +5025,7 @@ public record S3_InBlock(
 /// <param name="status">장정보	string	2</param>
 /// <param name="jnilvolume">전일동시간대거래량	long	12</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 223)]
 public record S3_OutBlock(
     [BlockField("체결시간", 6)] string chetime,
     [BlockField("전일대비구분", 1)] string sign,
@@ -4946,6 +5060,7 @@ public record S3_OutBlock(
 /// ELW체결: s3_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record s3_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -4982,6 +5097,7 @@ public record s3_InBlock(
 /// <param name="moneyness">ATM구분	string	1</param>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="lpvolume">LP보유수량	long	15</param>
+[BlockInfo(true, 250)]
 public record s3_OutBlock(
     [BlockField("체결시간", 6)] string chetime,
     [BlockField("전일대비구분", 1)] string sign,
@@ -5019,6 +5135,7 @@ public record s3_OutBlock(
 /// KOSPI기세: S4_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record S4_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -5037,6 +5154,7 @@ public record S4_InBlock(
 /// <param name="lowtime">저가시간	string	6</param>
 /// <param name="low">저가	int	8</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 82)]
 public record S4_OutBlock(
     [BlockField("전일대비구분", 1)] string sign,
     [BlockField("전일대비", 8)] int change,
@@ -5056,6 +5174,7 @@ public record S4_OutBlock(
 /// ELW기세: s4_
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record s4_InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -5074,6 +5193,7 @@ public record s4_InBlock(
 /// <param name="lowtime">저가시간	string	6</param>
 /// <param name="low">저가	int	8</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 82)]
 public record s4_OutBlock(
     [BlockField("전일대비구분", 1)] string sign,
     [BlockField("전일대비", 8)] int change,
@@ -5092,6 +5212,7 @@ public record s4_OutBlock(
 /// <summary>
 /// 주식주문접수: SC0
 /// </summary>
+[BlockInfo(false, 0)]
 public record SC0InBlock(
     );
 
@@ -5211,6 +5332,7 @@ public record SC0InBlock(
 /// <param name="ordablemny">주문가능현금	long	16</param>
 /// <param name="ordablesubstamt">주문가능대용	long	16</param>
 /// <param name="ruseableamt">재사용가능금액	long	16</param>
+[BlockInfo(false, 1088)]
 public record SC0OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -5331,6 +5453,7 @@ public record SC0OutBlock(
 /// <summary>
 /// 주식주문체결: SC1
 /// </summary>
+[BlockInfo(false, 0)]
 public record SC1InBlock(
     );
 
@@ -5467,6 +5590,7 @@ public record SC1InBlock(
 /// <param name="ordablemny">주문가능현금	long	16</param>
 /// <param name="ordablesubstamt">주문가능대용	long	16</param>
 /// <param name="ruseableamt">재사용가능금액	long	16</param>
+[BlockInfo(false, 1329)]
 public record SC1OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -5604,6 +5728,7 @@ public record SC1OutBlock(
 /// <summary>
 /// 주식주문정정: SC2
 /// </summary>
+[BlockInfo(false, 0)]
 public record SC2InBlock(
     );
 
@@ -5740,6 +5865,7 @@ public record SC2InBlock(
 /// <param name="ordablemny">주문가능현금	long	16</param>
 /// <param name="ordablesubstamt">주문가능대용	long	16</param>
 /// <param name="ruseableamt">재사용가능금액	long	16</param>
+[BlockInfo(false, 1329)]
 public record SC2OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -5877,6 +6003,7 @@ public record SC2OutBlock(
 /// <summary>
 /// 주식주문취소: SC3
 /// </summary>
+[BlockInfo(false, 0)]
 public record SC3InBlock(
     );
 
@@ -6013,6 +6140,7 @@ public record SC3InBlock(
 /// <param name="ordablemny">주문가능현금	long	16</param>
 /// <param name="ordablesubstamt">주문가능대용	long	16</param>
 /// <param name="ruseableamt">재사용가능금액	long	16</param>
+[BlockInfo(false, 1329)]
 public record SC3OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -6150,6 +6278,7 @@ public record SC3OutBlock(
 /// <summary>
 /// 주식주문거부: SC4
 /// </summary>
+[BlockInfo(false, 0)]
 public record SC4InBlock(
     );
 
@@ -6286,6 +6415,7 @@ public record SC4InBlock(
 /// <param name="ordablemny">주문가능현금	long	16</param>
 /// <param name="ordablesubstamt">주문가능대용	long	16</param>
 /// <param name="ruseableamt">재사용가능금액	long	16</param>
+[BlockInfo(false, 1329)]
 public record SC4OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("계좌번호", 11)] string accno,
@@ -6424,6 +6554,7 @@ public record SC4OutBlock(
 /// 상/하한가근접진입: SHC
 /// </summary>
 /// <param name="updnlmtgubun">상/하한구분	string	1</param>
+[BlockInfo(true, 2)]
 public record SHCInBlock(
     [BlockField("상/하한구분", 1)] string updnlmtgubun
     );
@@ -6450,6 +6581,7 @@ public record SHCInBlock(
 /// <param name="dishonest">불성실구분	string	1</param>
 /// <param name="jkrate">증거금률	string	1</param>
 /// <param name="updnlmtdaycnt">상한가/하한가연속일수	int	3</param>
+[BlockInfo(true, 128)]
 public record SHCOutBlock(
     [BlockField("거래소/코스닥구분", 1)] string sijanggubun,
     [BlockField("종목명", 20)] string hname,
@@ -6477,6 +6609,7 @@ public record SHCOutBlock(
 /// 상/하한가근접이탈: SHD
 /// </summary>
 /// <param name="updnlmtgubun">상/하한구분	string	1</param>
+[BlockInfo(true, 2)]
 public record SHDInBlock(
     [BlockField("상/하한구분", 1)] string updnlmtgubun
     );
@@ -6502,6 +6635,7 @@ public record SHDInBlock(
 /// <param name="wgubun">우선주구분	string	1</param>
 /// <param name="dishonest">불성실구분	string	1</param>
 /// <param name="jkrate">증거금률	string	1</param>
+[BlockInfo(true, 124)]
 public record SHDOutBlock(
     [BlockField("거래소/코스닥구분", 1)] string sijanggubun,
     [BlockField("종목명", 20)] string hname,
@@ -6528,6 +6662,7 @@ public record SHDOutBlock(
 /// 상/하한가진입: SHI
 /// </summary>
 /// <param name="updnlmtgubun">상/하한구분	string	1</param>
+[BlockInfo(true, 2)]
 public record SHIInBlock(
     [BlockField("상/하한구분", 1)] string updnlmtgubun
     );
@@ -6555,6 +6690,7 @@ public record SHIInBlock(
 /// <param name="wgubun">우선주구분	string	1</param>
 /// <param name="dishonest">불성실구분	string	1</param>
 /// <param name="jkrate">증거금률	string	1</param>
+[BlockInfo(true, 145)]
 public record SHIOutBlock(
     [BlockField("거래소/코스닥구분", 1)] string sijanggubun,
     [BlockField("종목명", 20)] string hname,
@@ -6583,6 +6719,7 @@ public record SHIOutBlock(
 /// 상/하한가이탈: SHO
 /// </summary>
 /// <param name="updnlmtgubun">상/하한구분	string	1</param>
+[BlockInfo(true, 2)]
 public record SHOInBlock(
     [BlockField("상/하한구분", 1)] string updnlmtgubun
     );
@@ -6609,6 +6746,7 @@ public record SHOInBlock(
 /// <param name="wgubun">우선주구분	string	1</param>
 /// <param name="dishonest">불성실구분	string	1</param>
 /// <param name="jkrate">증거금률	string	1</param>
+[BlockInfo(true, 133)]
 public record SHOOutBlock(
     [BlockField("거래소/코스닥구분", 1)] string sijanggubun,
     [BlockField("종목명", 20)] string hname,
@@ -6635,6 +6773,7 @@ public record SHOOutBlock(
 /// <summary>
 /// 해외선물주문: TC1
 /// </summary>
+[BlockInfo(false, 0)]
 public record TC1InBlock(
     );
 
@@ -6664,6 +6803,7 @@ public record TC1InBlock(
 /// <param name="ordr_tm">주문시간	string	9</param>
 /// <param name="userid">사용자ID	string	8</param>
 /// <param name="xrc_rsv_tcp_code">만기행사유무	string	1</param>
+[BlockInfo(false, 202)]
 public record TC1OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("KEY", 11)] string key,
@@ -6694,6 +6834,7 @@ public record TC1OutBlock(
 /// <summary>
 /// 해외선물응답: TC2
 /// </summary>
+[BlockInfo(false, 0)]
 public record TC2InBlock(
     );
 
@@ -6725,6 +6866,7 @@ public record TC2InBlock(
 /// <param name="rfsl_cd">호가거부사유코드	string	4</param>
 /// <param name="text">호가거부사유코드명	string	80</param>
 /// <param name="user_id">사용자ID	string	8</param>
+[BlockInfo(false, 297)]
 public record TC2OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("KEY", 11)] string key,
@@ -6757,6 +6899,7 @@ public record TC2OutBlock(
 /// <summary>
 /// 해외선물체결: TC3
 /// </summary>
+[BlockInfo(false, 0)]
 public record TC3InBlock(
     );
 
@@ -6800,6 +6943,7 @@ public record TC3InBlock(
 /// <param name="last_now_prc">최종현재가격	double	18.11</param>
 /// <param name="bf_mtrt_dt">이전만기일자	string	8</param>
 /// <param name="clr_q">청산수량	long	15</param>
+[BlockInfo(false, 437)]
 public record TC3OutBlock(
     [BlockField("라인일련번호", 10)] long lineseq,
     [BlockField("KEY", 11)] string key,
@@ -6845,6 +6989,7 @@ public record TC3OutBlock(
 /// VI발동해제: VI_
 /// </summary>
 /// <param name="shcode">단축코드(KEY)	string	6</param>
+[BlockInfo(true, 7)]
 public record VI_InBlock(
     [BlockField("단축코드(KEY)", 6)] string shcode
     );
@@ -6859,6 +7004,7 @@ public record VI_InBlock(
 /// <param name="shcode">단축코드(KEY)	string	6</param>
 /// <param name="ref_shcode">참조코드	string	6</param>
 /// <param name="time">시간	string	6</param>
+[BlockInfo(true, 50)]
 public record VI_OutBlock(
     [BlockField("구분(0:해제 1:정적발동 2:동적발동 3:정적&동적)", 1)] string vi_gubun,
     [BlockField("정적VI발동기준가격", 8)] int svi_recprice,
@@ -6874,6 +7020,7 @@ public record VI_OutBlock(
 /// 해외옵션 현재가체결: WOC
 /// </summary>
 /// <param name="symbol">종목코드	string	16</param>
+[BlockInfo(true, 17)]
 public record WOCInBlock(
     [BlockField("종목코드", 16)] string symbol
     );
@@ -6899,6 +7046,7 @@ public record WOCInBlock(
 /// <param name="mdvolume">매도누적체결수량	string	15</param>
 /// <param name="msvolume">매수누적체결수량	string	15</param>
 /// <param name="ovsmkend">장마감일	string	8</param>
+[BlockInfo(true, 208)]
 public record WOCOutBlock(
     [BlockField("종목코드", 16)] string symbol,
     [BlockField("체결일자(현지)", 8)] string ovsdate,
@@ -6925,6 +7073,7 @@ public record WOCOutBlock(
 /// 해외옵션 호가: WOH
 /// </summary>
 /// <param name="symbol">종목코드	string	16</param>
+[BlockInfo(true, 17)]
 public record WOHInBlock(
     [BlockField("종목코드", 16)] string symbol
     );
@@ -6968,6 +7117,7 @@ public record WOHInBlock(
 /// <param name="totbidcnt">매수호가총건수	long	10</param>
 /// <param name="totofferrem">매도호가총수량	long	10</param>
 /// <param name="totbidrem">매수호가총수량	long	10</param>
+[BlockInfo(true, 448)]
 public record WOHOutBlock(
     [BlockField("종목코드", 16)] string symbol,
     [BlockField("호가시간", 6)] string hotime,
@@ -7012,6 +7162,7 @@ public record WOHOutBlock(
 /// 상품선물예상체결: YC3
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record YC3InBlock(
     [BlockField("단축코드", 8)] string shcode
     );
@@ -7026,6 +7177,7 @@ public record YC3InBlock(
 /// <param name="jnilchange">예상체결가전일종가대비	double	9.2</param>
 /// <param name="jnilydrate">예상체결가전일종가등락율	double	9.2</param>
 /// <param name="shcode">단축코드	string	8</param>
+[BlockInfo(true, 55)]
 public record YC3OutBlock(
     [BlockField("예상체결시간", 6)] string ychetime,
     [BlockField("예상체결가격", 9.2)] double yeprice,
@@ -7041,6 +7193,7 @@ public record YC3OutBlock(
 /// 지수선물예상체결: YFC
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record YFCInBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -7054,6 +7207,7 @@ public record YFCInBlock(
 /// <param name="jnilchange">예상체결가전일종가대비	double	6.2</param>
 /// <param name="jnilydrate">예상체결가전일종가등락율	double	6.2</param>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 39)]
 public record YFCOutBlock(
     [BlockField("예상체결시간", 6)] string ychetime,
     [BlockField("예상체결가격", 6.2)] double yeprice,
@@ -7068,6 +7222,7 @@ public record YFCOutBlock(
 /// 주식선물예상체결: YJC
 /// </summary>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record YJCInBlock(
     [BlockField("단축코드", 8)] string futcode
     );
@@ -7081,6 +7236,7 @@ public record YJCInBlock(
 /// <param name="jnilchange">예상체결가전일종가대비	long	10</param>
 /// <param name="jnilydrate">예상체결가전일종가등락율	double	6.2</param>
 /// <param name="futcode">단축코드	string	8</param>
+[BlockInfo(true, 47)]
 public record YJCOutBlock(
     [BlockField("예상체결시간", 6)] string ychetime,
     [BlockField("예상체결가격", 10)] long yeprice,
@@ -7095,6 +7251,7 @@ public record YJCOutBlock(
 /// 예상지수: YJ_
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 4)]
 public record YJ_InBlock(
     [BlockField("업종코드", 3)] string upcode
     );
@@ -7111,6 +7268,7 @@ public record YJ_InBlock(
 /// <param name="volume">누적거래량	int	8</param>
 /// <param name="value">예상거래대금	int	8</param>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 65)]
 public record YJ_OutBlock(
     [BlockField("시간", 6)] string time,
     [BlockField("예상지수", 8.2)] double jisu,
@@ -7128,6 +7286,7 @@ public record YJ_OutBlock(
 /// KOSDAQ예상체결: YK3
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record YK3InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -7146,6 +7305,7 @@ public record YK3InBlock(
 /// <param name="yofferrem0">예상매도호가수량	long	12</param>
 /// <param name="ybidrem0">예상매수호가수량	long	12</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 98)]
 public record YK3OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("예상체결가격", 8)] int yeprice,
@@ -7165,6 +7325,7 @@ public record YK3OutBlock(
 /// 지수옵션예상체결: YOC
 /// </summary>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record YOCInBlock(
     [BlockField("단축코드", 8)] string optcode
     );
@@ -7178,6 +7339,7 @@ public record YOCInBlock(
 /// <param name="jnilchange">예상체결가전일종가대비	double	6.2</param>
 /// <param name="jnilydrate">예상체결가전일종가등락율	double	6.2</param>
 /// <param name="optcode">단축코드	string	8</param>
+[BlockInfo(true, 39)]
 public record YOCOutBlock(
     [BlockField("예상체결시간", 6)] string ychetime,
     [BlockField("예상체결가격", 6.2)] double yeprice,
@@ -7192,6 +7354,7 @@ public record YOCOutBlock(
 /// KOSPI예상체결: YS3
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record YS3InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -7210,6 +7373,7 @@ public record YS3InBlock(
 /// <param name="yofferrem0">예상매도호가수량	long	12</param>
 /// <param name="ybidrem0">예상매수호가수량	long	12</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 98)]
 public record YS3OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("예상체결가격", 8)] int yeprice,
@@ -7229,6 +7393,7 @@ public record YS3OutBlock(
 /// ELW예상체결: Ys3
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record Ys3InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -7247,6 +7412,7 @@ public record Ys3InBlock(
 /// <param name="yofferrem0">예상매도호가수량	long	12</param>
 /// <param name="ybidrem0">예상매수호가수량	long	12</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 98)]
 public record Ys3OutBlock(
     [BlockField("호가시간", 6)] string hotime,
     [BlockField("예상체결가격", 8)] int yeprice,

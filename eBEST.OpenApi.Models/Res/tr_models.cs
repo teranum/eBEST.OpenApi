@@ -1,4 +1,4 @@
-// [2024-03-09 오후 11:44:23]
+// [2024-03-11 오전 11:59:00]
 // 이 파일은 ResToModel 에 의해 자동으로 만들어졌습니다.
 // XingAPI Res폴더의 .res 파일에서 변환되었습니다.
 namespace eBEST.OpenApi.Models;
