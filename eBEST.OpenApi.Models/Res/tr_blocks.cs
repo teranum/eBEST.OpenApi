@@ -1,4 +1,4 @@
-// [2024-02-13 오후 9:25:02]
+// [2024-03-11 오전 11:59:00]
 // 이 파일은 ResToModel 에 의해 자동으로 만들어졌습니다.
 // XingAPI Res폴더의 .res 파일에서 변환되었습니다.
 namespace eBEST.OpenApi.Models;
@@ -16,6 +16,7 @@ namespace eBEST.OpenApi.Models;
 /// <param name="PdptnCode">상품유형코드	string	2</param>
 /// <param name="IsuLgclssCode">종목대분류코드	string	2</param>
 /// <param name="IsuNo">종목번호	string	12</param>
+[BlockInfo(false, 76)]
 public record CDPCQ04700InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("조회구분", 1)] string QryTp,
@@ -42,6 +43,7 @@ public record CDPCQ04700InBlock1(
 /// <param name="PdptnCode">상품유형코드	string	2</param>
 /// <param name="IsuLgclssCode">종목대분류코드	string	2</param>
 /// <param name="IsuNo">종목번호	string	12</param>
+[BlockInfo(false, 76)]
 public record CDPCQ04700OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("조회구분", 1)] string QryTp,
@@ -60,6 +62,7 @@ public record CDPCQ04700OutBlock1(
 /// </summary>
 /// <param name="RecCnt">레코드갯수	int	5</param>
 /// <param name="AcntNm">계좌명	string	40</param>
+[BlockInfo(false, 45)]
 public record CDPCQ04700OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm
@@ -146,6 +149,7 @@ public record CDPCQ04700OutBlock2(
 /// <param name="FcurrStmpTx">외화인지세	double	21.4</param>
 /// <param name="FcurrElecfnTrtax">외화전자금융거래세	double	21.4</param>
 /// <param name="FcstckTrtax">외화증권거래세	double	21.4</param>
+[BlockInfo(false, 1412)]
 public record CDPCQ04700OutBlock3(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("거래일자", 8)] string TrdDt,
@@ -234,6 +238,7 @@ public record CDPCQ04700OutBlock3(
 /// <param name="PnlSumAmt">손익합계금액	long	16</param>
 /// <param name="CtrctAsm">약정누계	long	16</param>
 /// <param name="CmsnAmtSumAmt">수수료합계금액	long	16</param>
+[BlockInfo(false, 53)]
 public record CDPCQ04700OutBlock4(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("손익합계금액", 16)] long PnlSumAmt,
@@ -261,6 +266,7 @@ public record CDPCQ04700OutBlock4(
 /// <param name="BuyCmsn">매수수수료	long	16</param>
 /// <param name="ExecTax">체결세금	long	16</param>
 /// <param name="FcurrBuyAdjstAmt">외화매수정산금액	double	25.4</param>
+[BlockInfo(false, 282)]
 public record CDPCQ04700OutBlock5(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("입금금액", 16)] long MnyinAmt,
@@ -291,6 +297,7 @@ public record CDPCQ04700OutBlock5(
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="PrdtExecTpCode">체결구분	string	1</param>
 /// <param name="StnlnSeqTp">정렬순서구분	string	1</param>
+[BlockInfo(false, 36)]
 public record CEXAQ21100InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("선택입력구분", 1)] string ChoicInptTpCode,
@@ -309,6 +316,7 @@ public record CEXAQ21100InBlock1(
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="PrdtExecTpCode">체결구분	string	1</param>
 /// <param name="StnlnSeqTp">정렬순서구분	string	1</param>
+[BlockInfo(false, 36)]
 public record CEXAQ21100OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("선택입력구분", 1)] string ChoicInptTpCode,
@@ -325,6 +333,7 @@ public record CEXAQ21100OutBlock1(
 /// <param name="AcntNm">계좌명	string	40</param>
 /// <param name="OrdQty">주문수량	long	16</param>
 /// <param name="ExecQty">체결수량	long	16</param>
+[BlockInfo(false, 77)]
 public record CEXAQ21100OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -356,6 +365,7 @@ public record CEXAQ21100OutBlock2(
 /// <param name="UnercQty">미체결수량	long	16</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
 /// <param name="CommdaNm">통신매체명	string	40</param>
+[BlockInfo(false, 322)]
 public record CEXAQ21100OutBlock3(
     [BlockField("계좌번호1", 20)] string AcntNo1,
     [BlockField("주문일", 8)] string OrdDt,
@@ -394,6 +404,7 @@ public record CEXAQ21100OutBlock3(
 /// <param name="BnsTpCode">매매구분	string	1</param>
 /// <param name="OrdPrc">주문가	double	13.2</param>
 /// <param name="ErxPrcCndiTpCode">유렉스가격조건구분코드	string	1</param>
+[BlockInfo(false, 96)]
 public record CEXAQ21200InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -420,6 +431,7 @@ public record CEXAQ21200InBlock1(
 /// <param name="BnsTpCode">매매구분	string	1</param>
 /// <param name="OrdPrc">주문가	double	13.2</param>
 /// <param name="ErxPrcCndiTpCode">유렉스가격조건구분코드	string	1</param>
+[BlockInfo(false, 96)]
 public record CEXAQ21200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -447,6 +459,7 @@ public record CEXAQ21200OutBlock1(
 /// <param name="UsePreargMnyMgn">사용예정현금증거금액	long	16</param>
 /// <param name="OrdAbleAmt">주문가능금액	long	16</param>
 /// <param name="MnyOrdAbleAmt">현금주문가능금액	long	16</param>
+[BlockInfo(false, 180)]
 public record CEXAQ21200OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -471,6 +484,7 @@ public record CEXAQ21200OutBlock2(
 /// <param name="IsuCode">종목코드	string	12</param>
 /// <param name="BalEvalTp">잔고평가구분	string	1</param>
 /// <param name="FutsPrcEvalTp">선물가격평가구분	string	1</param>
+[BlockInfo(false, 47)]
 public record CEXAQ31100InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -489,6 +503,7 @@ public record CEXAQ31100InBlock1(
 /// <param name="IsuCode">종목코드	string	12</param>
 /// <param name="BalEvalTp">잔고평가구분	string	1</param>
 /// <param name="FutsPrcEvalTp">선물가격평가구분	string	1</param>
+[BlockInfo(false, 47)]
 public record CEXAQ31100OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -508,6 +523,7 @@ public record CEXAQ31100OutBlock1(
 /// <param name="AdjstDfamt">정산차금	long	16</param>
 /// <param name="TotEvalAmt">총평가금액	long	16</param>
 /// <param name="TotPnlAmt">총손익금액	long	16</param>
+[BlockInfo(false, 129)]
 public record CEXAQ31100OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -536,6 +552,7 @@ public record CEXAQ31100OutBlock2(
 /// <param name="PnlRat">손익률	double	12.6</param>
 /// <param name="UnsttAmt">미결제금액	long	16</param>
 /// <param name="BnsplAmt">매매손익금액	long	16</param>
+[BlockInfo(false, 246)]
 public record CEXAQ31100OutBlock3(
     [BlockField("선물옵션종목번호", 12)] string FnoIsuNo,
     [BlockField("종목명", 40)] string IsuNm,
@@ -563,6 +580,7 @@ public record CEXAQ31100OutBlock3(
 /// <param name="InptPwd">입력비밀번호	string	8</param>
 /// <param name="BalEvalTp">잔고평가구분	string	1</param>
 /// <param name="FutsPrcEvalTp">선물가격평가구분	string	1</param>
+[BlockInfo(false, 35)]
 public record CEXAQ31200InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -579,6 +597,7 @@ public record CEXAQ31200InBlock1(
 /// <param name="InptPwd">입력비밀번호	string	8</param>
 /// <param name="BalEvalTp">잔고평가구분	string	1</param>
 /// <param name="FutsPrcEvalTp">선물가격평가구분	string	1</param>
+[BlockInfo(false, 35)]
 public record CEXAQ31200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -617,6 +636,7 @@ public record CEXAQ31200OutBlock1(
 /// <param name="MnyinAmt">입금금액	long	16</param>
 /// <param name="MnyoutAmt">출금금액	long	16</param>
 /// <param name="FutsCmsnAmt">선물수수료금액	long	16</param>
+[BlockInfo(false, 444)]
 public record CEXAQ31200OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -662,6 +682,7 @@ public record CEXAQ31200OutBlock2(
 /// <param name="PnlRat">손익률	double	12.6</param>
 /// <param name="EvalAmt">평가금액	long	16</param>
 /// <param name="LqdtAbleQty">청산가능수량	long	16</param>
+[BlockInfo(false, 184)]
 public record CEXAQ31200OutBlock3(
     [BlockField("선물옵션종목번호", 12)] string FnoIsuNo,
     [BlockField("종목명", 40)] string IsuNm,
@@ -691,6 +712,7 @@ public record CEXAQ31200OutBlock3(
 /// <param name="FnoTrdPtnCode">선물옵션거래유형코드	string	2</param>
 /// <param name="SrtOrdNo2">시작주문번호2	long	10</param>
 /// <param name="StnlnSeqTp">정렬순서구분	string	1</param>
+[BlockInfo(false, 64)]
 public record CEXAQ44200InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("선택입력구분", 1)] string ChoicInptTpCode,
@@ -717,6 +739,7 @@ public record CEXAQ44200InBlock1(
 /// <param name="FnoTrdPtnCode">선물옵션거래유형코드	string	2</param>
 /// <param name="SrtOrdNo2">시작주문번호2	long	10</param>
 /// <param name="StnlnSeqTp">정렬순서구분	string	1</param>
+[BlockInfo(false, 64)]
 public record CEXAQ44200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("선택입력구분", 1)] string ChoicInptTpCode,
@@ -738,6 +761,7 @@ public record CEXAQ44200OutBlock1(
 /// <param name="ExecQty">체결수량	long	16</param>
 /// <param name="UnercQty">미체결수량	long	16</param>
 /// <param name="ExecPrc">체결가	double	15.2</param>
+[BlockInfo(false, 68)]
 public record CEXAQ44200OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문수량", 16)] long OrdQty,
@@ -781,6 +805,7 @@ public record CEXAQ44200OutBlock2(
 /// <param name="ErxOrdStatCode">유렉스주문상태코드	string	1</param>
 /// <param name="CodeNm0">코드명0	string	40</param>
 /// <param name="ExchRcptTime">거래소접수시각	string	30</param>
+[BlockInfo(false, 493)]
 public record CEXAQ44200OutBlock3(
     [BlockField("계좌번호1", 20)] string AcntNo1,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -827,6 +852,7 @@ public record CEXAQ44200OutBlock3(
 /// <param name="ErxPrcCndiTpCode">유렉스가격조건구분코드	string	1</param>
 /// <param name="OrdPrc">주문가격	double	15.2</param>
 /// <param name="OrdQty">주문수량	long	16</param>
+[BlockInfo(false, 73)]
 public record CEXAT11100InBlock1(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("비밀번호", 8)] string Pwd,
@@ -850,6 +876,7 @@ public record CEXAT11100InBlock1(
 /// <param name="OrdQty">주문수량	long	16</param>
 /// <param name="OrdCndiPrc">주문조건가격	double	25.8</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 105)]
 public record CEXAT11100OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -876,6 +903,7 @@ public record CEXAT11100OutBlock1(
 /// <param name="OrdMgn">주문증거금	long	16</param>
 /// <param name="MnyOrdMgn">현금주문증거금	long	16</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
+[BlockInfo(false, 225)]
 public record CEXAT11100OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -898,6 +926,7 @@ public record CEXAT11100OutBlock2(
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="FnoIsuNo">선물옵션종목번호	string	12</param>
 /// <param name="OrdPrc">주문가격	double	15.2</param>
+[BlockInfo(false, 65)]
 public record CEXAT11200InBlock1(
     [BlockField("원주문번호", 10)] long OrgOrdNo,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -920,6 +949,7 @@ public record CEXAT11200InBlock1(
 /// <param name="MdfyQty">정정수량	long	16</param>
 /// <param name="OrdCndiPrc">주문조건가격	double	25.8</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 115)]
 public record CEXAT11200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("원주문번호", 10)] long OrgOrdNo,
@@ -947,6 +977,7 @@ public record CEXAT11200OutBlock1(
 /// <param name="OrdMgn">주문증거금액	long	16</param>
 /// <param name="MnyOrdMgn">현금주문증거금액	long	16</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
+[BlockInfo(false, 225)]
 public record CEXAT11200OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -968,6 +999,7 @@ public record CEXAT11200OutBlock2(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="FnoIsuNo">선물옵션종목번호	string	12</param>
+[BlockInfo(false, 50)]
 public record CEXAT11300InBlock1(
     [BlockField("원주문번호", 10)] long OrgOrdNo,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -985,6 +1017,7 @@ public record CEXAT11300InBlock1(
 /// <param name="FnoIsuNo">선물옵션종목번호	string	12</param>
 /// <param name="CancQty">취소수량	long	16</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 73)]
 public record CEXAT11300OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("원주문번호", 10)] long OrgOrdNo,
@@ -1008,6 +1041,7 @@ public record CEXAT11300OutBlock1(
 /// <param name="OrdMgn">주문증거금액	long	16</param>
 /// <param name="MnyOrdMgn">현금주문증거금액	long	16</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
+[BlockInfo(false, 225)]
 public record CEXAT11300OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -1035,6 +1069,7 @@ public record CEXAT11300OutBlock2(
 /// <param name="PrdtExecTpCode">체결구분	string	1</param>
 /// <param name="StnlnSeqTp">정렬순서구분	string	1</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 57)]
 public record CFOAQ00600InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1061,6 +1096,7 @@ public record CFOAQ00600InBlock1(
 /// <param name="PrdtExecTpCode">체결구분	string	1</param>
 /// <param name="StnlnSeqTp">정렬순서구분	string	1</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 57)]
 public record CFOAQ00600OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1083,6 +1119,7 @@ public record CFOAQ00600OutBlock1(
 /// <param name="FutsExecQty">선물체결수량	long	16</param>
 /// <param name="OptOrdQty">옵션주문수량	long	16</param>
 /// <param name="OptExecQty">옵션체결수량	long	16</param>
+[BlockInfo(false, 109)]
 public record CFOAQ00600OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -1119,6 +1156,7 @@ public record CFOAQ00600OutBlock2(
 /// <param name="UserId">사용자ID	string	16</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
 /// <param name="CommdaCodeNm">통신매체코드명	string	40</param>
+[BlockInfo(false, 348)]
 public record CFOAQ00600OutBlock3(
     [BlockField("주문일", 8)] string OrdDt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -1160,6 +1198,7 @@ public record CFOAQ00600OutBlock3(
 /// <param name="BnsTpCode">매매구분	string	1</param>
 /// <param name="FnoOrdPrc">선물옵션주문가격	double	27.8</param>
 /// <param name="FnoOrdprcPtnCode">선물옵션호가유형코드	string	2</param>
+[BlockInfo(false, 111)]
 public record CFOAQ10100InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1186,6 +1225,7 @@ public record CFOAQ10100InBlock1(
 /// <param name="BnsTpCode">매매구분	string	1</param>
 /// <param name="FnoOrdPrc">선물옵션주문가격	double	27.8</param>
 /// <param name="FnoOrdprcPtnCode">선물옵션호가유형코드	string	2</param>
+[BlockInfo(false, 111)]
 public record CFOAQ10100OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1213,6 +1253,7 @@ public record CFOAQ10100OutBlock1(
 /// <param name="UsePreargMnyMgn">사용예정현금증거금액	long	16</param>
 /// <param name="OrdAbleAmt">주문가능금액	long	16</param>
 /// <param name="MnyOrdAbleAmt">현금주문가능금액	long	16</param>
+[BlockInfo(false, 192)]
 public record CFOAQ10100OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -1238,6 +1279,7 @@ public record CFOAQ10100OutBlock2(
 /// <param name="FnoOrdprcPtnCode">선물옵션호가유형코드	string	2</param>
 /// <param name="FnoOrdPrc">선물옵션주문가격	double	27.8</param>
 /// <param name="OrdQty">주문수량	long	16</param>
+[BlockInfo(false, 86)]
 public record CFOAT00100InBlock1(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("비밀번호", 8)] string Pwd,
@@ -1274,6 +1316,7 @@ public record CFOAT00100InBlock1(
 /// <param name="MgempNo">관리사원번호	string	9</param>
 /// <param name="FundId">펀드ID	string	12</param>
 /// <param name="FundOrdNo">펀드주문번호	long	10</param>
+[BlockInfo(false, 227)]
 public record CFOAT00100OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문시장코드", 2)] string OrdMktCode,
@@ -1313,6 +1356,7 @@ public record CFOAT00100OutBlock1(
 /// <param name="OrdMgn">주문증거금	long	16</param>
 /// <param name="MnyOrdMgn">현금주문증거금	long	16</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
+[BlockInfo(false, 225)]
 public record CFOAT00100OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -1337,6 +1381,7 @@ public record CFOAT00100OutBlock2(
 /// <param name="FnoOrdprcPtnCode">선물옵션호가유형코드	string	2</param>
 /// <param name="FnoOrdPrc">선물옵션주문가격	double	27.8</param>
 /// <param name="MdfyQty">정정수량	long	16</param>
+[BlockInfo(false, 95)]
 public record CFOAT00200InBlock1(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("비밀번호", 8)] string Pwd,
@@ -1372,6 +1417,7 @@ public record CFOAT00200InBlock1(
 /// <param name="FundId">펀드ID	string	12</param>
 /// <param name="FundOrgOrdNo">펀드원주문번호	long	10</param>
 /// <param name="FundOrdNo">펀드주문번호	long	10</param>
+[BlockInfo(false, 226)]
 public record CFOAT00200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문시장코드", 2)] string OrdMktCode,
@@ -1410,6 +1456,7 @@ public record CFOAT00200OutBlock1(
 /// <param name="OrdMgn">주문증거금액	long	16</param>
 /// <param name="MnyOrdMgn">현금주문증거금액	long	16</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
+[BlockInfo(false, 225)]
 public record CFOAT00200OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -1432,6 +1479,7 @@ public record CFOAT00200OutBlock2(
 /// <param name="FnoIsuNo">선물옵션종목번호	string	12</param>
 /// <param name="OrgOrdNo">원주문번호	long	10</param>
 /// <param name="CancQty">취소수량	long	16</param>
+[BlockInfo(false, 66)]
 public record CFOAT00300InBlock1(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("비밀번호", 8)] string Pwd,
@@ -1463,6 +1511,7 @@ public record CFOAT00300InBlock1(
 /// <param name="FundId">펀드ID	string	12</param>
 /// <param name="FundOrgOrdNo">펀드원주문번호	long	10</param>
 /// <param name="FundOrdNo">펀드주문번호	long	10</param>
+[BlockInfo(false, 197)]
 public record CFOAT00300OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문시장코드", 2)] string OrdMktCode,
@@ -1499,6 +1548,7 @@ public record CFOAT00300OutBlock1(
 /// <param name="OrdMgn">주문증거금액	long	16</param>
 /// <param name="MnyOrdMgn">현금주문증거금액	long	16</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
+[BlockInfo(false, 225)]
 public record CFOAT00300OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -1519,6 +1569,7 @@ public record CFOAT00300OutBlock2(
 /// <param name="RecCnt">레코드갯수	int	5</param>
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
+[BlockInfo(false, 33)]
 public record CFOBQ10500InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1531,6 +1582,7 @@ public record CFOBQ10500InBlock1(
 /// <param name="RecCnt">레코드갯수	int	5</param>
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
+[BlockInfo(false, 33)]
 public record CFOBQ10500OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1564,6 +1616,7 @@ public record CFOBQ10500OutBlock1(
 /// <param name="FnoCrdayFdamt">선물옵션금일가입금액	long	16</param>
 /// <param name="FcurrSubstAmt">외화대용금액	long	16</param>
 /// <param name="FnoAcntAfmgnNm">선물옵션계좌사후증거금명	string	20</param>
+[BlockInfo(false, 401)]
 public record CFOBQ10500OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -1612,6 +1665,7 @@ public record CFOBQ10500OutBlock2(
 /// <param name="TotRiskCsgnMgn">총위험위탁증거금	long	16</param>
 /// <param name="UndCsgnMgn">인수도위탁증거금	long	16</param>
 /// <param name="MgnRdctAmt">증거금감면금액	long	16</param>
+[BlockInfo(false, 292)]
 public record CFOBQ10500OutBlock3(
     [BlockField("상품군코드명", 20)] string PdGrpCodeNm,
     [BlockField("순위험증거금액", 16)] long NetRiskMgn,
@@ -1643,6 +1697,7 @@ public record CFOBQ10500OutBlock3(
 /// <param name="DueYymm">만기년월	string	6</param>
 /// <param name="SettWklyCnt">결제주간수	string	2</param>
 /// <param name="SpclDtPtnCode">특별일자유형코드	string	3</param>
+[BlockInfo(false, 21)]
 public record CFOBQ10800InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("종목중분류코드", 2)] string IsuMdclssCode,
@@ -1661,6 +1716,7 @@ public record CFOBQ10800InBlock1(
 /// <param name="DueYymm">만기년월	string	6</param>
 /// <param name="SettWklyCnt">결제주간수	string	2</param>
 /// <param name="SpclDtPtnCode">특별일자유형코드	string	3</param>
+[BlockInfo(false, 21)]
 public record CFOBQ10800OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("종목중분류코드", 2)] string IsuMdclssCode,
@@ -1688,6 +1744,7 @@ public record CFOBQ10800OutBlock1(
 /// <param name="Thrprc2">이론가2	double	19.8</param>
 /// <param name="BasePrc2">기준가2	double	13.2</param>
 /// <param name="OrdMgn2">주문증거금액2	long	16</param>
+[BlockInfo(false, 347)]
 public record CFOBQ10800OutBlock2(
     [BlockField("행사가", 13.2)] double ElwXrcPrc,
     [BlockField("선물옵션종목번호", 12)] string FnoIsuNo,
@@ -1714,6 +1771,7 @@ public record CFOBQ10800OutBlock2(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="BnsDt">매매일	string	8</param>
+[BlockInfo(false, 41)]
 public record CFOEQ11100InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1728,6 +1786,7 @@ public record CFOEQ11100InBlock1(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="BnsDt">매매일	string	8</param>
+[BlockInfo(false, 41)]
 public record CFOEQ11100OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1837,6 +1896,7 @@ public record CFOEQ11100OutBlock1(
 /// <param name="MktEndAfMnyOutAmt">장종료후현금출금금액	long	16</param>
 /// <param name="MktEndAfSubstDsgnAmt">장종료후대용지정금액	long	16</param>
 /// <param name="MktEndAfSubstAbndAmt">장종료후대용해지금액	long	16</param>
+[BlockInfo(false, 1547)]
 public record CFOEQ11100OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -1951,6 +2011,7 @@ public record CFOEQ11100OutBlock2(
 /// <param name="QryTp">조회구분	string	1</param>
 /// <param name="StnlnSeqTp">정렬순서구분	string	1</param>
 /// <param name="FnoBalEvalTpCode">선물옵션잔고평가구분코드	string	1</param>
+[BlockInfo(false, 52)]
 public record CFOEQ82600InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1973,6 +2034,7 @@ public record CFOEQ82600InBlock1(
 /// <param name="QryTp">조회구분	string	1</param>
 /// <param name="StnlnSeqTp">정렬순서구분	string	1</param>
 /// <param name="FnoBalEvalTpCode">선물옵션잔고평가구분코드	string	1</param>
+[BlockInfo(false, 52)]
 public record CFOEQ82600OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -1995,6 +2057,7 @@ public record CFOEQ82600OutBlock1(
 /// <param name="MnyinSumAmt">입금합계금액	long	16</param>
 /// <param name="MnyoutSumAmt">출금합계금액	long	16</param>
 /// <param name="AcntNm">계좌명	string	40</param>
+[BlockInfo(false, 141)]
 public record CFOEQ82600OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("선물정산차금", 16)] long FutsAdjstDfamt,
@@ -2029,6 +2092,7 @@ public record CFOEQ82600OutBlock2(
 /// <param name="EvalAmt">평가금액	long	16</param>
 /// <param name="AddupEvalAmt">합산평가금액	long	16</param>
 /// <param name="Amt2">금액2	long	16</param>
+[BlockInfo(false, 312)]
 public record CFOEQ82600OutBlock3(
     [BlockField("조회일", 8)] string QryDt,
     [BlockField("예탁총액", 16)] long DpstgTotamt,
@@ -2061,6 +2125,7 @@ public record CFOEQ82600OutBlock3(
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="RegMktCode">등록시장코드	string	2</param>
 /// <param name="BuyDt">매수일자	string	8</param>
+[BlockInfo(false, 43)]
 public record CFOFQ02400InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -2077,6 +2142,7 @@ public record CFOFQ02400InBlock1(
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="RegMktCode">등록시장코드	string	2</param>
 /// <param name="BuyDt">매수일자	string	8</param>
+[BlockInfo(false, 43)]
 public record CFOFQ02400OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -2108,6 +2174,7 @@ public record CFOFQ02400OutBlock1(
 /// <param name="FutsPnlSum">선물손익합계	long	16</param>
 /// <param name="OptPnlSum">옵션손익합계	long	16</param>
 /// <param name="AllPnlSum">전체손익합계	long	16</param>
+[BlockInfo(false, 333)]
 public record CFOFQ02400OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -2147,6 +2214,7 @@ public record CFOFQ02400OutBlock2(
 /// <param name="PutSellPnl">풋매도손익	long	16</param>
 /// <param name="PutBuyQty">풋매수수량	long	16</param>
 /// <param name="PutBuyPnl">풋매수손익	long	16</param>
+[BlockInfo(false, 193)]
 public record CFOFQ02400OutBlock3(
     [BlockField("선물옵션품목구분", 1)] string FnoClssCode,
     [BlockField("선물매도수량", 16)] long FutsSellQty,
@@ -2178,6 +2246,7 @@ public record CFOFQ02400OutBlock3(
 /// <param name="EvalAmt">평가금액	long	16</param>
 /// <param name="EvalPnlAmt">평가손익금액	long	16</param>
 /// <param name="EvalErnrat">평가수익률	double	12.6</param>
+[BlockInfo(false, 187)]
 public record CFOFQ02400OutBlock4(
     [BlockField("종목번호", 12)] string IsuNo,
     [BlockField("종목명", 40)] string IsuNm,
@@ -2207,6 +2276,7 @@ public record CFOFQ02400OutBlock4(
 /// <param name="isexcelout">결과 지표데이터 엑셀표시 여부	string	1</param>
 /// <param name="excelfilename">엑셀데이터 파일명	string	256</param>
 /// <param name="IsReal">실시간 데이터수신 자동등록 여부	string	1</param>
+[BlockInfo(false, 359)]
 public record ChartExcelInBlock(
     [BlockField("지표ID", 10)] long indexid,
     [BlockField("지표명", 40)] string indexname,
@@ -2226,6 +2296,7 @@ public record ChartExcelInBlock(
 /// <param name="indexid">지표ID	long	10</param>
 /// <param name="rec_cnt">레코드갯수	int	5</param>
 /// <param name="validdata_cnt">유효 데이터 컬럼 갯수	int	2</param>
+[BlockInfo(false, 17)]
 public record ChartExcelOutBlock(
     [BlockField("지표ID", 10)] long indexid,
     [BlockField("레코드갯수", 5)] int rec_cnt,
@@ -2248,6 +2319,7 @@ public record ChartExcelOutBlock(
 /// <param name="value4">지표값4	double	10</param>
 /// <param name="value5">지표값5	double	10</param>
 /// <param name="pos">위치	int	8</param>
+[BlockInfo(false, 124)]
 public record ChartExcelOutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -2281,6 +2353,7 @@ public record ChartExcelOutBlock1(
 /// <param name="Isamend">수정주가 반영 여부	string	1</param>
 /// <param name="Isgab">갭보정 여부	string	1</param>
 /// <param name="IsReal">실시간 데이터수신 자동등록 여부	string	1</param>
+[BlockInfo(false, 127)]
 public record ChartIndexInBlock(
     [BlockField("지표ID", 10)] long indexid,
     [BlockField("지표명", 40)] string indexname,
@@ -2303,6 +2376,7 @@ public record ChartIndexInBlock(
 /// <param name="indexid">지표ID	long	10</param>
 /// <param name="rec_cnt">레코드갯수	int	5</param>
 /// <param name="validdata_cnt">유효 데이터 컬럼 갯수	int	2</param>
+[BlockInfo(false, 17)]
 public record ChartIndexOutBlock(
     [BlockField("지표ID", 10)] long indexid,
     [BlockField("레코드갯수", 5)] int rec_cnt,
@@ -2325,6 +2399,7 @@ public record ChartIndexOutBlock(
 /// <param name="value4">지표값4	double	10</param>
 /// <param name="value5">지표값5	double	10</param>
 /// <param name="pos">위치	int	8</param>
+[BlockInfo(false, 124)]
 public record ChartIndexOutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -2352,6 +2427,7 @@ public record ChartIndexOutBlock1(
 /// <param name="BnsTpCode">매매구분코드	string	1</param>
 /// <param name="OvrsDrvtOrdPrc">해외파생주문가격	double	30.11</param>
 /// <param name="AbrdFutsOrdPtnCode">해외선물주문유형코드	string	1</param>
+[BlockInfo(false, 88)]
 public record CIDBQ01400InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("조회구분코드", 1)] string QryTpCode,
@@ -2372,6 +2448,7 @@ public record CIDBQ01400InBlock1(
 /// <param name="BnsTpCode">매매구분코드	string	1</param>
 /// <param name="OvrsDrvtOrdPrc">해외파생주문가격	double	30.11</param>
 /// <param name="AbrdFutsOrdPtnCode">해외선물주문유형코드	string	1</param>
+[BlockInfo(false, 88)]
 public record CIDBQ01400OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("조회구분코드", 1)] string QryTpCode,
@@ -2387,6 +2464,7 @@ public record CIDBQ01400OutBlock1(
 /// </summary>
 /// <param name="RecCnt">레코드갯수	int	5</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
+[BlockInfo(false, 21)]
 public record CIDBQ01400OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문가능수량", 16)] long OrdAbleQty
@@ -2403,6 +2481,7 @@ public record CIDBQ01400OutBlock2(
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="QryDt">조회일자	string	8</param>
 /// <param name="BalTpCode">잔고구분코드	string	1</param>
+[BlockInfo(false, 63)]
 public record CIDBQ01500InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌구분코드", 1)] string AcntTpCode,
@@ -2423,6 +2502,7 @@ public record CIDBQ01500InBlock1(
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="QryDt">조회일자	string	8</param>
 /// <param name="BalTpCode">잔고구분코드	string	1</param>
+[BlockInfo(false, 63)]
 public record CIDBQ01500OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌구분코드", 1)] string AcntTpCode,
@@ -2467,6 +2547,7 @@ public record CIDBQ01500OutBlock1(
 /// <param name="PosNo">포지션번호	string	13</param>
 /// <param name="EufOneCmsnAmt">거래소비용1수수료금액	double	19.2</param>
 /// <param name="EufTwoCmsnAmt">거래소비용2수수료금액	double	19.2</param>
+[BlockInfo(false, 687)]
 public record CIDBQ01500OutBlock2(
     [BlockField("기준일자", 8)] string BaseDt,
     [BlockField("예수금", 16)] long Dps,
@@ -2516,6 +2597,7 @@ public record CIDBQ01500OutBlock2(
 /// <param name="QryTpCode">조회구분코드	string	1</param>
 /// <param name="OrdPtnCode">주문유형코드	string	2</param>
 /// <param name="OvrsDrvtFnoTpCode">해외파생선물옵션구분코드	string	1</param>
+[BlockInfo(false, 78)]
 public record CIDBQ01800InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -2544,6 +2626,7 @@ public record CIDBQ01800InBlock1(
 /// <param name="QryTpCode">조회구분코드	string	1</param>
 /// <param name="OrdPtnCode">주문유형코드	string	2</param>
 /// <param name="OvrsDrvtFnoTpCode">해외파생선물옵션구분코드	string	1</param>
+[BlockInfo(false, 78)]
 public record CIDBQ01800OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -2608,6 +2691,7 @@ public record CIDBQ01800OutBlock1(
 /// <param name="OvrsFutsOrdNo2">해외선물주문번호2	string	10</param>
 /// <param name="OvrsFutsOrgOrdNo2">해외선물원주문번호2	string	10</param>
 /// <param name="OvrsDrvtIsuCode2">해외파생종목코드2	string	30</param>
+[BlockInfo(false, 828)]
 public record CIDBQ01800OutBlock2(
     [BlockField("해외선물주문번호", 10)] string OvrsFutsOrdNo,
     [BlockField("해외선물원주문번호", 10)] string OvrsFutsOrgOrdNo,
@@ -2674,6 +2758,7 @@ public record CIDBQ01800OutBlock2(
 /// <param name="QryTpCode">조회구분코드	string	1</param>
 /// <param name="OrdPtnCode">주문유형코드	string	2</param>
 /// <param name="OvrsDrvtFnoTpCode">해외파생선물옵션구분코드	string	1</param>
+[BlockInfo(false, 86)]
 public record CIDBQ02400InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -2704,6 +2789,7 @@ public record CIDBQ02400InBlock1(
 /// <param name="QryTpCode">조회구분코드	string	1</param>
 /// <param name="OrdPtnCode">주문유형코드	string	2</param>
 /// <param name="OvrsDrvtFnoTpCode">해외파생선물옵션구분코드	string	1</param>
+[BlockInfo(false, 86)]
 public record CIDBQ02400OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -2784,6 +2870,7 @@ public record CIDBQ02400OutBlock1(
 /// <param name="OvrsDrvtOptTpCode">해외파생옵션구분코드	string	1</param>
 /// <param name="SprdBaseIsuYn">스프레드기준종목여부	string	1</param>
 /// <param name="OvrsDrvtIsuCode2">해외파생종목코드2	string	30</param>
+[BlockInfo(false, 1187)]
 public record CIDBQ02400OutBlock2(
     [BlockField("주문일자", 8)] string OrdDt,
     [BlockField("해외선물주문번호", 10)] string OvrsFutsOrdNo,
@@ -2858,6 +2945,7 @@ public record CIDBQ02400OutBlock2(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="AcntPwd">계좌비밀번호	string	8</param>
 /// <param name="TrdDt">거래일자	string	8</param>
+[BlockInfo(false, 42)]
 public record CIDBQ03000InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌구분코드", 1)] string AcntTpCode,
@@ -2874,6 +2962,7 @@ public record CIDBQ03000InBlock1(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="AcntPwd">계좌비밀번호	string	8</param>
 /// <param name="TrdDt">거래일자	string	8</param>
+[BlockInfo(false, 42)]
 public record CIDBQ03000OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌구분코드", 1)] string AcntTpCode,
@@ -2902,6 +2991,7 @@ public record CIDBQ03000OutBlock1(
 /// <param name="LastSettPnlAmt">최종결제손익금액	double	19.2</param>
 /// <param name="OvrsOptSettAmt">해외옵션결제금액	double	19.2</param>
 /// <param name="OvrsOptBalEvalAmt">해외옵션잔고평가금액	double	19.2</param>
+[BlockInfo(false, 310)]
 public record CIDBQ03000OutBlock2(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("거래일자", 8)] string TrdDt,
@@ -2932,6 +3022,7 @@ public record CIDBQ03000OutBlock2(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="AcntPwd">계좌비밀번호	string	8</param>
 /// <param name="CrcyCode">통화코드	string	3</param>
+[BlockInfo(false, 57)]
 public record CIDBQ05300InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("해외계좌구분코드", 1)] string OvrsAcntTpCode,
@@ -2950,6 +3041,7 @@ public record CIDBQ05300InBlock1(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="AcntPwd">계좌비밀번호	string	8</param>
 /// <param name="CrcyCode">통화코드	string	3</param>
+[BlockInfo(false, 57)]
 public record CIDBQ05300OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("해외계좌구분코드", 1)] string OvrsAcntTpCode,
@@ -2983,6 +3075,7 @@ public record CIDBQ05300OutBlock1(
 /// <param name="OvrsFutsOptSellAmt">해외선물옵션매도금액	double	23.2</param>
 /// <param name="OptBuyMktWrthAmt">옵션매수시장가치금액	double	19.2</param>
 /// <param name="OptSellMktWrthAmt">옵션매도시장가치금액	double	19.2</param>
+[BlockInfo(false, 396)]
 public record CIDBQ05300OutBlock2(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("통화코드", 3)] string CrcyCode,
@@ -3034,6 +3127,7 @@ public record CIDBQ05300OutBlock2(
 /// <param name="OptSellMktWrthAmt">옵션매도시장가치금액	double	19.2</param>
 /// <param name="OvrsOptSettAmt">해외옵션결제금액	double	19.2</param>
 /// <param name="OvrsOptBalEvalAmt">해외옵션잔고평가금액	double	19.2</param>
+[BlockInfo(false, 470)]
 public record CIDBQ05300OutBlock3(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("해외선물예수금", 23.2)] double OvrsFutsDps,
@@ -3081,6 +3175,7 @@ public record CIDBQ05300OutBlock3(
 /// <param name="PrdtCode">상품코드	string	6</param>
 /// <param name="DueYymm">만기년월	string	6</param>
 /// <param name="ExchCode">거래소코드	string	10</param>
+[BlockInfo(false, 182)]
 public record CIDBT00100InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문일자", 8)] string OrdDt,
@@ -3119,6 +3214,7 @@ public record CIDBT00100InBlock1(
 /// <param name="PrdtCode">상품코드	string	6</param>
 /// <param name="DueYymm">만기년월	string	6</param>
 /// <param name="ExchCode">거래소코드	string	10</param>
+[BlockInfo(false, 182)]
 public record CIDBT00100OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문일자", 8)] string OrdDt,
@@ -3144,6 +3240,7 @@ public record CIDBT00100OutBlock1(
 /// <param name="RecCnt">레코드갯수	int	5</param>
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="OvrsFutsOrdNo">해외선물주문번호	string	10</param>
+[BlockInfo(false, 35)]
 public record CIDBT00100OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3171,6 +3268,7 @@ public record CIDBT00100OutBlock2(
 /// <param name="OvrsDrvtPrdtCode">해외파생상품코드	string	10</param>
 /// <param name="DueYymm">만기년월	string	6</param>
 /// <param name="ExchCode">거래소코드	string	10</param>
+[BlockInfo(false, 192)]
 public record CIDBT00900InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문일자", 8)] string OrdDt,
@@ -3211,6 +3309,7 @@ public record CIDBT00900InBlock1(
 /// <param name="OvrsDrvtPrdtCode">해외파생상품코드	string	10</param>
 /// <param name="DueYymm">만기년월	string	6</param>
 /// <param name="ExchCode">거래소코드	string	10</param>
+[BlockInfo(false, 192)]
 public record CIDBT00900OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문일자", 8)] string OrdDt,
@@ -3238,6 +3337,7 @@ public record CIDBT00900OutBlock1(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="OvrsFutsOrdNo">해외선물주문번호	string	10</param>
 /// <param name="InnerMsgCnts">내부메시지내용	string	80</param>
+[BlockInfo(false, 115)]
 public record CIDBT00900OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3259,6 +3359,7 @@ public record CIDBT00900OutBlock2(
 /// <param name="FutsOrdTpCode">선물주문구분코드	string	1</param>
 /// <param name="PrdtTpCode">상품구분코드	string	2</param>
 /// <param name="ExchCode">거래소코드	string	10</param>
+[BlockInfo(false, 97)]
 public record CIDBT01000InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문일자", 8)] string OrdDt,
@@ -3285,6 +3386,7 @@ public record CIDBT01000InBlock1(
 /// <param name="FutsOrdTpCode">선물주문구분코드	string	1</param>
 /// <param name="PrdtTpCode">상품구분코드	string	2</param>
 /// <param name="ExchCode">거래소코드	string	10</param>
+[BlockInfo(false, 97)]
 public record CIDBT01000OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문일자", 8)] string OrdDt,
@@ -3305,6 +3407,7 @@ public record CIDBT01000OutBlock1(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="OvrsFutsOrdNo">해외선물주문번호	string	10</param>
 /// <param name="InnerMsgCnts">내부메시지내용	string	80</param>
+[BlockInfo(false, 115)]
 public record CIDBT01000OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3320,6 +3423,7 @@ public record CIDBT01000OutBlock2(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="AcntPwd">계좌비밀번호	string	8</param>
 /// <param name="TrdDt">거래일자	string	8</param>
+[BlockInfo(false, 41)]
 public record CIDEQ00800InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3334,6 +3438,7 @@ public record CIDEQ00800InBlock1(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="AcntPwd">계좌비밀번호	string	8</param>
 /// <param name="TrdDt">거래일자	string	8</param>
+[BlockInfo(false, 41)]
 public record CIDEQ00800OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3361,6 +3466,7 @@ public record CIDEQ00800OutBlock1(
 /// <param name="DueDt">만기일자	string	8</param>
 /// <param name="PrcntrAmt">계약당금액	double	19.2</param>
 /// <param name="FcurrEvalPnlAmt">외화평가손익금액	double	21.4</param>
+[BlockInfo(false, 330)]
 public record CIDEQ00800OutBlock2(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("거래일자", 8)] string TrdDt,
@@ -3391,6 +3497,7 @@ public record CIDEQ00800OutBlock2(
 /// <param name="SecTpCode">유가증권구분	string	1</param>
 /// <param name="LoanIntrstGrdCode">대출이자등급코드	string	2</param>
 /// <param name="LoanTp">대출구분	string	1</param>
+[BlockInfo(false, 22)]
 public record CLNAQ00100InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("조회구분", 1)] string QryTp,
@@ -3409,6 +3516,7 @@ public record CLNAQ00100InBlock1(
 /// <param name="SecTpCode">유가증권구분	string	1</param>
 /// <param name="LoanIntrstGrdCode">대출이자등급코드	string	2</param>
 /// <param name="LoanTp">대출구분	string	1</param>
+[BlockInfo(false, 22)]
 public record CLNAQ00100OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("조회구분", 1)] string QryTp,
@@ -3442,6 +3550,7 @@ public record CLNAQ00100OutBlock1(
 /// <param name="RegPsnId">등록자ID	string	16</param>
 /// <param name="Rat01">비율값	double	19.8</param>
 /// <param name="Rat02">비율값	double	19.8</param>
+[BlockInfo(false, 458)]
 public record CLNAQ00100OutBlock2(
     [BlockField("종목번호", 12)] string IsuNo,
     [BlockField("종목명", 40)] string IsuNm,
@@ -3471,6 +3580,7 @@ public record CLNAQ00100OutBlock2(
 /// </summary>
 /// <param name="RecCnt">레코드갯수	int	5</param>
 /// <param name="LrgMnyoutSumAmt">대출금합계금액	long	16</param>
+[BlockInfo(false, 21)]
 public record CLNAQ00100OutBlock3(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("대출금합계금액", 16)] long LrgMnyoutSumAmt
@@ -3487,6 +3597,7 @@ public record CLNAQ00100OutBlock3(
 /// <param name="IsuNo">종목번호	string	12</param>
 /// <param name="OrdPrc">주문가	double	13.2</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 62)]
 public record CSPAQ00600InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3507,6 +3618,7 @@ public record CSPAQ00600InBlock1(
 /// <param name="IsuNo">종목번호	string	12</param>
 /// <param name="OrdPrc">주문가	double	13.2</param>
 /// <param name="CommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 62)]
 public record CSPAQ00600OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3553,6 +3665,7 @@ public record CSPAQ00600OutBlock1(
 /// <param name="OrdAbleAmt">주문가능금액	long	16</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
 /// <param name="RcvblUablOrdAbleQty">미수불가주문가능수량	long	16</param>
+[BlockInfo(false, 525)]
 public record CSPAQ00600OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -3598,6 +3711,7 @@ public record CSPAQ00600OutBlock2(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="BalCreTp">잔고생성구분	string	1</param>
+[BlockInfo(false, 37)]
 public record CSPAQ12200InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("관리지점번호", 3)] string MgmtBrnNo,
@@ -3614,6 +3728,7 @@ public record CSPAQ12200InBlock1(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="BalCreTp">잔고생성구분	string	1</param>
+[BlockInfo(false, 37)]
 public record CSPAQ12200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("관리지점번호", 3)] string MgmtBrnNo,
@@ -3683,6 +3798,7 @@ public record CSPAQ12200OutBlock1(
 /// <param name="AddCrdtPldgSubst">추가신용담보대용	long	16</param>
 /// <param name="CslLoanAmtdt1">매도대금담보대출금액	long	16</param>
 /// <param name="DpslRestrcAmt">처분제한금액	long	16</param>
+[BlockInfo(false, 964)]
 public record CSPAQ12200OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("지점명", 40)] string BrnNm,
@@ -3755,6 +3871,7 @@ public record CSPAQ12200OutBlock2(
 /// <param name="CmsnAppTpCode">수수료적용구분	string	1</param>
 /// <param name="D2balBaseQryTp">D2잔고기준조회구분	string	1</param>
 /// <param name="UprcTpCode">단가구분	string	1</param>
+[BlockInfo(false, 37)]
 public record CSPAQ12300InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3775,6 +3892,7 @@ public record CSPAQ12300InBlock1(
 /// <param name="CmsnAppTpCode">수수료적용구분	string	1</param>
 /// <param name="D2balBaseQryTp">D2잔고기준조회구분	string	1</param>
 /// <param name="UprcTpCode">단가구분	string	1</param>
+[BlockInfo(false, 37)]
 public record CSPAQ12300OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -3857,6 +3975,7 @@ public record CSPAQ12300OutBlock1(
 /// <param name="RepayRqrdAmtD1">변제소요금(D+1)	long	16</param>
 /// <param name="RepayRqrdAmtD2">변제소요금(D+2)	long	16</param>
 /// <param name="LoanAmt">대출금액	long	16</param>
+[BlockInfo(false, 1141)]
 public record CSPAQ12300OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("지점명", 40)] string BrnNm,
@@ -3974,6 +4093,7 @@ public record CSPAQ12300OutBlock2(
 /// <param name="RegMktCode">등록시장코드	string	2</param>
 /// <param name="LoanDtlClssCode">대출상세분류코드	string	2</param>
 /// <param name="DpspdgLoanQty">예탁담보대출수량	long	16</param>
+[BlockInfo(false, 659)]
 public record CSPAQ12300OutBlock3(
     [BlockField("종목번호", 12)] string IsuNo,
     [BlockField("종목명", 40)] string IsuNm,
@@ -4034,6 +4154,7 @@ public record CSPAQ12300OutBlock3(
 /// <param name="SrtOrdNo2">시작주문번호2	long	10</param>
 /// <param name="BkseqTpCode">역순구분	string	1</param>
 /// <param name="OrdPtnCode">주문유형코드	string	2</param>
+[BlockInfo(false, 70)]
 public record CSPAQ13700InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4062,6 +4183,7 @@ public record CSPAQ13700InBlock1(
 /// <param name="SrtOrdNo2">시작주문번호2	long	10</param>
 /// <param name="BkseqTpCode">역순구분	string	1</param>
 /// <param name="OrdPtnCode">주문유형코드	string	2</param>
+[BlockInfo(false, 70)]
 public record CSPAQ13700OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4086,6 +4208,7 @@ public record CSPAQ13700OutBlock1(
 /// <param name="BuyExecQty">매수체결수량	long	16</param>
 /// <param name="SellOrdQty">매도주문수량	long	16</param>
 /// <param name="BuyOrdQty">매수주문수량	long	16</param>
+[BlockInfo(false, 101)]
 public record CSPAQ13700OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("매도체결금액", 16)] long SellExecAmt,
@@ -4134,6 +4257,7 @@ public record CSPAQ13700OutBlock2(
 /// <param name="OrdTime">주문시각	string	9</param>
 /// <param name="OpDrtnNo">운용지시번호	string	12</param>
 /// <param name="OdrrId">주문자ID	string	16</param>
+[BlockInfo(false, 470)]
 public record CSPAQ13700OutBlock3(
     [BlockField("주문일", 8)] string OrdDt,
     [BlockField("관리지점번호", 3)] string MgmtBrnNo,
@@ -4181,6 +4305,7 @@ public record CSPAQ13700OutBlock3(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="BalCreTp">잔고생성구분	string	1</param>
+[BlockInfo(false, 37)]
 public record CSPAQ22200InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("관리지점번호", 3)] string MgmtBrnNo,
@@ -4197,6 +4322,7 @@ public record CSPAQ22200InBlock1(
 /// <param name="AcntNo">계좌번호	string	20</param>
 /// <param name="Pwd">비밀번호	string	8</param>
 /// <param name="BalCreTp">잔고생성구분	string	1</param>
+[BlockInfo(false, 37)]
 public record CSPAQ22200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("관리지점번호", 3)] string MgmtBrnNo,
@@ -4245,6 +4371,7 @@ public record CSPAQ22200OutBlock1(
 /// <param name="CrdaySellAdjstAmt">금일매도정산금액	long	16</param>
 /// <param name="CrdayBuyAdjstAmt">금일매수정산금액	long	16</param>
 /// <param name="CslLoanAmtdt1">매도대금담보대출금액	long	16</param>
+[BlockInfo(false, 622)]
 public record CSPAQ22200OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("지점명", 40)] string BrnNm,
@@ -4299,6 +4426,7 @@ public record CSPAQ22200OutBlock2(
 /// <param name="MgntrnCode">신용거래코드	string	3</param>
 /// <param name="LoanDt">대출일	string	8</param>
 /// <param name="OrdCndiTpCode">주문조건구분	string	1</param>
+[BlockInfo(false, 84)]
 public record CSPAT00600InBlock1(
     [BlockField("계좌번호", 20)] string AcntNo,
     [BlockField("입력비밀번호", 8)] string InptPwd,
@@ -4341,6 +4469,7 @@ public record CSPAT00600InBlock1(
 /// <param name="OpDrtnNo">운용지시번호	string	12</param>
 /// <param name="LpYn">유동성공급자여부	string	1</param>
 /// <param name="CvrgTpCode">반대매매구분	string	1</param>
+[BlockInfo(false, 188)]
 public record CSPAT00600OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4391,6 +4520,7 @@ public record CSPAT00600OutBlock1(
 /// <param name="RuseOrdAmt">재사용주문금액	long	16</param>
 /// <param name="AcntNm">계좌명	string	40</param>
 /// <param name="IsuNm">종목명	string	40</param>
+[BlockInfo(false, 252)]
 public record CSPAT00600OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -4424,6 +4554,7 @@ public record CSPAT00600OutBlock2(
 /// <param name="OrdprcPtnCode">호가유형코드	string	2</param>
 /// <param name="OrdCndiTpCode">주문조건구분	string	1</param>
 /// <param name="OrdPrc">주문가	double	13.2</param>
+[BlockInfo(false, 82)]
 public record CSPAT00700InBlock1(
     [BlockField("원주문번호", 10)] long OrgOrdNo,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4455,6 +4586,7 @@ public record CSPAT00700InBlock1(
 /// <param name="BskNo">바스켓번호	long	10</param>
 /// <param name="TrchNo">트렌치번호	long	10</param>
 /// <param name="ItemNo">아이템번호	long	10</param>
+[BlockInfo(false, 165)]
 public record CSPAT00700OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("원주문번호", 10)] long OrgOrdNo,
@@ -4503,6 +4635,7 @@ public record CSPAT00700OutBlock1(
 /// <param name="RuseOrdAmt">재사용주문금액	long	16</param>
 /// <param name="AcntNm">계좌명	string	40</param>
 /// <param name="IsuNm">종목명	string	40</param>
+[BlockInfo(false, 248)]
 public record CSPAT00700OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -4540,6 +4673,7 @@ public record CSPAT00700OutBlock2(
 /// <param name="InptPwd">입력비밀번호	string	8</param>
 /// <param name="IsuNo">종목번호	string	12</param>
 /// <param name="OrdQty">주문수량	long	16</param>
+[BlockInfo(false, 66)]
 public record CSPAT00800InBlock1(
     [BlockField("원주문번호", 10)] long OrgOrdNo,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4565,6 +4699,7 @@ public record CSPAT00800InBlock1(
 /// <param name="BskNo">바스켓번호	long	10</param>
 /// <param name="TrchNo">트렌치번호	long	10</param>
 /// <param name="ItemNo">아이템번호	long	10</param>
+[BlockInfo(false, 149)]
 public record CSPAT00800OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("원주문번호", 10)] long OrgOrdNo,
@@ -4606,6 +4741,7 @@ public record CSPAT00800OutBlock1(
 /// <param name="RsvOrdNo">예약주문번호	long	10</param>
 /// <param name="AcntNm">계좌명	string	40</param>
 /// <param name="IsuNm">종목명	string	40</param>
+[BlockInfo(false, 184)]
 public record CSPAT00800OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("주문번호", 10)] long OrdNo,
@@ -4641,6 +4777,7 @@ public record CSPAT00800OutBlock2(
 /// <param name="IsuNo">종목번호	string	12</param>
 /// <param name="OrdPrc">주문가격	double	15.2</param>
 /// <param name="RegCommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 63)]
 public record CSPBQ00200InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("매매구분", 1)] string BnsTpCode,
@@ -4661,6 +4798,7 @@ public record CSPBQ00200InBlock1(
 /// <param name="IsuNo">종목번호	string	12</param>
 /// <param name="OrdPrc">주문가격	double	15.2</param>
 /// <param name="RegCommdaCode">통신매체코드	string	2</param>
+[BlockInfo(false, 63)]
 public record CSPBQ00200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("매매구분", 1)] string BnsTpCode,
@@ -4716,6 +4854,7 @@ public record CSPBQ00200OutBlock1(
 /// <param name="MgnRat100pctRuseAbleAmt">증거금률100퍼센트재사용가능금액	long	16</param>
 /// <param name="OrdAbleQty">주문가능수량	long	16</param>
 /// <param name="OrdAbleAmt">주문가능금액	long	16</param>
+[BlockInfo(false, 672)]
 public record CSPBQ00200OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -4771,6 +4910,7 @@ public record CSPBQ00200OutBlock2(
 /// <param name="QrySrtDt">조회시작일	string	8</param>
 /// <param name="QryEndDt">조회종료일	string	8</param>
 /// <param name="TermTp">기간구분	string	1</param>
+[BlockInfo(false, 50)]
 public record FOCCQ33600InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4789,6 +4929,7 @@ public record FOCCQ33600InBlock1(
 /// <param name="QrySrtDt">조회시작일	string	8</param>
 /// <param name="QryEndDt">조회종료일	string	8</param>
 /// <param name="TermTp">기간구분	string	1</param>
+[BlockInfo(false, 50)]
 public record FOCCQ33600OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4809,6 +4950,7 @@ public record FOCCQ33600OutBlock1(
 /// <param name="InvstAvrbalPramt">투자원금평잔금액	long	16</param>
 /// <param name="InvstPlAmt">투자손익금액	long	16</param>
 /// <param name="InvstErnrat">투자수익률	double	9.2</param>
+[BlockInfo(false, 134)]
 public record FOCCQ33600OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -4833,6 +4975,7 @@ public record FOCCQ33600OutBlock2(
 /// <param name="EvalPnlAmt">평가손익금액	long	16</param>
 /// <param name="TermErnrat">기간수익률	double	11.3</param>
 /// <param name="Idx">지수	double	13.2</param>
+[BlockInfo(false, 150)]
 public record FOCCQ33600OutBlock3(
     [BlockField("기준일", 8)] string BaseDt,
     [BlockField("기초평가금액", 19)] long FdEvalAmt,
@@ -4859,6 +5002,7 @@ public record FOCCQ33600OutBlock3(
 /// <param name="BaseAmtTp">기준금액구분	string	1</param>
 /// <param name="QryTermTp">조회기간구분	string	1</param>
 /// <param name="PnlCalcTpCode">손익산출구분코드	string	1</param>
+[BlockInfo(false, 53)]
 public record FOCCQ33700InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4883,6 +5027,7 @@ public record FOCCQ33700InBlock1(
 /// <param name="BaseAmtTp">기준금액구분	string	1</param>
 /// <param name="QryTermTp">조회기간구분	string	1</param>
 /// <param name="PnlCalcTpCode">손익산출구분코드	string	1</param>
+[BlockInfo(false, 53)]
 public record FOCCQ33700OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌번호", 20)] string AcntNo,
@@ -4909,6 +5054,7 @@ public record FOCCQ33700OutBlock1(
 /// <param name="OptEvalPnlAmt">옵션평가손익금액	long	16</param>
 /// <param name="InvstPlAmt">투자손익금액	long	16</param>
 /// <param name="ErnRat">수익률	double	12.6</param>
+[BlockInfo(false, 185)]
 public record FOCCQ33700OutBlock2(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("계좌명", 40)] string AcntNm,
@@ -4939,6 +5085,7 @@ public record FOCCQ33700OutBlock2(
 /// <param name="FutsAdjstDfamt">선물정산차금	long	16</param>
 /// <param name="OptBsnPnlAmt">옵션매매손익금액	long	16</param>
 /// <param name="OptEvalPnlAmt">옵션평가손익금액	long	16</param>
+[BlockInfo(false, 192)]
 public record FOCCQ33700OutBlock3(
     [BlockField("거래일", 8)] string TrdDt,
     [BlockField("기초예탁자산금액", 16)] long FdDpsastAmt,
@@ -4962,6 +5109,7 @@ public record FOCCQ33700OutBlock3(
 /// <param name="RecCnt">레코드갯수	int	5</param>
 /// <param name="IsuLgclssCode">종목대분류코드	string	2</param>
 /// <param name="IsuMdclssCode">종목중분류코드	string	2</param>
+[BlockInfo(false, 9)]
 public record MMDAQ91200InBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("종목대분류코드", 2)] string IsuLgclssCode,
@@ -4974,6 +5122,7 @@ public record MMDAQ91200InBlock1(
 /// <param name="RecCnt">레코드갯수	int	5</param>
 /// <param name="IsuLgclssCode">종목대분류코드	string	2</param>
 /// <param name="IsuMdclssCode">종목중분류코드	string	2</param>
+[BlockInfo(false, 9)]
 public record MMDAQ91200OutBlock1(
     [BlockField("레코드갯수", 5)] int RecCnt,
     [BlockField("종목대분류코드", 2)] string IsuLgclssCode,
@@ -4993,6 +5142,7 @@ public record MMDAQ91200OutBlock1(
 /// <param name="MnyMgnrt">현금증거금율	double	26.9</param>
 /// <param name="RmndDays">잔여일수	int	6</param>
 /// <param name="OnePrcntrOrdMgn">1계약당주문증거금	long	17</param>
+[BlockInfo(false, 226)]
 public record MMDAQ91200OutBlock2(
     [BlockField("종목소분류코드", 3)] string IsuSmclssCode,
     [BlockField("종목중분류코드", 2)] string IsuMdclssCode,
@@ -5011,6 +5161,7 @@ public record MMDAQ91200OutBlock2(
 /// 해외선물마스터조회-API용: o3101
 /// </summary>
 /// <param name="gubun">입력구분(예비)	string	1</param>
+[BlockInfo(true, 2)]
 public record o3101InBlock(
     [BlockField("입력구분(예비)", 1)] string gubun
     );
@@ -5044,6 +5195,7 @@ public record o3101InBlock(
 /// <param name="OpngMgnR">개시증거금율	double	7.3</param>
 /// <param name="MntncMgnR">유지증거금율	double	7.3</param>
 /// <param name="DotGb">유효소수점자리수	int	2</param>
+[BlockInfo(true, 341)]
 public record o3101OutBlock(
     [BlockField("종목코드", 8)] string Symbol,
     [BlockField("종목명", 50)] string SymbolNm,
@@ -5082,6 +5234,7 @@ public record o3101OutBlock(
 /// <param name="readcnt">조회건수	int	4</param>
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	6</param>
+[BlockInfo(true, 35)]
 public record o3103InBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("N분주기", 4)] int ncnt,
@@ -5098,6 +5251,7 @@ public record o3103InBlock(
 /// <param name="readcnt">조회건수	int	4</param>
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	6</param>
+[BlockInfo(true, 35)]
 public record o3103OutBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("시차", 4)] int timediff,
@@ -5116,6 +5270,7 @@ public record o3103OutBlock(
 /// <param name="low">저가	double	15.9</param>
 /// <param name="close">종가	double	15.9</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 93)]
 public record o3103OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("현지시간", 6)] string time,
@@ -5133,6 +5288,7 @@ public record o3103OutBlock1(
 /// <param name="gubun">조회구분	string	1</param>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="date">조회일자	string	8</param>
+[BlockInfo(true, 20)]
 public record o3104InBlock(
     [BlockField("조회구분", 1)] string gubun,
     [BlockField("단축코드", 8)] string shcode,
@@ -5152,6 +5308,7 @@ public record o3104InBlock(
 /// <param name="low">저가	double	15.9</param>
 /// <param name="cgubun">체결구분	string	1</param>
 /// <param name="volume">누적거래량	long	10</param>
+[BlockInfo(true, 111)]
 public record o3104OutBlock1(
     [BlockField("일자", 8)] string chedate,
     [BlockField("현재가", 15.9)] double price,
@@ -5170,6 +5327,7 @@ public record o3104OutBlock1(
 /// 해외선물현재가(종목정보)조회-API용: o3105
 /// </summary>
 /// <param name="symbol">종목코드	string	8</param>
+[BlockInfo(true, 9)]
 public record o3105InBlock(
     [BlockField("종목코드", 8)] string symbol
     );
@@ -5235,6 +5393,7 @@ public record o3105InBlock(
 /// <param name="YdiffSign">전일대비구분	string	1</param>
 /// <param name="Cgubun">체결구분	string	1</param>
 /// <param name="Diff">등락율	double	6.2</param>
+[BlockInfo(true, 639)]
 public record o3105OutBlock(
     [BlockField("종목코드", 8)] string Symbol,
     [BlockField("종목명", 50)] string SymbolNm,
@@ -5301,6 +5460,7 @@ public record o3105OutBlock(
 /// 해외선물현재가호가조회-API용: o3106
 /// </summary>
 /// <param name="symbol">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record o3106InBlock(
     [BlockField("단축코드", 8)] string symbol
     );
@@ -5354,6 +5514,7 @@ public record o3106InBlock(
 /// <param name="bidcnt">매수호가건수합	long	10</param>
 /// <param name="offer">매도호가수량합	long	10</param>
 /// <param name="bid">매수호가수량합	long	10</param>
+[BlockInfo(true, 607)]
 public record o3106OutBlock(
     [BlockField("종목코드", 8)] string symbol,
     [BlockField("종목명", 50)] string symbolname,
@@ -5408,6 +5569,7 @@ public record o3106OutBlock(
 /// 해외선물관심종목조회-API용: o3107
 /// </summary>
 /// <param name="symbol">종목심볼	string	8</param>
+[BlockInfo(true, 9)]
 public record o3107InBlock(
     [BlockField("종목심볼", 8)] string symbol
     );
@@ -5436,6 +5598,7 @@ public record o3107InBlock(
 /// <param name="bidcnt">매수호가건수합	long	10</param>
 /// <param name="offer">매도호가수량합	long	10</param>
 /// <param name="bid">매수호가수량합	long	10</param>
+[BlockInfo(true, 296)]
 public record o3107OutBlock(
     [BlockField("종목코드", 8)] string symbol,
     [BlockField("종목명", 50)] string symbolname,
@@ -5470,6 +5633,7 @@ public record o3107OutBlock(
 /// <param name="sdate">시작일자	string	8</param>
 /// <param name="edate">종료일자	string	8</param>
 /// <param name="cts_date">연속일자	string	8</param>
+[BlockInfo(true, 51)]
 public record o3108InBlock(
     [BlockField("단축코드", 16)] string shcode,
     [BlockField("주기구분", 1)] string gubun,
@@ -5496,6 +5660,7 @@ public record o3108InBlock(
 /// <param name="mk_etime">장마감시간	string	6</param>
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 189)]
 public record o3108OutBlock(
     [BlockField("단축코드", 16)] string shcode,
     [BlockField("전일시가", 15.9)] double jisiga,
@@ -5522,6 +5687,7 @@ public record o3108OutBlock(
 /// <param name="low">저가	double	15.9</param>
 /// <param name="close">종가	double	15.9</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 86)]
 public record o3108OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 15.9)] double open,
@@ -5539,6 +5705,7 @@ public record o3108OutBlock1(
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="readcnt">조회갯수	int	4</param>
 /// <param name="cts_seq">순번CTS	int	8</param>
+[BlockInfo(true, 25)]
 public record o3116InBlock(
     [BlockField("조회구분(0:당일1:전일)", 1)] string gubun,
     [BlockField("단축코드", 8)] string shcode,
@@ -5550,6 +5717,7 @@ public record o3116InBlock(
 /// 해외선물시간대별(Tick)체결-API용: o3116
 /// </summary>
 /// <param name="cts_seq">순번CTS	int	8</param>
+[BlockInfo(true, 9)]
 public record o3116OutBlock(
     [BlockField("순번CTS", 8)] int cts_seq
     );
@@ -5565,6 +5733,7 @@ public record o3116OutBlock(
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="cvolume">체결수량	long	10</param>
 /// <param name="volume">누적거래량	long	10</param>
+[BlockInfo(true, 79)]
 public record o3116OutBlock1(
     [BlockField("현지일자", 8)] string ovsdate,
     [BlockField("현지시간", 6)] string ovstime,
@@ -5585,6 +5754,7 @@ public record o3116OutBlock1(
 /// <param name="qrycnt">건수	int	4</param>
 /// <param name="cts_seq">연속시간	string	10</param>
 /// <param name="cts_daygb">연속당일구분	string	2</param>
+[BlockInfo(true, 33)]
 public record o3117InBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("단위", 4)] int ncnt,
@@ -5600,6 +5770,7 @@ public record o3117InBlock(
 /// <param name="rec_count">레코드카운트	int	7</param>
 /// <param name="cts_seq">연속시간	string	10</param>
 /// <param name="cts_daygb">연속당일구분	string	2</param>
+[BlockInfo(true, 31)]
 public record o3117OutBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("레코드카운트", 7)] int rec_count,
@@ -5617,6 +5788,7 @@ public record o3117OutBlock(
 /// <param name="low">저가	double	15.9</param>
 /// <param name="close">종가	double	15.9</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 93)]
 public record o3117OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -5633,6 +5805,7 @@ public record o3117OutBlock1(
 /// </summary>
 /// <param name="MktGb">시장구분	string	1</param>
 /// <param name="BscGdsCd">옵션기초상품코드	string	10</param>
+[BlockInfo(true, 13)]
 public record o3121InBlock(
     [BlockField("시장구분", 1)] string MktGb,
     [BlockField("옵션기초상품코드", 10)] string BscGdsCd
@@ -5675,6 +5848,7 @@ public record o3121InBlock(
 /// <param name="LastSettPtnCode">해외파생기초자산종목코드	string	30</param>
 /// <param name="OptMinOrcPrc">해외옵션최소호가	string	15</param>
 /// <param name="OptMinBaseOrcPrc">해외옵션최소기준호가	string	15</param>
+[BlockInfo(true, 450)]
 public record o3121OutBlock(
     [BlockField("종목코드", 16)] string Symbol,
     [BlockField("종목명", 50)] string SymbolNm,
@@ -5722,6 +5896,7 @@ public record o3121OutBlock(
 /// <param name="readcnt">조회건수	int	4</param>
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	6</param>
+[BlockInfo(true, 45)]
 public record o3123InBlock(
     [BlockField("시장구분", 1)] string mktgb,
     [BlockField("단축코드", 16)] string shcode,
@@ -5739,6 +5914,7 @@ public record o3123InBlock(
 /// <param name="readcnt">조회건수	int	4</param>
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	6</param>
+[BlockInfo(true, 43)]
 public record o3123OutBlock(
     [BlockField("단축코드", 16)] string shcode,
     [BlockField("시차", 4)] int timediff,
@@ -5757,6 +5933,7 @@ public record o3123OutBlock(
 /// <param name="low">저가	double	15.9</param>
 /// <param name="close">종가	double	15.9</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 93)]
 public record o3123OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("현지시간", 6)] string time,
@@ -5773,6 +5950,7 @@ public record o3123OutBlock1(
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="symbol">종목코드	string	16</param>
+[BlockInfo(true, 19)]
 public record o3125InBlock(
     [BlockField("시장구분", 1)] string mktgb,
     [BlockField("종목코드", 16)] string symbol
@@ -5841,6 +6019,7 @@ public record o3125InBlock(
 /// <param name="Diff">등락율	double	6.2</param>
 /// <param name="MinOrcPrc">최소호가	double	15.9</param>
 /// <param name="MinBaseOrcPrc">최소기준호가	double	15.9</param>
+[BlockInfo(true, 679)]
 public record o3125OutBlock(
     [BlockField("종목코드", 16)] string Symbol,
     [BlockField("종목명", 50)] string SymbolNm,
@@ -5910,6 +6089,7 @@ public record o3125OutBlock(
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="symbol">단축코드	string	16</param>
+[BlockInfo(true, 19)]
 public record o3126InBlock(
     [BlockField("시장구분", 1)] string mktgb,
     [BlockField("단축코드", 16)] string symbol
@@ -5964,6 +6144,7 @@ public record o3126InBlock(
 /// <param name="bidcnt">매수호가건수합	long	10</param>
 /// <param name="offer">매도호가수량합	long	10</param>
 /// <param name="bid">매수호가수량합	long	10</param>
+[BlockInfo(true, 615)]
 public record o3126OutBlock(
     [BlockField("종목코드", 16)] string symbol,
     [BlockField("종목명", 50)] string symbolname,
@@ -6018,6 +6199,7 @@ public record o3126OutBlock(
 /// 해외선물옵션관심종목조회-API용: o3127
 /// </summary>
 /// <param name="nrec">건수	int	4</param>
+[BlockInfo(true, 5)]
 public record o3127InBlock(
     [BlockField("건수", 4)] int nrec
     );
@@ -6027,6 +6209,7 @@ public record o3127InBlock(
 /// </summary>
 /// <param name="mktgb">시장구분	string	1</param>
 /// <param name="symbol">종목심볼	string	16</param>
+[BlockInfo(true, 19)]
 public record o3127InBlock1(
     [BlockField("시장구분", 1)] string mktgb,
     [BlockField("종목심볼", 16)] string symbol
@@ -6056,6 +6239,7 @@ public record o3127InBlock1(
 /// <param name="bidcnt">매수호가건수합	long	10</param>
 /// <param name="offer">매도호가수량합	long	10</param>
 /// <param name="bid">매수호가수량합	long	10</param>
+[BlockInfo(true, 304)]
 public record o3127OutBlock(
     [BlockField("종목코드", 16)] string symbol,
     [BlockField("종목명", 50)] string symbolname,
@@ -6091,6 +6275,7 @@ public record o3127OutBlock(
 /// <param name="sdate">시작일자	string	8</param>
 /// <param name="edate">종료일자	string	8</param>
 /// <param name="cts_date">연속일자	string	8</param>
+[BlockInfo(true, 53)]
 public record o3128InBlock(
     [BlockField("시장구분", 1)] string mktgb,
     [BlockField("단축코드", 16)] string shcode,
@@ -6118,6 +6303,7 @@ public record o3128InBlock(
 /// <param name="mk_etime">장마감시간	string	6</param>
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 189)]
 public record o3128OutBlock(
     [BlockField("단축코드", 16)] string shcode,
     [BlockField("전일시가", 15.9)] double jisiga,
@@ -6144,6 +6330,7 @@ public record o3128OutBlock(
 /// <param name="low">저가	double	15.9</param>
 /// <param name="close">종가	double	15.9</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 86)]
 public record o3128OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 15.9)] double open,
@@ -6162,6 +6349,7 @@ public record o3128OutBlock1(
 /// <param name="shcode">단축코드	string	16</param>
 /// <param name="readcnt">조회갯수	int	4</param>
 /// <param name="cts_seq">순번CTS	int	8</param>
+[BlockInfo(true, 35)]
 public record o3136InBlock(
     [BlockField("조회구분(0:당일1:전일)", 1)] string gubun,
     [BlockField("시장구분", 1)] string mktgb,
@@ -6174,6 +6362,7 @@ public record o3136InBlock(
 /// 해외선물옵션시간대별(Tick)체결-API용: o3136
 /// </summary>
 /// <param name="cts_seq">순번CTS	int	8</param>
+[BlockInfo(true, 9)]
 public record o3136OutBlock(
     [BlockField("순번CTS", 8)] int cts_seq
     );
@@ -6189,6 +6378,7 @@ public record o3136OutBlock(
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="cvolume">체결수량	long	10</param>
 /// <param name="volume">누적거래량	long	10</param>
+[BlockInfo(true, 79)]
 public record o3136OutBlock1(
     [BlockField("현지일자", 8)] string ovsdate,
     [BlockField("현지시간", 6)] string ovstime,
@@ -6210,6 +6400,7 @@ public record o3136OutBlock1(
 /// <param name="qrycnt">건수	int	4</param>
 /// <param name="cts_seq">연속시간	string	10</param>
 /// <param name="cts_daygb">연속당일구분	string	2</param>
+[BlockInfo(true, 43)]
 public record o3137InBlock(
     [BlockField("시장구분", 1)] string mktgb,
     [BlockField("단축코드", 16)] string shcode,
@@ -6226,6 +6417,7 @@ public record o3137InBlock(
 /// <param name="rec_count">레코드카운트	int	7</param>
 /// <param name="cts_seq">연속시간	string	10</param>
 /// <param name="cts_daygb">연속당일구분	string	2</param>
+[BlockInfo(true, 39)]
 public record o3137OutBlock(
     [BlockField("단축코드", 16)] string shcode,
     [BlockField("레코드카운트", 7)] int rec_count,
@@ -6243,6 +6435,7 @@ public record o3137OutBlock(
 /// <param name="low">저가	double	15.9</param>
 /// <param name="close">종가	double	15.9</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 93)]
 public record o3137OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -6263,6 +6456,7 @@ public record o3137OutBlock1(
 /// <param name="qrycnt">건수	int	4</param>
 /// <param name="cts_seq">연속시간	string	10</param>
 /// <param name="cts_daygb">연속당일구분	string	2</param>
+[BlockInfo(true, 43)]
 public record o3139InBlock(
     [BlockField("시장구분", 1)] string mktgb,
     [BlockField("단축코드", 16)] string shcode,
@@ -6280,6 +6474,7 @@ public record o3139InBlock(
 /// <param name="cts_seq">연속시간	string	10</param>
 /// <param name="cts_daygb">연속당일구분	string	2</param>
 /// <param name="last_count">마지막Tick건수	int	4</param>
+[BlockInfo(true, 44)]
 public record o3139OutBlock(
     [BlockField("단축코드", 16)] string shcode,
     [BlockField("레코드카운트", 7)] int rec_count,
@@ -6298,6 +6493,7 @@ public record o3139OutBlock(
 /// <param name="low">저가	double	15.8</param>
 /// <param name="close">종가	double	15.8</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 93)]
 public record o3139OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -6317,6 +6513,7 @@ public record o3139OutBlock1(
 /// <param name="cts_expcode">CTS_종목번호	string	12</param>
 /// <param name="cts_price">CTS_단가	string	9</param>
 /// <param name="cts_middiv">CTS_매체	string	2</param>
+[BlockInfo(false, 35)]
 public record t0150InBlock(
     [BlockField("계좌번호", 11)] string accno,
     [BlockField("CTS_매매구분", 1)] string cts_medosu,
@@ -6351,6 +6548,7 @@ public record t0150InBlock(
 /// <param name="cts_expcode">CTS_종목번호	string	12</param>
 /// <param name="cts_price">CTS_단가	string	9</param>
 /// <param name="cts_middiv">CTS_매체	string	2</param>
+[BlockInfo(false, 339)]
 public record t0150OutBlock(
     [BlockField("매도수량", 9)] long mdqty,
     [BlockField("매도약정금액", 18)] long mdamt,
@@ -6390,6 +6588,7 @@ public record t0150OutBlock(
 /// <param name="argtax">농특세	long	18</param>
 /// <param name="adjamt">정산금액	long	18</param>
 /// <param name="middiv">매체	string	20</param>
+[BlockInfo(false, 150)]
 public record t0150OutBlock1(
     [BlockField("매매구분", 10)] string medosu,
     [BlockField("종목번호", 12)] string expcode,
@@ -6413,6 +6612,7 @@ public record t0150OutBlock1(
 /// <param name="cts_expcode">CTS_종목번호	string	12</param>
 /// <param name="cts_price">CTS_단가	string	9</param>
 /// <param name="cts_middiv">CTS_매체	string	2</param>
+[BlockInfo(false, 43)]
 public record t0151InBlock(
     [BlockField("일자", 8)] string date,
     [BlockField("계좌번호", 11)] string accno,
@@ -6448,6 +6648,7 @@ public record t0151InBlock(
 /// <param name="cts_expcode">CTS_종목번호	string	12</param>
 /// <param name="cts_price">CTS_단가	string	9</param>
 /// <param name="cts_middiv">CTS_매체	string	2</param>
+[BlockInfo(false, 339)]
 public record t0151OutBlock(
     [BlockField("매도수량", 9)] long mdqty,
     [BlockField("매도약정금액", 18)] long mdamt,
@@ -6487,6 +6688,7 @@ public record t0151OutBlock(
 /// <param name="argtax">농특세	long	18</param>
 /// <param name="adjamt">정산금액	long	18</param>
 /// <param name="middiv">매체	string	20</param>
+[BlockInfo(false, 150)]
 public record t0151OutBlock1(
     [BlockField("매매구분", 10)] string medosu,
     [BlockField("종목번호", 12)] string expcode,
@@ -6505,6 +6707,7 @@ public record t0151OutBlock1(
 /// 서버시간조회: t0167
 /// </summary>
 /// <param name="id">id	string	8</param>
+[BlockInfo(false, 8)]
 public record t0167InBlock(
     [BlockField("id", 8)] string id
     );
@@ -6514,6 +6717,7 @@ public record t0167InBlock(
 /// </summary>
 /// <param name="dt">일자(YYYYMMDD)	string	8</param>
 /// <param name="time">시간(HHMMSSssssss)	string	12</param>
+[BlockInfo(false, 20)]
 public record t0167OutBlock(
     [BlockField("일자(YYYYMMDD)", 8)] string dt,
     [BlockField("시간(HHMMSSssssss)", 12)] string time
@@ -6530,6 +6734,7 @@ public record t0167OutBlock(
 /// <param name="dangb">단일가구분	string	1</param>
 /// <param name="charge">제비용포함여부	string	1</param>
 /// <param name="cts_expcode">CTS_종목번호	string	22</param>
+[BlockInfo(true, 52)]
 public record t0424InBlock(
     [BlockField("계좌번호", 11)] string accno,
     [BlockField("비밀번호", 8)] string passwd,
@@ -6550,6 +6755,7 @@ public record t0424InBlock(
 /// <param name="cts_expcode">CTS_종목번호	string	22</param>
 /// <param name="tappamt">평가금액	long	18</param>
 /// <param name="tdtsunik">평가손익	long	18</param>
+[BlockInfo(true, 137)]
 public record t0424OutBlock(
     [BlockField("추정순자산", 18)] long sunamt,
     [BlockField("실현손익", 18)] long dtsunik,
@@ -6592,6 +6798,7 @@ public record t0424OutBlock(
 /// <param name="fee">수수료	long	10</param>
 /// <param name="tax">제세금	long	10</param>
 /// <param name="sininter">신용이자	long	10</param>
+[BlockInfo(true, 427)]
 public record t0424OutBlock1(
     [BlockField("종목번호", 12)] string expcode,
     [BlockField("잔고구분", 10)] string jangb,
@@ -6635,6 +6842,7 @@ public record t0424OutBlock1(
 /// <param name="medosu">매매구분	string	1</param>
 /// <param name="sortgb">정렬순서	string	1</param>
 /// <param name="cts_ordno">주문번호	string	10</param>
+[BlockInfo(true, 51)]
 public record t0425InBlock(
     [BlockField("계좌번호", 11)] string accno,
     [BlockField("비밀번호", 8)] string passwd,
@@ -6657,6 +6865,7 @@ public record t0425InBlock(
 /// <param name="tmsamt">총매수체결금액	long	18</param>
 /// <param name="tax">추정제세금	long	18</param>
 /// <param name="cts_ordno">주문번호	string	10</param>
+[BlockInfo(true, 163)]
 public record t0425OutBlock(
     [BlockField("총주문수량", 18)] long tqty,
     [BlockField("총체결수량", 18)] long tcheqty,
@@ -6692,6 +6901,7 @@ public record t0425OutBlock(
 /// <param name="orggb">주문구분	string	2</param>
 /// <param name="singb">신용구분	string	2</param>
 /// <param name="loandt">대출일자	string	8</param>
+[BlockInfo(true, 196)]
 public record t0425OutBlock1(
     [BlockField("주문번호", 10)] long ordno,
     [BlockField("종목번호", 12)] string expcode,
@@ -6725,6 +6935,7 @@ public record t0425OutBlock1(
 /// <param name="chegb">체결구분	string	1</param>
 /// <param name="sortgb">정렬순서	string	1</param>
 /// <param name="cts_ordno">CTS_주문번호	string	7</param>
+[BlockInfo(false, 36)]
 public record t0434InBlock(
     [BlockField("계좌번호", 11)] string accno,
     [BlockField("비밀번호", 8)] string passwd,
@@ -6738,6 +6949,7 @@ public record t0434InBlock(
 /// 선물/옵션체결/미체결: t0434
 /// </summary>
 /// <param name="cts_ordno">CTS_주문번호	string	7</param>
+[BlockInfo(false, 7)]
 public record t0434OutBlock(
     [BlockField("CTS_주문번호", 7)] string cts_ordno
     );
@@ -6761,6 +6973,7 @@ public record t0434OutBlock(
 /// <param name="rtcode">사유코드	string	3</param>
 /// <param name="sysprocseq">처리순번	long	10</param>
 /// <param name="hogatype">호가타입	string	1</param>
+[BlockInfo(false, 139)]
 public record t0434OutBlock1(
     [BlockField("주문번호", 7)] int ordno,
     [BlockField("원주문번호", 7)] int orgordno,
@@ -6788,6 +7001,7 @@ public record t0434OutBlock1(
 /// <param name="passwd">비밀번호	string	8</param>
 /// <param name="cts_expcode">CTS_종목번호	string	8</param>
 /// <param name="cts_medocd">CTS_매매구분	string	1</param>
+[BlockInfo(true, 32)]
 public record t0441InBlock(
     [BlockField("계좌번호", 11)] string accno,
     [BlockField("비밀번호", 8)] string passwd,
@@ -6803,6 +7017,7 @@ public record t0441InBlock(
 /// <param name="cts_medocd">CTS_매매구분	string	1</param>
 /// <param name="tappamt">평가금액	long	18</param>
 /// <param name="tsunik">평가손익	long	18</param>
+[BlockInfo(true, 68)]
 public record t0441OutBlock(
     [BlockField("매매손익합계", 18)] long tdtsunik,
     [BlockField("CTS_종목번호", 8)] string cts_expcode,
@@ -6827,6 +7042,7 @@ public record t0441OutBlock(
 /// <param name="appamt">평가금액	long	18</param>
 /// <param name="dtsunik1">평가손익	long	18</param>
 /// <param name="sunikrt">수익율	double	10.2</param>
+[BlockInfo(true, 157)]
 public record t0441OutBlock1(
     [BlockField("종목번호", 8)] string expcode,
     [BlockField("구분", 4)] string medosu,
@@ -6848,6 +7064,7 @@ public record t0441OutBlock1(
 /// 주식현재가호가조회: t1101
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1101InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -6941,6 +7158,7 @@ public record t1101InBlock(
 /// <param name="open">시가	int	8</param>
 /// <param name="high">고가	int	8</param>
 /// <param name="low">저가	int	8</param>
+[BlockInfo(true, 951)]
 public record t1101OutBlock(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -7035,6 +7253,7 @@ public record t1101OutBlock(
 /// 주식현재가(시세)조회: t1102
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1102InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -7202,6 +7421,7 @@ public record t1102InBlock(
 /// <param name="abnormal_rise_gu">이상급등종목여부	string	1</param>
 /// <param name="lend_text">대차불가표시	string	8</param>
 /// <param name="ty_text">ETF/ETN투자유의	string	8</param>
+[BlockInfo(true, 1516)]
 public record t1102OutBlock(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -7371,6 +7591,7 @@ public record t1102OutBlock(
 /// </summary>
 /// <param name="code">종목코드	string	6</param>
 /// <param name="nrec">건수	string	2</param>
+[BlockInfo(false, 8)]
 public record t1104InBlock(
     [BlockField("종목코드", 6)] string code,
     [BlockField("건수", 2)] string nrec
@@ -7383,6 +7604,7 @@ public record t1104InBlock(
 /// <param name="gubn">조건구분	string	1</param>
 /// <param name="dat1">데이타1	string	1</param>
 /// <param name="dat2">데이타2	string	8</param>
+[BlockInfo(false, 11)]
 public record t1104InBlock1(
     [BlockField("인덱스", 1)] string indx,
     [BlockField("조건구분", 1)] string gubn,
@@ -7394,6 +7616,7 @@ public record t1104InBlock1(
 /// 주식현재가시세메모: t1104
 /// </summary>
 /// <param name="nrec">출력건수	string	2</param>
+[BlockInfo(false, 2)]
 public record t1104OutBlock(
     [BlockField("출력건수", 2)] string nrec
     );
@@ -7404,6 +7627,7 @@ public record t1104OutBlock(
 /// <param name="indx">인덱스	string	1</param>
 /// <param name="gubn">조건구분	string	1</param>
 /// <param name="vals">출력값	string	8</param>
+[BlockInfo(false, 10)]
 public record t1104OutBlock1(
     [BlockField("인덱스", 1)] string indx,
     [BlockField("조건구분", 1)] string gubn,
@@ -7415,6 +7639,7 @@ public record t1104OutBlock1(
 /// 주식피못/디마크조회: t1105
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1105InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -7431,6 +7656,7 @@ public record t1105InBlock(
 /// <param name="stdprc">기준가격	int	8</param>
 /// <param name="offerd">D저항	int	8</param>
 /// <param name="suppd">D지지	int	8</param>
+[BlockInfo(true, 79)]
 public record t1105OutBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("피봇", 8)] int pbot,
@@ -7450,6 +7676,7 @@ public record t1105OutBlock(
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="dan_chetime">체결cts	string	10</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 23)]
 public record t1109InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("체결cts", 10)] string dan_chetime,
@@ -7462,6 +7689,7 @@ public record t1109InBlock(
 /// <param name="ctsshcode">종목cts	string	6</param>
 /// <param name="ctschetime">체결cts	string	10</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 23)]
 public record t1109OutBlock(
     [BlockField("종목cts", 6)] string ctsshcode,
     [BlockField("체결cts", 10)] string ctschetime,
@@ -7479,6 +7707,7 @@ public record t1109OutBlock(
 /// <param name="dan_cvolume">체결량	int	8</param>
 /// <param name="chdegree">체결강도	double	9.2</param>
 /// <param name="dan_volume">누적거래량	long	12</param>
+[BlockInfo(true, 70)]
 public record t1109OutBlock1(
     [BlockField("시간", 10)] string dan_chetime,
     [BlockField("현재가", 8)] int dan_price,
@@ -7499,6 +7728,7 @@ public record t1109OutBlock1(
 /// <param name="starttime">시작시간	string	4</param>
 /// <param name="endtime">종료시간	string	4</param>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 41)]
 public record t1301InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("특이거래량", 12)] long cvolume,
@@ -7511,6 +7741,7 @@ public record t1301InBlock(
 /// 주식시간대별체결조회: t1301
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 11)]
 public record t1301OutBlock(
     [BlockField("시간CTS", 10)] string cts_time
     );
@@ -7532,6 +7763,7 @@ public record t1301OutBlock(
 /// <param name="mschecnt">매수체결건수	int	8</param>
 /// <param name="revolume">순체결량	long	12</param>
 /// <param name="rechecnt">순체결건수	int	8</param>
+[BlockInfo(true, 139)]
 public record t1301OutBlock1(
     [BlockField("시간", 10)] string chetime,
     [BlockField("현재가", 8)] int price,
@@ -7557,6 +7789,7 @@ public record t1301OutBlock1(
 /// <param name="gubun">작업구분	string	1</param>
 /// <param name="time">시간	string	6</param>
 /// <param name="cnt">건수	int	3</param>
+[BlockInfo(true, 20)]
 public record t1302InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("작업구분", 1)] string gubun,
@@ -7568,6 +7801,7 @@ public record t1302InBlock(
 /// 주식분별주가조회: t1302
 /// </summary>
 /// <param name="cts_time">시간CTS	string	6</param>
+[BlockInfo(true, 7)]
 public record t1302OutBlock(
     [BlockField("시간CTS", 6)] string cts_time
     );
@@ -7598,6 +7832,7 @@ public record t1302OutBlock(
 /// <param name="totbidrem">매수잔량	long	12</param>
 /// <param name="mdvolumetm">시간별매도체결량	long	12</param>
 /// <param name="msvolumetm">시간별매수체결량	long	12</param>
+[BlockInfo(true, 232)]
 public record t1302OutBlock1(
     [BlockField("시간", 6)] string chetime,
     [BlockField("종가", 8)] int close,
@@ -7633,6 +7868,7 @@ public record t1302OutBlock1(
 /// <param name="date">날짜	string	8</param>
 /// <param name="idx">IDX	int	4</param>
 /// <param name="cnt">건수	int	4</param>
+[BlockInfo(true, 28)]
 public record t1305InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("일주월구분", 1)] int dwmcode,
@@ -7647,6 +7883,7 @@ public record t1305InBlock(
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="date">날짜	string	8</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 19)]
 public record t1305OutBlock(
     [BlockField("CNT", 4)] int cnt,
     [BlockField("날짜", 8)] string date,
@@ -7684,6 +7921,7 @@ public record t1305OutBlock(
 /// <param name="l_change">저가대비	int	8</param>
 /// <param name="l_diff">저가기준등락율	double	6.2</param>
 /// <param name="marketcap">시가총액(단위:백만)	long	12</param>
+[BlockInfo(true, 234)]
 public record t1305OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 8)] int open,
@@ -7723,6 +7961,7 @@ public record t1305OutBlock1(
 /// <param name="starttime">시작시간	string	4</param>
 /// <param name="endtime">종료시간	string	4</param>
 /// <param name="bun_term">분간격	string	2</param>
+[BlockInfo(true, 20)]
 public record t1308InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("시작시간", 4)] string starttime,
@@ -7749,6 +7988,7 @@ public record t1308InBlock(
 /// <param name="open">시가	int	8</param>
 /// <param name="high">고가	int	8</param>
 /// <param name="low">저가	int	8</param>
+[BlockInfo(true, 147)]
 public record t1308OutBlock1(
     [BlockField("시간", 8)] string chetime,
     [BlockField("현재가", 8)] int price,
@@ -7777,6 +8017,7 @@ public record t1308OutBlock1(
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="endtime">종료시간	string	4</param>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 27)]
 public record t1310InBlock(
     [BlockField("당일전일구분", 1)] string daygb,
     [BlockField("분틱구분", 1)] string timegb,
@@ -7789,6 +8030,7 @@ public record t1310InBlock(
 /// 주식당일전일분틱조회: t1310
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 11)]
 public record t1310OutBlock(
     [BlockField("시간CTS", 10)] string cts_time
     );
@@ -7810,6 +8052,7 @@ public record t1310OutBlock(
 /// <param name="mschecnt">매수체결건수	int	8</param>
 /// <param name="revolume">순체결량	long	12</param>
 /// <param name="rechecnt">순체결건수	int	8</param>
+[BlockInfo(true, 139)]
 public record t1310OutBlock1(
     [BlockField("시간", 10)] string chetime,
     [BlockField("현재가", 8)] int price,
@@ -7835,6 +8078,7 @@ public record t1310OutBlock1(
 /// <param name="styymm">시작상장월	string	6</param>
 /// <param name="enyymm">종료상장월	string	6</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 21)]
 public record t1403InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("시작상장월", 6)] string styymm,
@@ -7846,6 +8090,7 @@ public record t1403InBlock(
 /// 신규상장종목조회: t1403
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1403OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -7866,6 +8111,7 @@ public record t1403OutBlock(
 /// <param name="close">등록일종가	int	8</param>
 /// <param name="recdiff">등록일등락율	double	6.2</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 118)]
 public record t1403OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -7889,6 +8135,7 @@ public record t1403OutBlock1(
 /// <param name="gubun">구분	string	1</param>
 /// <param name="jongchk">종목체크	string	1</param>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
+[BlockInfo(true, 11)]
 public record t1404InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("종목체크", 1)] string jongchk,
@@ -7899,6 +8146,7 @@ public record t1404InBlock(
 /// 관리/불성실/투자유의조회: t1404
 /// </summary>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
+[BlockInfo(true, 7)]
 public record t1404OutBlock(
     [BlockField("종목코드_CTS", 6)] string cts_shcode
     );
@@ -7919,6 +8167,7 @@ public record t1404OutBlock(
 /// <param name="reason">사유	string	4</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="edate">해제일	string	8</param>
+[BlockInfo(true, 116)]
 public record t1404OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -7942,6 +8191,7 @@ public record t1404OutBlock1(
 /// <param name="gubun">구분	string	1</param>
 /// <param name="jongchk">종목체크	string	1</param>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
+[BlockInfo(true, 11)]
 public record t1405InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("종목체크", 1)] string jongchk,
@@ -7952,6 +8202,7 @@ public record t1405InBlock(
 /// 투자경고/매매정지/정리매매조회: t1405
 /// </summary>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
+[BlockInfo(true, 7)]
 public record t1405OutBlock(
     [BlockField("종목코드_CTS", 6)] string cts_shcode
     );
@@ -7968,6 +8219,7 @@ public record t1405OutBlock(
 /// <param name="date">지정일	string	8</param>
 /// <param name="edate">해제일	string	8</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 86)]
 public record t1405OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -7986,6 +8238,7 @@ public record t1405OutBlock1(
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
+[BlockInfo(true, 9)]
 public record t1410InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("종목코드_CTS", 6)] string cts_shcode
@@ -7995,6 +8248,7 @@ public record t1410InBlock(
 /// 초저유동성조회: t1410
 /// </summary>
 /// <param name="cts_shcode">종목코드_CTS	string	6</param>
+[BlockInfo(true, 7)]
 public record t1410OutBlock(
     [BlockField("종목코드_CTS", 6)] string cts_shcode
     );
@@ -8009,6 +8263,7 @@ public record t1410OutBlock(
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="volume">누적거래량	long	12</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 68)]
 public record t1410OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -8028,6 +8283,7 @@ public record t1410OutBlock1(
 /// <param name="jkrate">증거금율구분	string	1</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 18)]
 public record t1411InBlock(
     [BlockField("시장구분", 1)] string gubun,
     [BlockField("위탁신용구분", 1)] string jongchk,
@@ -8042,6 +8298,7 @@ public record t1411InBlock(
 /// <param name="jkrate">위탁증거금율	int	3</param>
 /// <param name="sjkrate">신용증거금율	int	3</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 13)]
 public record t1411OutBlock(
     [BlockField("위탁증거금율", 3)] int jkrate,
     [BlockField("신용증거금율", 3)] int sjkrate,
@@ -8062,6 +8319,7 @@ public record t1411OutBlock(
 /// <param name="change">전일대비	int	8</param>
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="volume">누적거래량	long	12</param>
+[BlockInfo(true, 94)]
 public record t1411OutBlock1(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종목명", 20)] string hname,
@@ -8089,6 +8347,7 @@ public record t1411OutBlock1(
 /// <param name="eprice">종료가격	int	8</param>
 /// <param name="volume">거래량	long	12</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 57)]
 public record t1422InBlock(
     [BlockField("조회구분", 1)] string qrygb,
     [BlockField("구분", 1)] string gubun,
@@ -8106,6 +8365,7 @@ public record t1422InBlock(
 /// </summary>
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 10)]
 public record t1422OutBlock(
     [BlockField("CNT", 4)] int cnt,
     [BlockField("IDX", 4)] int idx
@@ -8127,6 +8387,7 @@ public record t1422OutBlock(
 /// <param name="lmtdaycnt">연속	int	8</param>
 /// <param name="jnilvolume">전일거래량	long	12</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 134)]
 public record t1422OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -8157,6 +8418,7 @@ public record t1422OutBlock1(
 /// <param name="volume">거래량	long	12</param>
 /// <param name="idx">IDX	int	4</param>
 /// <param name="jshex">전일상하한제외	string	1</param>
+[BlockInfo(true, 61)]
 public record t1427InBlock(
     [BlockField("조회구분", 1)] string qrygb,
     [BlockField("구분", 1)] string gubun,
@@ -8175,6 +8437,7 @@ public record t1427InBlock(
 /// </summary>
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 10)]
 public record t1427OutBlock(
     [BlockField("CNT", 4)] int cnt,
     [BlockField("IDX", 4)] int idx
@@ -8200,6 +8463,7 @@ public record t1427OutBlock(
 /// <param name="lmtdaycnt">연속	int	8</param>
 /// <param name="value">거래대금	long	12</param>
 /// <param name="total">시가총액	long	12</param>
+[BlockInfo(true, 176)]
 public record t1427OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -8233,6 +8497,7 @@ public record t1427OutBlock1(
 /// <param name="volume">거래량	long	12</param>
 /// <param name="idx">IDX	int	4</param>
 /// <param name="jc_num2">대상제외2	long	12</param>
+[BlockInfo(true, 68)]
 public record t1441InBlock(
     [BlockField("구분", 1)] string gubun1,
     [BlockField("상승하락", 1)] string gubun2,
@@ -8249,6 +8514,7 @@ public record t1441InBlock(
 /// 등락율상위: t1441
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1441OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -8275,6 +8541,7 @@ public record t1441OutBlock(
 /// <param name="voldiff">거래량대비율	double	8.2</param>
 /// <param name="value">거래대금	long	15</param>
 /// <param name="total">시가총액	long	12</param>
+[BlockInfo(true, 197)]
 public record t1441OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -8311,6 +8578,7 @@ public record t1441OutBlock1(
 /// <param name="volume">거래량	long	12</param>
 /// <param name="idx">IDX	int	4</param>
 /// <param name="jc_num2">대상제외2	long	12</param>
+[BlockInfo(true, 70)]
 public record t1442InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("신고신저", 1)] string type1,
@@ -8328,6 +8596,7 @@ public record t1442InBlock(
 /// 신고/신저가: t1442
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1442OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -8346,6 +8615,7 @@ public record t1442OutBlock(
 /// <param name="pastsign">이전가대비구분	string	1</param>
 /// <param name="pastchange">이전가대비	int	8</param>
 /// <param name="pastdiff">이전가대비율	double	6.2</param>
+[BlockInfo(true, 95)]
 public record t1442OutBlock1(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종목명", 20)] string hname,
@@ -8366,6 +8636,7 @@ public record t1442OutBlock1(
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 9)]
 public record t1444InBlock(
     [BlockField("업종코드", 3)] string upcode,
     [BlockField("IDX", 4)] int idx
@@ -8375,6 +8646,7 @@ public record t1444InBlock(
 /// 시가총액상위: t1444
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1444OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -8393,6 +8665,7 @@ public record t1444OutBlock(
 /// <param name="total">시가총액	long	12</param>
 /// <param name="rate">비중	double	6.2</param>
 /// <param name="for_rate">외인비중	double	6.2</param>
+[BlockInfo(true, 102)]
 public record t1444OutBlock1(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종목명", 20)] string hname,
@@ -8413,6 +8686,7 @@ public record t1444OutBlock1(
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="dategb">일자구분	string	1</param>
+[BlockInfo(true, 9)]
 public record t1449InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("일자구분", 1)] string dategb
@@ -8428,6 +8702,7 @@ public record t1449InBlock(
 /// <param name="volume">거래량	long	12</param>
 /// <param name="msvolume">매수체결량	long	12</param>
 /// <param name="mdvolume">매도체결량	long	12</param>
+[BlockInfo(true, 66)]
 public record t1449OutBlock(
     [BlockField("현재가", 8)] int price,
     [BlockField("전일대비구분", 1)] string sign,
@@ -8450,6 +8725,7 @@ public record t1449OutBlock(
 /// <param name="mdvolume">매도체결량	long	12</param>
 /// <param name="msvolume">매수체결량	long	12</param>
 /// <param name="msdiff">매수비율	double	6.2</param>
+[BlockInfo(true, 80)]
 public record t1449OutBlock1(
     [BlockField("체결가", 8)] int price,
     [BlockField("전일대비구분", 1)] string sign,
@@ -8475,6 +8751,7 @@ public record t1449OutBlock1(
 /// <param name="eprice">종료가격	int	8</param>
 /// <param name="volume">거래량	long	12</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 61)]
 public record t1452InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("전일구분", 1)] string jnilgubun,
@@ -8491,6 +8768,7 @@ public record t1452InBlock(
 /// 거래량상위: t1452
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1452OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -8508,6 +8786,7 @@ public record t1452OutBlock(
 /// <param name="jnilvolume">전일거래량	long	12</param>
 /// <param name="bef_diff">전일비	double	10.2</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 99)]
 public record t1452OutBlock1(
     [BlockField("종목명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -8533,6 +8812,7 @@ public record t1452OutBlock1(
 /// <param name="volume">거래량	long	12</param>
 /// <param name="idx">IDX	int	4</param>
 /// <param name="jc_num2">대상제외2	long	12</param>
+[BlockInfo(true, 66)]
 public record t1463InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("전일구분", 1)] string jnilgubun,
@@ -8548,6 +8828,7 @@ public record t1463InBlock(
 /// 거래대금상위: t1463
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1463OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -8567,6 +8848,7 @@ public record t1463OutBlock(
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="filler">filler	string	1</param>
 /// <param name="jnilvolume">전일거래량	long	12</param>
+[BlockInfo(true, 120)]
 public record t1463OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -8595,6 +8877,7 @@ public record t1463OutBlock1(
 /// <param name="volume">거래량	long	12</param>
 /// <param name="idx">IDX	int	4</param>
 /// <param name="jc_num2">대상제외2	long	12</param>
+[BlockInfo(true, 68)]
 public record t1466InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("전일거래량", 1)] string type1,
@@ -8612,6 +8895,7 @@ public record t1466InBlock(
 /// </summary>
 /// <param name="hhmm">현재시분	string	5</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 11)]
 public record t1466OutBlock(
     [BlockField("현재시분", 5)] string hhmm,
     [BlockField("IDX", 4)] int idx
@@ -8632,6 +8916,7 @@ public record t1466OutBlock(
 /// <param name="open">시가	int	8</param>
 /// <param name="high">고가	int	8</param>
 /// <param name="low">저가	int	8</param>
+[BlockInfo(true, 117)]
 public record t1466OutBlock1(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종목명", 20)] string hname,
@@ -8655,6 +8940,7 @@ public record t1466OutBlock1(
 /// <param name="gubun">분구분	string	2</param>
 /// <param name="time">시간	string	6</param>
 /// <param name="cnt">자료개수	string	3</param>
+[BlockInfo(true, 21)]
 public record t1471InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("분구분", 2)] string gubun,
@@ -8671,6 +8957,7 @@ public record t1471InBlock(
 /// <param name="change">전일대비	int	8</param>
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="volume">누적거래량	long	12</param>
+[BlockInfo(true, 47)]
 public record t1471OutBlock(
     [BlockField("시간CTS", 6)] string time,
     [BlockField("현재가", 8)] int price,
@@ -8695,6 +8982,7 @@ public record t1471OutBlock(
 /// <param name="totsun">순매수	long	12</param>
 /// <param name="msrate">매수비율	double	6.2</param>
 /// <param name="close">종가	int	8</param>
+[BlockInfo(true, 132)]
 public record t1471OutBlock1(
     [BlockField("체결시간", 6)] string time,
     [BlockField("메도증감", 12)] long preoffercha1,
@@ -8721,6 +9009,7 @@ public record t1471OutBlock1(
 /// <param name="time">기준시간	int	6</param>
 /// <param name="rankcnt">랭크카운터	int	3</param>
 /// <param name="gubun">조회구분	string	1</param>
+[BlockInfo(true, 36)]
 public record t1475InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("상승하락", 1)] string vptype,
@@ -8737,6 +9026,7 @@ public record t1475InBlock(
 /// <param name="date">기준일자	int	8</param>
 /// <param name="time">기준시간	int	6</param>
 /// <param name="rankcnt">랭크카운터	int	3</param>
+[BlockInfo(true, 20)]
 public record t1475OutBlock(
     [BlockField("기준일자", 8)] int date,
     [BlockField("기준시간", 6)] int time,
@@ -8756,6 +9046,7 @@ public record t1475OutBlock(
 /// <param name="ma5vp">5일MAVP	double	8.2</param>
 /// <param name="ma20vp">20일MAVP	double	8.2</param>
 /// <param name="ma60vp">60일MAVP	double	8.2</param>
+[BlockInfo(true, 87)]
 public record t1475OutBlock1(
     [BlockField("일자", 10)] string datetime,
     [BlockField("현재가", 8)] int price,
@@ -8778,6 +9069,7 @@ public record t1475OutBlock1(
 /// <param name="jongchk">종목체크	string	1</param>
 /// <param name="volume">거래량	string	1</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 13)]
 public record t1481InBlock(
     [BlockField("구분", 1)] string gubun1,
     [BlockField("상승하락", 1)] string gubun2,
@@ -8790,6 +9082,7 @@ public record t1481InBlock(
 /// 시간외등락율상위: t1481
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1481OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -8809,6 +9102,7 @@ public record t1481OutBlock(
 /// <param name="bidho1">매수호가	long	12</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="value">누적거래대금	long	12</param>
+[BlockInfo(true, 133)]
 public record t1481OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -8831,6 +9125,7 @@ public record t1481OutBlock1(
 /// <param name="gubun">구분	string	1</param>
 /// <param name="jongchk">거래량	string	1</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 9)]
 public record t1482InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("거래량", 1)] string jongchk,
@@ -8841,6 +9136,7 @@ public record t1482InBlock(
 /// 시간외거래량상위: t1482
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1482OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -8857,6 +9153,7 @@ public record t1482OutBlock(
 /// <param name="vol">회전율	double	6.2</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="value">누적거래대금	long	12</param>
+[BlockInfo(true, 88)]
 public record t1482OutBlock1(
     [BlockField("종목명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -8875,6 +9172,7 @@ public record t1482OutBlock1(
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="gubun">조회구분	string	1</param>
+[BlockInfo(true, 6)]
 public record t1485InBlock(
     [BlockField("업종코드", 3)] string upcode,
     [BlockField("조회구분", 1)] string gubun
@@ -8893,6 +9191,7 @@ public record t1485InBlock(
 /// <param name="ylowjo">하락종목수	int	4</param>
 /// <param name="ydownjo">하한종목수	int	4</param>
 /// <param name="ytrajo">거래형성수	int	4</param>
+[BlockInfo(true, 67)]
 public record t1485OutBlock(
     [BlockField("현재지수", 10.2)] double pricejisu,
     [BlockField("지수전일대비구분", 1)] string sign,
@@ -8916,6 +9215,7 @@ public record t1485OutBlock(
 /// <param name="volume">예상체결량	long	12</param>
 /// <param name="volcha">예상체결량직전대비	long	12</param>
 /// <param name="diff">예상등락율	double	6.2</param>
+[BlockInfo(true, 64)]
 public record t1485OutBlock1(
     [BlockField("시간", 6)] string chetime,
     [BlockField("예상지수", 10.2)] double jisu,
@@ -8933,6 +9233,7 @@ public record t1485OutBlock1(
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="cts_time">시간CTS	string	10</param>
 /// <param name="cnt">조회건수	int	4</param>
+[BlockInfo(true, 23)]
 public record t1486InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("시간CTS", 10)] string cts_time,
@@ -8943,6 +9244,7 @@ public record t1486InBlock(
 /// 시간별예상체결가: t1486
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 11)]
 public record t1486OutBlock(
     [BlockField("시간CTS", 10)] string cts_time
     );
@@ -8960,6 +9262,7 @@ public record t1486OutBlock(
 /// <param name="bidho1">매수호가	int	8</param>
 /// <param name="offerrem1">매도잔량	long	12</param>
 /// <param name="bidrem1">매수잔량	long	12</param>
+[BlockInfo(true, 93)]
 public record t1486OutBlock1(
     [BlockField("시간", 8)] string chetime,
     [BlockField("예상체결가", 8)] int price,
@@ -8986,6 +9289,7 @@ public record t1486OutBlock1(
 /// <param name="yesprice">예상체결시작가격	int	8</param>
 /// <param name="yeeprice">예상체결종료가격	int	8</param>
 /// <param name="yevolume">예상체결량	long	12</param>
+[BlockInfo(true, 57)]
 public record t1488InBlock(
     [BlockField("거래소구분", 1)] string gubun,
     [BlockField("상하락구분", 1)] string sign,
@@ -9002,6 +9306,7 @@ public record t1488InBlock(
 /// 예상체결가등락율상위조회: t1488
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1488OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -9023,6 +9328,7 @@ public record t1488OutBlock(
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="jkrate">증거금율	string	3</param>
 /// <param name="jnilvolume">전일거래량	long	12</param>
+[BlockInfo(true, 134)]
 public record t1488OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -9051,6 +9357,7 @@ public record t1488OutBlock1(
 /// <param name="yesprice">예상체결시작가격	int	8</param>
 /// <param name="yeeprice">예상체결종료가격	int	8</param>
 /// <param name="yevolume">예상체결량	long	12</param>
+[BlockInfo(true, 53)]
 public record t1489InBlock(
     [BlockField("거래소구분", 1)] string gubun,
     [BlockField("장구분", 1)] string jgubun,
@@ -9065,6 +9372,7 @@ public record t1489InBlock(
 /// 예상체결량상위조회: t1489
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1489OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -9082,6 +9390,7 @@ public record t1489OutBlock(
 /// <param name="bidho">매수호가	int	8</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="jnilvolume">전일거래량	long	12</param>
+[BlockInfo(true, 99)]
 public record t1489OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -9104,6 +9413,7 @@ public record t1489OutBlock1(
 /// <param name="jongchk">종목체크	string	1</param>
 /// <param name="volume">거래량	string	1</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 13)]
 public record t1492InBlock(
     [BlockField("구분", 1)] string gubun1,
     [BlockField("상승하락", 1)] string gubun2,
@@ -9116,6 +9426,7 @@ public record t1492InBlock(
 /// 단일가예상등락율상위: t1492
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1492OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -9136,6 +9447,7 @@ public record t1492OutBlock(
 /// <param name="bidho1">매수호가	long	12</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="value">누적거래대금	long	12</param>
+[BlockInfo(true, 146)]
 public record t1492OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("예상체결가", 8)] int price,
@@ -9157,6 +9469,7 @@ public record t1492OutBlock1(
 /// 업종현재가: t1511
 /// </summary>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 4)]
 public record t1511InBlock(
     [BlockField("업종코드", 3)] string upcode
     );
@@ -9229,6 +9542,7 @@ public record t1511InBlock(
 /// <param name="unchgjo">보합종목수	int	4</param>
 /// <param name="lowjo">하락종목수	int	4</param>
 /// <param name="downjo">하한종목수	int	4</param>
+[BlockInfo(true, 539)]
 public record t1511OutBlock(
     [BlockField("업종구분", 1)] string gubun,
     [BlockField("업종명", 20)] string hname,
@@ -9307,6 +9621,7 @@ public record t1511OutBlock(
 /// <param name="cts_date">CTS_일자	string	8</param>
 /// <param name="cnt">조회건수	int	4</param>
 /// <param name="rate_gbn">비중구분	string	1</param>
+[BlockInfo(true, 24)]
 public record t1514InBlock(
     [BlockField("업종코드", 3)] string upcode,
     [BlockField("구분1", 1)] string gubun1,
@@ -9320,6 +9635,7 @@ public record t1514InBlock(
 /// 업종기간별추이: t1514
 /// </summary>
 /// <param name="cts_date">CTS_일자	string	8</param>
+[BlockInfo(true, 9)]
 public record t1514OutBlock(
     [BlockField("CTS_일자", 8)] string cts_date
     );
@@ -9351,6 +9667,7 @@ public record t1514OutBlock(
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="rate">거래비중	double	7.2</param>
 /// <param name="divrate">업종배당수익률	double	7.2</param>
+[BlockInfo(true, 205)]
 public record t1514OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("지수", 12.2)] double jisu,
@@ -9385,6 +9702,7 @@ public record t1514OutBlock1(
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 13)]
 public record t1516InBlock(
     [BlockField("업종코드", 3)] string upcode,
     [BlockField("구분", 1)] string gubun,
@@ -9399,6 +9717,7 @@ public record t1516InBlock(
 /// <param name="sign">전일대비구분	string	1</param>
 /// <param name="change">전일대비	double	7.2</param>
 /// <param name="jdiff">등락율	double	6.2</param>
+[BlockInfo(true, 37)]
 public record t1516OutBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("지수", 12.2)] double pricejisu,
@@ -9428,6 +9747,7 @@ public record t1516OutBlock(
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="total">시가총액	long	12</param>
 /// <param name="value">거래대금	long	12</param>
+[BlockInfo(true, 181)]
 public record t1516OutBlock1(
     [BlockField("종목명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -9455,6 +9775,7 @@ public record t1516OutBlock1(
 /// </summary>
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="tmcode">테마코드	string	4</param>
+[BlockInfo(true, 42)]
 public record t1531InBlock(
     [BlockField("테마명", 36)] string tmname,
     [BlockField("테마코드", 4)] string tmcode
@@ -9466,6 +9787,7 @@ public record t1531InBlock(
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="avgdiff">평균등락율	double	6.2</param>
 /// <param name="tmcode">테마코드	string	4</param>
+[BlockInfo(true, 49)]
 public record t1531OutBlock(
     [BlockField("테마명", 36)] string tmname,
     [BlockField("평균등락율", 6.2)] double avgdiff,
@@ -9477,6 +9799,7 @@ public record t1531OutBlock(
 /// 종목별테마: t1532
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1532InBlock(
     [BlockField("종목코드", 6)] string shcode
     );
@@ -9487,6 +9810,7 @@ public record t1532InBlock(
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="avgdiff">평균등락율	double	6.2</param>
 /// <param name="tmcode">테마코드	string	4</param>
+[BlockInfo(true, 49)]
 public record t1532OutBlock(
     [BlockField("테마명", 36)] string tmname,
     [BlockField("평균등락율", 6.2)] double avgdiff,
@@ -9499,6 +9823,7 @@ public record t1532OutBlock(
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
 /// <param name="chgdate">대비일자	int	2</param>
+[BlockInfo(true, 5)]
 public record t1533InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("대비일자", 2)] int chgdate
@@ -9508,6 +9833,7 @@ public record t1533InBlock(
 /// 특이테마: t1533
 /// </summary>
 /// <param name="bdate">일자	string	8</param>
+[BlockInfo(true, 9)]
 public record t1533OutBlock(
     [BlockField("일자", 8)] string bdate
     );
@@ -9524,6 +9850,7 @@ public record t1533OutBlock(
 /// <param name="avgdiff">평균등락율	double	6.2</param>
 /// <param name="chgdiff">대비등락율	double	6.2</param>
 /// <param name="tmcode">테마코드	string	4</param>
+[BlockInfo(true, 89)]
 public record t1533OutBlock1(
     [BlockField("테마명", 36)] string tmname,
     [BlockField("전체", 4)] int totcnt,
@@ -9541,6 +9868,7 @@ public record t1533OutBlock1(
 /// 테마종목별시세조회: t1537
 /// </summary>
 /// <param name="tmcode">테마코드	string	4</param>
+[BlockInfo(true, 5)]
 public record t1537InBlock(
     [BlockField("테마코드", 4)] string tmcode
     );
@@ -9552,6 +9880,7 @@ public record t1537InBlock(
 /// <param name="tmcnt">테마종목수	int	4</param>
 /// <param name="uprate">상승종목비율	int	4</param>
 /// <param name="tmname">테마명	string	36</param>
+[BlockInfo(true, 52)]
 public record t1537OutBlock(
     [BlockField("상승종목수", 4)] int upcnt,
     [BlockField("테마종목수", 4)] int tmcnt,
@@ -9576,6 +9905,7 @@ public record t1537OutBlock(
 /// <param name="low">저가	int	8</param>
 /// <param name="value">누적거래대금(단위:백만)	long	12</param>
 /// <param name="marketcap">시가총액(단위:백만)	long	12</param>
+[BlockInfo(true, 140)]
 public record t1537OutBlock1(
     [BlockField("종목명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -9601,6 +9931,7 @@ public record t1537OutBlock1(
 /// <param name="gubun2">옵션금액수량구분2	string	1</param>
 /// <param name="gubun3">금액단위	string	1</param>
 /// <param name="gubun4">선물금액수량구분4	string	1</param>
+[BlockInfo(true, 8)]
 public record t1601InBlock(
     [BlockField("주식금액수량구분1", 1)] string gubun1,
     [BlockField("옵션금액수량구분2", 1)] string gubun2,
@@ -9671,6 +10002,7 @@ public record t1601InBlock(
 /// <param name="md_00">사모펀드매도	long	12</param>
 /// <param name="rate_00">사모펀드증감	long	12</param>
 /// <param name="svolume_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 684)]
 public record t1601OutBlock1(
     [BlockField("개인투자자코드", 4)] string tjjcode_08,
     [BlockField("개인매수", 12)] long ms_08,
@@ -9797,6 +10129,7 @@ public record t1601OutBlock1(
 /// <param name="md_00">사모펀드매도	long	12</param>
 /// <param name="rate_00">사모펀드증감	long	12</param>
 /// <param name="svolume_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 684)]
 public record t1601OutBlock2(
     [BlockField("개인투자자코드", 4)] string tjjcode_08,
     [BlockField("개인매수", 12)] long ms_08,
@@ -9923,6 +10256,7 @@ public record t1601OutBlock2(
 /// <param name="md_00">사모펀드매도	long	12</param>
 /// <param name="rate_00">사모펀드증감	long	12</param>
 /// <param name="svolume_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 684)]
 public record t1601OutBlock3(
     [BlockField("개인투자자코드", 4)] string tjjcode_08,
     [BlockField("개인매수", 12)] long ms_08,
@@ -10049,6 +10383,7 @@ public record t1601OutBlock3(
 /// <param name="md_00">사모펀드매도	long	12</param>
 /// <param name="rate_00">사모펀드증감	long	12</param>
 /// <param name="svolume_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 684)]
 public record t1601OutBlock4(
     [BlockField("개인투자자코드", 4)] string tjjcode_08,
     [BlockField("개인매수", 12)] long ms_08,
@@ -10175,6 +10510,7 @@ public record t1601OutBlock4(
 /// <param name="md_00">사모펀드매도	long	12</param>
 /// <param name="rate_00">사모펀드증감	long	12</param>
 /// <param name="svolume_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 684)]
 public record t1601OutBlock5(
     [BlockField("개인투자자코드", 4)] string tjjcode_08,
     [BlockField("개인매수", 12)] long ms_08,
@@ -10301,6 +10637,7 @@ public record t1601OutBlock5(
 /// <param name="md_00">사모펀드매도	long	12</param>
 /// <param name="rate_00">사모펀드증감	long	12</param>
 /// <param name="svolume_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 684)]
 public record t1601OutBlock6(
     [BlockField("개인투자자코드", 4)] string tjjcode_08,
     [BlockField("개인매수", 12)] long ms_08,
@@ -10376,6 +10713,7 @@ public record t1601OutBlock6(
 /// <param name="cts_idx">CTSIDX	int	4</param>
 /// <param name="cnt">조회건수	int	4</param>
 /// <param name="gubun3">직전대비구분(C:직전대비)	string	1</param>
+[BlockInfo(true, 31)]
 public record t1602InBlock(
     [BlockField("시장구분", 1)] string market,
     [BlockField("업종코드", 3)] string upcode,
@@ -10451,6 +10789,7 @@ public record t1602InBlock(
 /// <param name="md_00">사모펀드매도	long	12</param>
 /// <param name="rate_00">사모펀드증감	long	12</param>
 /// <param name="svolume_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 693)]
 public record t1602OutBlock(
     [BlockField("CTSTIME", 8)] string cts_time,
     [BlockField("개인투자자코드", 4)] string tjjcode_08,
@@ -10531,6 +10870,7 @@ public record t1602OutBlock(
 /// <param name="sv_07">기타순매수	long	12</param>
 /// <param name="sv_11">국가순매수	long	12</param>
 /// <param name="sv_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 165)]
 public record t1602OutBlock1(
     [BlockField("시간", 8)] string time,
     [BlockField("개인순매수", 12)] long sv_08,
@@ -10558,6 +10898,7 @@ public record t1602OutBlock1(
 /// <param name="cts_idx">CTSIDX	int	4</param>
 /// <param name="cnt">조회건수	int	3</param>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 28)]
 public record t1603InBlock(
     [BlockField("시장구분", 1)] string market,
     [BlockField("투자자구분", 1)] string gubun1,
@@ -10573,6 +10914,7 @@ public record t1603InBlock(
 /// </summary>
 /// <param name="cts_idx">CTSIDX	int	4</param>
 /// <param name="cts_time">CTSTIME	string	8</param>
+[BlockInfo(true, 14)]
 public record t1603OutBlock(
     [BlockField("CTSIDX", 4)] int cts_idx,
     [BlockField("CTSTIME", 8)] string cts_time
@@ -10589,6 +10931,7 @@ public record t1603OutBlock(
 /// <param name="mdvalue">매도금액	long	12</param>
 /// <param name="svolume">순매수수량	int	8</param>
 /// <param name="svalue">순매수금액	long	12</param>
+[BlockInfo(true, 80)]
 public record t1603OutBlock1(
     [BlockField("시간", 8)] string time,
     [BlockField("투자자구분", 4)] string tjjcode,
@@ -10606,6 +10949,7 @@ public record t1603OutBlock1(
 /// </summary>
 /// <param name="gubun1">주식구분	string	1</param>
 /// <param name="gubun2">옵션구분	string	1</param>
+[BlockInfo(true, 4)]
 public record t1615InBlock(
     [BlockField("주식구분", 1)] string gubun1,
     [BlockField("옵션구분", 1)] string gubun2
@@ -10620,6 +10964,7 @@ public record t1615InBlock(
 /// <param name="djvalue">자기매도금액	long	12</param>
 /// <param name="sum_volume">합계수량	long	12</param>
 /// <param name="sum_value">합계금액	long	12</param>
+[BlockInfo(true, 78)]
 public record t1615OutBlock(
     [BlockField("위탁매도수량", 12)] long dwvolume,
     [BlockField("위탁매도금액", 12)] long dwvalue,
@@ -10637,6 +10982,7 @@ public record t1615OutBlock(
 /// <param name="sv_17">외국인	long	12</param>
 /// <param name="sv_18">기관계	long	12</param>
 /// <param name="sv_07">증권	long	12</param>
+[BlockInfo(true, 73)]
 public record t1615OutBlock1(
     [BlockField("시장명", 20)] string hname,
     [BlockField("개인", 12)] long sv_08,
@@ -10654,6 +11000,7 @@ public record t1615OutBlock1(
 /// <param name="gubun3">일자구분(1:시간대별2:일별)	string	1</param>
 /// <param name="cts_date">CTSDATE(연속키값-일자)	string	8</param>
 /// <param name="cts_time">CTSTIME(연속키값-시간)	string	8</param>
+[BlockInfo(true, 24)]
 public record t1617InBlock(
     [BlockField("시장구분(1:코스피2:코스닥3:선물4:콜옵션5:풋옵션6:주식선물)", 1)] string gubun1,
     [BlockField("수량금액구분(1:수량2:금액)", 1)] string gubun2,
@@ -10679,6 +11026,7 @@ public record t1617InBlock(
 /// <param name="ms_01">증권매수	long	12</param>
 /// <param name="md_01">증권매도	long	12</param>
 /// <param name="sv_01">증권순매수	long	12</param>
+[BlockInfo(true, 174)]
 public record t1617OutBlock(
     [BlockField("CTSDATE", 8)] string cts_date,
     [BlockField("CTSTIME", 8)] string cts_time,
@@ -10705,6 +11053,7 @@ public record t1617OutBlock(
 /// <param name="sv_17">외국인	long	12</param>
 /// <param name="sv_18">기관계	long	12</param>
 /// <param name="sv_01">증권	long	12</param>
+[BlockInfo(true, 70)]
 public record t1617OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 8)] string time,
@@ -10722,6 +11071,7 @@ public record t1617OutBlock1(
 /// <param name="nmin">N분	int	2</param>
 /// <param name="cnt">조회건수	int	3</param>
 /// <param name="bgubun">전일분	string	1</param>
+[BlockInfo(true, 13)]
 public record t1621InBlock(
     [BlockField("업종코드", 3)] string upcode,
     [BlockField("N분", 2)] int nmin,
@@ -10746,6 +11096,7 @@ public record t1621InBlock(
 /// <param name="pefcode">사모펀드투자자코드	string	4</param>
 /// <param name="jisucd">기준지수코드	string	8</param>
 /// <param name="jisunm">기준지수명	string	20</param>
+[BlockInfo(true, 90)]
 public record t1621OutBlock(
     [BlockField("개인투자자코드", 4)] string indcode,
     [BlockField("외국인투자자코드", 4)] string forcode,
@@ -10797,6 +11148,7 @@ public record t1621OutBlock(
 /// <param name="upcvolume">기준체결거래량	int	8</param>
 /// <param name="upvolume">기준누적거래량	double	12</param>
 /// <param name="upvalue">기준거래대금	double	12</param>
+[BlockInfo(true, 337)]
 public record t1621OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -10839,6 +11191,7 @@ public record t1621OutBlock1(
 /// <param name="dgubun">일자구분	string	1</param>
 /// <param name="sdate">시작일자	string	8</param>
 /// <param name="edate">종료일자	string	8</param>
+[BlockInfo(true, 22)]
 public record t1631InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("일자구분", 1)] string dgubun,
@@ -10857,6 +11210,7 @@ public record t1631InBlock(
 /// <param name="bshrem">매수비차익미체결잔량	int	8</param>
 /// <param name="tcsrem">매수차익주문수량	int	8</param>
 /// <param name="tbsrem">매수비차익주문수량	int	8</param>
+[BlockInfo(true, 72)]
 public record t1631OutBlock(
     [BlockField("매도차익미체결잔량", 8)] int cdhrem,
     [BlockField("매도비차익미체결잔량", 8)] int bdhrem,
@@ -10877,6 +11231,7 @@ public record t1631OutBlock(
 /// <param name="bidvalue">매수금액	long	12</param>
 /// <param name="volume">순매수수량	int	8</param>
 /// <param name="value">순매수금액	long	12</param>
+[BlockInfo(true, 66)]
 public record t1631OutBlock1(
     [BlockField("매도수량", 8)] int offervolume,
     [BlockField("매도금액", 12)] long offervalue,
@@ -10896,6 +11251,7 @@ public record t1631OutBlock1(
 /// <param name="gubun3">전일구분	string	1</param>
 /// <param name="date">일자	string	8</param>
 /// <param name="time">시간	string	6</param>
+[BlockInfo(true, 24)]
 public record t1632InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("금액수량구분", 1)] string gubun1,
@@ -10911,6 +11267,7 @@ public record t1632InBlock(
 /// <param name="date">날짜CTS	string	8</param>
 /// <param name="time">시간CTS	string	6</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 21)]
 public record t1632OutBlock(
     [BlockField("날짜CTS", 8)] string date,
     [BlockField("시간CTS", 6)] string time,
@@ -10934,6 +11291,7 @@ public record t1632OutBlock(
 /// <param name="bcha3">비차익순매수	long	12</param>
 /// <param name="bcha1">비차익매수	long	12</param>
 /// <param name="bcha2">비차익매도	long	12</param>
+[BlockInfo(true, 147)]
 public record t1632OutBlock1(
     [BlockField("시간", 6)] string time,
     [BlockField("KP200", 6.2)] double k200jisu,
@@ -10963,6 +11321,7 @@ public record t1632OutBlock1(
 /// <param name="tdate">to일자	string	8</param>
 /// <param name="gubun4">직전대비증감구분	string	1</param>
 /// <param name="date">날짜	string	8</param>
+[BlockInfo(true, 37)]
 public record t1633InBlock(
     [BlockField("시장구분", 1)] string gubun,
     [BlockField("금액수량구분", 1)] string gubun1,
@@ -10979,6 +11338,7 @@ public record t1633InBlock(
 /// </summary>
 /// <param name="date">날짜	string	8</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 14)]
 public record t1633OutBlock(
     [BlockField("날짜", 8)] string date,
     [BlockField("IDX", 4)] int idx
@@ -11001,6 +11361,7 @@ public record t1633OutBlock(
 /// <param name="bcha1">비차익매수	long	12</param>
 /// <param name="bcha2">비차익매도	long	12</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 155)]
 public record t1633OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("KP200", 6.2)] double jisu,
@@ -11027,6 +11388,7 @@ public record t1633OutBlock1(
 /// <param name="gubun2">정렬기준	string	1</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="cts_idx">IDXCTS	int	4</param>
+[BlockInfo(true, 18)]
 public record t1636InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("금액수량구분", 1)] string gubun1,
@@ -11039,6 +11401,7 @@ public record t1636InBlock(
 /// 종목별프로그램매매동향: t1636
 /// </summary>
 /// <param name="cts_idx">IDXCTS	int	4</param>
+[BlockInfo(true, 5)]
 public record t1636OutBlock(
     [BlockField("IDXCTS", 4)] int cts_idx
     );
@@ -11062,6 +11425,7 @@ public record t1636OutBlock(
 /// <param name="sgta">시가총액	long	15</param>
 /// <param name="rate">비중	double	6.2</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 178)]
 public record t1636OutBlock1(
     [BlockField("순위", 8)] int rank,
     [BlockField("종목명", 20)] string hname,
@@ -11091,6 +11455,7 @@ public record t1636OutBlock1(
 /// <param name="date">일자	string	8</param>
 /// <param name="time">시간	string	6</param>
 /// <param name="cts_idx">IDXCTS(9999:차트)	int	4</param>
+[BlockInfo(true, 32)]
 public record t1637InBlock(
     [BlockField("수량금액구분(0:수량1:금액)", 1)] string gubun1,
     [BlockField("시간일별구분(0:시간1:일자)", 1)] string gubun2,
@@ -11104,6 +11469,7 @@ public record t1637InBlock(
 /// 종목별프로그램매매추이: t1637
 /// </summary>
 /// <param name="cts_idx">IDXCTS	int	4</param>
+[BlockInfo(true, 5)]
 public record t1637OutBlock(
     [BlockField("IDXCTS", 4)] int cts_idx
     );
@@ -11125,6 +11491,7 @@ public record t1637OutBlock(
 /// <param name="offervolume">매도수량	long	12</param>
 /// <param name="stksvolume">매수수량	long	12</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 150)]
 public record t1637OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -11149,6 +11516,7 @@ public record t1637OutBlock1(
 /// <param name="gubun1">구분	string	1</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="gubun2">정렬	string	1</param>
+[BlockInfo(true, 11)]
 public record t1638InBlock(
     [BlockField("구분", 1)] string gubun1,
     [BlockField("종목코드", 6)] string shcode,
@@ -11172,6 +11540,7 @@ public record t1638InBlock(
 /// <param name="pdgvolume">매도공시수량	long	12</param>
 /// <param name="sigatot">시가총액	long	20</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 153)]
 public record t1638OutBlock(
     [BlockField("순위", 4)] int rank,
     [BlockField("한글명", 20)] string hname,
@@ -11194,6 +11563,7 @@ public record t1638OutBlock(
 /// 프로그램매매종합조회(미니): t1640
 /// </summary>
 /// <param name="gubun">구분	string	2</param>
+[BlockInfo(true, 3)]
 public record t1640InBlock(
     [BlockField("구분", 2)] string gubun
     );
@@ -11214,6 +11584,7 @@ public record t1640InBlock(
 /// <param name="offervaldiff">매도금액증감	double	12</param>
 /// <param name="bidvaldiff">매수금액증감	double	12</param>
 /// <param name="sunvaldiff">순매수증감	double	12</param>
+[BlockInfo(true, 139)]
 public record t1640OutBlock(
     [BlockField("매도수량", 8)] int offervolume,
     [BlockField("매수수량", 8)] int bidvolume,
@@ -11237,6 +11608,7 @@ public record t1640OutBlock(
 /// <param name="gubun">구분	string	1</param>
 /// <param name="gubun1">금액수량구분	string	1</param>
 /// <param name="gubun3">전일구분	string	1</param>
+[BlockInfo(true, 6)]
 public record t1662InBlock(
     [BlockField("구분", 1)] string gubun,
     [BlockField("금액수량구분", 1)] string gubun1,
@@ -11261,6 +11633,7 @@ public record t1662InBlock(
 /// <param name="bcha1">비차익매수	long	12</param>
 /// <param name="bcha2">비차익매도	long	12</param>
 /// <param name="volume">거래량	long	12</param>
+[BlockInfo(true, 160)]
 public record t1662OutBlock(
     [BlockField("시간", 6)] string time,
     [BlockField("KP200", 6.2)] double k200jisu,
@@ -11287,6 +11660,7 @@ public record t1662OutBlock(
 /// <param name="vagubun">금액수량구분	string	1</param>
 /// <param name="bdgubun">시간일별구분	string	1</param>
 /// <param name="cnt">조회건수	int	3</param>
+[BlockInfo(true, 10)]
 public record t1664InBlock(
     [BlockField("시장구분", 1)] string mgubun,
     [BlockField("금액수량구분", 1)] string vagubun,
@@ -11312,6 +11686,7 @@ public record t1664InBlock(
 /// <param name="bicha">비차익순매수	double	12</param>
 /// <param name="totcha">종합순매수	double	12</param>
 /// <param name="basis">베이시스	double	6.2</param>
+[BlockInfo(true, 185)]
 public record t1664OutBlock1(
     [BlockField("일자시간", 8)] string dt,
     [BlockField("증권순매수", 12)] double tjj01,
@@ -11340,6 +11715,7 @@ public record t1664OutBlock1(
 /// <param name="gubun3">단위구분(1:일2:주3:월)	string	1</param>
 /// <param name="from_date">시작날짜	string	8</param>
 /// <param name="to_date">종료날짜	string	8</param>
+[BlockInfo(true, 28)]
 public record t1665InBlock(
     [BlockField("시장구분(1:kospi2:kp2003:kosdaq4:선물5:풋옵션6:콜옵션)", 1)] string market,
     [BlockField("업종코드", 3)] string upcode,
@@ -11354,6 +11730,7 @@ public record t1665InBlock(
 /// </summary>
 /// <param name="mcode">시장코드	string	8</param>
 /// <param name="mname">시장명	string	20</param>
+[BlockInfo(true, 30)]
 public record t1665OutBlock(
     [BlockField("시장코드", 8)] string mcode,
     [BlockField("시장명", 20)] string mname
@@ -11394,6 +11771,7 @@ public record t1665OutBlock(
 /// <param name="sa_11">국가금액	double	12</param>
 /// <param name="sa_99">기타계금액(기타+국가)	double	12</param>
 /// <param name="jisu">시장지수	double	7.2</param>
+[BlockInfo(true, 407)]
 public record t1665OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("개인수량", 12)] long sv_08,
@@ -11440,6 +11818,7 @@ public record t1665OutBlock1(
 /// <param name="cumulgb">누적구분(0:일간1:누적)	string	1</param>
 /// <param name="cts_date">CTSDATE	string	8</param>
 /// <param name="cts_idx">CTSIDX	int	4</param>
+[BlockInfo(true, 36)]
 public record t1702InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종료일자", 8)] string todt,
@@ -11455,6 +11834,7 @@ public record t1702InBlock(
 /// </summary>
 /// <param name="cts_idx">CTSIDX	int	4</param>
 /// <param name="cts_date">CTSDATE	string	8</param>
+[BlockInfo(true, 14)]
 public record t1702OutBlock(
     [BlockField("CTSIDX", 4)] int cts_idx,
     [BlockField("CTSDATE", 8)] string cts_date
@@ -11484,6 +11864,7 @@ public record t1702OutBlock(
 /// <param name="amt0018">기관	long	12</param>
 /// <param name="amt0088">외인계(등록+미등록)	long	12</param>
 /// <param name="amt0099">기타계(기타+국가)	long	12</param>
+[BlockInfo(true, 244)]
 public record t1702OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("종가", 8)] int close,
@@ -11520,6 +11901,7 @@ public record t1702OutBlock1(
 /// <param name="prgubun">PR적용구분(0:적용안함1:적용)	string	1</param>
 /// <param name="orggubun">기관적용	string	1</param>
 /// <param name="frggubun">외인적용	string	1</param>
+[BlockInfo(true, 37)]
 public record t1716InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("구분(0:일간순매수1:기간누적순매수)", 1)] string gubun,
@@ -11549,6 +11931,7 @@ public record t1716InBlock(
 /// <param name="fsc_0009">금감원_외국인	long	12</param>
 /// <param name="gm_volume">공매도수량	long	12</param>
 /// <param name="gm_value">공매도대금	long	12</param>
+[BlockInfo(true, 160)]
 public record t1716OutBlock(
     [BlockField("일자", 8)] string date,
     [BlockField("종가", 8)] int close,
@@ -11575,6 +11958,7 @@ public record t1716OutBlock(
 /// <param name="gubun">구분(0:일간순매수1:기간누적순매수)	string	1</param>
 /// <param name="fromdt">시작일자(일간조회일경우는space)	string	8</param>
 /// <param name="todt">종료일자	string	8</param>
+[BlockInfo(true, 27)]
 public record t1717InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("구분(0:일간순매수1:기간누적순매수)", 1)] string gubun,
@@ -11621,6 +12005,7 @@ public record t1717InBlock(
 /// <param name="tjj0018_dan">기관(단가)	long	12</param>
 /// <param name="tjj0016_dan">외인계(단가)(등록+미등록)	long	12</param>
 /// <param name="tjj0017_dan">기타계(단가)(기타+국가)	long	12</param>
+[BlockInfo(true, 439)]
 public record t1717OutBlock(
     [BlockField("일자", 8)] string date,
     [BlockField("종가", 8)] int close,
@@ -11669,6 +12054,7 @@ public record t1717OutBlock(
 /// <param name="traddate2">조회날짜2	string	8</param>
 /// <param name="fwgubun1">외국계구분	string	1</param>
 /// <param name="cts_idx">CTSIDX	int	4</param>
+[BlockInfo(true, 32)]
 public record t1752InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("조회날짜1", 8)] string traddate1,
@@ -11683,6 +12069,7 @@ public record t1752InBlock(
 /// <param name="fwdvl">외국계매도	long	12</param>
 /// <param name="fwsvl">외국계매수	long	12</param>
 /// <param name="cts_idx">CTSIDX	int	4</param>
+[BlockInfo(true, 31)]
 public record t1752OutBlock(
     [BlockField("외국계매도", 12)] long fwdvl,
     [BlockField("외국계매수", 12)] long fwsvl,
@@ -11701,6 +12088,7 @@ public record t1752OutBlock(
 /// <param name="tradno">회원사코드	string	3</param>
 /// <param name="wgubun">외국계여부	string	1</param>
 /// <param name="swinrat">순비중	double	6.1</param>
+[BlockInfo(true, 93)]
 public record t1752OutBlock1(
     [BlockField("회원사", 20)] string tradname,
     [BlockField("매도수량", 12)] long tradmdvol,
@@ -11719,6 +12107,7 @@ public record t1752OutBlock1(
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="gubun1">구분1	string	1</param>
+[BlockInfo(true, 9)]
 public record t1764InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("구분1", 1)] string gubun1
@@ -11730,6 +12119,7 @@ public record t1764InBlock(
 /// <param name="rank">순위	int	4</param>
 /// <param name="tradno">거래원번호	string	3</param>
 /// <param name="tradname">거래원이름	string	20</param>
+[BlockInfo(true, 30)]
 public record t1764OutBlock(
     [BlockField("순위", 4)] int rank,
     [BlockField("거래원번호", 3)] string tradno,
@@ -11747,6 +12137,7 @@ public record t1764OutBlock(
 /// <param name="traddate2">거래원날짜2	string	8</param>
 /// <param name="cts_idx">CTSIDX	int	4</param>
 /// <param name="cnt">요청건수	int	3</param>
+[BlockInfo(true, 40)]
 public record t1771InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("거래원코드", 3)] string tradno,
@@ -11761,6 +12152,7 @@ public record t1771InBlock(
 /// 종목별회원사추이: t1771
 /// </summary>
 /// <param name="cts_idx">CTSIDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1771OutBlock(
     [BlockField("CTSIDX", 4)] int cts_idx
     );
@@ -11783,6 +12175,7 @@ public record t1771OutBlock(
 /// <param name="tradmttvolume">누적순매수	long	12</param>
 /// <param name="tradavg">평균단가	int	8</param>
 /// <param name="tradmttavg">누적평균단가	int	8</param>
+[BlockInfo(true, 166)]
 public record t1771OutBlock2(
     [BlockField("날짜", 8)] string traddate,
     [BlockField("시간", 8)] string tradtime,
@@ -11809,6 +12202,7 @@ public record t1771OutBlock2(
 /// <param name="jmGb">종목구분	string	1</param>
 /// <param name="jmcode">종목코드	string	6</param>
 /// <param name="cts">NEXTKEY	string	30</param>
+[BlockInfo(false, 38)]
 public record t1809InBlock(
     [BlockField("신호구분", 1)] string gubun,
     [BlockField("종목구분", 1)] string jmGb,
@@ -11820,6 +12214,7 @@ public record t1809InBlock(
 /// 신호조회: t1809
 /// </summary>
 /// <param name="cts">NEXTKEY	string	30</param>
+[BlockInfo(false, 30)]
 public record t1809OutBlock(
     [BlockField("NEXTKEY", 30)] string cts
     );
@@ -11841,6 +12236,7 @@ public record t1809OutBlock(
 /// <param name="chgrate">대비등락율	double	6.2</param>
 /// <param name="volume">거래량	long	9</param>
 /// <param name="datetime">신호일시	string	16</param>
+[BlockInfo(false, 432)]
 public record t1809OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -11864,6 +12260,7 @@ public record t1809OutBlock1(
 /// </summary>
 /// <param name="search_cd">검색코드	string	4</param>
 /// <param name="gubun">구분(0:전체1:코스피2:코스닥)	string	1</param>
+[BlockInfo(true, 7)]
 public record t1825InBlock(
     [BlockField("검색코드", 4)] string search_cd,
     [BlockField("구분(0:전체1:코스피2:코스닥)", 1)] string gubun
@@ -11873,6 +12270,7 @@ public record t1825InBlock(
 /// 종목Q클릭검색(씽큐스마트): t1825
 /// </summary>
 /// <param name="JongCnt">검색종목수	int	4</param>
+[BlockInfo(true, 5)]
 public record t1825OutBlock(
     [BlockField("검색종목수", 4)] int JongCnt
     );
@@ -11889,6 +12287,7 @@ public record t1825OutBlock(
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="volume">거래량	long	10</param>
 /// <param name="volumerate">거래량전일대비율	double	6.2</param>
+[BlockInfo(true, 79)]
 public record t1825OutBlock1(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종목명", 20)] string hname,
@@ -11906,6 +12305,7 @@ public record t1825OutBlock1(
 /// 종목Q클릭검색리스트조회(씽큐스마트): t1826
 /// </summary>
 /// <param name="search_gb">검색구분(0:핵심검색1:지표검색2:시세동향3:투자자동향)	string	1</param>
+[BlockInfo(false, 1)]
 public record t1826InBlock(
     [BlockField("검색구분(0:핵심검색1:지표검색2:시세동향3:투자자동향)", 1)] string search_gb
     );
@@ -11915,6 +12315,7 @@ public record t1826InBlock(
 /// </summary>
 /// <param name="search_cd">검색코드	string	4</param>
 /// <param name="search_nm">검색명	string	40</param>
+[BlockInfo(false, 44)]
 public record t1826OutBlock(
     [BlockField("검색코드", 4)] string search_cd,
     [BlockField("검색명", 40)] string search_nm
@@ -11927,6 +12328,7 @@ public record t1826OutBlock(
 /// <param name="sRealFlag">실시간구분(0:조회 1:실시간)	string	1</param>
 /// <param name="sSearchFlag">종목검색구분(F:파일 S:서버)	string	1</param>
 /// <param name="query_index">종목검색입력값	string	256</param>
+[BlockInfo(true, 261)]
 public record t1857InBlock(
     [BlockField("실시간구분(0:조회 1:실시간)", 1)] string sRealFlag,
     [BlockField("종목검색구분(F:파일 S:서버)", 1)] string sSearchFlag,
@@ -11939,6 +12341,7 @@ public record t1857InBlock(
 /// <param name="result_count">검색종목수	int	5</param>
 /// <param name="result_time">포착시간	string	6</param>
 /// <param name="AlertNum">실시간키	string	11</param>
+[BlockInfo(true, 25)]
 public record t1857OutBlock(
     [BlockField("검색종목수", 5)] int result_count,
     [BlockField("포착시간", 6)] string result_time,
@@ -11956,6 +12359,7 @@ public record t1857OutBlock(
 /// <param name="diff">등락율	double	6</param>
 /// <param name="volume">거래량	long	12</param>
 /// <param name="JobFlag">종목상태(N:진입 R:재진입 O:이탈)	string	1</param>
+[BlockInfo(true, 93)]
 public record t1857OutBlock1(
     [BlockField("종목코드", 7)] string shcode,
     [BlockField("종목명", 40)] string hname,
@@ -11976,6 +12380,7 @@ public record t1857OutBlock1(
 /// <param name="group_name">그룹명	string	40</param>
 /// <param name="cont">연속여부	string	1</param>
 /// <param name="contkey">연속키	string	40</param>
+[BlockInfo(false, 90)]
 public record t1866InBlock(
     [BlockField("로그인ID", 8)] string user_id,
     [BlockField("조회구분", 1)] string gb,
@@ -11990,6 +12395,7 @@ public record t1866InBlock(
 /// <param name="result_count">저장조건수	int	5</param>
 /// <param name="cont">연속여부	string	1</param>
 /// <param name="contkey">연속키	string	40</param>
+[BlockInfo(false, 46)]
 public record t1866OutBlock(
     [BlockField("저장조건수", 5)] int result_count,
     [BlockField("연속여부", 1)] string cont,
@@ -12002,6 +12408,7 @@ public record t1866OutBlock(
 /// <param name="query_index">서버저장인덱스	string	12</param>
 /// <param name="group_name">그룹명	string	40</param>
 /// <param name="query_name">조건저장명	string	40</param>
+[BlockInfo(false, 92)]
 public record t1866OutBlock1(
     [BlockField("서버저장인덱스", 12)] string query_index,
     [BlockField("그룹명", 40)] string group_name,
@@ -12013,6 +12420,7 @@ public record t1866OutBlock1(
 /// ETF현재가(시세)조회: t1901
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1901InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -12154,6 +12562,7 @@ public record t1901InBlock(
 /// <param name="idx_asset_class1">지수자산분류코드(대분류)	string	2</param>
 /// <param name="ty_text">ETF/ETN투자유의	string	8</param>
 /// <param name="leverage2">추적수익률배수	double	6.2</param>
+[BlockInfo(true, 1238)]
 public record t1901OutBlock(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -12297,6 +12706,7 @@ public record t1901OutBlock(
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="time">시간	string	6</param>
+[BlockInfo(true, 14)]
 public record t1902InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("시간", 6)] string time
@@ -12308,6 +12718,7 @@ public record t1902InBlock(
 /// <param name="time">시간	string	6</param>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="upname">업종지수명	string	20</param>
+[BlockInfo(true, 49)]
 public record t1902OutBlock(
     [BlockField("시간", 6)] string time,
     [BlockField("종목명", 20)] string hname,
@@ -12330,6 +12741,7 @@ public record t1902OutBlock(
 /// <param name="jisu">지수	double	8.2</param>
 /// <param name="jichange">전일대비	double	8.2</param>
 /// <param name="jirate">전일대비율	double	8.2</param>
+[BlockInfo(true, 119)]
 public record t1902OutBlock1(
     [BlockField("시간", 8)] string time,
     [BlockField("현재가", 8)] int price,
@@ -12352,6 +12764,7 @@ public record t1902OutBlock1(
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="date">일자	string	8</param>
+[BlockInfo(true, 16)]
 public record t1903InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("일자", 8)] string date
@@ -12363,6 +12776,7 @@ public record t1903InBlock(
 /// <param name="date">일자	string	8</param>
 /// <param name="hname">종목명	string	20</param>
 /// <param name="upname">업종지수명	string	20</param>
+[BlockInfo(true, 51)]
 public record t1903OutBlock(
     [BlockField("일자", 8)] string date,
     [BlockField("종목명", 20)] string hname,
@@ -12385,6 +12799,7 @@ public record t1903OutBlock(
 /// <param name="jisu">지수	double	8.2</param>
 /// <param name="jichange">전일대비	double	8.2</param>
 /// <param name="jirate">전일대비율	double	8.2</param>
+[BlockInfo(true, 119)]
 public record t1903OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("현재가", 8)] int price,
@@ -12408,6 +12823,7 @@ public record t1903OutBlock1(
 /// <param name="shcode">ETF단축코드	string	6</param>
 /// <param name="date">PDF적용일자	string	8</param>
 /// <param name="sgb">정렬기준(1:평가금액2:증권수)	string	1</param>
+[BlockInfo(true, 18)]
 public record t1904InBlock(
     [BlockField("ETF단축코드", 6)] string shcode,
     [BlockField("PDF적용일자", 8)] string date,
@@ -12454,6 +12870,7 @@ public record t1904InBlock(
 /// <param name="opcom_nmk">운용사명	string	20</param>
 /// <param name="tot_pval">전종목평가금액합	long	12</param>
 /// <param name="tot_sigatval">전종목구성시가총액합	long	12</param>
+[BlockInfo(true, 331)]
 public record t1904OutBlock(
     [BlockField("당일구분", 1)] string chk_tday,
     [BlockField("PDF적용일자", 8)] string date,
@@ -12512,6 +12929,7 @@ public record t1904OutBlock(
 /// <param name="profitdate">PDF적용일자	string	8</param>
 /// <param name="weight">비중(평가금액)	double	6.2</param>
 /// <param name="diff2">ETF종목과등락차	double	6.2</param>
+[BlockInfo(true, 162)]
 public record t1904OutBlock1(
     [BlockField("단축코드", 12)] string shcode,
     [BlockField("한글명", 20)] string hname,
@@ -12535,6 +12953,7 @@ public record t1904OutBlock1(
 /// ETFLP호가: t1906
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1906InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -12648,6 +13067,7 @@ public record t1906InBlock(
 /// <param name="open">시가	int	8</param>
 /// <param name="high">고가	int	8</param>
 /// <param name="low">저가	int	8</param>
+[BlockInfo(true, 1211)]
 public record t1906OutBlock(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -12765,6 +13185,7 @@ public record t1906OutBlock(
 /// <param name="gubun">융자대주구분	string	1</param>
 /// <param name="date">날짜	string	8</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 23)]
 public record t1921InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("융자대주구분", 1)] string gubun,
@@ -12778,6 +13199,7 @@ public record t1921InBlock(
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="date">날짜	string	8</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 19)]
 public record t1921OutBlock(
     [BlockField("CNT", 4)] int cnt,
     [BlockField("날짜", 8)] string date,
@@ -12800,6 +13222,7 @@ public record t1921OutBlock(
 /// <param name="gyrate">공여율	double	6.2</param>
 /// <param name="jkrate">잔고율	double	6.2</param>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 102)]
 public record t1921OutBlock1(
     [BlockField("날짜", 8)] string mmdate,
     [BlockField("종가", 8)] int close,
@@ -12821,6 +13244,7 @@ public record t1921OutBlock1(
 /// 종목별신용정보: t1926
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1926InBlock(
     [BlockField("종목코드", 6)] string shcode
     );
@@ -12858,6 +13282,7 @@ public record t1926InBlock(
 /// <param name="yj20days">융자20일증가율	double	9.2</param>
 /// <param name="dj5days">대주5일증가율	double	9.2</param>
 /// <param name="dj20days">대주20일증가율	double	9.2</param>
+[BlockInfo(true, 286)]
 public record t1926OutBlock(
     [BlockField("융자신규수량", 8)] int ynvolume,
     [BlockField("융자상환수량", 8)] int ysvolume,
@@ -12899,6 +13324,7 @@ public record t1926OutBlock(
 /// <param name="date">일자	string	8</param>
 /// <param name="sdate">시작일자	string	8</param>
 /// <param name="edate">종료일자	string	8</param>
+[BlockInfo(true, 34)]
 public record t1927InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("일자", 8)] string date,
@@ -12910,6 +13336,7 @@ public record t1927InBlock(
 /// 공매도일별추이: t1927
 /// </summary>
 /// <param name="date">일자CTS	string	8</param>
+[BlockInfo(true, 9)]
 public record t1927OutBlock(
     [BlockField("일자CTS", 8)] string date
     );
@@ -12933,6 +13360,7 @@ public record t1927OutBlock(
 /// <param name="gm_va1">업틱룰적용공매도대금	long	12</param>
 /// <param name="gm_vo2">업틱룰예외공매도수량	long	12</param>
 /// <param name="gm_va2">업틱룰예외공매도대금	long	12</param>
+[BlockInfo(true, 173)]
 public record t1927OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("현재가", 8)] int price,
@@ -12959,6 +13387,7 @@ public record t1927OutBlock1(
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="sdate">시작일자	string	8</param>
 /// <param name="edate">종료일자	string	8</param>
+[BlockInfo(true, 25)]
 public record t1941InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("시작일자", 8)] string sdate,
@@ -12980,6 +13409,7 @@ public record t1941InBlock(
 /// <param name="tovalue">잔고금액	long	12</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="tovoldif">대차증감	long	12</param>
+[BlockInfo(true, 121)]
 public record t1941OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("종가", 8)] int price,
@@ -13000,6 +13430,7 @@ public record t1941OutBlock1(
 /// ELW현재가(시세)조회: t1950
 /// </summary>
 /// <param name="shcode">ELW단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1950InBlock(
     [BlockField("ELW단축코드", 6)] string shcode
     );
@@ -13087,6 +13518,7 @@ public record t1950InBlock(
 /// <param name="lpord">LP사주문가능여부	string	2</param>
 /// <param name="elwdetail">권리내용	string	100</param>
 /// <param name="valuation">만기평가가격방식	string	100</param>
+[BlockInfo(true, 914)]
 public record t1950OutBlock(
     [BlockField("한글명", 40)] string hname,
     [BlockField("체결시간", 10)] string chetime,
@@ -13181,6 +13613,7 @@ public record t1950OutBlock(
 /// <param name="bskdiff">기초자산등락율	double	6.2</param>
 /// <param name="bskvolume">기초자산거래량	double	12</param>
 /// <param name="bskjnilclose">기초자산전일종가	int	8</param>
+[BlockInfo(true, 60)]
 public record t1950OutBlock1(
     [BlockField("기초자산코드", 6)] string bskcode,
     [BlockField("기초자산비율", 3)] int bskbno,
@@ -13201,6 +13634,7 @@ public record t1950OutBlock1(
 /// <param name="starttime">시작시간	string	4</param>
 /// <param name="endtime">종료시간	string	4</param>
 /// <param name="cts_time">시간CTS	string	8</param>
+[BlockInfo(true, 39)]
 public record t1951InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("특이거래량", 12)] long cvolume,
@@ -13213,6 +13647,7 @@ public record t1951InBlock(
 /// ELW시간대별체결조회: t1951
 /// </summary>
 /// <param name="cts_time">시간CTS	string	8</param>
+[BlockInfo(true, 9)]
 public record t1951OutBlock(
     [BlockField("시간CTS", 8)] string cts_time
     );
@@ -13234,6 +13669,7 @@ public record t1951OutBlock(
 /// <param name="mschecnt">매수체결건수	int	8</param>
 /// <param name="revolume">순체결량	long	12</param>
 /// <param name="rechecnt">순체결건수	int	8</param>
+[BlockInfo(true, 137)]
 public record t1951OutBlock1(
     [BlockField("시간", 8)] string chetime,
     [BlockField("현재가", 8)] int price,
@@ -13258,6 +13694,7 @@ public record t1951OutBlock1(
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="date">날짜	string	8</param>
 /// <param name="cnt">건수	int	3</param>
+[BlockInfo(true, 20)]
 public record t1954InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("날짜", 8)] string date,
@@ -13271,6 +13708,7 @@ public record t1954InBlock(
 /// <param name="bsjgubun">기초자산구분	string	1</param>
 /// <param name="bscode">기초자산코드(현물)	string	6</param>
 /// <param name="bjcode">기초자산코드(지수)	string	3</param>
+[BlockInfo(true, 22)]
 public record t1954OutBlock(
     [BlockField("날짜", 8)] string date,
     [BlockField("기초자산구분", 1)] string bsjgubun,
@@ -13304,6 +13742,7 @@ public record t1954OutBlock(
 /// <param name="capt">자본지지	double	6.2</param>
 /// <param name="gearing">기어링	double	6.2</param>
 /// <param name="mness">Moneyness	string	1</param>
+[BlockInfo(true, 178)]
 public record t1954OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 8)] int open,
@@ -13335,6 +13774,7 @@ public record t1954OutBlock1(
 /// ELW현재가(확정지급액)조회: t1956
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1956InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -13423,6 +13863,7 @@ public record t1956InBlock(
 /// <param name="elwdetail">권리내용	string	100</param>
 /// <param name="valuation">만기평가가격방식	string	100</param>
 /// <param name="givemoney">확정지급액	double	8.3</param>
+[BlockInfo(true, 923)]
 public record t1956OutBlock(
     [BlockField("한글명", 40)] string hname,
     [BlockField("체결시간", 10)] string chetime,
@@ -13518,6 +13959,7 @@ public record t1956OutBlock(
 /// <param name="bskdiff">기초자산등락율	double	6.2</param>
 /// <param name="bskvolume">기초자산거래량	double	12</param>
 /// <param name="bskjnilclose">기초자산전일종가	int	8</param>
+[BlockInfo(true, 60)]
 public record t1956OutBlock1(
     [BlockField("기초자산코드", 6)] string bskcode,
     [BlockField("기초자산비율", 3)] int bskbno,
@@ -13535,6 +13977,7 @@ public record t1956OutBlock1(
 /// </summary>
 /// <param name="shcode1">종목코드1	string	6</param>
 /// <param name="shcode2">종목코드2	string	6</param>
+[BlockInfo(true, 14)]
 public record t1958InBlock(
     [BlockField("종목코드1", 6)] string shcode1,
     [BlockField("종목코드2", 6)] string shcode2
@@ -13565,6 +14008,7 @@ public record t1958InBlock(
 /// <param name="price">가격	int	8</param>
 /// <param name="volume">거래량	double	12</param>
 /// <param name="diff">등락율	double	6.2</param>
+[BlockInfo(true, 242)]
 public record t1958OutBlock(
     [BlockField("종목명", 40)] string hname,
     [BlockField("기초자산", 12)] string item1,
@@ -13615,6 +14059,7 @@ public record t1958OutBlock(
 /// <param name="price">가격	int	8</param>
 /// <param name="volume">거래량	double	12</param>
 /// <param name="diff">등락율	double	6.2</param>
+[BlockInfo(true, 242)]
 public record t1958OutBlock1(
     [BlockField("종목명", 40)] string hname,
     [BlockField("기초자산", 12)] string item1,
@@ -13665,6 +14110,7 @@ public record t1958OutBlock1(
 /// <param name="pricecmp">가격비교	int	8</param>
 /// <param name="volumecmp">거래량비교	double	12</param>
 /// <param name="diffcmp">등락율비교	double	6.2</param>
+[BlockInfo(true, 176)]
 public record t1958OutBlock2(
     [BlockField("종목명비교", 6)] string hnamecmp,
     [BlockField("기초자산비교", 6)] string item1cmp,
@@ -13695,6 +14141,7 @@ public record t1958OutBlock2(
 /// LP대상종목정보조회: t1959
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1959InBlock(
     [BlockField("종목코드", 6)] string shcode
     );
@@ -13720,6 +14167,7 @@ public record t1959InBlock(
 /// <param name="lp_st_date">LP시작일	string	8</param>
 /// <param name="lp_end_date">LP종료일	string	8</param>
 /// <param name="lp_spread">LP스프레드	double	5.2</param>
+[BlockInfo(true, 253)]
 public record t1959OutBlock1(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종목명", 40)] string hname,
@@ -13756,6 +14204,7 @@ public record t1959OutBlock1(
 /// <param name="sjanday">잔존시작일수	int	8</param>
 /// <param name="ejanday">잔존종료일수	int	8</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 88)]
 public record t1960InBlock(
     [BlockField("상승하락(0:상승1:하락)", 1)] string gubun,
     [BlockField("권리유형구분(00:EX01:콜02:풋'':전체)", 2)] string ggubun,
@@ -13774,6 +14223,7 @@ public record t1960InBlock(
 /// ELW등락율상위: t1960
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1960OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -13799,6 +14249,7 @@ public record t1960OutBlock(
 /// <param name="itemdiff">기초자산등락율	double	6.2</param>
 /// <param name="elwshcode">ELW종목코드	string	6</param>
 /// <param name="bepoint">손익분기점	double	12.2</param>
+[BlockInfo(true, 209)]
 public record t1960OutBlock1(
     [BlockField("한글명", 40)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -13835,6 +14286,7 @@ public record t1960OutBlock1(
 /// <param name="sjanday">잔존시작일수	int	8</param>
 /// <param name="ejanday">잔존종료일수	int	8</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 88)]
 public record t1961InBlock(
     [BlockField("당일전일(0:당일1:전일)", 1)] string gubun,
     [BlockField("권리유형구분(00:EX01:콜02:풋'':전체)", 2)] string ggubun,
@@ -13853,6 +14305,7 @@ public record t1961InBlock(
 /// ELW거래량상위: t1961
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1961OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -13878,6 +14331,7 @@ public record t1961OutBlock(
 /// <param name="itemchange">기초자산전일대비	string	10</param>
 /// <param name="itemdiff">기초자산등락율	double	6.2</param>
 /// <param name="elwshcode">ELW종목코드	string	6</param>
+[BlockInfo(true, 209)]
 public record t1961OutBlock1(
     [BlockField("한글명", 40)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -13914,6 +14368,7 @@ public record t1961OutBlock1(
 /// <param name="fromrat">시작비율	string	5</param>
 /// <param name="torat">종료비율	string	5</param>
 /// <param name="volume">거래량	string	12</param>
+[BlockInfo(true, 70)]
 public record t1964InBlock(
     [BlockField("기초자산코드", 12)] string item,
     [BlockField("발행사", 12)] string issuercd,
@@ -13968,6 +14423,7 @@ public record t1964InBlock(
 /// <param name="impv">내재변동성	double	6.2</param>
 /// <param name="delta">델타	double	10.6</param>
 /// <param name="theta">쎄타	double	10.6</param>
+[BlockInfo(true, 387)]
 public record t1964OutBlock1(
     [BlockField("ELW코드", 6)] string shcode,
     [BlockField("종목명", 40)] string hname,
@@ -14023,6 +14479,7 @@ public record t1964OutBlock1(
 /// <param name="sjanday">잔존시작일수	int	8</param>
 /// <param name="ejanday">잔존종료일수	int	8</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 88)]
 public record t1966InBlock(
     [BlockField("당일전일(0:당일1:전일)", 1)] string gubun,
     [BlockField("권리유형구분(00:EX01:콜02:풋'':전체)", 2)] string ggubun,
@@ -14041,6 +14498,7 @@ public record t1966InBlock(
 /// ELW거래대금상위: t1966
 /// </summary>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 5)]
 public record t1966OutBlock(
     [BlockField("IDX", 4)] int idx
     );
@@ -14066,6 +14524,7 @@ public record t1966OutBlock(
 /// <param name="itemchange">기초자산전일대비	string	10</param>
 /// <param name="itemdiff">기초자산등락율	double	6.2</param>
 /// <param name="elwshcode">ELW종목코드	string	6</param>
+[BlockInfo(true, 209)]
 public record t1966OutBlock1(
     [BlockField("한글명", 40)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -14147,6 +14606,7 @@ public record t1966OutBlock1(
 /// <param name="lp_code">LP회원사코드	string	3</param>
 /// <param name="chkkoba">조기종료chk구분	string	1</param>
 /// <param name="cbkoba">조기종료(0:전체1:KOBA2:KOBA제외)	string	1</param>
+[BlockInfo(true, 304)]
 public record t1969InBlock(
     [BlockField("기초자산chk구분", 1)] string chkitem,
     [BlockField("기초자산코드", 12)] string cbitem,
@@ -14210,6 +14670,7 @@ public record t1969InBlock(
 /// ELW지표검색: t1969
 /// </summary>
 /// <param name="cnt">종목갯수	int	4</param>
+[BlockInfo(true, 5)]
 public record t1969OutBlock(
     [BlockField("종목갯수", 4)] int cnt
     );
@@ -14249,6 +14710,7 @@ public record t1969OutBlock(
 /// <param name="convrate">전환비율	double	8.4</param>
 /// <param name="tickvalue">1틱환산	double	10.2</param>
 /// <param name="kasis">괴리율	double	6.2</param>
+[BlockInfo(true, 374)]
 public record t1969OutBlock1(
     [BlockField("종목명", 40)] string hname,
     [BlockField("종목코드", 6)] string shcode,
@@ -14289,6 +14751,7 @@ public record t1969OutBlock1(
 /// ELW현재가호가조회: t1971
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1971InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -14403,6 +14866,7 @@ public record t1971InBlock(
 /// <param name="koba_stdprc">KO베리어	double	12.2</param>
 /// <param name="koba_acc_rt">KO접근도	double	12.2</param>
 /// <param name="koba_yn">KO발생여부(Y/N)	string	1</param>
+[BlockInfo(true, 1236)]
 public record t1971OutBlock(
     [BlockField("한글명", 40)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -14518,6 +14982,7 @@ public record t1971OutBlock(
 /// ELW현재가(거래원)조회: t1972
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1972InBlock(
     [BlockField("단축코드", 6)] string shcode
     );
@@ -14574,6 +15039,7 @@ public record t1972InBlock(
 /// <param name="ftradmscha">외국계매수직전대비	long	12</param>
 /// <param name="fwddiff">외국계매도합계비율	double	6.2</param>
 /// <param name="fwsdiff">외국계매수합계비율	double	6.2</param>
+[BlockInfo(true, 530)]
 public record t1972OutBlock(
     [BlockField("한글명", 40)] string hname,
     [BlockField("표준코드", 12)] string expcode,
@@ -14632,6 +15098,7 @@ public record t1972OutBlock(
 /// </summary>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="cts_time">시간CTS	string	8</param>
+[BlockInfo(true, 16)]
 public record t1973InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("시간CTS", 8)] string cts_time
@@ -14641,6 +15108,7 @@ public record t1973InBlock(
 /// ELW시간대별예상체결조회: t1973
 /// </summary>
 /// <param name="cts_time">시간CTS	string	8</param>
+[BlockInfo(true, 9)]
 public record t1973OutBlock(
     [BlockField("시간CTS", 8)] string cts_time
     );
@@ -14657,6 +15125,7 @@ public record t1973OutBlock(
 /// <param name="yevolume">예상체결량	long	12</param>
 /// <param name="ymdvolume">예상매도체결량	long	12</param>
 /// <param name="ymsvolume">예상매수체결량	long	12</param>
+[BlockInfo(true, 77)]
 public record t1973OutBlock1(
     [BlockField("시간", 8)] string chetime,
     [BlockField("예상체결가격", 8)] int yeprice,
@@ -14674,6 +15143,7 @@ public record t1973OutBlock1(
 /// ELW기초자산동일종목: t1974
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
+[BlockInfo(true, 7)]
 public record t1974InBlock(
     [BlockField("종목코드", 6)] string shcode
     );
@@ -14682,6 +15152,7 @@ public record t1974InBlock(
 /// ELW기초자산동일종목: t1974
 /// </summary>
 /// <param name="cnt">종목갯수	int	4</param>
+[BlockInfo(true, 5)]
 public record t1974OutBlock(
     [BlockField("종목갯수", 4)] int cnt
     );
@@ -14697,6 +15168,7 @@ public record t1974OutBlock(
 /// <param name="change">전일대비	int	8</param>
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="volume">거래량	double	12</param>
+[BlockInfo(true, 91)]
 public record t1974OutBlock1(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종목명", 40)] string hname,
@@ -14727,6 +15199,7 @@ public record t1974OutBlock1(
 /// <param name="to_amt">거래대금2	string	12</param>
 /// <param name="chk_up">양봉설정(0:전체1:조건설정)	string	1</param>
 /// <param name="chk_down">음봉설정(0:전체1:조건설정)	string	1</param>
+[BlockInfo(true, 104)]
 public record t1988InBlock(
     [BlockField("시장구분(0:전체1:코스피2:코스닥)", 1)] string mkt_gb,
     [BlockField("가격설정(0:전체1:조건설정)", 1)] string chk_price,
@@ -14750,6 +15223,7 @@ public record t1988InBlock(
 /// </summary>
 /// <param name="ksp_cnt">코스피종목건수	string	4</param>
 /// <param name="ksd_cnt">코스닥종목건수	string	4</param>
+[BlockInfo(true, 10)]
 public record t1988OutBlock(
     [BlockField("코스피종목건수", 4)] string ksp_cnt,
     [BlockField("코스닥종목건수", 4)] string ksd_cnt
@@ -14769,6 +15243,7 @@ public record t1988OutBlock(
 /// <param name="value">누적거래대금(백만)	string	12</param>
 /// <param name="mkt_gb">시장구분	string	1</param>
 /// <param name="jvolume">전일동시간대거래량(주)	string	12</param>
+[BlockInfo(true, 116)]
 public record t1988OutBlock1(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("표준코드", 12)] string expcode,
@@ -14788,6 +15263,7 @@ public record t1988OutBlock1(
 /// 선물/옵션현재가(시세)조회: t2101
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record t2101InBlock(
     [BlockField("단축코드", 8)] string focode
     );
@@ -14864,6 +15340,7 @@ public record t2101InBlock(
 /// <param name="dnstep">하한적용단계	string	2</param>
 /// <param name="uplmtprice_3rd">3단계상한가	double	6.2</param>
 /// <param name="dnlmtprice_3rd">3단계하한가	double	6.2</param>
+[BlockInfo(true, 472)]
 public record t2101OutBlock(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 6.2)] double price,
@@ -14941,6 +15418,7 @@ public record t2101OutBlock(
 /// 선물/옵션현재가호가조회: t2105
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record t2105InBlock(
     [BlockField("단축코드", 8)] string shcode
     );
@@ -14992,6 +15470,7 @@ public record t2105InBlock(
 /// <param name="tbidnum">총매수호가건수	int	8</param>
 /// <param name="time">수신시간	string	6</param>
 /// <param name="shcode">단축코드	string	8</param>
+[BlockInfo(true, 373)]
 public record t2105OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("현재가", 6.2)] double price,
@@ -15045,6 +15524,7 @@ public record t2105OutBlock(
 /// </summary>
 /// <param name="code">종목코드	string	8</param>
 /// <param name="nrec">건수	string	2</param>
+[BlockInfo(false, 10)]
 public record t2106InBlock(
     [BlockField("종목코드", 8)] string code,
     [BlockField("건수", 2)] string nrec
@@ -15057,6 +15537,7 @@ public record t2106InBlock(
 /// <param name="gubn">조건구분	string	1</param>
 /// <param name="dat1">데이타1	string	1</param>
 /// <param name="dat2">데이타2	string	8</param>
+[BlockInfo(false, 11)]
 public record t2106InBlock1(
     [BlockField("인덱스", 1)] string indx,
     [BlockField("조건구분", 1)] string gubn,
@@ -15068,6 +15549,7 @@ public record t2106InBlock1(
 /// 선물/옵션현재가시세메모: t2106
 /// </summary>
 /// <param name="nrec">출력건수	string	2</param>
+[BlockInfo(false, 2)]
 public record t2106OutBlock(
     [BlockField("출력건수", 2)] string nrec
     );
@@ -15078,6 +15560,7 @@ public record t2106OutBlock(
 /// <param name="indx">인덱스	string	1</param>
 /// <param name="gubn">조건구분	string	1</param>
 /// <param name="vals">출력값	string	8</param>
+[BlockInfo(false, 10)]
 public record t2106OutBlock1(
     [BlockField("인덱스", 1)] string indx,
     [BlockField("조건구분", 1)] string gubn,
@@ -15093,6 +15576,7 @@ public record t2106OutBlock1(
 /// <param name="stime">시작시간	string	4</param>
 /// <param name="etime">종료시간	string	4</param>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 43)]
 public record t2201InBlock(
     [BlockField("단축코드", 8)] string focode,
     [BlockField("특이거래량", 12)] long cvolume,
@@ -15105,6 +15589,7 @@ public record t2201InBlock(
 /// 선물옵션시간대별체결조회: t2201
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 11)]
 public record t2201OutBlock(
     [BlockField("시간CTS", 10)] string cts_time
     );
@@ -15134,6 +15619,7 @@ public record t2201OutBlock(
 /// <param name="n_mschecnt">누적매수체결건수	int	8</param>
 /// <param name="n_mdchecnt">누적매도체결건수	int	8</param>
 /// <param name="s_mschecnt">누적순매수체결건수	int	8</param>
+[BlockInfo(true, 199)]
 public record t2201OutBlock1(
     [BlockField("시간", 10)] string chetime,
     [BlockField("현재가", 6.2)] double price,
@@ -15169,6 +15655,7 @@ public record t2201OutBlock1(
 /// <param name="cts_code">CTS종목코드	string	8</param>
 /// <param name="lastdate">전종목만기일	string	8</param>
 /// <param name="cnt">조회요청건수	int	3</param>
+[BlockInfo(true, 42)]
 public record t2203InBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("선물최근월물", 1)] string futcheck,
@@ -15185,6 +15672,7 @@ public record t2203InBlock(
 /// <param name="cts_code">CTS종목코드	string	8</param>
 /// <param name="lastdate">전종목만기일	string	8</param>
 /// <param name="nowfutyn">최근월선물여부	string	1</param>
+[BlockInfo(true, 29)]
 public record t2203OutBlock(
     [BlockField("날짜", 8)] string date,
     [BlockField("CTS종목코드", 8)] string cts_code,
@@ -15208,6 +15696,7 @@ public record t2203OutBlock(
 /// <param name="openyak">미결수량	int	8</param>
 /// <param name="openyakupdn">미결증감	int	8</param>
 /// <param name="value">거래대금	double	12</param>
+[BlockInfo(true, 108)]
 public record t2203OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 6.2)] double open,
@@ -15232,6 +15721,7 @@ public record t2203OutBlock1(
 /// <param name="cgubun">챠트구분	string	1</param>
 /// <param name="bgubun">분구분	int	3</param>
 /// <param name="cnt">조회건수	int	3</param>
+[BlockInfo(true, 19)]
 public record t2209InBlock(
     [BlockField("단축코드", 8)] string focode,
     [BlockField("챠트구분", 1)] string cgubun,
@@ -15262,6 +15752,7 @@ public record t2209InBlock(
 /// <param name="ss_mschevol">순매수순간체결량	double	12</param>
 /// <param name="chdegvol">체결강도(거래량)	double	8.2</param>
 /// <param name="chdegcnt">체결강도(건수)	double	8.2</param>
+[BlockInfo(true, 185)]
 public record t2209OutBlock1(
     [BlockField("시간", 10)] string chetime,
     [BlockField("현재가", 6.2)] double price,
@@ -15293,6 +15784,7 @@ public record t2209OutBlock1(
 /// <param name="cvolume">특이거래량	long	12</param>
 /// <param name="stime">시작시간	string	4</param>
 /// <param name="etime">종료시간	string	4</param>
+[BlockInfo(true, 32)]
 public record t2210InBlock(
     [BlockField("단축코드", 8)] string focode,
     [BlockField("특이거래량", 12)] long cvolume,
@@ -15307,6 +15799,7 @@ public record t2210InBlock(
 /// <param name="mdchecnt">매도체결건수	int	8</param>
 /// <param name="msvolume">매수체결수량	int	8</param>
 /// <param name="mschecnt">매수체결건수	int	8</param>
+[BlockInfo(true, 36)]
 public record t2210OutBlock(
     [BlockField("매도체결수량", 8)] int mdvolume,
     [BlockField("매도체결건수", 8)] int mdchecnt,
@@ -15320,6 +15813,7 @@ public record t2210OutBlock(
 /// </summary>
 /// <param name="yyyymm">월물	string	6</param>
 /// <param name="gubun">미니구분(M:미니G:정규)	string	1</param>
+[BlockInfo(true, 9)]
 public record t2301InBlock(
     [BlockField("월물", 6)] string yyyymm,
     [BlockField("미니구분(M:미니G:정규)", 1)] string gubun
@@ -15338,6 +15832,7 @@ public record t2301InBlock(
 /// <param name="gmdiff">근월물등락율	double	6.2</param>
 /// <param name="gmvolume">근월물거래량	long	12</param>
 /// <param name="gmshcode">근월물선물코드	string	8</param>
+[BlockInfo(true, 69)]
 public record t2301OutBlock(
     [BlockField("역사적변동성", 4)] int histimpv,
     [BlockField("옵션잔존일", 4)] int jandatecnt,
@@ -15386,6 +15881,7 @@ public record t2301OutBlock(
 /// <param name="atmgubun">ATM구분	string	1</param>
 /// <param name="jisuconv">지수환산	double	6.2</param>
 /// <param name="value">거래대금	double	12</param>
+[BlockInfo(true, 270)]
 public record t2301OutBlock1(
     [BlockField("행사가", 6.2)] double actprice,
     [BlockField("콜옵션코드", 8)] string optcode,
@@ -15456,6 +15952,7 @@ public record t2301OutBlock1(
 /// <param name="atmgubun">ATM구분	string	1</param>
 /// <param name="jisuconv">지수환산	double	6.2</param>
 /// <param name="value">거래대금	double	12</param>
+[BlockInfo(true, 270)]
 public record t2301OutBlock2(
     [BlockField("행사가", 6.2)] double actprice,
     [BlockField("풋옵션코드", 8)] string optcode,
@@ -15502,6 +15999,7 @@ public record t2301OutBlock2(
 /// <param name="hgubun">호가구분	string	1</param>
 /// <param name="cnt">조회건수	int	3</param>
 /// <param name="cts_time">시간CTS	string	6</param>
+[BlockInfo(true, 32)]
 public record t2405InBlock(
     [BlockField("단축코드", 8)] string focode,
     [BlockField("분구분", 1)] string bgubun,
@@ -15520,6 +16018,7 @@ public record t2405InBlock(
 /// <param name="msvolume">매수체결수량	double	12</param>
 /// <param name="mschecnt">매수체결건수	int	8</param>
 /// <param name="cts_time">시간CTS	string	6</param>
+[BlockInfo(true, 51)]
 public record t2405OutBlock(
     [BlockField("매도체결수량", 12)] double mdvolume,
     [BlockField("매도체결건수", 8)] int mdchecnt,
@@ -15551,6 +16050,7 @@ public record t2405OutBlock(
 /// <param name="r_bidcnt">매수건수비율	double	6.2</param>
 /// <param name="r_sign">매수비율구분	string	1</param>
 /// <param name="date">일자	string	8</param>
+[BlockInfo(true, 156)]
 public record t2405OutBlock1(
     [BlockField("시간", 6)] string time,
     [BlockField("현재가", 6.2)] double price,
@@ -15583,6 +16083,7 @@ public record t2405OutBlock1(
 /// <param name="nmin">N분	int	3</param>
 /// <param name="tcgubun">당일연결구분	string	1</param>
 /// <param name="cnt">조회건수	int	4</param>
+[BlockInfo(true, 22)]
 public record t2421InBlock(
     [BlockField("종목코드", 8)] string focode,
     [BlockField("분일구분", 1)] string bdgubun,
@@ -15601,6 +16102,7 @@ public record t2421InBlock(
 /// <param name="cvolume">체결수량	int	8</param>
 /// <param name="volume">누적거래량	double	15</param>
 /// <param name="openyak">미결제수량	int	8</param>
+[BlockInfo(true, 57)]
 public record t2421OutBlock(
     [BlockField("현재가", 6.2)] double price,
     [BlockField("전일대비구분", 1)] string sign,
@@ -15624,6 +16126,7 @@ public record t2421OutBlock(
 /// <param name="lowopenyak">미결제저량	int	8</param>
 /// <param name="closeopenyak">미결제종량	int	8</param>
 /// <param name="openupdn">미결증감	int	8</param>
+[BlockInfo(true, 88)]
 public record t2421OutBlock1(
     [BlockField("일자시간", 14)] string dt,
     [BlockField("시가", 6.2)] double open,
@@ -15649,6 +16152,7 @@ public record t2421OutBlock1(
 /// <param name="cts_time">CTSTIME	string	8</param>
 /// <param name="cts_idx">CTSIDX	int	4</param>
 /// <param name="cnt">조회건수	int	4</param>
+[BlockInfo(true, 32)]
 public record t2541InBlock(
     [BlockField("상품ID", 2)] string eitem,
     [BlockField("시장구분", 1)] string market,
@@ -15726,6 +16230,7 @@ public record t2541InBlock(
 /// <param name="md_00">사모펀드매도	long	12</param>
 /// <param name="rate_00">사모펀드증감	long	12</param>
 /// <param name="svolume_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 698)]
 public record t2541OutBlock(
     [BlockField("상품ID", 2)] string eitem,
     [BlockField("시장구분", 1)] string sgubun,
@@ -15808,6 +16313,7 @@ public record t2541OutBlock(
 /// <param name="sv_07">기타순매수	long	12</param>
 /// <param name="sv_11">국가순매수	long	12</param>
 /// <param name="sv_00">사모펀드순매수	long	12</param>
+[BlockInfo(true, 165)]
 public record t2541OutBlock1(
     [BlockField("시간", 8)] string time,
     [BlockField("개인순매수", 12)] long sv_08,
@@ -15834,6 +16340,7 @@ public record t2541OutBlock1(
 /// <param name="nmin">N분	int	2</param>
 /// <param name="cnt">조회건수	int	3</param>
 /// <param name="bgubun">전일분	string	1</param>
+[BlockInfo(true, 18)]
 public record t2545InBlock(
     [BlockField("상품ID", 2)] string eitem,
     [BlockField("시장구분", 1)] string sgubun,
@@ -15862,6 +16369,7 @@ public record t2545InBlock(
 /// <param name="pefcode">사모펀드투자자코드	string	4</param>
 /// <param name="jisucd">기준지수코드	string	8</param>
 /// <param name="jisunm">기준지수명	string	20</param>
+[BlockInfo(true, 95)]
 public record t2545OutBlock(
     [BlockField("상품ID", 2)] string eitem,
     [BlockField("시장구분", 1)] string sgubun,
@@ -15915,6 +16423,7 @@ public record t2545OutBlock(
 /// <param name="upcvolume">기준체결거래량	int	8</param>
 /// <param name="upvolume">기준누적거래량	double	12</param>
 /// <param name="upvalue">기준거래대금	double	12</param>
+[BlockInfo(true, 337)]
 public record t2545OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -15954,6 +16463,7 @@ public record t2545OutBlock1(
 /// EUREXKOSPI200옵션선물현재가(시세)조회: t2830
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record t2830InBlock(
     [BlockField("단축코드", 8)] string focode
     );
@@ -15998,6 +16508,7 @@ public record t2830InBlock(
 /// <param name="jnilvalue">전일거래대금	long	12</param>
 /// <param name="uplmtprice_3rd">정규장3단계상한가	double	6.2</param>
 /// <param name="dnlmtprice_3rd">정규장3단계하한가	double	6.2</param>
+[BlockInfo(true, 276)]
 public record t2830OutBlock(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 6.2)] double price,
@@ -16043,6 +16554,7 @@ public record t2830OutBlock(
 /// EUREXKOSPI200옵션선물호가조회: t2831
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record t2831InBlock(
     [BlockField("단축코드", 8)] string shcode
     );
@@ -16093,6 +16605,7 @@ public record t2831InBlock(
 /// <param name="tbidnum">총매수호가건수	int	8</param>
 /// <param name="time">수신시간	string	6</param>
 /// <param name="shcode">단축코드	string	8</param>
+[BlockInfo(true, 366)]
 public record t2831OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("현재가", 6.2)] double price,
@@ -16148,6 +16661,7 @@ public record t2831OutBlock(
 /// <param name="stime">시작시간	string	4</param>
 /// <param name="etime">종료시간	string	4</param>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 43)]
 public record t2832InBlock(
     [BlockField("단축코드", 8)] string focode,
     [BlockField("특이거래량", 12)] long cvolume,
@@ -16160,6 +16674,7 @@ public record t2832InBlock(
 /// EUREX야간옵션선물시간대별체결조회: t2832
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 11)]
 public record t2832OutBlock(
     [BlockField("시간CTS", 10)] string cts_time
     );
@@ -16182,6 +16697,7 @@ public record t2832OutBlock(
 /// <param name="n_mschecnt">누적매수체결건수	int	8</param>
 /// <param name="n_mdchecnt">누적매도체결건수	int	8</param>
 /// <param name="s_mschecnt">누적순매수체결건수	int	8</param>
+[BlockInfo(true, 138)]
 public record t2832OutBlock1(
     [BlockField("시간", 10)] string chetime,
     [BlockField("현재가", 6.2)] double price,
@@ -16210,6 +16726,7 @@ public record t2832OutBlock1(
 /// <param name="cts_code">CTS종목코드	string	8</param>
 /// <param name="lastdate">전종목만기일	string	8</param>
 /// <param name="cnt">조회요청건수	int	3</param>
+[BlockInfo(true, 42)]
 public record t2833InBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("선물최근월물", 1)] string futcheck,
@@ -16226,6 +16743,7 @@ public record t2833InBlock(
 /// <param name="cts_code">CTS종목코드	string	8</param>
 /// <param name="lastdate">전종목만기일	string	8</param>
 /// <param name="nowfutyn">최근월선물여부	string	1</param>
+[BlockInfo(true, 29)]
 public record t2833OutBlock(
     [BlockField("날짜", 8)] string date,
     [BlockField("CTS종목코드", 8)] string cts_code,
@@ -16246,6 +16764,7 @@ public record t2833OutBlock(
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="volume">거래량	long	12</param>
 /// <param name="diff_vol">거래증가율	double	10.2</param>
+[BlockInfo(true, 77)]
 public record t2833OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 6.2)] double open,
@@ -16265,6 +16784,7 @@ public record t2833OutBlock1(
 /// </summary>
 /// <param name="yyyymm">월물(혹은주물WN)	string	6</param>
 /// <param name="gubun">구분(G:원지수W:위클리)	string	1</param>
+[BlockInfo(true, 9)]
 public record t2835InBlock(
     [BlockField("월물(혹은주물WN)", 6)] string yyyymm,
     [BlockField("구분(G:원지수W:위클리)", 1)] string gubun
@@ -16279,6 +16799,7 @@ public record t2835InBlock(
 /// <param name="gmdiff">근월물등락율	double	6.2</param>
 /// <param name="gmvolume">근월물거래량	long	12</param>
 /// <param name="gmshcode">근월물선물코드	string	8</param>
+[BlockInfo(true, 45)]
 public record t2835OutBlock(
     [BlockField("근월물현재가", 6.2)] double gmprice,
     [BlockField("근월물전일대비구분", 1)] string gmsign,
@@ -16310,6 +16831,7 @@ public record t2835OutBlock(
 /// <param name="low">저가	double	6.2</param>
 /// <param name="atmgubun">ATM구분	string	1</param>
 /// <param name="jisuconv">지수환산	double	6.2</param>
+[BlockInfo(true, 149)]
 public record t2835OutBlock1(
     [BlockField("행사가", 6.2)] double actprice,
     [BlockField("콜옵션코드", 8)] string optcode,
@@ -16354,6 +16876,7 @@ public record t2835OutBlock1(
 /// <param name="low">저가	double	6.2</param>
 /// <param name="atmgubun">ATM구분	string	1</param>
 /// <param name="jisuconv">지수환산	double	6.2</param>
+[BlockInfo(true, 149)]
 public record t2835OutBlock2(
     [BlockField("행사가", 6.2)] double actprice,
     [BlockField("풋옵션코드", 8)] string optcode,
@@ -16381,6 +16904,7 @@ public record t2835OutBlock2(
 /// 뉴스본문: t3102
 /// </summary>
 /// <param name="sNewsno">뉴스번호	string	24</param>
+[BlockInfo(false, 24)]
 public record t3102InBlock(
     [BlockField("뉴스번호", 24)] string sNewsno
     );
@@ -16389,6 +16913,7 @@ public record t3102InBlock(
 /// 뉴스본문: t3102
 /// </summary>
 /// <param name="sJongcode">뉴스종목	string	6</param>
+[BlockInfo(false, 6)]
 public record t3102OutBlock(
     [BlockField("뉴스종목", 6)] string sJongcode
     );
@@ -16397,6 +16922,7 @@ public record t3102OutBlock(
 /// 뉴스본문: t3102
 /// </summary>
 /// <param name="sBody">뉴스본문	string	100</param>
+[BlockInfo(false, 100)]
 public record t3102OutBlock1(
     [BlockField("뉴스본문", 100)] string sBody
     );
@@ -16405,6 +16931,7 @@ public record t3102OutBlock1(
 /// 뉴스본문: t3102
 /// </summary>
 /// <param name="sTitle">뉴스타이틀	string	300</param>
+[BlockInfo(false, 300)]
 public record t3102OutBlock2(
     [BlockField("뉴스타이틀", 300)] string sTitle
     );
@@ -16415,6 +16942,7 @@ public record t3102OutBlock2(
 /// </summary>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="date">조회일자	string	8</param>
+[BlockInfo(true, 16)]
 public record t3202InBlock(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("조회일자", 8)] string date
@@ -16430,6 +16958,7 @@ public record t3202InBlock(
 /// <param name="custnm">발행회사명	string	80</param>
 /// <param name="shcode">종목코드	string	6</param>
 /// <param name="upunm">업무명	string	20</param>
+[BlockInfo(true, 134)]
 public record t3202OutBlock(
     [BlockField("기준일", 8)] string recdt,
     [BlockField("테이블아이디", 6)] string tableid,
@@ -16445,6 +16974,7 @@ public record t3202OutBlock(
 /// FNG_요약: t3320
 /// </summary>
 /// <param name="gicode">종목코드	string	7</param>
+[BlockInfo(true, 8)]
 public record t3320InBlock(
     [BlockField("종목코드", 7)] string gicode
     );
@@ -16476,6 +17006,7 @@ public record t3320InBlock(
 /// <param name="notice1">위험고지구분1_정리매매	string	1</param>
 /// <param name="notice2">위험고지구분2_투자위험	string	1</param>
 /// <param name="notice3">위험고지구분3_단기과열	string	1</param>
+[BlockInfo(true, 495)]
 public record t3320OutBlock(
     [BlockField("업종구분명", 20)] string upgubunnm,
     [BlockField("시장구분", 1)] string sijangcd,
@@ -16525,6 +17056,7 @@ public record t3320OutBlock(
 /// <param name="peg">PEG	double	13.2</param>
 /// <param name="t_peg">T.PEG	double	13.2</param>
 /// <param name="t_gsym">최근분기년도	string	6</param>
+[BlockInfo(true, 234)]
 public record t3320OutBlock1(
     [BlockField("기업코드", 7)] string gicode,
     [BlockField("결산년월", 6)] string gsym,
@@ -16555,6 +17087,7 @@ public record t3320OutBlock1(
 /// <param name="gubun1">순위구분(1:매출액증가율2:영업이익증가율3:세전계속이익증가율4:부채비율5:유보율6:EPS7:BPS8:ROE9:PERa:PBRb:PEG)	string	1</param>
 /// <param name="gubun2">대비구분	string	1</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 11)]
 public record t3341InBlock(
     [BlockField("시장구분", 1)] string gubun,
     [BlockField("순위구분(1:매출액증가율2:영업이익증가율3:세전계속이익증가율4:부채비율5:유보율6:EPS7:BPS8:ROE9:PERa:PBRb:PEG)", 1)] string gubun1,
@@ -16567,6 +17100,7 @@ public record t3341InBlock(
 /// </summary>
 /// <param name="cnt">CNT	int	4</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 10)]
 public record t3341OutBlock(
     [BlockField("CNT", 4)] int cnt,
     [BlockField("IDX", 4)] int idx
@@ -16589,6 +17123,7 @@ public record t3341OutBlock(
 /// <param name="per">PER	double	13.2</param>
 /// <param name="pbr">PBR	double	13.2</param>
 /// <param name="peg">PEG	double	13.2</param>
+[BlockInfo(true, 179)]
 public record t3341OutBlock1(
     [BlockField("순위", 4)] int rank,
     [BlockField("기업명", 20)] string hname,
@@ -16614,6 +17149,7 @@ public record t3341OutBlock1(
 /// <param name="gubun1">구분	string	1</param>
 /// <param name="tradno">회원사코드	string	3</param>
 /// <param name="cts_date">IDXDATE	string	8</param>
+[BlockInfo(true, 25)]
 public record t3401InBlock(
     [BlockField("종목코드", 9)] string shcode,
     [BlockField("구분", 1)] string gubun1,
@@ -16631,6 +17167,7 @@ public record t3401InBlock(
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="volume">거래량	long	12</param>
 /// <param name="value">거래대금	long	12</param>
+[BlockInfo(true, 62)]
 public record t3401OutBlock(
     [BlockField("IDXDATE", 8)] string cts_date,
     [BlockField("현재가", 8)] int price,
@@ -16653,6 +17190,7 @@ public record t3401OutBlock(
 /// <param name="boga">목표가변경전	long	12</param>
 /// <param name="noga">목표가변경후	long	12</param>
 /// <param name="close">의견일종가	int	8</param>
+[BlockInfo(true, 151)]
 public record t3401OutBlock1(
     [BlockField("종목코드", 9)] string shcode,
     [BlockField("회원사코드", 3)] string tradno,
@@ -16676,6 +17214,7 @@ public record t3401OutBlock1(
 /// <param name="nmin">N분	int	3</param>
 /// <param name="cts_date">CTS_DATE	string	8</param>
 /// <param name="cts_time">CTS_TIME	string	6</param>
+[BlockInfo(true, 46)]
 public record t3518InBlock(
     [BlockField("종목종류", 1)] string kind,
     [BlockField("SYMBOL", 16)] string symbol,
@@ -16691,6 +17230,7 @@ public record t3518InBlock(
 /// </summary>
 /// <param name="cts_date">CTS_DATE	string	8</param>
 /// <param name="cts_time">CTS_TIME	string	6</param>
+[BlockInfo(true, 16)]
 public record t3518OutBlock(
     [BlockField("CTS_DATE", 8)] string cts_date,
     [BlockField("CTS_TIME", 6)] string cts_time
@@ -16718,6 +17258,7 @@ public record t3518OutBlock(
 /// <param name="exid">EXID	string	4</param>
 /// <param name="kodate">한국일자	string	8</param>
 /// <param name="kotime">한국시간	string	8</param>
+[BlockInfo(true, 181)]
 public record t3518OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("시간", 8)] string time,
@@ -16746,6 +17287,7 @@ public record t3518OutBlock1(
 /// </summary>
 /// <param name="kind">종목종류	string	1</param>
 /// <param name="symbol">SYMBOL	string	16</param>
+[BlockInfo(true, 19)]
 public record t3521InBlock(
     [BlockField("종목종류", 1)] string kind,
     [BlockField("SYMBOL", 16)] string symbol
@@ -16761,6 +17303,7 @@ public record t3521InBlock(
 /// <param name="change">대비	double	6.2</param>
 /// <param name="diff">등락율	double	6.2</param>
 /// <param name="date">일자	string	8</param>
+[BlockInfo(true, 76)]
 public record t3521OutBlock(
     [BlockField("심벌", 16)] string symbol,
     [BlockField("지수명", 20)] string hname,
@@ -16785,6 +17328,7 @@ public record t3521OutBlock(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	10</param>
 /// <param name="cts_daygb">연속당일구분(0:연속전체1:연속당일만2:연속전일만)	string	1</param>
+[BlockInfo(true, 58)]
 public record t4203InBlock(
     [BlockField("단축코드", 3)] string shcode,
     [BlockField("주기구분(0:틱1:분2:일3:주4:월)", 1)] string gubun,
@@ -16815,6 +17359,7 @@ public record t4203InBlock(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	10</param>
 /// <param name="cts_daygb">연속당일구분	string	1</param>
+[BlockInfo(true, 116)]
 public record t4203OutBlock(
     [BlockField("단축코드", 3)] string shcode,
     [BlockField("전일시가", 7.2)] double jisiga,
@@ -16843,6 +17388,7 @@ public record t4203OutBlock(
 /// <param name="close">종가	double	7.2</param>
 /// <param name="jdiff_vol">거래량	long	12</param>
 /// <param name="value">거래대금	long	12</param>
+[BlockInfo(true, 74)]
 public record t4203OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -16859,6 +17405,7 @@ public record t4203OutBlock1(
 /// 주식선물마스터조회(API용): t8401
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
+[BlockInfo(false, 1)]
 public record t8401InBlock(
     [BlockField("Dummy", 1)] string dummy
     );
@@ -16870,6 +17417,7 @@ public record t8401InBlock(
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="expcode">확장코드	string	12</param>
 /// <param name="basecode">기초자산코드	string	9</param>
+[BlockInfo(false, 49)]
 public record t8401OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 8)] string shcode,
@@ -16882,6 +17430,7 @@ public record t8401OutBlock(
 /// 주식선물현재가조회(API용): t8402
 /// </summary>
 /// <param name="focode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record t8402InBlock(
     [BlockField("단축코드", 8)] string focode
     );
@@ -16957,6 +17506,7 @@ public record t8402InBlock(
 /// <param name="jnilysign">예상체결가전일종가대비구분	string	1</param>
 /// <param name="jnilychange">예상체결가전일종가대비	int	8</param>
 /// <param name="jnilydrate">예상체결가전일종가등락율	double	6.2</param>
+[BlockInfo(true, 583)]
 public record t8402OutBlock(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -17033,6 +17583,7 @@ public record t8402OutBlock(
 /// 주식선물호가조회(API용): t8403
 /// </summary>
 /// <param name="shcode">단축코드	string	8</param>
+[BlockInfo(true, 9)]
 public record t8403InBlock(
     [BlockField("단축코드", 8)] string shcode
     );
@@ -17114,6 +17665,7 @@ public record t8403InBlock(
 /// <param name="tbidnum">총매수호가건수	int	8</param>
 /// <param name="time">수신시간	string	6</param>
 /// <param name="shcode">단축코드	string	6</param>
+[BlockInfo(true, 667)]
 public record t8403OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("현재가", 8)] int price,
@@ -17200,6 +17752,7 @@ public record t8403OutBlock(
 /// <param name="stime">시작시간	string	4</param>
 /// <param name="etime">종료시간	string	4</param>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 43)]
 public record t8404InBlock(
     [BlockField("단축코드", 8)] string focode,
     [BlockField("특이거래량", 12)] long cvolume,
@@ -17212,6 +17765,7 @@ public record t8404InBlock(
 /// 주식선물시간대별체결조회(API용): t8404
 /// </summary>
 /// <param name="cts_time">시간CTS	string	10</param>
+[BlockInfo(true, 11)]
 public record t8404OutBlock(
     [BlockField("시간CTS", 10)] string cts_time
     );
@@ -17241,6 +17795,7 @@ public record t8404OutBlock(
 /// <param name="n_mschecnt">누적매수체결건수	int	8</param>
 /// <param name="n_mdchecnt">누적매도체결건수	int	8</param>
 /// <param name="s_mschecnt">누적순매수체결건수	int	8</param>
+[BlockInfo(true, 211)]
 public record t8404OutBlock1(
     [BlockField("시간", 10)] string chetime,
     [BlockField("현재가", 8)] int price,
@@ -17276,6 +17831,7 @@ public record t8404OutBlock1(
 /// <param name="cts_code">CTS종목코드	string	8</param>
 /// <param name="lastdate">전종목만기일	string	8</param>
 /// <param name="cnt">조회요청건수	int	3</param>
+[BlockInfo(true, 42)]
 public record t8405InBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("선물최근월물", 1)] string futcheck,
@@ -17292,6 +17848,7 @@ public record t8405InBlock(
 /// <param name="cts_code">CTS종목코드	string	8</param>
 /// <param name="lastdate">전종목만기일	string	8</param>
 /// <param name="nowfutyn">최근월선물여부	string	1</param>
+[BlockInfo(true, 29)]
 public record t8405OutBlock(
     [BlockField("날짜", 8)] string date,
     [BlockField("CTS종목코드", 8)] string cts_code,
@@ -17315,6 +17872,7 @@ public record t8405OutBlock(
 /// <param name="openyak">미결수량	int	8</param>
 /// <param name="openyakupdn">미결증감	int	8</param>
 /// <param name="value">거래대금	double	12</param>
+[BlockInfo(true, 118)]
 public record t8405OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 8)] int open,
@@ -17339,6 +17897,7 @@ public record t8405OutBlock1(
 /// <param name="cgubun">챠트구분	string	1</param>
 /// <param name="bgubun">분구분	int	3</param>
 /// <param name="cnt">조회건수	int	3</param>
+[BlockInfo(true, 19)]
 public record t8406InBlock(
     [BlockField("단축코드", 8)] string focode,
     [BlockField("챠트구분", 1)] string cgubun,
@@ -17369,6 +17928,7 @@ public record t8406InBlock(
 /// <param name="ss_mschevol">순매수순간체결량	double	12</param>
 /// <param name="chdegvol">체결강도(거래량)	double	8.2</param>
 /// <param name="chdegcnt">체결강도(건수)	double	8.2</param>
+[BlockInfo(true, 195)]
 public record t8406OutBlock1(
     [BlockField("시간", 10)] string chetime,
     [BlockField("현재가", 8)] int price,
@@ -17398,6 +17958,7 @@ public record t8406OutBlock1(
 /// </summary>
 /// <param name="nrec">건수	int	3</param>
 /// <param name="shcode">종목코드	string	300</param>
+[BlockInfo(true, 305)]
 public record t8407InBlock(
     [BlockField("건수", 3)] int nrec,
     [BlockField("종목코드", 300)] string shcode
@@ -17428,6 +17989,7 @@ public record t8407InBlock(
 /// <param name="jnilclose">전일종가	int	8</param>
 /// <param name="uplmtprice">상한가	int	8</param>
 /// <param name="dnlmtprice">하한가	int	8</param>
+[BlockInfo(true, 244)]
 public record t8407OutBlock1(
     [BlockField("종목코드", 6)] string shcode,
     [BlockField("종목명", 40)] string hname,
@@ -17465,6 +18027,7 @@ public record t8407OutBlock1(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
 /// <param name="sujung">수정주가여부(Y:적용N:비적용)	string	1</param>
+[BlockInfo(true, 45)]
 public record t8410InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("주기구분(2:일3:주4:월5:년)", 1)] string gubun,
@@ -17498,6 +18061,7 @@ public record t8410InBlock(
 /// <param name="rec_count">레코드카운트	int	7</param>
 /// <param name="svi_uplmtprice">정적VI상한가	int	8</param>
 /// <param name="svi_dnlmtprice">정적VI하한가	int	8</param>
+[BlockInfo(true, 162)]
 public record t8410OutBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("전일시가", 8)] int jisiga,
@@ -17535,6 +18099,7 @@ public record t8410OutBlock(
 /// <param name="pricechk">수정주가반영항목	long	13</param>
 /// <param name="ratevalue">수정비율반영거래대금	long	12</param>
 /// <param name="sign">종가등락구분(1:상한2:상승3:보합4:하한5:하락주식일만사용)	string	1</param>
+[BlockInfo(true, 137)]
 public record t8410OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 12)] long open,
@@ -17565,6 +18130,7 @@ public record t8410OutBlock1(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	10</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
+[BlockInfo(true, 73)]
 public record t8411InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("단위(n틱)", 4)] int ncnt,
@@ -17600,6 +18166,7 @@ public record t8411InBlock(
 /// <param name="e_time">장종료시간(HHMMSS)	string	6</param>
 /// <param name="dshmin">동시호가처리시간(MM:분)	string	2</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 155)]
 public record t8411OutBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("전일시가", 8)] int jisiga,
@@ -17634,6 +18201,7 @@ public record t8411OutBlock(
 /// <param name="jongchk">수정구분	long	13</param>
 /// <param name="rate">수정비율	double	6.2</param>
 /// <param name="pricechk">수정주가반영항목	long	13</param>
+[BlockInfo(true, 104)]
 public record t8411OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 10)] string time,
@@ -17662,6 +18230,7 @@ public record t8411OutBlock1(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	10</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
+[BlockInfo(true, 73)]
 public record t8412InBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("단위(n분)", 4)] int ncnt,
@@ -17697,6 +18266,7 @@ public record t8412InBlock(
 /// <param name="e_time">장종료시간(HHMMSS)	string	6</param>
 /// <param name="dshmin">동시호가처리시간(MM:분)	string	2</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 155)]
 public record t8412OutBlock(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("전일시가", 8)] int jisiga,
@@ -17732,6 +18302,7 @@ public record t8412OutBlock(
 /// <param name="jongchk">수정구분	long	13</param>
 /// <param name="rate">수정비율	double	6.2</param>
 /// <param name="sign">종가등락구분(1:상한2:상승3:보합4:하한5:하락)	string	1</param>
+[BlockInfo(true, 105)]
 public record t8412OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 10)] string time,
@@ -17761,6 +18332,7 @@ public record t8412OutBlock1(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	10</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
+[BlockInfo(true, 75)]
 public record t8414InBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("단위(n틱)", 4)] int ncnt,
@@ -17796,6 +18368,7 @@ public record t8414InBlock(
 /// <param name="e_time">장종료시간(HHMMSS)	string	6</param>
 /// <param name="dshmin">동시호가처리시간(MM:분)	string	2</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 137)]
 public record t8414OutBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("전일시가", 6.2)] double jisiga,
@@ -17828,6 +18401,7 @@ public record t8414OutBlock(
 /// <param name="close">종가	double	6.2</param>
 /// <param name="jdiff_vol">거래량	long	12</param>
 /// <param name="openyak">미결제약정	long	12</param>
+[BlockInfo(true, 74)]
 public record t8414OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 10)] string time,
@@ -17854,6 +18428,7 @@ public record t8414OutBlock1(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	10</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
+[BlockInfo(true, 75)]
 public record t8415InBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("단위(n분)", 4)] int ncnt,
@@ -17889,6 +18464,7 @@ public record t8415InBlock(
 /// <param name="e_time">장종료시간(HHMMSS)	string	6</param>
 /// <param name="dshmin">동시호가처리시간(MM:분)	string	2</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 137)]
 public record t8415OutBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("전일시가", 6.2)] double jisiga,
@@ -17922,6 +18498,7 @@ public record t8415OutBlock(
 /// <param name="jdiff_vol">누적거래량	long	12</param>
 /// <param name="value">거래대금	long	12</param>
 /// <param name="openyak">미결제약정	long	12</param>
+[BlockInfo(true, 87)]
 public record t8415OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 10)] string time,
@@ -17945,6 +18522,7 @@ public record t8415OutBlock1(
 /// <param name="edate">종료일자	string	8</param>
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
+[BlockInfo(true, 45)]
 public record t8416InBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("주기구분(2:일3:주4:월)", 1)] string gubun,
@@ -17975,6 +18553,7 @@ public record t8416InBlock(
 /// <param name="e_time">장종료시간(HHMMSS)	string	6</param>
 /// <param name="dshmin">동시호가처리시간(MM:분)	string	2</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 126)]
 public record t8416OutBlock(
     [BlockField("단축코드", 8)] string shcode,
     [BlockField("전일시가", 6.2)] double jisiga,
@@ -18006,6 +18585,7 @@ public record t8416OutBlock(
 /// <param name="jdiff_vol">누적거래량	long	12</param>
 /// <param name="value">거래대금	long	12</param>
 /// <param name="openyak">미결제약정	long	12</param>
+[BlockInfo(true, 76)]
 public record t8416OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 6.2)] double open,
@@ -18032,6 +18612,7 @@ public record t8416OutBlock1(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	10</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
+[BlockInfo(true, 70)]
 public record t8417InBlock(
     [BlockField("단축코드", 3)] string shcode,
     [BlockField("단위(n틱)", 4)] int ncnt,
@@ -18065,6 +18646,7 @@ public record t8417InBlock(
 /// <param name="e_time">장종료시간(HHMMSS)	string	6</param>
 /// <param name="dshmin">동시호가처리시간(MM:분)	string	2</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 126)]
 public record t8417OutBlock(
     [BlockField("단축코드", 3)] string shcode,
     [BlockField("전일시가", 7.2)] double jisiga,
@@ -18094,6 +18676,7 @@ public record t8417OutBlock(
 /// <param name="low">저가	double	7.2</param>
 /// <param name="close">종가	double	7.2</param>
 /// <param name="jdiff_vol">거래량	long	12</param>
+[BlockInfo(true, 61)]
 public record t8417OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -18119,6 +18702,7 @@ public record t8417OutBlock1(
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="cts_time">연속시간	string	10</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
+[BlockInfo(true, 70)]
 public record t8418InBlock(
     [BlockField("단축코드", 3)] string shcode,
     [BlockField("단위(n분)", 4)] int ncnt,
@@ -18153,6 +18737,7 @@ public record t8418InBlock(
 /// <param name="e_time">업종종료시간(HHMMSS)	string	6</param>
 /// <param name="dshmin">동시호가처리시간(MM:분)	string	2</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 139)]
 public record t8418OutBlock(
     [BlockField("단축코드", 3)] string shcode,
     [BlockField("전일시가", 7.2)] double jisiga,
@@ -18184,6 +18769,7 @@ public record t8418OutBlock(
 /// <param name="close">종가	double	7.2</param>
 /// <param name="jdiff_vol">거래량	long	12</param>
 /// <param name="value">거래대금	long	12</param>
+[BlockInfo(true, 74)]
 public record t8418OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -18206,6 +18792,7 @@ public record t8418OutBlock1(
 /// <param name="edate">종료일자	string	8</param>
 /// <param name="cts_date">연속일자	string	8</param>
 /// <param name="comp_yn">압축여부(Y:압축N:비압축)	string	1</param>
+[BlockInfo(true, 40)]
 public record t8419InBlock(
     [BlockField("단축코드", 3)] string shcode,
     [BlockField("주기구분(2:일3:주4:월)", 1)] string gubun,
@@ -18235,6 +18822,7 @@ public record t8419InBlock(
 /// <param name="e_time">업종종료시간	string	6</param>
 /// <param name="dshmin">동시호가처리시간(MM:분)	string	2</param>
 /// <param name="rec_count">레코드카운트	int	7</param>
+[BlockInfo(true, 128)]
 public record t8419OutBlock(
     [BlockField("단축코드", 3)] string shcode,
     [BlockField("전일시가", 7.2)] double jisiga,
@@ -18264,6 +18852,7 @@ public record t8419OutBlock(
 /// <param name="close">종가	double	7.2</param>
 /// <param name="jdiff_vol">거래량	long	12</param>
 /// <param name="value">거래대금	long	12</param>
+[BlockInfo(true, 67)]
 public record t8419OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시가", 7.2)] double open,
@@ -18279,6 +18868,7 @@ public record t8419OutBlock1(
 /// 전체업종: t8424
 /// </summary>
 /// <param name="gubun1">구분1	string	1</param>
+[BlockInfo(true, 2)]
 public record t8424InBlock(
     [BlockField("구분1", 1)] string gubun1
     );
@@ -18288,6 +18878,7 @@ public record t8424InBlock(
 /// </summary>
 /// <param name="hname">업종명	string	20</param>
 /// <param name="upcode">업종코드	string	3</param>
+[BlockInfo(true, 25)]
 public record t8424OutBlock(
     [BlockField("업종명", 20)] string hname,
     [BlockField("업종코드", 3)] string upcode
@@ -18298,6 +18889,7 @@ public record t8424OutBlock(
 /// 전체테마: t8425
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
+[BlockInfo(true, 2)]
 public record t8425InBlock(
     [BlockField("Dummy", 1)] string dummy
     );
@@ -18307,6 +18899,7 @@ public record t8425InBlock(
 /// </summary>
 /// <param name="tmname">테마명	string	36</param>
 /// <param name="tmcode">테마코드	string	4</param>
+[BlockInfo(true, 42)]
 public record t8425OutBlock(
     [BlockField("테마명", 36)] string tmname,
     [BlockField("테마코드", 4)] string tmcode
@@ -18317,6 +18910,7 @@ public record t8425OutBlock(
 /// 상품선물마스터조회(API용): t8426
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
+[BlockInfo(false, 1)]
 public record t8426InBlock(
     [BlockField("Dummy", 1)] string dummy
     );
@@ -18327,6 +18921,7 @@ public record t8426InBlock(
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="expcode">확장코드	string	12</param>
+[BlockInfo(false, 40)]
 public record t8426OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 8)] string shcode,
@@ -18347,6 +18942,7 @@ public record t8426OutBlock(
 /// <param name="min_term">분간격	string	2</param>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
+[BlockInfo(true, 49)]
 public record t8427InBlock(
     [BlockField("선물옵션구분", 1)] string fo_gbn,
     [BlockField("조회년도", 4)] string yyyy,
@@ -18366,6 +18962,7 @@ public record t8427InBlock(
 /// <param name="focode">선물옵션코드	string	8</param>
 /// <param name="date">날짜	string	8</param>
 /// <param name="time">시간	string	6</param>
+[BlockInfo(true, 25)]
 public record t8427OutBlock(
     [BlockField("선물옵션코드", 8)] string focode,
     [BlockField("날짜", 8)] string date,
@@ -18389,6 +18986,7 @@ public record t8427OutBlock(
 /// <param name="openyak">미결수량	int	8</param>
 /// <param name="openyakupdn">미결증감	int	8</param>
 /// <param name="value">거래대금	double	12</param>
+[BlockInfo(true, 115)]
 public record t8427OutBlock1(
     [BlockField("날짜", 8)] string date,
     [BlockField("시간", 6)] string time,
@@ -18416,6 +19014,7 @@ public record t8427OutBlock1(
 /// <param name="key_date">날짜	string	8</param>
 /// <param name="upcode">업종코드	string	3</param>
 /// <param name="cnt">조회건수	int	3</param>
+[BlockInfo(true, 37)]
 public record t8428InBlock(
     [BlockField("from일자", 8)] string fdate,
     [BlockField("to일자", 8)] string tdate,
@@ -18430,6 +19029,7 @@ public record t8428InBlock(
 /// </summary>
 /// <param name="date">날짜CTS	string	8</param>
 /// <param name="idx">IDX	int	4</param>
+[BlockInfo(true, 14)]
 public record t8428OutBlock(
     [BlockField("날짜CTS", 8)] string date,
     [BlockField("IDX", 4)] int idx
@@ -18456,6 +19056,7 @@ public record t8428OutBlock(
 /// <param name="bndmoney">채권형_억원	int	8</param>
 /// <param name="bndsmoney">필러(구.단기채권)	int	8</param>
 /// <param name="mmfmoney">MMF_억원(주식)	int	8</param>
+[BlockInfo(true, 172)]
 public record t8428OutBlock1(
     [BlockField("일자", 8)] string date,
     [BlockField("지수", 7.2)] double jisu,
@@ -18485,6 +19086,7 @@ public record t8428OutBlock1(
 /// <param name="cgubun">챠트구분	string	1</param>
 /// <param name="bgubun">분구분	int	3</param>
 /// <param name="cnt">조회건수	int	3</param>
+[BlockInfo(true, 19)]
 public record t8429InBlock(
     [BlockField("단축코드", 8)] string focode,
     [BlockField("챠트구분", 1)] string cgubun,
@@ -18512,6 +19114,7 @@ public record t8429InBlock(
 /// <param name="ss_mschevol">순매수순간체결량	double	12</param>
 /// <param name="chdegvol">체결강도(거래량)	double	8.2</param>
 /// <param name="chdegcnt">체결강도(건수)	double	8.2</param>
+[BlockInfo(true, 154)]
 public record t8429OutBlock1(
     [BlockField("시간", 10)] string chetime,
     [BlockField("현재가", 6.2)] double price,
@@ -18537,6 +19140,7 @@ public record t8429OutBlock1(
 /// 주식종목조회: t8430
 /// </summary>
 /// <param name="gubun">구분(0:전체1:코스피2:코스닥)	string	1</param>
+[BlockInfo(false, 1)]
 public record t8430InBlock(
     [BlockField("구분(0:전체1:코스피2:코스닥)", 1)] string gubun
     );
@@ -18554,6 +19158,7 @@ public record t8430InBlock(
 /// <param name="memedan">주문수량단위	string	5</param>
 /// <param name="recprice">기준가	int	8</param>
 /// <param name="gubun">구분(1:코스피2:코스닥)	string	1</param>
+[BlockInfo(false, 77)]
 public record t8430OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 6)] string shcode,
@@ -18572,6 +19177,7 @@ public record t8430OutBlock(
 /// ELW종목조회: t8431
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
+[BlockInfo(false, 1)]
 public record t8431InBlock(
     [BlockField("Dummy", 1)] string dummy
     );
@@ -18586,6 +19192,7 @@ public record t8431InBlock(
 /// <param name="dnlmtprice">하한가	int	8</param>
 /// <param name="jnilclose">전일종가	int	8</param>
 /// <param name="recprice">기준가	int	8</param>
+[BlockInfo(false, 90)]
 public record t8431OutBlock(
     [BlockField("종목명", 40)] string hname,
     [BlockField("단축코드", 6)] string shcode,
@@ -18601,6 +19208,7 @@ public record t8431OutBlock(
 /// 지수선물마스터조회API용: t8432
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
+[BlockInfo(false, 1)]
 public record t8432InBlock(
     [BlockField("구분", 1)] string gubun
     );
@@ -18617,6 +19225,7 @@ public record t8432InBlock(
 /// <param name="jnilhigh">전일고가	double	6.2</param>
 /// <param name="jnillow">전일저가	double	6.2</param>
 /// <param name="recprice">기준가	double	6.2</param>
+[BlockInfo(false, 76)]
 public record t8432OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 8)] string shcode,
@@ -18634,6 +19243,7 @@ public record t8432OutBlock(
 /// 지수옵션마스터조회API용: t8433
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
+[BlockInfo(false, 1)]
 public record t8433InBlock(
     [BlockField("Dummy", 1)] string dummy
     );
@@ -18650,6 +19260,7 @@ public record t8433InBlock(
 /// <param name="jnilhigh">전일고가	double	6.2</param>
 /// <param name="jnillow">전일저가	double	6.2</param>
 /// <param name="recprice">기준가	double	6.2</param>
+[BlockInfo(false, 76)]
 public record t8433OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 8)] string shcode,
@@ -18668,6 +19279,7 @@ public record t8433OutBlock(
 /// </summary>
 /// <param name="qrycnt">건수	int	3</param>
 /// <param name="focode">단축코드	string	400</param>
+[BlockInfo(true, 405)]
 public record t8434InBlock(
     [BlockField("건수", 3)] int qrycnt,
     [BlockField("단축코드", 400)] string focode
@@ -18684,6 +19296,7 @@ public record t8434InBlock(
 /// <param name="volume">누적거래량	long	12</param>
 /// <param name="checnt">체결건수	int	8</param>
 /// <param name="focode">단축코드	string	8</param>
+[BlockInfo(true, 75)]
 public record t8434OutBlock1(
     [BlockField("한글명", 20)] string hname,
     [BlockField("현재가", 6.2)] double price,
@@ -18700,6 +19313,7 @@ public record t8434OutBlock1(
 /// 파생종목마스터조회API용: t8435
 /// </summary>
 /// <param name="gubun">구분(MF/MO)	string	2</param>
+[BlockInfo(false, 2)]
 public record t8435InBlock(
     [BlockField("구분(MF/MO)", 2)] string gubun
     );
@@ -18716,6 +19330,7 @@ public record t8435InBlock(
 /// <param name="jnilhigh">전일고가	double	6.2</param>
 /// <param name="jnillow">전일저가	double	6.2</param>
 /// <param name="recprice">기준가	double	6.2</param>
+[BlockInfo(false, 76)]
 public record t8435OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 8)] string shcode,
@@ -18733,6 +19348,7 @@ public record t8435OutBlock(
 /// 주식종목조회 API용: t8436
 /// </summary>
 /// <param name="gubun">구분(0:전체1:코스피2:코스닥)	string	1</param>
+[BlockInfo(false, 1)]
 public record t8436InBlock(
     [BlockField("구분(0:전체1:코스피2:코스닥)", 1)] string gubun
     );
@@ -18753,6 +19369,7 @@ public record t8436InBlock(
 /// <param name="bu12gubun">증권그룹	string	2</param>
 /// <param name="spac_gubun">기업인수목적회사여부(Y/N)	string	1</param>
 /// <param name="filler">filler(미사용)	string	32</param>
+[BlockInfo(false, 112)]
 public record t8436OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 6)] string shcode,
@@ -18774,6 +19391,7 @@ public record t8436OutBlock(
 /// CME/EUREX마스터조회(API용): t8437
 /// </summary>
 /// <param name="gubun">구분(NF/NC/NM/NO)	string	2</param>
+[BlockInfo(false, 2)]
 public record t8437InBlock(
     [BlockField("구분(NF/NC/NM/NO)", 2)] string gubun
     );
@@ -18786,6 +19404,7 @@ public record t8437InBlock(
 /// <param name="expcode">표준코드	string	12</param>
 /// <param name="tradeunit">거래승수	double	21.8</param>
 /// <param name="atmgb">ATM구분(1:ATM2:ITM3:OTM)	string	1</param>
+[BlockInfo(false, 62)]
 public record t8437OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("종목코드", 8)] string shcode,
@@ -18799,6 +19418,7 @@ public record t8437OutBlock(
 /// 기초자산리스트조회: t9905
 /// </summary>
 /// <param name="dummy">DUMMY	string	1</param>
+[BlockInfo(false, 1)]
 public record t9905InBlock(
     [BlockField("DUMMY", 1)] string dummy
     );
@@ -18809,6 +19429,7 @@ public record t9905InBlock(
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="expcode">표준코드	string	12</param>
 /// <param name="hname">종목명	string	20</param>
+[BlockInfo(false, 38)]
 public record t9905OutBlock1(
     [BlockField("단축코드", 6)] string shcode,
     [BlockField("표준코드", 12)] string expcode,
@@ -18820,6 +19441,7 @@ public record t9905OutBlock1(
 /// 만기월조회: t9907
 /// </summary>
 /// <param name="dummy">DUMMY	string	1</param>
+[BlockInfo(false, 1)]
 public record t9907InBlock(
     [BlockField("DUMMY", 1)] string dummy
     );
@@ -18829,6 +19451,7 @@ public record t9907InBlock(
 /// </summary>
 /// <param name="lastym">만기월	string	6</param>
 /// <param name="lastnm">만기월명	string	10</param>
+[BlockInfo(false, 16)]
 public record t9907OutBlock1(
     [BlockField("만기월", 6)] string lastym,
     [BlockField("만기월명", 10)] string lastnm
@@ -18839,6 +19462,7 @@ public record t9907OutBlock1(
 /// ELW마스터조회API용: t9942
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
+[BlockInfo(false, 1)]
 public record t9942InBlock(
     [BlockField("Dummy", 1)] string dummy
     );
@@ -18849,6 +19473,7 @@ public record t9942InBlock(
 /// <param name="hname">종목명	string	40</param>
 /// <param name="shcode">단축코드	string	6</param>
 /// <param name="expcode">확장코드	string	12</param>
+[BlockInfo(false, 58)]
 public record t9942OutBlock(
     [BlockField("종목명", 40)] string hname,
     [BlockField("단축코드", 6)] string shcode,
@@ -18860,6 +19485,7 @@ public record t9942OutBlock(
 /// 지수선물마스터조회API용: t9943
 /// </summary>
 /// <param name="gubun">구분	string	1</param>
+[BlockInfo(false, 1)]
 public record t9943InBlock(
     [BlockField("구분", 1)] string gubun
     );
@@ -18870,6 +19496,7 @@ public record t9943InBlock(
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="expcode">확장코드	string	12</param>
+[BlockInfo(false, 40)]
 public record t9943OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 8)] string shcode,
@@ -18881,6 +19508,7 @@ public record t9943OutBlock(
 /// 지수옵션마스터조회API용: t9944
 /// </summary>
 /// <param name="dummy">Dummy	string	1</param>
+[BlockInfo(false, 1)]
 public record t9944InBlock(
     [BlockField("Dummy", 1)] string dummy
     );
@@ -18891,6 +19519,7 @@ public record t9944InBlock(
 /// <param name="hname">종목명	string	20</param>
 /// <param name="shcode">단축코드	string	8</param>
 /// <param name="expcode">확장코드	string	12</param>
+[BlockInfo(false, 40)]
 public record t9944OutBlock(
     [BlockField("종목명", 20)] string hname,
     [BlockField("단축코드", 8)] string shcode,
@@ -18902,6 +19531,7 @@ public record t9944OutBlock(
 /// 주식마스터조회API용-종목명40bytes: t9945
 /// </summary>
 /// <param name="gubun">구분(KSP:1KSD:2)	string	1</param>
+[BlockInfo(false, 1)]
 public record t9945InBlock(
     [BlockField("구분(KSP:1KSD:2)", 1)] string gubun
     );
@@ -18914,6 +19544,7 @@ public record t9945InBlock(
 /// <param name="expcode">확장코드	string	12</param>
 /// <param name="etfchk">ETF구분	string	1</param>
 /// <param name="filler">filler	string	5</param>
+[BlockInfo(false, 64)]
 public record t9945OutBlock(
     [BlockField("종목명", 40)] string hname,
     [BlockField("단축코드", 6)] string shcode,
