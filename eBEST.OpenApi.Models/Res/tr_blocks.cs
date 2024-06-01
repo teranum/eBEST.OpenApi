@@ -15340,7 +15340,7 @@ public record t2101InBlock(
 /// <param name="dnstep">하한적용단계	string	2</param>
 /// <param name="uplmtprice_3rd">3단계상한가	double	6.2</param>
 /// <param name="dnlmtprice_3rd">3단계하한가	double	6.2</param>
-/// <param name="excpt_ccls_q">예상체결수량	long	9</param>
+/// <param name="expct_ccls_q">예상체결수량	long	9</param>
 [BlockInfo(true, 482)]
 public record t2101OutBlock(
     [BlockField("한글명", 20)] string hname,
@@ -15412,7 +15412,7 @@ public record t2101OutBlock(
     [BlockField("하한적용단계", 2)] string dnstep,
     [BlockField("3단계상한가", 6.2)] double uplmtprice_3rd,
     [BlockField("3단계하한가", 6.2)] double dnlmtprice_3rd,
-    [BlockField("예상체결수량", 9)] long excpt_ccls_q
+    [BlockField("예상체결수량", 9)] long expct_ccls_q
     );
 
 

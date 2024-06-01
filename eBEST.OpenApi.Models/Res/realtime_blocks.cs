@@ -7207,7 +7207,7 @@ public record YFCInBlock(
 /// <param name="jnilchange">예상체결가전일종가대비	double	6.2</param>
 /// <param name="jnilydrate">예상체결가전일종가등락율	double	6.2</param>
 /// <param name="futcode">단축코드	string	8</param>
-/// <param name="excpt_ccls_q">예상체결수량	long	9</param>
+/// <param name="expct_ccls_q">예상체결수량	long	9</param>
 [BlockInfo(true, 49)]
 public record YFCOutBlock(
     [BlockField("예상체결시간", 6)] string ychetime,
@@ -7216,7 +7216,7 @@ public record YFCOutBlock(
     [BlockField("예상체결가전일종가대비", 6.2)] double jnilchange,
     [BlockField("예상체결가전일종가등락율", 6.2)] double jnilydrate,
     [BlockField("단축코드", 8)] string futcode,
-    [BlockField("예상체결수량", 9)] long excpt_ccls_q
+    [BlockField("예상체결수량", 9)] long expct_ccls_q
     );
 
 
@@ -7238,7 +7238,7 @@ public record YJCInBlock(
 /// <param name="jnilchange">예상체결가전일종가대비	long	10</param>
 /// <param name="jnilydrate">예상체결가전일종가등락율	double	6.2</param>
 /// <param name="futcode">단축코드	string	8</param>
-/// <param name="excpt_ccls_q">예상체결수량	long	9</param>
+/// <param name="expct_ccls_q">예상체결수량	long	9</param>
 [BlockInfo(true, 57)]
 public record YJCOutBlock(
     [BlockField("예상체결시간", 6)] string ychetime,
@@ -7247,7 +7247,7 @@ public record YJCOutBlock(
     [BlockField("예상체결가전일종가대비", 10)] long jnilchange,
     [BlockField("예상체결가전일종가등락율", 6.2)] double jnilydrate,
     [BlockField("단축코드", 8)] string futcode,
-    [BlockField("예상체결수량", 9)] long excpt_ccls_q
+    [BlockField("예상체결수량", 9)] long expct_ccls_q
     );
 
 
@@ -7343,7 +7343,7 @@ public record YOCInBlock(
 /// <param name="jnilchange">예상체결가전일종가대비	double	6.2</param>
 /// <param name="jnilydrate">예상체결가전일종가등락율	double	6.2</param>
 /// <param name="optcode">단축코드	string	8</param>
-/// <param name="excpt_ccls_q">예상체결수량	long	9</param>
+/// <param name="expct_ccls_q">예상체결수량	long	9</param>
 [BlockInfo(true, 49)]
 public record YOCOutBlock(
     [BlockField("예상체결시간", 6)] string ychetime,
@@ -7352,7 +7352,7 @@ public record YOCOutBlock(
     [BlockField("예상체결가전일종가대비", 6.2)] double jnilchange,
     [BlockField("예상체결가전일종가등락율", 6.2)] double jnilydrate,
     [BlockField("단축코드", 8)] string optcode,
-    [BlockField("예상체결수량", 9)] long excpt_ccls_q
+    [BlockField("예상체결수량", 9)] long expct_ccls_q
     );
 
 
