@@ -1,6 +1,6 @@
 # [![NuGet version](https://badge.fury.io/nu/eBEST.OpenApi.png)](https://badge.fury.io/nu/eBEST.OpenApi) eBEST.OpenApi C# Wrapper
 
-eBEST.OpenApi는 eBEST OpenAPI를 C#에서 사용하기 위한 Wrapper입니다.
+eBEST.OpenApi는 LS증권 OpenAPI를 C#에서 사용하기 위한 Wrapper입니다. (이베스트증권 -> LS증권)
 
 ## 개발환경
 Visual Studio 2022, NET48, NET8.0
@@ -23,6 +23,7 @@ Visual Studio 2022, NET48, NET8.0
 
 	// 메소드
 	ValueTask<bool> ConnectAsync : 비동기 로그인 요청 (true: 연결성공, false: 연결실패)
+	Task CloseAsync : 비동기 연결해제 요청 (웹소켓 연결해제)
 	ValueTask<bool> AddAccountRealtimeRequest : 실시간 계좌정보 요청 (true: 요청성공, false: 요청실패)
 	ValueTask<bool> RemoveAccountRealtimeRequest : 실시간 계좌정보 요청 취소 (true: 요청성공, false: 요청실패)
 	ValueTask<bool> AddRealtimeRequest : 실시간 요청 (true: 요청성공, false: 요청실패)

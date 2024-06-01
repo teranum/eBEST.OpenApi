@@ -26,11 +26,19 @@ namespace eBEST.OpenApi
             모의투자,
         }
 
-        private readonly string _baseUrl = "https://openapi.ebestsec.co.kr:8080";
-        private readonly string _wssUrlReal = "wss://openapi.ebestsec.co.kr:9443/websocket";
-        private readonly string _wssUrlSimulation = "wss://openapi.ebestsec.co.kr:29443/websocket";
+        //private readonly string _baseUrl = "https://openapi.ebestsec.co.kr:8080";
+        //private readonly string _wssUrlReal = "wss://openapi.ebestsec.co.kr:9443";
+        //private readonly string _wssUrlSimulation = "wss://openapi.ebestsec.co.kr:29443";
+
+        /// <summary>
+        /// 2024.06.01 이베스트증권 -> LS증권으로 변경
+        /// </summary>
+        const string BaseUrl = "https://openapi.ls-sec.co.kr:8080";
+        const string WssUrlReal = "wss://openapi.ls-sec.co.kr:9443";
+        const string WssUrlSimulation = "wss://openapi.ls-sec.co.kr:29443";
+
         private readonly HttpClient _httpClient;
-        private readonly ClientWebSocket _wssClient;
+        private ClientWebSocket? _wssClient;
         private string _authorization = string.Empty;
         private string _macAddress = string.Empty;
         private long _expires_in;
@@ -60,10 +68,8 @@ namespace eBEST.OpenApi
 
             _httpClient = new HttpClient
             {
-                BaseAddress = new Uri(_baseUrl),
+                BaseAddress = new Uri(BaseUrl),
             };
-
-            _wssClient = new ClientWebSocket();
         }
 
         /// <summary>
@@ -139,10 +145,10 @@ namespace eBEST.OpenApi
             _expires_in = oAuth.expires_in;
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(oAuth.token_type, _authorization);
 
-            // 모의투자인지 실투자인지 구분한다
-            Simple_CSPAQ12300 더미조회 = new()
+            // 모의투자인지 실투자인지 구분하기 위해 FOCCQ33600 더미조회, 모의투자시 응답메시지에 '모의투자' 있음
+            Dummy_FOCCQ33600 더미조회 = new()
             {
-                CSPAQ12300InBlock1 = new("0", "0", "0", "0"),
+                FOCCQ33600InBlock1 = null,
             };
             await GetTRData(더미조회).ConfigureAwait(true);
             if (더미조회.rsp_msg is not null && 더미조회.rsp_msg.StartsWith("모의투자", StringComparison.Ordinal))
@@ -151,19 +157,55 @@ namespace eBEST.OpenApi
             }
 
             // 실시간 웹소켓 연결
-            Uri wssUri = new(ServerType == SERVER_TYPE.실투자 ? _wssUrlReal : _wssUrlSimulation);
-            if (_wssClient.ConnectAsync(wssUri, CancellationToken.None).Wait(2000))
+            Uri wssUri = new((ServerType == SERVER_TYPE.실투자 ? WssUrlReal : WssUrlSimulation) + "/websocket");
+            try
             {
-                Connected = true;
-                _ = WebsocketListen(_wssClient);
 
-                OnConnectEvent?.Invoke(this, new(Ok: true, $"{ServerType} 연결 성공"));
-                return true;
+                _wssClient = new ClientWebSocket();
+                if (_wssClient.ConnectAsync(wssUri, CancellationToken.None).Wait(2000))
+                {
+                    Connected = true;
+                    _ = WebsocketListen(_wssClient);
+
+                    OnConnectEvent?.Invoke(this, new(Ok: true, $"{ServerType} 연결 성공"));
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                _wssClient = null;
+                LastErrorMessage = "Websocket서버 연결 응답 없습니다";
+                OnConnectEvent?.Invoke(this, new(Ok: false, LastErrorMessage));
+                return false;
             }
 
-            LastErrorMessage = "Websocket서버 연결 응답 없습니다";
-            OnConnectEvent?.Invoke(this, new(Ok: false, LastErrorMessage));
             return false;
+        }
+
+        /// <summary>
+        /// 연결 해제
+        /// </summary>
+        /// <returns></returns>
+        public async Task CloseAsync()
+        {
+            if (!Connected || _wssClient == null)
+            {
+                LastErrorMessage = "Aleady disconnected";
+                return;
+            }
+
+            Connected = false;
+
+            try
+            {
+                await _wssClient.CloseAsync(WebSocketCloseStatus.NormalClosure, "Bye^^", CancellationToken.None).ConfigureAwait(false);
+                LastErrorMessage = "Success disconnected";
+            }
+            catch (Exception ex)
+            {
+                LastErrorMessage = ex.Message;
+            }
+            return;
         }
 
         /// <summary>
@@ -267,6 +309,12 @@ namespace eBEST.OpenApi
 
         protected async ValueTask<bool> RealtimeRequest<T>(T request)
         {
+            if (!Connected || _wssClient == null)
+            {
+                LastErrorMessage = "Not connected";
+                return false;
+            }
+
             LastErrorMessage = string.Empty;
             try
             {
@@ -446,16 +494,15 @@ namespace eBEST.OpenApi
             return (string.Empty, string.Empty, string.Empty, string.Empty);
         }
 
-        record CSPAQ12300InBlock1(string BalCreTp, string CmsnAppTpCode, string D2balBaseQryTp, string UprcTpCode);
-
         /// <summary>
-        /// BEP단가조회
+        /// FOCCQ33600 더미조회 (웹소켓 주소확정을 위한 실투자/모의투자 여부 판단)
+        /// 메시지 응답에 '모의투자' 있으면 모의투자로 판단
         /// </summary>
-        [Path("/stock/accno", TRCode = "CSPAQ12300")]
-        class Simple_CSPAQ12300 : TrBase
+        [Path("/stock/accno", TRCode = "FOCCQ33600")]
+        class Dummy_FOCCQ33600 : TrBase
         {
             /// 요청
-            public CSPAQ12300InBlock1? CSPAQ12300InBlock1 { get; set; }
+            public object? FOCCQ33600InBlock1 { get; set; }
         }
 
     }
