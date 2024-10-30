@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Description>NET wrapper for eBEST OpenApi</Description>
-		<Version>2.0.1</Version>
+		<Version>2.0.2</Version>
 		<Title>eBEST.OpenApi</Title>
 		<PackageTags>eBEST, OpenApi</PackageTags>
 		<Authors>teranum</Authors>
@@ -21,7 +21,7 @@
 	
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
 		<Reference Include="System.Net.Http" />
-		<PackageReference Include="System.Text.Json" Version="8.0.4" />
+		<PackageReference Include="System.Text.Json" Version="8.0.5" />
 	</ItemGroup>
 
 	<ItemGroup>
